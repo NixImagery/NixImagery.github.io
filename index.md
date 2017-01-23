@@ -1,7 +1,7 @@
-Nick Hood is a teacher of Physics and Mathematics seconded on a Teaching Fellowship to Edinburgh University’s Moray House School of Education.
+I am a Senior Teaching Fellow at Edinburgh University’s Moray House School of Education, lecturing in initial teacher education with a specialism in primary and secondary science, and physics.
 
-Nick has thirty years of business, military and industry experience in technical, commercial and managerial roles in military operations, aviation, IT, simulation, training and education. As well as being a full time educator, Nick is also a regular publisher and writer, creator of online learning facilities, web host and designer.
+Before entering education, I had gained thirty years of business, military and industry experience in technical, commercial and managerial roles in military operations, aviation, IT, simulation and training. I am an irregular publisher and writer, creator of online learning facilities. I sustain a business as a web host and designer.
 
-Nick is a chartered Physicist, a chartered Scientist with the Science Council, a member of the Institute of Physics and the Royal Aeronautical Society.
+My professional designations include Chartered Physicist (CPhys), Chartered Scientist with the Science Council (CSci), member of the Institute of Physics (MInstP) and member of the Royal Aeronautical Society (MRAeS).
 
-You can find Nick’s cv [here](http://cullaloe.com/cv.pdf) (pdf, 100kB).
+You can find my current cv [here](http://cullaloe.com/cv.pdf) (pdf, 100kB).
