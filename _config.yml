@@ -31,16 +31,6 @@ social-email: nick@cullaloe.net # add your Email address
 # Disqus
 discus-identifier: cullaloe # add your discus identifier
 
-# Tracker
-analytics: # Google Analytics
-
-# Build Settings
-markdown: kramdown
-plugins:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jemoji
-
 paginate: 8
 paginate_path: "/page/:num"
 
