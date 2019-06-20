@@ -1,8 +1,47 @@
 title: Nick Hood @cullaloe
 description: I like tech that works.
-google_analytics:
+analytics: # Google Analytics
 show_downloads: false
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
 
+# Build Settings
+markdown: kramdown
 plugins:
   - jekyll-mentions
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://cullaloe.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
+
+# Author Settings
+author: Nick Hood # add your name
+author-img: david-freeman.jpg # add your photo
+about-author: I am a technophile. # add description
+social-twitter: cullaloe # add your Twitter handle
+social-facebook: cullaloe # add your Facebook handle
+social-github: cullaloe # add your Github handle
+social-linkedin: cullaloe # add your Linkedin handle
+social-email: nick@cullaloe.net # add your Email address
+
+# Disqus
+discus-identifier: cullaloe # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
