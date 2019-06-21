@@ -1,11 +1,11 @@
 ---
 layout: post
 title: About me
+slug: about
 date: 2019-06-21 12:50:00 +0300
 description: I like tech that works. # Add post description (optional)
-img: IMG_8111.JPG # Add image post (optional)
+img: IMG_8111-sm.JPG # Add image post (optional)
 tags: about # add tag
-permalink: /about
 ---
 
 I am a Senior Teaching Fellow at Edinburgh University’s Moray House School of Education, leading teacher education in science and physics across primary and secondary sectors.

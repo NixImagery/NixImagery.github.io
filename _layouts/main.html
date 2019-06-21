@@ -10,7 +10,10 @@ layout: default
       </div>
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
-    </div>
+      {% if site.about-page and page.slug == about %}
+      <p><a href="{{site.baseurl}}/{{ site.about-page }}" target="_blank">read more...</a></p>
+      {% endif %}
+</div>
   </header> <!-- End Header -->
   <footer>
     <section class="contact">

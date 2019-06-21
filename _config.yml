@@ -21,6 +21,7 @@ site-twitter: #if your site has a twitter account, enter it here
 author: Nick Hood # add your name
 author-img: nick-hood.jpg # add your photo
 about-author: I like tech that works. # add description
+about-page: about
 social-twitter: cullaloe # add your Twitter handle
 social-facebook: cullaloe # add your Facebook handle
 social-github: cullaloe # add your Github handle
