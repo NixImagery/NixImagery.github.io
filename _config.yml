@@ -1,5 +1,5 @@
 title: Nick Hood @cullaloe
-description: A technical blog.
+description: 
 analytics: UA-29333042-8 # Google Analytics
 show_downloads: false
 # theme: jekyll-theme-minimal
@@ -20,7 +20,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Nick Hood # add your name
 author-img: nick-hood.jpg # add your photo
-about-author: I like tech that works. # add description
+about-author: A technical blog. # add description
 about-page: about
 social-twitter: cullaloe # add your Twitter handle
 social-facebook: cullaloe # add your Facebook handle
