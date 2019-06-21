@@ -9,10 +9,10 @@ layout: default
         <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
       </div>
       <div class="author-name">{{site.author}}</div>
-      <p>{{site.about-author}}</p>
+      <p>{{site.about-author}}
       {% if site.about-page and page.slug == about %}
-      <p><a href="{{site.baseurl}}/{{ site.about-page }}" target="_blank">read more...</a></p>
-      {% endif %}
+      <br/><a href="{{site.baseurl}}/{{ site.about-page }}" target="_blank" class="plain">read more...</a>
+      {% endif %}</p>
 </div>
   </header> <!-- End Header -->
   <footer>
