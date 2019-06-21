@@ -10,7 +10,7 @@ layout: default
       </div>
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}
-      {% if site.about-page and page.slug == about %}
+      {% if site.about-page and page.slug != "about" %}
       <br/><a href="{{site.baseurl}}/{{ site.about-page }}" target="_blank" class="plain">read more...</a>
       {% endif %}</p>
 </div>
