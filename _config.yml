@@ -7,7 +7,7 @@ show_downloads: false
 # Build Settings
 markdown: kramdown
 plugins:
-  - jekyll-mentions
+  # - jekyll-mentions
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
