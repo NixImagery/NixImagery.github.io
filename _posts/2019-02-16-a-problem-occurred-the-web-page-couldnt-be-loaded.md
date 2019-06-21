@@ -2,13 +2,11 @@
 layout: post
 title: A Problem Occurred. The web page couldn’t be loaded.
 date: 2019-02-16 13:48:44.000000000 +00:00
-description: 
+# description: 
 published: true
 img: no-internet.png
-tags:
-- code
-- Online
-- Technology
+tags: [networking, OSX]
+# permalink: 
 ---
 This message appears in the pop-up dialog when trying to connect to new (mostly public) wifi routers using MacOS Mojave 10.14. I've been resorting to using my phone's personal hotspot but this is no good when there is a poor mobile signal.
 
