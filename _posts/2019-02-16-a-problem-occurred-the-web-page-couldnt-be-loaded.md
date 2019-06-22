@@ -4,7 +4,9 @@ title: A Problem Occurred. The web page couldn’t be loaded.
 date: 2019-02-16 13:48:44.000000000 +00:00
 # description: 
 published: true
-img: no-internet.png
+img: lubnaig.jpg
+fig-caption: Loch Lubnaig 
+fig-attrib: by Nick Hood
 tags: [networking, OSX]
 # permalink: 
 ---

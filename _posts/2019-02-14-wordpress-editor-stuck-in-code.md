@@ -4,7 +4,9 @@ title: Wordpress editor stuck in code
 date: 2019-02-14 15:58:21.000000000 +00:00
 # description: 
 published: true
-img: Screenshot-2019-02-14-at-16.07.36.png
+img: analogies.png
+# fig-caption: Analogies
+# fig-attrib: xkcd
 tags: [WordPress]
 # permalink: 
 ---
