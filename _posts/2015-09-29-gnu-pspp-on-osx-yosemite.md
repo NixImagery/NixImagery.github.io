@@ -4,7 +4,7 @@ title: GNU PSPP on OSX Yosemite
 date: 2015-09-29 20:33:29.000000000 +01:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

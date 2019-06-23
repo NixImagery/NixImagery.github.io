@@ -4,7 +4,7 @@ title: Adobe Lightroom 5.7 Crash
 date: 2014-11-27 21:05:52.000000000 +00:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

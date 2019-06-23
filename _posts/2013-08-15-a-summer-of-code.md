@@ -4,7 +4,7 @@ title: A summer of code
 date: 2013-08-15 21:03:44.000000000 +01:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

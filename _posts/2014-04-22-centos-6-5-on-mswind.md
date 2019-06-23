@@ -4,7 +4,7 @@ title: CentOS 6.5 on MSWind
 date: 2014-04-22 15:11:50.000000000 +01:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

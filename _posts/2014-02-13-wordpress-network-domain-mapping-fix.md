@@ -4,7 +4,7 @@ title: Wordpress network domain mapping fix
 date: 2014-02-13 21:14:08.000000000 +00:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

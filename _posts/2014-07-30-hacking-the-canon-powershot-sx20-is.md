@@ -4,7 +4,7 @@ title: Hacking the Canon Powershot SX20 IS
 date: 2014-07-30 19:01:54.000000000 +01:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

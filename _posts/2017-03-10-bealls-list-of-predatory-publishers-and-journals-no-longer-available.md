@@ -4,7 +4,7 @@ title: Beall's list of "predatory" publishers and journals no longer available
 date: 2017-03-10 10:30:39.000000000 +00:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

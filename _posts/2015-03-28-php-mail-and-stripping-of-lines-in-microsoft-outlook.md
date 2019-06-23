@@ -4,7 +4,7 @@ title: PHP Mail and stripping of lines in Microsoft Outlook
 date: 2015-03-28 18:24:25.000000000 +00:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

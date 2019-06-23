@@ -4,7 +4,7 @@ title: Redmine on CentOS
 date: 2014-03-05 10:11:00.000000000 +00:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:

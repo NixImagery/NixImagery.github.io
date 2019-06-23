@@ -4,7 +4,7 @@ title: WordPress Redirect Loop
 date: 2014-07-02 19:23:40.000000000 +01:00
 type: post
 parent_id: '0'
-published: true
+published: false
 password: ''
 status: publish
 categories:
