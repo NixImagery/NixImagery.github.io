@@ -3,8 +3,8 @@ layout: post
 title: Google Research releases exoplanet discovery ML code
 date: 2018-03-11 11:34:38.000000000 +00:00
 # description: 
-img: humans.jpg
-fig-caption: Humans in Green Park
+img: exoplanets.jpeg
+fig-caption: A distant star
 # fig-attrib: 
 published: true
 tags:
