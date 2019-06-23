@@ -8,11 +8,8 @@ layout: default
       <div class="cover-author-image">
         <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
       </div>
-      <div class="author-name">{{site.author}}</div>
-      <p>{{site.about-author}}
-      {% if site.about-page and page.slug != "about" %}
-      <br/><a href="{{site.baseurl}}/{{ site.about-page }}" target="_blank" class="plain">read more...</a>
-      {% endif %}</p>
+      <div class="author-name"><a href="{{site.baseurl}}/{{ site.about-page }}" target="_self" class="plain">{{site.author}}</a></div>
+      <p>{{site.about-author}}</p>
 </div>
   </header> <!-- End Header -->
   <footer>

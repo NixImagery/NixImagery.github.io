@@ -5,10 +5,10 @@ date: 2019-06-21 12:50:00 +0300
 description: I like tech that works. # Add post description (optional)
 published: true
 img: IMG_8111-sm.JPG # Add image post (optional)
-fig-caption: Desktop 
-fig-attrib: my workspace
+# fig-caption: Desktop 
+# fig-attrib: my workspace
 tags: about # add tag
-permalink: /about
+# permalink: /about
 ---
 
 I am a Senior Teaching Fellow at Edinburgh University’s Moray House School of Education, leading teacher education in science and physics across primary and secondary sectors.

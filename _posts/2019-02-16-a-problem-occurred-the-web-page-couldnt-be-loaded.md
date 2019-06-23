@@ -6,7 +6,7 @@ date: 2019-02-16 13:48:44.000000000 +00:00
 published: true
 img: lubnaig.jpg
 fig-caption: Loch Lubnaig 
-fig-attrib: by Nick Hood
+# fig-attrib: by Nick Hood
 tags: [networking, OSX]
 # permalink: 
 ---

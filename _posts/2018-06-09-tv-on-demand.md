@@ -3,15 +3,13 @@ layout: post
 title: TV On Demand
 date: 2018-06-09 21:14:42.000000000 +01:00
 # description: 
-img: Screenshot-2019-06-21.png
-fig-caption: Files
-fig-attrib: by Nick
+img: humans.jpg
+fig-caption: Humans in Green Park
+# fig-attrib: 
 published: true
 tags:
-- AIML
-- Culture
-- Reviews
-- humans
+- Media
+- Humans
 # permalink: "/blog/2018/06/09/tv-on-demand/"
 ---
 So, we thought we'd catch up on Channel 4's [Humans](http://www.channel4.com/programmes/humans) with some popcorn. On with the Sky box and the telly and press the TV guide. Catch up. Here we go. Microwave is on. Sounds of corn popping.

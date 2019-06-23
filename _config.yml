@@ -20,7 +20,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Nick Hood # add your name
 author-img: nick-hood.jpg # add your photo
-about-author: A technical blog. # add description
+about-author: a technical log # add description
 about-page: about
 social-twitter: cullaloe # add your Twitter handle
 social-facebook: cullaloe # add your Facebook handle
