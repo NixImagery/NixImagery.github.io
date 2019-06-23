@@ -1,12 +1,8 @@
 # cullaloe.github.io
 
-I am a Senior Teaching Fellow at Edinburgh University’s Moray House School of Education, leading teacher education in science and physics across primary and secondary sectors.
+This repository is the source for a technical blog that contains posts on coding, technical matters and things related to my online services like the VPS that hosts the various websites I operate. These posts previously sat within my own [personal blog](https://cullaloe.com) along with commentary on education, reviews, rants, and photography. Articles are being migrated from the old WordPress site.
 
-Before spending time in education, I held technical and commercial roles in military operations, aviation, IT, simulation and training. Trade certifications include Microsoft Certified Solutions Developer (MCSD). My interests include intelligent automation and the potential this has in teaching and learning.
-
-My professional designations include [Chartered Physicist (CPhys)](https://membership.iop.org/chartered-physicist-cphys), [Chartered Scientist (CSci)](https://sciencecouncil.org/scientists-science-technicians/which-professional-award-is-right-for-me/csci/), member of the Institute of Physics (MInstP) and member of the Royal Aeronautical Society (MRAeS). I am a [Fellow of the Royal Society of Arts] (https://www.thersa.org/fellowship).
-
-You can find my current cv [here](http://cullaloe.com/cv.pdf) (pdf, 100kB).
+I am a Senior Teaching Fellow at Edinburgh University and maintain an interest in programming and artificial intelligence. You can find my current cv [here](http://cullaloe.com/cv.pdf) (pdf, 100kB).
 
 
-Nick Hood
+Nick Hood FRSA
