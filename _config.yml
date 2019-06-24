@@ -10,6 +10,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
+  - jekyll-feed
 
 
 permalink: ':title/'
