@@ -36,20 +36,22 @@ You should be able to visit `http://your-domain.tld:8983` to verify the Solr ser
 ## Secure the Solr Server
 By default, Solr is open to the world. You might want to secure it by adding this at the end of `/opt/solr/server/etc/webdefault.xml`
 
-<pre class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;security-constraint&gt;</span>
-<span class="s1"><span class="Apple-converted-space">   </span>&lt;web-resource-collection&gt;</span>
-<span class="s1"><span class="Apple-converted-space">       </span>&lt;web-resource-name&gt;Solr Administration&lt;/web-resource-name&gt;</span>
-<span class="s1"><span class="Apple-converted-space">       </span>&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span>
-<span class="s1"><span class="Apple-converted-space">   </span>&lt;/web-resource-collection&gt;</span>
-<span class="s1"><span class="Apple-converted-space">   </span>&lt;auth-constraint&gt;</span>
-<span class="s1"><span class="Apple-converted-space">       </span>&lt;role-name&gt;solr-admin&lt;/role-name&gt;</span>
-<span class="s1"><span class="Apple-converted-space">   </span>&lt;/auth-constraint&gt;</span>
-<span class="s1"><span class="Apple-converted-space">  </span>&lt;/security-constraint&gt;</span>
+```xml
+<security-constraint>
+      <web-resource-collection>
+            <web-resource-name>Solr Administration</web-resource-name>
+            <url-pattern>/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+            <role-name>solr-admin</role-name>
+      </auth-constraint>
+</security-constraint>
 
-<span class="s1"><span class="Apple-converted-space">  </span>&lt;login-config&gt;</span>
-<span class="s1"><span class="Apple-converted-space">   </span>&lt;auth-method&gt;BASIC&lt;/auth-method&gt;</span>
-<span class="s1"><span class="Apple-converted-space">   </span>&lt;realm-name&gt;Solr Administration&lt;/realm-name&gt;</span>
-<span class="s1"><span class="Apple-converted-space">  </span>&lt;/login-config&gt;</span></pre>
+<login-config>
+      <auth-method>BASIC</auth-method>
+      <realm-name>Solr Administration</realm-name>
+</login-config>
+```
 
 Create a file in the same directory called realm.properties containing your chosen authentication details (matching the role above) in a single line:
 
