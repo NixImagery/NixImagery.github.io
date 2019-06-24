@@ -12,7 +12,7 @@ tags:
 - blog
 # permalink: "/blog/2017/11/24/open-badges-closed/"
 ---
-I am bringing together my posts on coding, technical matters and things related to my online services like the VPS that hosts the various websites I operate. These had previously sat within my own [personal blog](https://cullaloe.com) along with commentary on education, reviews, rants, and photographs of cats (I kid you not).
+I am bringing together my posts on coding, technical matters and things related to my online services like the VPS that hosts the various websites I operate. These had previously sat within my own [personal blog](https://cullaloe.com) along with commentary on education, reviews, rants, and photographs of cats ([I kid you not](https://500px.com/photo/272137057/take-me-home-by-nick-hood)).
 
 This new blog, hosted on GitHub pages, will be the home of my technical blog. I am in the process of migrating articles from the old WordPress site into the cleaner markdown used within the jekyll static page environment here.
 
