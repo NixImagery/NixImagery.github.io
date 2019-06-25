@@ -7,10 +7,10 @@ show_downloads: false
 # Build Settings
 markdown: kramdown
 plugins:
-  - jekyll-sitemap
   - jekyll-paginate
   - jemoji
-  - jekyll-feed
+  # - jekyll-feed - replaced with feed.xml template
+  - jekyll-sitemap
 
 
 permalink: ':title/'
@@ -32,5 +32,5 @@ social-email: nick@cullaloe.net # add your Email address
 # Disqus
 discus-identifier: cullaloe # add your discus identifier
 
-paginate: 8
+paginate: 10
 paginate_path: "/page/:num"
