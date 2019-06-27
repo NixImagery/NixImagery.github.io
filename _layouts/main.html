@@ -10,8 +10,13 @@ layout: default
       </div>
       <div class="author-name"><a href="{{site.baseurl}}/{{ site.about-page }}" target="_self" class="plain">{{site.author}}</a></div>
       <p>{{site.about-author}}</p>
-</div>
+    </div>
+    <div class="search" id="js-search">
+        <input type="text" placeholder="type to search..." class="search__input" id="js-search__input">
+        <ul class="search__results" id="js-search__results"></ul>
+      </div>
   </header> <!-- End Header -->
+ 
   <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
@@ -48,6 +53,7 @@ layout: default
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
+
 <div class="content-box clearfix">
   {{ content }}
 </div>
