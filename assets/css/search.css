@@ -10,8 +10,15 @@ input#js-search__input {
   .is-active .search__input {
 	transform: translateY(0);
   }
+
+  .search__input {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+  }
+
   .search__results {
-	font-size: 12px;
+	font-size: 11px;
 	list-style: none;
 	padding: 0;
 	overflow-x: hidden;
