@@ -30,7 +30,7 @@ social-linkedin: cullaloe # add your Linkedin handle
 social-email: nick@cullaloe.net # add your Email address
 
 # Disqus
-discus-identifier: cullaloe # add your discus identifier
+discus-identifier: cullaloe-gh # add your discus identifier
 
 paginate: 10
 paginate_path: "/page/:num"
