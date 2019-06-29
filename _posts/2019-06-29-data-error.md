@@ -21,4 +21,4 @@ All good clean banter, and dealt with appropriately by the other Nick Hood, who 
 
 Oh, and if you think that I am responsible for ruining vast areas of the internet, yeah, I did that. You can get my cv [here](https://cullaloe.com/cv.pdf) if you want to offer me a job.
 
-![screen grab](/assets/img/IMG_8123-sm.PNG) ![screen grab](/assets/img/IMG_8124.PNG)
+![screen grab](/assets/img/IMG_8123-sm.png) ![screen grab](/assets/img/IMG_8124.PNG)
