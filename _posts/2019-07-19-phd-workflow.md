@@ -31,7 +31,7 @@ Most of the documents are in markdown, with a YAML header containing information
 * On the command line, in the source folder, type:
 
 ```sh
-$ pandoc filename.md -o filename.pdf --bibliography="Users/nickhood/Dropbox/Bibliographies/PhD.bib"
+$ pandoc filename.md -o filename.pdf --bibliography="/path/to/Bibliographies/PhD.bib"
 ```
 # The research project
 ## Previously
