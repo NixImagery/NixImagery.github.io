@@ -5,7 +5,7 @@ date: 2016-12-08 12:03:40.000000000 +00:00
 type: post
 img: DSCF7644.jpg
 fig-caption: The Moray House Sundial
-# fig-attrib: 
+fig-attrib: Nick Hood
 published: true
 tags:
 - sundial
