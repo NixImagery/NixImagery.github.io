@@ -51,7 +51,10 @@ $ pandoc -t beamer Example.md -o Example.pdf \
 ```
 * add ```-V theme:Pittsburgh``` for non-default themes
 * add ```-V colortheme:beaver``` for non-default colours
-* add ```-V fonttheme:professionalfonts``` for non-default fonts
+* add ```-V fonttheme:structuresmallcapsserif``` for non-default fonts
 * Themes, etc. are [online](http://www.deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html)
 
-Have fun.
+Have fun. 
+
+## But I need a PowerPoint
+If you really have to, change the output format from pdf to pptx and remove ```-t beamer``` from the command. The output is a bit funky, but will give you a starting point for editing and formatting in PowerPoint if that's what you need.
