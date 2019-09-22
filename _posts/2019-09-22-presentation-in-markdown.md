@@ -3,7 +3,7 @@ layout: post
 title: Presentations in Markdown
 date: 2019-09-22 13:38
 # description: 
-img: "_DSF5635-Sep 12 2019.jpg"
+img: rumbling-bridge.jpg
 fig-caption: Rumbling Bridge flowers
 fig-attrib: Nick Hood
 published: true
