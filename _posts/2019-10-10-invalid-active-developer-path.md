@@ -10,7 +10,7 @@ published: true
 tags:
 - OSX
 - Catalana
-- 10.15
+- "10.15"
 - git
 # permalink:
 ---
