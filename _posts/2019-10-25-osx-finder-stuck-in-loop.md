@@ -30,3 +30,4 @@ Here, ```username``` should be replaced with the affected account's username. Th
 ```sh
 $ sudo rm -rf tempfolder
 ```
+There's a useful thread with more details on possible causes over at [MacWorld](http://hints.macworld.com/article.php?story=20060308010111601).
