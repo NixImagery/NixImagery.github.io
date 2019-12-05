@@ -6,7 +6,7 @@ date: 2019-11-26 20:10
 img: pattiesmuir.jpg
 fig-caption: Pattiesmuir in the frost
 fig-attrib: Nick Hood
-published: true
+published: false
 tags:
 - VPS
 - Jekyll
