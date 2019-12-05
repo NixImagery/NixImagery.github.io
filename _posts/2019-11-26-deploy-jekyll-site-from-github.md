@@ -30,5 +30,5 @@ $ chown -R webserver:webserver docs
 Now we need to redirect the server requests to the docs directory by creating ```.htaccess``` with these redirects:
 
 ```sh
-RewriteRule ^subdirectory/(.*)$ /anotherdirectory/$1 [R=301,NC,L]
+RewriteRule ^subdirectory/(.*)$ /anotherdirectory/$1 [R=301,L]
 ```
