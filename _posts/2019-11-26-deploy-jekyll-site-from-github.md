@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Deploying a Jekyll site from GitHub
-date: 2019-11-26 20:10
+# date: 2019-11-26 20:10
 # description: 
 img: pattiesmuir.jpg
 fig-caption: Pattiesmuir in the frost
@@ -26,7 +26,7 @@ You'll need to change the folder permissions so Apache can serve the pages and f
 ```sh
 $ chown -R webserver:webserver foobar/
 ```
-Now we need to serve the site files from the docs folder in the repository:
+Now we need to serve the site files from the docs folder in the repository. Include this in the Apache/Nginx configuration:
 
 ```sh
 Alias /foobar /var/www/vhosts/thesite/foobar/docs
