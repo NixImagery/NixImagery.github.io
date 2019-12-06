@@ -6,7 +6,7 @@ date: 2019-11-26 20:10
 img: pattiesmuir.jpg
 fig-caption: Pattiesmuir in the frost
 fig-attrib: Nick Hood
-published: false
+published: true
 tags:
 - VPS
 - Jekyll
@@ -16,19 +16,20 @@ tags:
 ---
 I've been building a site using Jekyll and hosting the code on GitHub. The site is available on GitHub pages from the ```docs``` folder in the ```master```branch, but I wanted to deploy it to a server running Centos and Apache.
 
-On the VPS, from the ```httpdocs``` folder, clone the GitHub repository into a new folder (here, called "mysite"):
+On the VPS, from behind the ```httpdocs``` or web-facing folder, clone the GitHub repository into a new folder (here, called "foobar"):
 
 ```sh
-$ git clone https://github.com/<githubuser>/<repository>.git <mysite>
+$ git clone https://github.com/githubuser/foobar.git foobar
 ```
 You'll need to change the folder permissions so Apache can serve the pages and find the css, etc:
 
 ```sh
-$ cd mysite
-$ chown -R webserver:webserver docs
+$ chown -R webserver:webserver foobar/
 ```
-Now we need to redirect the server requests to the docs directory by creating ```.htaccess``` with these redirects:
+Now we need to serve the site files from the docs folder in the repository:
 
 ```sh
-RewriteRule ^subdirectory/(.*)$ /anotherdirectory/$1 [R=301,L]
+Alias /foobar /var/www/vhosts/thesite/foobar/docs
 ```
+
+Updating the site just requires ```$ git pull``` from the repository folder on the web server.
