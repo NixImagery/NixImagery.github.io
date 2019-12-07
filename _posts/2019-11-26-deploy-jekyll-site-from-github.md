@@ -28,7 +28,7 @@ $ chown -R webserver:webserver foobar/
 ```
 Now we need to serve the site files from the docs folder in the repository. Include this in the Apache/Nginx configuration:
 
-```apacheconf
+```apache
 Alias /foobar /var/www/vhosts/thesite/foobar/docs
 ```
 
