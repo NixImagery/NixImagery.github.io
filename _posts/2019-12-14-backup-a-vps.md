@@ -29,4 +29,4 @@ The sync command is then issued with a username and the name of the server to be
 
 The last line of the script prints the current timestamp to a file. Once complete (it can take a while) the files can be relocated to an offline storage.
 
-[^1]:(Virtual Private Server. A rented computer that contains, manages and serves websites and other services on the Internet. Mine is in London.)
+[^1]: Virtual Private Server. A rented computer that contains, manages and serves websites and other services on the Internet. Mine is in London.
