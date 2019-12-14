@@ -25,7 +25,7 @@ date >> VPS_rsync.date
 ```
 The first line tells OSX that what follows is a bash script and should run in the Bourne Again Shell (bash). Next, a folder is created in the current user's download directory, which is then made the current working directory.
 
-The sync command is then issued with a username and the name of the server to be backed up - in this case ```server.tld```, and the directory on the server to be backed up. I am backing up the ```vhosts``` directory which contains all of the files and folders that my VPS serves. The dot at the end of that line tells ```rsync``` to download the data to the current directory. The server will issue a login challenge.
+The rsync command is then issued with a username and the name of the server to be backed up - in this case ```server.tld```, and the directory on the server to be backed up. I am backing up the ```vhosts``` directory which contains all of the files and folders that my VPS serves. The dot at the end of that line tells ```rsync``` to download the data to the current directory. The server will issue a login challenge.
 
 The last line of the script prints the current timestamp to a file. Once complete (it can take a while) the files can be relocated to an offline storage.
 
