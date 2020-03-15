@@ -7,7 +7,7 @@ published: true
 img: sky.jpg
 fig-caption: Skye
 fig-attrib: by Nick
-tags: [Grav, CMS, mod security]
+tags: [Software]
 # permalink: "/blog/2018/08/07/grav-error-403-in-admin-panel/"
 ---
 I'm trying out [Grav](https://getgrav.org/), a flat file CMS, on my server. It looks promising, having just [installed it](https://photo.cullaloe.net/) with the admin plugin. It seems that there is a fairly [well-known problem](https://github.com/getgrav/grav-plugin-admin/issues/979) with false positives from apache's mod security web application firewall software, which manifests as an annoying 403 error banner in the admin pages (and the notifications panel not loading).

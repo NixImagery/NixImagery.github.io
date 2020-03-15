@@ -9,9 +9,6 @@ fig-attrib: Nick Hood
 published: true
 tags:
 - OSX
-- finder
-- desktop
-- loop
 # permalink:
 ---
 I keep quite a lot of folders on my desktop - keeping the current work in view, and offloading completed projects rather than have them hanging about my laptop.

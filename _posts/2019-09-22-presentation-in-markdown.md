@@ -8,10 +8,7 @@ fig-caption: Rumbling Bridge flowers
 fig-attrib: Nick Hood
 published: true
 tags:
-- pandoc
-- beamer
-- presentations
-- Latex
+- Markdown
 # permalink:
 ---
 I have needed a way to make a quick presentation that does not require the use of huge complex programs like PowerPoint or KeyNote. One way I have been using recently is to write the outline in markdown (as I would when sketching out a lesson plan) and then using the amazing pandoc to magic up a pdf. Here are the key elements of your markdown file and how to produce one for yourself.

@@ -7,7 +7,7 @@ published: true
 img: lubnaig.jpg
 fig-caption: Loch Lubnaig 
 # fig-attrib: by Nick Hood
-tags: [networking, OSX]
+tags: [OSX]
 # permalink: 
 ---
 This message appears in the pop-up dialog when trying to connect to new (mostly public) wifi routers using MacOS Mojave 10.14. I've been resorting to using my phone's personal hotspot but this is no good when there is a poor mobile signal.

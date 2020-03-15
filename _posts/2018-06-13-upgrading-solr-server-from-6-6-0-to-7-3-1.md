@@ -7,7 +7,7 @@ published: true
 img: heron.jpg
 fig-caption: Heron
 fig-attrib: by Nick
-tags: [Solr, Moodle]
+tags: [Moodle]
 permalink: "/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/"
 ---
 I use Apache's [Solr](http://lucene.apache.org/solr/) to provide a global search facility on Moodle. Now that my courses have ended for the summer, it's time to bite the bullet and upgrade the Solr server software from version 6.6.0 which I installed last year, to the current 7.3.1. This turned out to be more straightforward than I feared, and did not require me to touch the PHP solr module that I had to compile from source when I installed it the first time. Here are the steps:

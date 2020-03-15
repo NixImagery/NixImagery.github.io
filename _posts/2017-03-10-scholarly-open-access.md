@@ -8,13 +8,7 @@ fig-caption: Vasanta Hall, Letchworth
 # fig-attrib: 
 published: true
 tags:
-- education
 - Research
-- Science
-- Beall's list
-- Open Access
-- Reddit
-- Scholarly
 # permalink: "/blog/2017/03/10/scholarly-open-access/"
 ---
 I kept a link to Beall's list on my [PhD Resources Reddit](https://www.reddit.com/r/PhDResources/) and received a comment that alerted me to the post (reposted below) which reported the take-down of this incredibly useful resource.

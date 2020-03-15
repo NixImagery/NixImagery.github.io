@@ -8,7 +8,7 @@ img: Screen-Shot-2017-11-24-at-15.52.34.png
 # fig-attrib: 
 published: true
 tags:
-- Microsoft
+- Software
 # permalink: "/blog/2017/11/24/open-source-1-microsoft-0-own-goal/"
 ---
 So, I'm sitting down to work on some stuff for my job that is in a Microsoft file format, because that's what the corporate world uses, when this message appears. I managed to sign in using my corporate id and their subscription.

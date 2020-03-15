@@ -8,10 +8,7 @@ fig-caption: Durham
 fig-attrib: Nick Hood
 published: false
 tags:
-- Arch
 - Linux
-- USB
-- MacBook Pro
 # permalink:
 ---
 I have one of those old MacBook Pro laptops laying about that I have tried to revive with various flavours of Linux. Here, I describe how I put Arch Linux on it for development and experimentation.

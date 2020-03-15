@@ -9,7 +9,6 @@ fig-caption: Humans in Green Park
 published: true
 tags:
 - Media
-- Humans
 # permalink: "/blog/2018/06/09/tv-on-demand/"
 ---
 So, we thought we'd catch up on Channel 4's [Humans](http://www.channel4.com/programmes/humans) with some popcorn. On with the Sky box and the telly and press the TV guide. Catch up. Here we go. Microwave is on. Sounds of corn popping.

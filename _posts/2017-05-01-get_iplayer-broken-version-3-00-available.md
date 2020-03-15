@@ -8,9 +8,7 @@ img: g.png
 # fig-attrib: 
 published: true
 tags:
-- BBC iPlayer
-- get_iplayer
-- perl
+- Software
 # permalink: "/blog/2017/05/01/get_iplayer-broken-version-3-00-available/"
 ---
 For those of us who make use of the amazing <code>get_iplayer</code> program to obtain clips and other resources for classroom and other conveniences, it comes as a bit of a blow to find that in the past week or two, it has stopped working. Fortunately, there is a new version of the program available that with a little effort, gets the facility working again.

@@ -8,10 +8,7 @@ img: Arch-eduroam.png
 # fig-attrib: 
 published: true
 tags:
-- eduroam
-- wifi
 - Linux
-- Arch
 # permalink:
 ---
 Students on Initial Teacher Education programmes are beginning their studies this week. One of the students asked me to help get her connected to the eduroam academic wireless network. She had got the technical people in the library to look at it and they had got it going by doing some voodoo with a USB stick, but the connection would not re-establish later in the day.

@@ -8,9 +8,7 @@ fig-caption: Update screenshot
 # fig-attrib: 
 published: true
 tags:
-- NextCloud
-- VPS
-- Software update
+- Linux
 # permalink:
 ---
 Listening to [Linux Unplugged 307](https://linuxunplugged.com/307), which featured a discussion on NextCloud and its various features, prompted me to check the software state of my own instance running on my VPS[^VPS].

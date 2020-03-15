@@ -9,9 +9,6 @@ fig-attrib: Nick Hood
 published: true
 tags:
 - OSX
-- Catalana
-- "10.15"
-- git
 # permalink:
 ---
 After allowing my MacBook Air to upgrade itself to OSX 10.15 Catalana, git commands throw an error:

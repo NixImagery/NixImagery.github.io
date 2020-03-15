@@ -9,9 +9,7 @@ img: archlinux-logo.png
 published: true
 tags:
 - OSX
-- VM
 - Linux
-- Arch
 # permalink:
 ---
 I've wanted to take a look at Arch Linux for a while now, and when a student got me to connect her inherited Arch laptop to the University Wi-Fi network last week, I was reminded that this lightweight distribution is attractive to the increasingly paranoid control freak that I am becoming. Having toyed with the idea of spending money on an XPS or some other super-cool hacker machine, and having been defeated by prudence, here's how I got it running as a first-time-out instance on my University MacBook Air[^Mac].

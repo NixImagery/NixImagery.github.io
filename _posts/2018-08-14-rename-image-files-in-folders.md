@@ -7,7 +7,7 @@ published: true
 img: Screenshot-2019-06-21.png
 fig-caption: Files
 fig-attrib: by Nick
-tags: [Python, directory walk, renaming]
+tags: [Python]
 # permalink: "/blog/2018/08/14/rename-image-files-in-folders/"
 ---
 This is a Python script to walk a directory tree, renaming .jpg and .JPG files. It was written for a client who had a directory containing multiple directories, each containing zero or more (up to 100) image files. Most of the images were named &lt;abitrary name 1&gt;.jpg or &lt;arbitrary name 2&gt;.JPG.

@@ -8,10 +8,8 @@ fig-caption: Pattiesmuir in the frost
 fig-attrib: Nick Hood
 published: true
 tags:
-- VPS
 - Jekyll
-- GitHub
-- deployment
+- Linux
 # permalink:
 ---
 I've been building a site using Jekyll and hosting the code on GitHub. The site is available on GitHub pages from the ```docs``` folder in the ```master```branch, but I wanted to deploy it to a server running Centos and Apache.

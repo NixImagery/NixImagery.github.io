@@ -9,9 +9,6 @@ fig-attrib: Nick Hood
 published: true
 tags:
 - Chrome
-- http
-- Jekyll
-- development
 # permalink:
 ---
 Whilst developing Jekyll sites locally, the Chrome browser will sometimes try to fetch the page over ```https```, rather than ```http```. This is problematic, because the browser just renders a protocol error:

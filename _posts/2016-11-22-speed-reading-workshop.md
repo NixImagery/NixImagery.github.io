@@ -8,9 +8,7 @@ fig-caption: My notes
 fig-attrib: Nick Hood
 published: true
 tags:
-- academic
-- PhD
-- Reading
+- Education
 permalink: "/blog/2016/11/22/speed-reading-workshop/"
 ---
 Notes from a speed reading workshop at Moray House today: <a href="http://cullaloe.net/w/index.php?title=Speed_Reading_Workshop">http://cullaloe.net/w/index.php?title=Speed_Reading_Workshop</a>.

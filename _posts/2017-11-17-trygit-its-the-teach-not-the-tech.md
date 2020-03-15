@@ -8,8 +8,6 @@ fig-caption: Go ahead, dive in.
 # fig-attrib: 
 published: true
 tags:
-- Code school
-- Git
 - Linux
 # permalink: "/blog/2017/11/17/trygit-its-the-teach-not-the-tech/"
 ---

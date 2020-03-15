@@ -8,9 +8,7 @@ fig-caption: Edinburgh at dawn
 # fig-attrib: 
 published: true
 tags:
-- open badges
-- closed
-- Mozilla
+- Moodle
 # permalink: "/blog/2017/11/24/open-badges-closed/"
 ---
 Well, that was another massive waste of time. For all the hype and hope of having truly transportable awards for training and achievement, backed by Mozilla, no less, the current state of play is pretty disappointing.

@@ -8,8 +8,7 @@ img: shore.jpg
 # fig-attrib: 
 published: true
 tags:
-- GitHub
-- blog
+- Media
 # permalink:
 ---
 I am bringing together my posts on coding, technical matters and things related to my online services like the VPS that hosts the various websites I operate. These had previously sat within my own [personal blog](https://cullaloe.com) along with commentary on education, reviews, rants, and photographs of cats ([I kid you not](https://500px.com/photo/272137057/take-me-home-by-nick-hood)).

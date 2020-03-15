@@ -8,10 +8,7 @@ fig-caption: The Forth Road Bridge
 fig-attrib: Nick Hood
 published: true
 tags:
-- VPS
-- bash
-- rsync
-- backup
+- Linux
 # permalink:
 ---
 I regularly back up the files on my VPS[^1]. I do this using a script run from the terminal on any convenient machine, usually a MacBook laptop. This is the script:

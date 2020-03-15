@@ -8,9 +8,7 @@ fig-caption: Cramond
 # fig-attrib: 
 published: true
 tags:
-- OwnCloud
-- CentOS
-- VPS
+- Linux
 # permalink: "/blog/2017/10/29/owncloud-installation-on-centos-7/"
 ---
 For some time, I've wanted to have a calendaring tool independent of Google Calendar, which has become a central tool to my productivity and a source of concern as to how much data profiling results from it.

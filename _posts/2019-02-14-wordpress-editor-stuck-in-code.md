@@ -7,7 +7,7 @@ published: true
 img: analogies.png
 # fig-caption: Analogies
 # fig-attrib: xkcd
-tags: [WordPress, SQL]
+tags: [WordPress]
 # permalink: 
 ---
 The new Wordpress editor, Gutenberg, has had a mixed reception. For users that are only occasional editors on a site, it can be a pain to get to grips with, especially as the implementation is still quite buggy.

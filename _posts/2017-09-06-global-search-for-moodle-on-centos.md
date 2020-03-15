@@ -8,10 +8,8 @@ img: Screen-Shot-2017-09-06-at-16.11.59.png
 # fig-attrib: 
 published: true
 tags:
-- CentOS
-- Solr
+- Linux
 - Moodle
-- PHP
 # permalink: "/blog/2017/09/06/global-search-for-moodle-on-centos/"
 ---
 My students are using a Moodle VLE to access resources and teaching materials and it became evident that some kind of global search function would help them find things quickly, especially later in the programme when they come to write their assignments.

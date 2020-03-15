@@ -8,14 +8,7 @@ fig-caption: Alfie, PhD assistant
 # fig-attrib: 
 published: true
 tags:
-- education
-- Research
-- Science
-- AI
-- GitHub
-- markdown
-- YAML
-- PhD
+- Markdown
 # permalink:
 ---
 I've been setting up document repositories and workflows for a potential new research project which will consider teaching approaches for the understanding of complex ideas. In the project, there will be criticism of social constructivism as a default pedagogy and examination of intelligent automation of teaching.

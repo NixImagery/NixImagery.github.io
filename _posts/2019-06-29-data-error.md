@@ -8,9 +8,7 @@ img: IMG_8123-crop.png
 # fig-attrib: 
 published: true
 tags:
-- Google
-- Twitter
-- Data
+- Analytics
 # permalink:
 ---
 My normally quiescent twitter feed lit up a little this week in a case of mistaken identity, when [Google Analytics](https://twitter.com/googleanalytics) posted about Scroll Depth Heat Maps in Google's Data studio. Google tagged me instead of the [Data Analyst, Nick Hood](https://datarunsdeep.com.au/who-we-are#nick-hood) who wrote the blog post they were reporting on.

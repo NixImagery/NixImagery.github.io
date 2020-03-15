@@ -8,9 +8,7 @@ fig-caption: The Moray House Sundial
 fig-attrib: Nick Hood
 published: true
 tags:
-- sundial
-- motto
-- Moray House
+- Education
 permalink: "/blog/2016/12/08/the-moray-house-sundial/"
 ---
 Yesterday, after a year in careful storage, the Sundial Memorial returned to a place of honour and inspiration in the newly re-designed quad in front of Old Moray House.
