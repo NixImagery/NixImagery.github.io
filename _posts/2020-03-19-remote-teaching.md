@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Getting started with remote teaching
-description: Online CPD
 date:   2020-03-19 15:00
 
 img: remote.jpg

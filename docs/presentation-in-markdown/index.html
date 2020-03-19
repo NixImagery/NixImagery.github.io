@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<title>Presentations in Markdown - @cullaloe | Tech, tales and imagery</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="@cullaloe | Tech, tales and imagery" property="og:site_name">
+  
+    <meta content="Presentations in Markdown" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="@cullaloe" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/presentation-in-markdown/" property="og:url">
+  
+  
+    <meta content="2019-09-22T13:38:00+01:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/rumbling-bridge.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Markdown" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cullaloe">
+    <meta name="twitter:creator" content="@cullaloe">
+  
+    <meta name="twitter:title" content="Presentations in Markdown">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/presentation-in-markdown/">
+  
+  
+    <meta name="twitter:description" content="@cullaloe">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/rumbling-bridge.jpg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/search.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/nick-hood.jpg" alt="Nick Hood"></a>
+      </div>
+      <div class="author-name"><a href="/about" target="_self" class="plain">Nick Hood</a></div>
+      <p><a href="/tags" target="_self" class="plain">Tech, tales and imagery</a></p>
+      <div class="search" id="js-search">
+        <input type="text" placeholder="type to search..." class="search__input" id="js-search__input">
+      </div>
+    </div>
+    <ul class="search__results" id="js-search__results"></ul>
+</header> <!-- End Header -->
+ 
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/cullaloe" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/cullaloe" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/cullaloe" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/cullaloe" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:nick@cullaloe.net"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2020 &copy; Nick Hood</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/rumbling-bridge.jpg alt="Presentations in Markdown">
+        
+          <figcaption>Rumbling Bridge flowers
+            
+              <br/><div class="attrib">Nick Hood</div>
+            
+          </figcaption>
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Presentations in Markdown</h1>
+        <div class="page-date"><span>2019, Sep 22&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>I have needed a way to make a quick presentation that does not require the use of huge complex programs like PowerPoint or KeyNote. One way I have been using recently is to write the outline in markdown (as I would when sketching out a lesson plan) and then using the amazing pandoc to magic up a pdf. Here are the key elements of your markdown file and how to produce one for yourself.</p>
+
+<h2 id="yaml-header">YAML Header</h2>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---</span>
+<span class="ss">title: </span><span class="no">Example</span>
+<span class="ss">author: </span><span class="no">Nick</span> <span class="no">Hood</span>
+<span class="ss">date: </span><span class="s2">"22nd September 2019"</span>
+<span class="ss">classoption: </span><span class="s2">"aspectratio=169"</span>
+<span class="o">---</span>
+</code></pre></div></div>
+
+<h2 id="the-presentation">The presentation</h2>
+<p>The slide heading level is determined by the first heading that is followed by content. Any headings above that will be treated as section header slides.</p>
+
+<p>Any references can be automatically expanded into a list at the end of the final slide.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Bullets and links
+
+* First [Link](https://cullaloe.net)!
+* No link
+* Bullet
+
+# Q &amp; A
+
+## References
+</code></pre></div></div>
+
+<h2 id="how-to-make-the-presentation">How to make the presentation</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pandoc <span class="nt">-t</span> beamer Example.md <span class="nt">-o</span> Example.pdf <span class="se">\</span>
+    <span class="nt">--bibliography</span><span class="o">=</span><span class="s2">"/path/to/bibliography.bib"</span>
+</code></pre></div></div>
+<ul>
+  <li>add <code class="highlighter-rouge">-V theme:Pittsburgh</code> for non-default themes</li>
+  <li>add <code class="highlighter-rouge">-V colortheme:beaver</code> for non-default colours</li>
+  <li>add <code class="highlighter-rouge">-V fonttheme:structuresmallcapsserif</code> for non-default fonts</li>
+  <li>Themes, etc. are <a href="http://www.deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html">online</a></li>
+</ul>
+
+<p>Have fun.</p>
+
+<h2 id="but-i-need-a-powerpoint">But I need a PowerPoint</h2>
+<p>If you really have to, change the output format from pdf to pptx and remove <code class="highlighter-rouge">-t beamer</code> from the command. The output is a bit funky, but will give you a starting point for editing and formatting in PowerPoint if that’s what you need.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Presentations in Markdown&url=http://localhost:4000/presentation-in-markdown/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/presentation-in-markdown/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Markdown" class="tag">&#35; Markdown</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//cullaloe-gh.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-29333042-8', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+	<!-- Scripts -->
+  <!-- Search Js -->
+<script src="/assets/js/search.js"></script>
+  
+</body>
+</html>
