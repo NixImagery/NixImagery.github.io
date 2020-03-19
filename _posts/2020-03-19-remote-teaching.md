@@ -46,6 +46,6 @@ Support is a good idea, too, including having someone to manage the back channel
 Some useful tips and queries came out of the Q & A after Michael's presentation, including my own, which was if the bandwidth is rubbish, I have used collaborate with a phone call for 1-1 tutorials with students - the whiteboard and app sharing are really useful.
 
 ## Evaluation and next steps
-This was a really useful session to help me think about the delivery of teaching and support of my students in coming weeks of isolation. I'll be carrying these ideas and tips into my plannign for next week (once I get this marking done).
+This was a really useful session to help me think about the delivery of teaching and support of my students in coming weeks of isolation. I'll be carrying these ideas and tips into my planning for next week (once I get this marking done).
 
 
