@@ -5,8 +5,8 @@
     <description>@cullaloe</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Mar 2020 23:06:11 +0000</pubDate>
-    <lastBuildDate>Thu, 19 Mar 2020 23:06:11 +0000</lastBuildDate>
+    <pubDate>Fri, 20 Mar 2020 12:09:11 +0000</pubDate>
+    <lastBuildDate>Fri, 20 Mar 2020 12:09:11 +0000</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -121,6 +121,28 @@
         <guid isPermaLink="true">http://localhost:4000/lrps/</guid>
         
         <category>Imagery</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Capture One Webinar</title>
+        <description>&lt;p&gt;Capture One is the preferred choice of many photographers, me included. One reason for this is that Phase One, the company behind the program, understand excellence in design, production and performance and that these depend on effective learning by the users of their products. To this end, they operate a &lt;a href=&quot;https://learn.captureone.com/&quot;&gt;learning hub&lt;/a&gt;. With the recent release of a new version, &lt;a href=&quot;https://www.captureone.com/&quot;&gt;Capture One Pro 20&lt;/a&gt;, new webinars and tutorials allow users to get the most from the new developments.&lt;/p&gt;
+
+&lt;p&gt;I accessed two of these, the first a recording of a webinar &lt;a href=&quot;https://learn.captureone.com/webinars/top-5-things-to-know-about-capture-one-20/&quot;&gt;Top 5 things to know about Capture One Pro 20&lt;/a&gt;, and the second, through live participation in a webinar &lt;a href=&quot;https://learn.captureone.com/webinars/new-to-capture-one-hit-the-ground-running/&quot;&gt;Hit the Ground Running&lt;/a&gt;, designed for new users to the software. Although I have been using Capture One for a year or so now, this seminar was useful to get me familiar with the new features and a more professional workflow. I went on to access some of the short tutorials in the &lt;a href=&quot;https://learn.captureone.com/&quot;&gt;Learning Hub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+&lt;p&gt;Capture One Pro is a powerful digital photography management and editing software program made by the Danish manufacturers of &lt;a href=&quot;https://www.phaseone.com/&quot;&gt;Phase One&lt;/a&gt; cameras.&lt;/p&gt;
+
+&lt;p&gt;“Poppies” image © 2019. A quick re-edit using the new program.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 Dec 2019 16:00:00 +0000</pubDate>
+        <link>http://localhost:4000/capture-one-webinar/</link>
+        <guid isPermaLink="true">http://localhost:4000/capture-one-webinar/</guid>
+        
+        <category>CPD</category>
+        
+        <category>Photography</category>
         
         
       </item>
@@ -311,6 +333,48 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
       </item>
     
       <item>
+        <title>IDL Planning Meeting</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.geos.ed.ac.uk/homes/cgraham/&quot;&gt;Professor Colin Graham&lt;/a&gt; has been driving recent initiatives in the development of interdisciplinary learning (IDL). He organised a gathering of interested people at the &lt;a href=&quot;https://www.rse.org.uk/&quot;&gt;RSE&lt;/a&gt; to consider the establishment of an IDL Forum whereby practitioners could share ideas and have a conversation about how to implement IDL in schools.&lt;/p&gt;
+
+&lt;p&gt;I was privileged to have been invited in part because of my involvement in initial teacher education at Edinburgh, but also because I have experience in setting up and operating professional community spaces in education&lt;sup id=&quot;fnref:sptr&quot;&gt;&lt;a href=&quot;#fn:sptr&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;After introductions, Colin outlined the scope of support being made available by the RSE in bringing people together to progress the IDL forum. The elements needed were articulated as a platform, and people to moderate it. Scott Bryce&lt;sup id=&quot;fnref:SB&quot;&gt;&lt;a href=&quot;#fn:SB&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; shared his perspective of the establishment of science teacher networks in Scotland, stressing the need for a few moderators to volunteer from the community.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ed.ac.uk/profile/stuart-nicol&quot;&gt;Stuart Nicol&lt;/a&gt; talked about &lt;a href=&quot;https://open.ed.ac.uk/&quot;&gt;Open Education Resources (OER)&lt;/a&gt; and &lt;a href=&quot;&quot;&gt;TES Connect&lt;/a&gt; for resource storage, and the requirement to use open licences like &lt;a href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;Creative Commons CC BY 4.0&lt;/a&gt; in these spaces. As well as advising on matters like turnover of people in running facilities such as are proposed, Stuart identified the three elements of what is being aimed for: a &lt;strong&gt;front end&lt;/strong&gt; or web interface for users; &lt;strong&gt;resources&lt;/strong&gt; storage and curation; and a &lt;strong&gt;forum&lt;/strong&gt; space for dialogue and support for the community. These three need not be connected to each other except through hyperlinks.&lt;/p&gt;
+
+&lt;p&gt;The rest of the meeting discussed questions around IDL and what it is; examples of good practice&lt;sup id=&quot;fnref:ddb&quot;&gt;&lt;a href=&quot;#fn:ddb&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;; and some of the expectations that might be met in bringing together practitioners in IDL to support each other, share ideas and promote wider implementation of interdisciplinary teaching and learning in our schools. I have agreed to continue to be involved with this project and advise where I can. First actions seem to be establishment of the forum and getting a discussion going.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-idl-forum&quot;&gt;The IDL Forum&lt;/h2&gt;
+&lt;p&gt;I set up the IDL forum after meeting with Stuart and Colin in December. We settled on the University of Edinburgh’s Mailing List Service which operates using a hybrid suite based on &lt;a href=&quot;https://www.sympa.com/&quot;&gt;Sympa&lt;/a&gt;. The &lt;a href=&quot;https://mlist.is.ed.ac.uk/lists/arc/idled&quot;&gt;List archive&lt;/a&gt; is public. At the end of 2019, we are setting up a pilot group to poke at the forum and seed a discussion or two, with perhaps a more open launch early in 2020.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:sptr&quot;&gt;
+      &lt;p&gt;e.g., &lt;a href=&quot;https://networkedprofessionals.wordpress.com/2013/04/01/sputnik-to-pixies-an-example-of-an-online-professional-community/&quot;&gt;SPTR&lt;/a&gt; for physics teachers. &lt;a href=&quot;#fnref:sptr&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:SB&quot;&gt;
+      &lt;p&gt;SYNAPSE and STRONTIUM are the networks for Biology and Chemistry teachers in Scotland, established by Scott. He acknowledged, once prompted, that these came on the back of and with support from sptr, SPUTNIK and the physics community, which had established communities since 2004. SYNAPSE and STRONTIUM make use of &lt;a href=&quot;https://groups.google.com/&quot;&gt;Google Groups&lt;/a&gt; for forums and &lt;a href=&quot;https://drive.google.com/&quot;&gt;GDrive&lt;/a&gt; for resources storage, with the attendant problems of Local Authority filtering and data security. &lt;a href=&quot;#fnref:SB&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ddb&quot;&gt;
+      &lt;p&gt;e.g. &lt;a href=&quot;https://daydreambelievers.co.uk/&quot;&gt;Daydream Believers&lt;/a&gt; &lt;a href=&quot;#fnref:ddb&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 05 Nov 2019 16:00:00 +0000</pubDate>
+        <link>http://localhost:4000/IDL-planning/</link>
+        <guid isPermaLink="true">http://localhost:4000/IDL-planning/</guid>
+        
+        <category>Education</category>
+        
+        <category>CPD</category>
+        
+        
+      </item>
+    
+      <item>
         <title>OSX Finder stuck in loop</title>
         <description>&lt;p&gt;I keep quite a lot of folders on my desktop - keeping the current work in view, and offloading completed projects rather than have them hanging about my laptop.&lt;/p&gt;
 
@@ -352,86 +416,6 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
         <guid isPermaLink="true">http://localhost:4000/chrome-force-localhost-http/</guid>
         
         <category>Chrome</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Invalid active developer path after upgrade to Catalana</title>
-        <description>&lt;p&gt;After allowing my MacBook Air to upgrade itself to OSX 10.15 Catalana, git commands throw an error:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
-xcrun: error: invalid active developer path &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/Library/Developer/CommandLineTools&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This is because OSX updates remove the developer tools. You need to re-install them (and agree the license again).&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;xcode-select &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt;
-xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;requested &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;command &lt;/span&gt;line developer tools
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I am grateful to the contributors on &lt;a href=&quot;https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a&quot;&gt;Stack Exchange&lt;/a&gt; for the solution to this problem.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 10 Oct 2019 14:11:00 +0100</pubDate>
-        <link>http://localhost:4000/invalid-active-developer-path/</link>
-        <guid isPermaLink="true">http://localhost:4000/invalid-active-developer-path/</guid>
-        
-        <category>OSX</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Presentations in Markdown</title>
-        <description>&lt;p&gt;I have needed a way to make a quick presentation that does not require the use of huge complex programs like PowerPoint or KeyNote. One way I have been using recently is to write the outline in markdown (as I would when sketching out a lesson plan) and then using the amazing pandoc to magic up a pdf. Here are the key elements of your markdown file and how to produce one for yourself.&lt;/p&gt;
-
-&lt;h2 id=&quot;yaml-header&quot;&gt;YAML Header&lt;/h2&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;ss&quot;&gt;title: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Example&lt;/span&gt;
-&lt;span class=&quot;ss&quot;&gt;author: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Nick&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Hood&lt;/span&gt;
-&lt;span class=&quot;ss&quot;&gt;date: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;22nd September 2019&quot;&lt;/span&gt;
-&lt;span class=&quot;ss&quot;&gt;classoption: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;aspectratio=169&quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;the-presentation&quot;&gt;The presentation&lt;/h2&gt;
-&lt;p&gt;The slide heading level is determined by the first heading that is followed by content. Any headings above that will be treated as section header slides.&lt;/p&gt;
-
-&lt;p&gt;Any references can be automatically expanded into a list at the end of the final slide.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;## Bullets and links
-
-* First [Link](https://cullaloe.net)!
-* No link
-* Bullet
-
-# Q &amp;amp; A
-
-## References
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;how-to-make-the-presentation&quot;&gt;How to make the presentation&lt;/h2&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pandoc &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; beamer Example.md &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; Example.pdf &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;--bibliography&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/path/to/bibliography.bib&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;add &lt;code class=&quot;highlighter-rouge&quot;&gt;-V theme:Pittsburgh&lt;/code&gt; for non-default themes&lt;/li&gt;
-  &lt;li&gt;add &lt;code class=&quot;highlighter-rouge&quot;&gt;-V colortheme:beaver&lt;/code&gt; for non-default colours&lt;/li&gt;
-  &lt;li&gt;add &lt;code class=&quot;highlighter-rouge&quot;&gt;-V fonttheme:structuresmallcapsserif&lt;/code&gt; for non-default fonts&lt;/li&gt;
-  &lt;li&gt;Themes, etc. are &lt;a href=&quot;http://www.deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html&quot;&gt;online&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Have fun.&lt;/p&gt;
-
-&lt;h2 id=&quot;but-i-need-a-powerpoint&quot;&gt;But I need a PowerPoint&lt;/h2&gt;
-&lt;p&gt;If you really have to, change the output format from pdf to pptx and remove &lt;code class=&quot;highlighter-rouge&quot;&gt;-t beamer&lt;/code&gt; from the command. The output is a bit funky, but will give you a starting point for editing and formatting in PowerPoint if that’s what you need.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 22 Sep 2019 13:38:00 +0100</pubDate>
-        <link>http://localhost:4000/presentation-in-markdown/</link>
-        <guid isPermaLink="true">http://localhost:4000/presentation-in-markdown/</guid>
-        
-        <category>Markdown</category>
         
         
       </item>
