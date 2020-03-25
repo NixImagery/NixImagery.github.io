@@ -13,7 +13,7 @@ tags:
 - Linux
 # permalink:
 ---
-I wanted to update my Moodle 3.8 installation for the latest secuirty patches but discovered that the repository on my VPS was corrupted. I rather suspect that I had done this myself during a recent ```rsync``` backup, when I had lost patience with a large file and deleted it. I know, stupid is as stupid does. Anyway, Stack Overflow and [Zoey Hewll](https://stackoverflow.com/users/6112457/zoey-hewll) to the rescue. Zoey had posted a really smart way to re-set your .git to match the remote:
+I wanted to update my Moodle 3.8 installation for the latest security patches but discovered that the repository on my VPS was corrupted. I rather suspect that I had done this myself during a recent ```rsync``` backup, when I had lost patience with a large file and deleted it. I know, stupid is as stupid does. Anyway, Stack Overflow and [Zoey Hewll](https://stackoverflow.com/users/6112457/zoey-hewll) to the rescue. Zoey had posted a really smart way to re-set your .git to match the remote:
 
 ```sh
 $ mv -v .git .git_old &&            # remove old git
