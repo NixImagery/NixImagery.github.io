@@ -34,6 +34,6 @@ $ git reset --hard origin/MOODLE_38_STABLE
 $ git pull
 ```
 
-The last command confirmed there was nothing to do, so the code was recovered and up to date. I cold then run the update within the Moodle admin interface OK. 
+The last command confirmed there was nothing to do, so the code was recovered and up to date. I could then run the update within the Moodle admin interface OK. 
 
 Thank you, Zoey.
