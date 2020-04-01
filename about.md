@@ -17,6 +17,8 @@ Before spending time in education, I held technical and commercial roles in mili
 
 My professional designations include [Chartered Physicist (CPhys)](https://membership.iop.org/chartered-physicist-cphys), [Chartered Scientist (CSci)](https://sciencecouncil.org/scientists-science-technicians/which-professional-award-is-right-for-me/csci/), member of the Institute of Physics (MInstP) and member of the Royal Aeronautical Society (MRAeS). I am a [Fellow of the Royal Society of Arts](https://www.thersa.org/fellowship) and a member of [ScotlandIS](https://www.scotlandis.com/).
 
+I am also a keen amateur photographer. You can see my photographs on a number of channels, including my own [niximagery](https://niximagery.com) website.
+
 You can find my current cv [here](http://cullaloe.com/cv.pdf) (pdf, 100kB).
 
 
