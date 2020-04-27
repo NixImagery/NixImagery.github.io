@@ -11,7 +11,7 @@ tags:
 - Postnominals
 # permalink:
 ---
-For the past two years, I have used the post-nominal letters FRSA, having been invited to apply for a fast-track induction by the chair. I looked around my networks and saw that a number of people who I respect and admire were fellows of the RSA and so felt flattered that I should have been considered to be worthy of the honour. That should have been the first warning. Flattery is a powerful marketing tool.
+For the past two years, I have used the post-nominal letters FRSA, having been invited to apply for a fast-track induction. I looked around my networks and saw that a number of people who I respect and admire were fellows of the RSA and so felt flattered that I should have been considered to be worthy of the honour. That should have been the first warning. Flattery is a powerful marketing tool.
 
 > At the RSA (Royal Society for the encouragement of Arts, Manufactures and Commerce) we believe in a world where everyone is able to participate in creating a better future, by uniting people and ideas to resolve the challenges of our time.
 
