@@ -40,7 +40,7 @@ You cannot have any influence of significance on the learning environment of you
 
 ## Step away from the stage
 
-The lecture is a very special way to teaching that needs a lot of things to work well. Very few teachers have ever done it well, so don't try to do it in the virtual space. As teacher, you are likely to be the space owner, the moderator, the host. It would be an abuse of that privilege to hog all the time and screen space for yourself. Some of the best sessions I have recently seen online have taken a more conversational style, with at least two people talking on the topic, and those people were not the host. 
+The lecture is a very special way of teaching that needs a lot of things to work well. Very few teachers have ever done it well, so don't try to do it in the virtual space. As teacher, you are likely to be the space owner, the moderator, the host. It would be an abuse of that privilege to hog all the time and screen space for yourself. Some of the best sessions I have recently seen online have taken a more conversational style, with at least two people talking on the topic, and those people were not the host. 
 
 If you find yourself having to run a session with a group of students, try to map your natural habits onto the virtual space: how often in your classroom do you set a question and then give the students 5 minutes to talk together on how to answer it? Do this as often in the virtual spaces too - most have a breakout feature that allow you to put the class into quickly assembled small groups. Give them space and they might be less reticent than you find them in the more "crowded" space.
 
