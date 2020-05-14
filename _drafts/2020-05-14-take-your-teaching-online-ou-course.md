@@ -34,7 +34,17 @@ The course has an online animated character, Rita, a cutesy co-delegate who is f
 
 ## Week 1: Teaching online is different
 
+### (A)synchrony
+The first concept considered is the contrast between synchronous and asynchronous teaching. Synchronous sessions seem to be good for drop-ins, seminars, or scheduled interactive opportunities for students to resolve issues. Teaching more formally online requires the development of new skills. Asynchronous teaching gives control and responsibility to the students to access materials and communicate together without the teacher's specific instruction. Variation of media is important in this mode, but the benefits to the learner in greater flexibility, for example, are significant. In both modes, collaboration is a powerful pedagogy and needs to be facilitated, required and supported.
 
+#### Activity 1 Thinking about synchronous and asynchronous online teaching
+... come up with three short examples that fit the following situations. These could be based on your own experiences of teaching or learning, or a situation that you can imagine:
+
+1. A situation where synchronous learning is appropriate and beneficial in supporting learning.
+> The introduction of a new topic or course segment requiring the explanation or demonstration of an overview or concept.
+
+2. A situation where asynchronous learning is appropriate and beneficial in supporting learning.
+3. A situation that combines synchronous and asynchronous learning to support learning.
 
 
 [rita]: /assets/img/OU-Rita.png
