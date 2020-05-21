@@ -15,16 +15,16 @@ tags:
 ---
 [Take your teaching online](https://www.open.edu/openlearn/education-development/education/take-your-teaching-online/content-section-overview?active-tab=description-tab) is a free, self-paced, online Open University course that runs for a nominal 8 weeks, 3 hours per week, and is designed to help teachers move from face-to-face teaching to more blended, flipped or online methods. I will be publishing a series of posts containing my own notes, reflections and links from the course.
 
-Week|Topic|Comment
-----|-----|-------
-1|Teaching online is different
-2|
-3|
-4||Badge quiz
-5|
-6|
-7|
-8||Badge quiz
+Week|Topic
+:--:|-----
+**1**|**Teaching online is different**
+2|Discovering the connections: principles and theories for understanding digital tools
+3|Selecting technologies: what to look for and how to choose
+4|The benefits of support networks and how to develop them
+5|Finding, using, and sharing educational materials online
+6|Supporting learners with different needs – accessibility in online teaching
+7|Making a change in your teaching
+8|Evaluating changes and enhancing practice
 
 ## Week 1: Teaching online is different
 
@@ -52,7 +52,7 @@ Interaction is something to think about. I had been thinking that the synchronou
 
 > "... it is not the media but the pedagogy that determines the interaction." (Murphy, et. al, 2011, 589).
 
-This may be true to some extent but the media is a barrier to interaction. With online media platforms, synchronous interaction of the kind you're used to in the classroom comes when the numbers are small group-sized.
+This may be true to some extent but the media are both the means of, and the barrier to, interaction. With online media platforms, synchronous interaction of the kind you're used to in the classroom can come when the numbers are small group-sized.
 
 ### Feedback
 Giving students feedback on their work is no less important in the online setting, even if it can be harder to do in the natural way teachers are used to. This is why on online teaching, greater use is often made of peer feedback, related to collaboration. The cited paper, Gikandi and Morrow (2016)[^Gikandi2016] is particularly pertinent as it relates to teacher education. It provides a really nice discussion on how to provide really effective peer feedback opportunities in the online space. Their findings are no less applicable in the real-world teaching spaces, too.
