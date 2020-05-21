@@ -26,7 +26,9 @@ Week|Topic
 7|Making a change in your teaching
 8|Evaluating changes and enhancing practice
 
-## Week 1: Teaching online is different
+# Week 1: Teaching online is different
+
+## 1 Synchronous and asynchronous modes of teaching
 
 The TL;DR is that teachers moving online should use a blend of synchronous and asynchronous teaching, and focus on the pedagogy at least as much as the technology.
 
@@ -45,7 +47,7 @@ The first concept considered is the contrast between synchronous and asynchronou
 3. A situation that combines synchronous and asynchronous learning to support learning.
 > Students working independently or in groups on a project task, with regular check-in points to report on progress or discuss challenges or questions. These points can be optional for students, such that they become part of their support environment.
 
-#### Interaction and student voice
+### Interaction and student voice
 In the discussion, gathering the student preferences is suggested. I am finding that listening to the student voice and responding to their needs and preferences is crucial when teaching remotely. Keeping opportunities always open for them during synchronous sessions to seek a break, a break-out, or to raise questions or diversions is important in sustaining engagement and making your teaching effective. Similarly, the input of the students is significant in engaging students in asynchronous contexts - this might be making sure that they can access resources and back-channels (such as a forum) whenever they need to. 
 
 Interaction is something to think about. I had been thinking that the synchronous sessions were important because of the facility for interaction, and then been disappointed in the interactivity of the students, who seemed to prefer to just listen: even when I polled them, they said they were happy with it. However, they seem to "light up" when I introduce break-out groups in which they can, perhaps in groups of 3 or 4, all switch the camera and microphones on and interact more freely in the same way they would in the teaching lab. I think this has been because I have taken more of a direct teaching approach with some of the sessions I have been running. The Murphy paper suggests a reason why:
@@ -57,7 +59,7 @@ This may be true to some extent but the media are both the means of, and the bar
 ### Feedback
 Giving students feedback on their work is no less important in the online setting, even if it can be harder to do in the natural way teachers are used to. This is why on online teaching, greater use is often made of peer feedback, related to collaboration. The cited paper, Gikandi and Morrow (2016)[^Gikandi2016] is particularly pertinent as it relates to teacher education. It provides a really nice discussion on how to provide really effective peer feedback opportunities in the online space. Their findings are no less applicable in the real-world teaching spaces, too.
 
-### Rita
+## Rita
 
 ![The OU Rita character][rita]
 
