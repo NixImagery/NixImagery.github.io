@@ -46,6 +46,9 @@ The online environment provides great opportunity for mischief: the chat streams
 
 Online environments offer useful controls, such as "mute all", to the teacher which can help sustain engagement and the flow of a session without too many distractions. I have found that it is hard to identify bullying or isolation of individuals by others in the online environment. Making explicit channels for reporting or support should, in my view, be a key element of any online environment. We cannot ignore the potential for this to become a serious problem, normalised by acceptance of low-level abuse in the online classroom. I am surprised not to see more sites bearing direct links to [CEOP](https://www.ceop.police.uk/safety-centre/) in the UK, offering at least some opportunity for victims of abuse and exploitation to protect themselves.
 
+### Developing skills and confidence
+The more confidence and authority the teacher has with the technology, the more they can anticipate challenges faced by the learners (with microphones, video, hands up, etc.) and offer guidance and support to enable a fuller participation. I have found also that learners themselves are quite willing to support each other and the teacher - nobody wants the flow to be interrupted by unnecessary and avoidable distractions like the ringback or echo from someone leaving their microphone on. I have found this to be especially important where one or more participants are unaware of it.
+
 #### Activity 2 Motivating and engaging students online
 
 
