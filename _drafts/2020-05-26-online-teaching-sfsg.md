@@ -13,6 +13,12 @@ tags:
 
 # permalink:
 ---
+## Useful links
+
+From Audrey, [NSCS advice](https://www.ncsc.gov.uk/guidance/video-conferencing-services-using-them-securely) for using video conferencing service securely.
+
+## Feedback from students
+
 Nick Hood
 11:25
 
