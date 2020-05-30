@@ -9,6 +9,7 @@ fig-attrib: Bryan Mathers
 published: yes
 tags:
 - Education
+- Remote teaching
 - CPD
 
 # permalink:

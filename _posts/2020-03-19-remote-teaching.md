@@ -9,6 +9,7 @@ fig-attrib: Nick Hood
 
 tags:
     - Education
+    - Remote teaching
     - CPD
 ---
 I attended an online CPD session today, run by Michael Gallagher for staff moving rapidly and unexpectedly to online teaching during the COVID-19 virus outbreak. Jon Jack operated the back channel chat room.

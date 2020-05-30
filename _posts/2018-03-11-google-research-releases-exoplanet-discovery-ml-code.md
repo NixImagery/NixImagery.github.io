@@ -9,6 +9,8 @@ fig-caption: A distant star
 published: true
 tags:
 - AI
+- Data
+
 # permalink: "/blog/2018/03/11/google-research-releases-exoplanet-discovery-ml-code/"
 ---
 This week, Google Research released the AI code used in the discovery of two new exoplanets. [Their article](https://research.googleblog.com/2018/03/open-sourcing-hunt-for-exoplanets.html) includes an accessible intro to planet hunting and machine learning for those interested in either topic.

@@ -9,6 +9,7 @@ fig-attrib: Nick Hood
 published: true
 tags:
 - Education
+- Remote teaching
 - CPD
 # permalink:
 ---
