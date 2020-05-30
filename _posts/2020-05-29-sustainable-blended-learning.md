@@ -18,7 +18,7 @@ On the last two Fridays, I participated in two more of the IoP's Virtual Physics
 
 ## Practicals
 
-The session was hosted by Jennie Hargreaves and began with a demonstration of the Marvin & Milo "Balloon in a bottle" activity by Allan Reid, who had been cut short in the last meeting by the Zoom time-out[^zoom]. In breakout groups, we discussed ideas for doing practical physics, or at least, develop practical skills as far as possible in a blended or remote learning context. We shared ideas for resources to support this, including Colorao's [PhET](https://phet.colorado.edu/), [Marvin and Milo](https://spark.iop.org/collections/marvin-and-milo), and [IoP Spark](https://spark.iop.org/).
+The session was hosted by Jennie Hargreaves and began with a demonstration of the Marvin & Milo "Balloon in a bottle" activity by Allan Reid, who had been cut short in the last meeting by the Zoom time-out[^zoom]. In breakout groups, we discussed ideas for doing practical physics, or at least, develop practical skills as far as possible in a blended or remote learning context. We shared ideas for resources to support this, including Colorado's [PhET](https://phet.colorado.edu/), [Marvin and Milo](https://spark.iop.org/collections/marvin-and-milo), and [IoP Spark](https://spark.iop.org/).
 
 It was recognised that parents should be involved if possible, and that pupil choice is given, rather like primary colleagues are doing with *learning grids*, in which a dozen activies are available to choose from, according to pupil interest and available resources. Risk assessment was also mentioned, and is clearly something that teachers should (as always) be including in their planning.
 
@@ -67,6 +67,8 @@ Broadly, teachers are finding that they have about a third of their pupils engag
 Child protection is a concern, and yet again[^b4], nowhere in any of these online platforms do you see links to [CEOP](https://www.ceop.police.uk/safety-centre/) or other agencies to support children at risk.
 
 ## Notes
+The Blended Learning session was recorded. You can find it on [YouTube](https://www.youtube.com/watch?v=-yPfM92GVVk).
+
 [^zoom]: 40 minutes, because that is the maximum duration of a Zoom session using a free account. They unceremoniously kick everyone out once the meeting is over, and who can blame them?
 
 [^b4]: [I've mentioned this before](/online-teaching-more).
