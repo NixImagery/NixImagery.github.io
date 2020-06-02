@@ -36,11 +36,11 @@ Bringing the measures together, with a DNS-based reporting mechanism that closes
 
 If you want to send your DMARC reports to an address at a different domain, then that domain needs a DNS record to authorize the the reports:
 
-`reportingdomain.tld._report._dmarc.targetdomain.tld TXT v=DMARC1`
+`reportingdomain.tld._report._dmarc TXT v=DMARC1`
 
 If the target domain for the reports is being used for several domains (as in my case), then you can specify a wildcard entry:
 
-`*._report._dmarc.example.com TXT v=DMARC1`
+`*._report._dmarc TXT v=DMARC1`
 
 Within the Plesk server-wide mail settings panel, you can now check `Enable DMARC to check incoming mail`.
 
