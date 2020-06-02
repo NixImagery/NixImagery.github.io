@@ -151,12 +151,8 @@ df2 <- read_csv("data/RodentSimplified.csv") %>%
 ```
 What looks like a continuation line in the above code block is called a "pipe", written `%>%`. A pipe is much more than just for making the code look pretty: it really does work as a pipe to transfer a value between subsequent function calls. See [this](https://style.tidyverse.org/pipes.html) and [this](https://magrittr.tidyverse.org/) and [this](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) for more details. 
 
-<!--Fucking hell. She is an awful teacher. Not a bloody clue about how to teach well. This is hard work!-->
-
 ### Graph types
 After some warnings on selecting data presentation that is consistent with your intention to actually communicate something, and not to show off, Lucia introduced us to some of the graph types available with R. She gave us a really nice demonstration why many journals prefer data presentation (e.g. ratios) as a bar chart rather than a pie chart. Differences are sometimes clearer in the bar chart. Apparently, Florence Nightingale invented the pie chart!
-
-<!--Links-->
 
 ### The Grammar of graphics
 The `ggplot` function allows the creation of graphs according to the framework outlined by Wilkinson[^Wilkinson] in which the separate aspects of data presentation are dealt with separately. A basic template is described [here](https://homepage.divms.uiowa.edu/~luke/classes/STAT4580/ggplot.html) with examples for `ggplot`. My take on the framework is:
