@@ -22,17 +22,25 @@ The mail server I use is Postfix/Dovecot. Using the Plesk control interface on m
 The first thing to do is to switch on spam protection based on DNS blackhole lists such as [zen.spamhaus.org](https://www.spamhaus.org/), [spam.abuse.ch](https://abuse.ch/) and [spamrbl.imp.ch](https://imp.ch/). Also, when you do get spam in your inbox, report it immediately. This means just copying the message source[^notthat] into a form at somewhere like [SpamCop.net](https://www.spamcop.net/), who will send abuse reports to the ISPs that allow the spammers access to the internet. What we hope is that these providers will shut them down, but some are repeat offenders: all of my recent reports have gone to [CloudFlare](https://www.cloudflare.com/) who seem reluctant to combat internet abuse, perhaps because they are making money out of it.
 
 ## SPF
-[Sender Policy Framework](http://www.faqs.org/rfcs/rfc7208.html) is designed to allow domain admins to authorise the servers that are allowed to use their domain names. Receiving mail servers can check that authorisation by looking up the SPF record of the domain claimed in the "from" field of an email. 
+[Sender Policy Framework](https://www.rfc-editor.org/info/rfc7208) is designed to allow domain admins to authorise the servers that are allowed to use their domain names. Receiving mail servers can check that authorisation by looking up the SPF record of the domain claimed in the "from" field of an email. 
 
 Within the Plesk panel for the mail server, under `SPF spam protection`, check `Enable SPF spam protection to check incoming mail` and select `Only create Received-SPF headers, never block` from the drop-down. Your domains should also have an SPF code in the DNS table. This acts like a return address on a snail-mail envelope. Servers can check the sender's IP against this DNS record to check that it is allowed to send mail on behalf of the domain. This record identifies the version of SPF being used (always 1 at the moment), which records pertain and what policy should be applied to mail that fails to be verified when this record is checked by the receiving mail server. `-a` is a hard fail setting which advises rejection of mail that doesn't match the record parameters. `~a` is a soft fail, and `+a` is like leaving your keys in the front door. Use the hard fail setting.
 
 ## DKIM
-[DomainKeys Identified Mail (DKIM)](http://www.faqs.org/rfcs/rfc6376.html) is a system that allows the mail server to "certify" emails to assert their authenticity. This is achieved through a cryptographic signature and by querying the signer's domain directly to retrieve a key. This requires another couple of entries in the DNS table to contain the keys (see table below for examples).
+[DomainKeys Identified Mail (DKIM)](https://www.rfc-editor.org/info/rfc6376) is a system that allows the mail server to "certify" emails to assert their authenticity. This is achieved through a cryptographic signature and by querying the signer's domain directly to retrieve a key. This requires another couple of entries in the DNS table to contain the keys (see table below for examples).
 
 To enable this on the VPS, in the server-wide mail settings interface in Plesk, check `Verify incoming mail` and `Allow signing outgoing mail` under DKIM spam protection. In the panel for each subscription (domain), in the Mail Settings tab, check `Use DKIM spam protection system to sign outgoing email messages`.
 
 ## DMARC
-Bringing the measures together, with a DNS-based reporting mechanism that closes the loop, is [Domain-based Message Authentication, Reporting, and Conformance (DMARC)](http://www.faqs.org/rfcs/rfc7489.html). This helps protect the domain from unauthorized use. It also requires a DNS TXT entry which identifies policy for handling non-aligned (mail that looks like it might be spam) emails, and a place to send reports about incidents. Setting up needs the policy to be passive, or "reporting only", set by `p-none` in the DNS record. Increasing levels of confidence in the deliverability of email from the server allows organisations to increase this policy to "quarantine", or even "reject". Email reports are sent for authentication failure (forensic) and summary information (aggregate) to the email addresses in the record.
+Bringing the measures together, with a DNS-based reporting mechanism that closes the loop, is [Domain-based Message Authentication, Reporting, and Conformance (DMARC)](https://www.rfc-editor.org/info/rfc7489). This helps protect the domain from unauthorized use. It also requires a DNS TXT entry which identifies policy for handling non-aligned (mail that looks like it might be spam) emails, and a place to send reports about incidents. Setting up needs the policy to be passive, or "reporting only", set by `p-none` in the DNS record. Increasing levels of confidence in the deliverability of email from the server allows organisations to increase this policy to "quarantine", or even "reject". Email reports are sent for authentication failure (forensic) and summary information (aggregate) to the email addresses in the record.
+
+If you want to send your DMARC reports to an address at a different domain, then that domain needs a DNS record to authorize the the reports:
+
+`reportingdomain.tld._report._dmarc.targetdomain.tld TXT v=DMARC1`
+
+If the target domain for the reports is being used for several domains (as in my case), then you can specify a wildcard entry:
+
+`*._report._dmarc.example.com TXT v=DMARC1`
 
 Within the Plesk server-wide mail settings panel, you can now check `Enable DMARC to check incoming mail`.
 
@@ -45,6 +53,8 @@ Host name|Record type|Address
 _domainkey|TXT|o=-
 default._domainkey|TXT|v=DKIM1;k=rsa; p=yourkeygoeshere
 _dmarc|TXT|v=DMARC1; p=none; rua=mailto:aggregate@yourdomain.tld; ruf=mailto:forensics@yourdomain.tld; fo=1
+
+Thanks to [mxtoolbox](https://mxtoolbox.com/) for providing a suite of extremely useful tools and information. Although there is [RFC](https://ietf.org/standards/rfcs/), this would have been much harder to do without your help.
 
 ## Notes
 
