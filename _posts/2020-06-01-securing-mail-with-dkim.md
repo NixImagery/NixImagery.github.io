@@ -54,7 +54,7 @@ _domainkey|TXT|o=-
 default._domainkey|TXT|v=DKIM1;k=rsa; p=yourkeygoeshere
 _dmarc|TXT|v=DMARC1; p=none; rua=mailto:aggregate@yourdomain.tld; ruf=mailto:forensics@yourdomain.tld; fo=1
 
-Thanks to [mxtoolbox](https://mxtoolbox.com/) for providing a suite of extremely useful tools and information. Although there is [RFC](https://ietf.org/standards/rfcs/), this would have been much harder to do without your help.
+Thanks to [mxtoolbox](https://mxtoolbox.com/) for providing a suite of extremely useful tools and information. Although there is [RFC](https://ietf.org/standards/rfcs/), this would have been much harder to do without your help. Most of the DKIM verifiers out there don't actually check the validity of the signature key: [DMARCAnalyzer](https://www.dmarcanalyzer.com/) does, thanks also to them for this service.
 
 ## Notes
 
