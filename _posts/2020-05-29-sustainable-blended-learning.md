@@ -18,7 +18,7 @@ On the last two Fridays, I participated in two more of the IoP's Virtual Physics
 
 ## Practicals
 
-The session was hosted by Jennie Hargreaves and began with a demonstration of the Marvin & Milo "Balloon in a bottle" activity by Allan Reid, who had been cut short in the last meeting by the Zoom time-out[^zoom]. In breakout groups, we discussed ideas for doing practical physics, or at least, develop practical skills as far as possible in a blended or remote learning context. We shared ideas for resources to support this, including Colorado's [PhET](https://phet.colorado.edu/), [Marvin and Milo](https://spark.iop.org/collections/marvin-and-milo), and [IoP Spark](https://spark.iop.org/).
+The session was hosted by Jennie Hargreaves and began with a demonstration of the Marvin & Milo "Balloon in a bottle" activity by Allan Reid, who had been cut short in the last meeting by the Zoom time-out[^zoom]. In breakout groups, we discussed ideas for doing practical physics, or at least, develop practical skills as far as possible in a blended or remote learning context. We shared ideas for resources to support this, including Colorado's [PhET](https://phet.colorado.edu/), [Marvin and Milo](https://spark.iop.org/collections/marvin-and-milo), and [IoP Spark](https://spark.iop.org/) (there's also [ophysics](https://ophysics.com/)).
 
 It was recognised that parents should be involved if possible, and that pupil choice is given, rather like primary colleagues are doing with *learning grids*, in which a dozen activies are available to choose from, according to pupil interest and available resources. Risk assessment was also mentioned, and is clearly something that teachers should (as always) be including in their planning.
 
