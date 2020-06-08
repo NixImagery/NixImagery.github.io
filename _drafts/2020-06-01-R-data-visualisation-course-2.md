@@ -88,8 +88,73 @@ Levels: a b c d e
 * Summarising Statistics
 * Exploring 1 variable: Plotting distribution Histograms and Density plot
 
+### The results of the challenge 
+Last week's challenge was discussed, focusing on the meaning of the plots obtained, and how to add a best fit line using `+geom_smooth()` geometry to the `gg-plot` command. We played a bit with a tool to help us get better at "seeing" the correlation of plotted data: [guessthecorrelation](http://guessthecorrelation.com/).
+
+### Intro to Statistics
+This part of the class was further levelling by going over the basics of statistics and how they may be used to **summarise** or **infer** information. **Central tendency** includes arithmetic mean, median and mode values. **Measures of dispersion** like variance and standard deviation were also discussed. These functions were illustrated in the R IDE, including accessing columns within datasets using the dollar sign like this:
+
+```R
+mean(iris$Petal.Width)	#using mean formula
+```
+Similar functions offer median, variance and sd (standard deviation) calculations.
+
+### Visualise the distribution: Histogram and Density plots
+
+There is a nice [cheat sheet for ggplot data visualisation](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) tips.
+
+Subsets of the data based upon some category can be easily made:
+
+```R
+virginica <- subset(iris, Species=="virginica")
+```
+A table of data around these subsets can be quickly constructed and plotted:
+
+```R
+#Values of Virginica
+mean(virginica$Petal.Width)
+median(virginica$Petal.Width)
+var(virginica$Petal.Width)
+sd (virginica$Petal.Width)
+
+#... etc for the other two
+
+# Make a new table...
+Species <- c("setosa","versicolor", "virginica")
+
+# add columns...
+Mean <- c(mean(setosa$Petal.Width), mean(versicolor$Petal.Width), mean(virginica$Petal.Width))
+Median <- c(median(setosa$Petal.Width), median(versicolor$Petal.Width), median(virginica$Petal.Width))
+Variance <- c(round(var(setosa$Petal.Width), digits = 2), round(var(versicolor$Petal.Width), digits = 2), round(var(virginica$Petal.Width), digits = 2))
+SD <- c(round(sd(setosa$Petal.Width), digits = 2), round(sd(versicolor$Petal.Width), digits = 2),round(sd(virginica$Petal.Width), digits = 2))
+
+# Make the data frame for plotting...
+FullPlot <- as.data.frame(cbind(Species, Mean, Median, Variance, SD))
+```
+Notice you can double-click on the FullPlot table in the environment box (equivalent to the command `View(FullPlot)`), it will display the table in a new tab for inspection.
+
+```R
+# ... and now plot it in a nice histogram
+
+ggplot(iris, aes(x=Petal.Width, fill=Species))+ 
+  geom_histogram(alpha=0.8,color="black", binwidth=0.08)+
+  geom_vline(aes(xintercept = mean(Petal.Width)),col='red',size=2)+
+  theme_bw()+facet_wrap(~Species, ncol = 1) 
+  
+```
+Here's how that looks:
+
+![](/assets/img/iris-histogram.png)
+
+### The next challenge, number 2
+Once again, I got nowhere with the challenge in the 10 minutes we had to do it. I spent most of that time, after loading the dataset, trying to figure out how to make a scatter plot. The answer was looking for a histogram. I don't know how to approach the second part of the challenge, and haven't read the third. There's no chance of getting this right if the problem is not understood. Tomorrow, we will dash through the solution. So far, I think I have got very little from these exercises.
+
 ## Next class
 
+* Discuss Challenge 2
+* Boxplots
+* Playing with colours 
+* Exporting graphs
 
 
 
