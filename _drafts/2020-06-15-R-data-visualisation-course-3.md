@@ -3,7 +3,7 @@ layout: post
 title: "Statistics and Visualisation with R #3"
 date: 2020-06-16 15:08
 # description: 
-img: pirate_ships.jpg
+img: sea-black-and-white-beach-89095.jpg
 fig-caption: Pirate ships
 fig-attrib: Public Domain
 published: yes
