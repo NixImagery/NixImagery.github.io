@@ -8,6 +8,7 @@ img: pirate_ships.jpg
 fig-caption: Pirate ships
 fig-attrib: Public Domain
 published: yes
+katex: yes
 tags:
 - Data
 - R
@@ -92,7 +93,11 @@ Levels: a b c d e
 Last week's challenge was discussed, focusing on the meaning of the plots obtained, and how to add a best fit line using `+geom_smooth()` geometry to the `gg-plot` command. We played a bit with a tool to help us get better at "seeing" the correlation of plotted data: [guessthecorrelation](http://guessthecorrelation.com/).
 
 ### Intro to Statistics
-This part of the class was further levelling by going over the basics of statistics and how they may be used to **summarise** or **infer** information. **Central tendency** includes arithmetic mean, median and mode values. **Measures of dispersion** like variance and standard deviation were also discussed. These functions were illustrated in the R IDE, including accessing columns within datasets using the dollar sign like this:
+This part of the class was further levelling by going over the basics of statistics and how they may be used to **summarise** or **infer** information. **Central tendency** includes arithmetic mean, median and mode values. **Measures of dispersion** like variance and standard deviation were also discussed. 
+
+Standard deviation: \\[ \sigma = \sqrt {\frac{1}{N} \sum\limits ^N _{i=1}(x_i - \mu)^2} \\]
+
+These functions were illustrated in the R IDE, including accessing columns within datasets using the dollar sign like this:
 
 ```R
 mean(iris$Petal.Width)	#using mean formula
