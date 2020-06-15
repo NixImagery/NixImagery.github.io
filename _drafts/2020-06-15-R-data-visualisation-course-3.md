@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Statistics and Visualisation with R #3"
-date: 2020-06-16 15:08
+# date: 2020-06-16 15:08
 # description: 
 img: sea-black-and-white-beach-89095.jpg
 fig-caption: Pirate ships
@@ -39,14 +39,37 @@ Class 10|30 June 13:00-14:30|Recap and Bring your dataset class
 
 ## Class 5 - Data Collection Bias, Probability, and Distribution
 
-* Data Collection 
-* Datasets biases
-* Inferential statistics
-* Probability 
+After a quick review of the challenge from last week, an agenda for today was shared which wasn't really followed[^progression].
 
+### Data Collection and bias
+
+> "Data collection is the process of gathering and measuring information on targeted variables in an established system, which then enables one to answer relevant questions and evaluate outcomes. 
+The goal for all data collection is to capture quality evidence that allows analysis to lead to the formulation of convincing and credible answers to the questions that have been posed." ([Wikipedia](https://en.wikipedia.org/wiki/Data_collection))
+
+The **sample** is taken from the **population**, but a **bias** is introduced when the sample is taken. One example of this is the **[survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias)**.
+
+### Probability 
+A basic definition was given to the class, with an example from an earlier class that helped us. If we make the statement `if **A** is true then **B** is true` can we infer from this that `if **B** is true then **A** is true`? Clearly not, but we might be able to say `if **B** is true then **A** is more plausible`. Plausibility here relates to how probably something can be.
+
+> "Probability is a numerical description of how likely an event is to occur or how likely it is that a proposition is true." - [Wikipedia](https://en.wikipedia.org/wiki/Probability)
+
+### Distribution
+
+In introducing this topic, we were shown the really neat `rnorm()` function that generates random data sets with specified mean and standard deviation.
+
+In the class, we were given a challenge to go through the steps needed with a new data set to examine it. These steps seem to be just to plot it and have a look. All of the curves looked to be distributed around a central mean, which makes them **normal** distributions. There was a problem with the challenge files which meant that some of us didn't have the correct files and so did a different (trivial) task. The key message is to examine your data as soon as you have it, to look for central values and distribution, so as to understand it and how you expect it to behave in analysis.
+
+Other distributions include uniform, logarithmic, left-, right-skewed and bimodal.
 
 ## Next class
 
+* Hypothesis testing
+* Null-Hypothesis
+* Main types of tests
+* Limitations and corrections
 
 ## Notes and references
+[^progression]: I seem to be not the only one amongst the diminishing cohort (we're down to a dozen today, having started closer to 50) that is finding it hard to follow this course. Yes, it's interesting and cool, the different things you can do with R and geometries, but I am missing clarity, signposting, structure and other basic pedagogical features. 
+
+    Taking time after class to review the presentation slides, it was possible to reconstruct perhaps what the instructor was intending, for example, in the two slides on probability and more generally with this class today. I might have got very little from today's session without spending as long again going over the materials. I am perhaps going to seek out other resources.
 
