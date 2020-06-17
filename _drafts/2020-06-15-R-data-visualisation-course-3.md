@@ -61,6 +61,23 @@ In the class, we were given a challenge to go through the steps needed with a ne
 
 Other distributions include uniform, logarithmic, left-, right-skewed and bimodal.
 
+## Playtime discoveries
+Between this week's two classes, I had a quick look at the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/) and discovered a neat thing. Remember the funky assignment operator `<-` from the first class which had its funky keyboard shortcut `alt -`? Most programming languages I've used have a simple equals sign as the assignment operator and I was a bit baffled as to why super-sexy R should do something so weird as `<-`. Well, it turns out that in most contexts, `=` works in exactly the way you'd expect, so these are equivalent:
+
+```R
+> x <- 99> x = 99
+```
+What's interesting about the R syntax, though, it that it can be reversed and it still works:
+
+```R
+> 99 -> x
+```
+I'm sure that the case for this will become apparent eventually. One more way to do assignments is to call the assignment function:
+
+```R
+> assign('x', 99) # notice the weird need for quotes around x in the function call
+```
+
 ## Next class
 
 * Hypothesis testing
