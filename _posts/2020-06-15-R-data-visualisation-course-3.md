@@ -61,6 +61,11 @@ In the class, we were given a challenge to go through the steps needed with a ne
 
 Other distributions include uniform, logarithmic, left-, right-skewed and bimodal.
 
+## Class 6 - Hypothesis testing and the main tests
+Just half a dozen students today. We started with a review of the mini-challenge from last session, which included a consideration of colours: [HTML colour](https://www.hexcolortool.com/) and a [ggplot colour reference](http://sape.inf.usi.ch/quick-reference/ggplot2/colour) were shared.
+
+One emphasis today is that there are multiple ways of doing the same thing in R, with an illustration of data importation and summarisation. Although some of the few remaining students seemed to be following the narrative, I became increasingly frustrated and lost trying to follow the class: the thread was along the lines of hypothesis testing, the null hypothesis and corrections. 
+
 ## Playtime discoveries
 Between this week's two classes, I had a quick look at the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/) and discovered a neat thing. Remember the funky assignment operator `<-` from the first class which had its funky keyboard shortcut `alt -`? Most programming languages I've used have a simple equals sign as the assignment operator and I was a bit baffled as to why super-sexy R should do something so weird as `<-`. Well, it turns out that in most contexts, `=` works in exactly the way you'd expect, so these are equivalent:
 
@@ -78,15 +83,13 @@ I'm sure that the case for this will become apparent eventually. One more way to
 > assign('x', 99) # notice the weird need for quotes around x in the function call
 ```
 
-## Next class
+## Next steps: other ways to learn R
+I got totally overwhelmed with the rate of new concepts in this class, or perhaps the pace and style of delivery. I think, given the time I have to spend after each class going over the material in order to make sense of it, it is clear that this course is not right for me. I have decided to abandon it and follow other materials more appropriate to my purpose, which is to develop skills in data visualisation using R. Despite the title, this course is not doing that for me.
 
-* Hypothesis testing
-* Null-Hypothesis
-* Main types of tests
-* Limitations and corrections
+Having decided[^progression2] to seek out other ways to learn how to R, I found that there are lots of self-directed learning resources out there, of course. An [introduction to R](https://learn.datacamp.com/courses/free-introduction-to-r) course at DataCamp will be the new direction of travel down this rabbit hole for me.
 
 ## Notes and references
-[^progression]: I seem to be not the only one amongst the diminishing cohort (we're down to a dozen today, having started closer to 50) that is finding it hard to follow this course. Yes, it's interesting and cool, the different things you can do with R and geometries, but I am missing clarity, signposting, structure and other basic pedagogical features. 
+[^progression]: I seem to be not the only one amongst the diminishing cohort (we're down to a dozen today (Monday), having started closer to 50) that is finding it hard to follow this course. Yes, it's interesting and cool, the different things you can do with R and geometries, but I am missing clarity, signposting, structure and other basic pedagogical features. 
 
-    Taking time after class to review the presentation slides, it was possible to reconstruct perhaps what the instructor was intending, for example, in the two slides on probability and more generally with this class today. I might have got very little from today's session without spending as long again going over the materials. I am perhaps going to seek out other resources.
+[^progression2]: Taking time after class 5 to review the presentation slides, it was possible to reconstruct perhaps what the instructor was intending, for example, in the two slides on probability and more generally with this class today. I might have got very little from today's session without spending as long again going over the materials. I am perhaps going to [seek out other resources](#other-ways-to-learn-r).
 
