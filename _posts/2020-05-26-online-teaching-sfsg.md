@@ -16,7 +16,7 @@ tags:
 
 I wanted to note here some reflections on how I have been doing in my experience with teaching remotely during the COVID-19 "lockdown", which came as the PGDE Secondary programme I teach on was in its final few weeks. I ignored the suggestion that we should only have a narrow focus for our teaching at this stage, being the preparation for GTCS registration, the final task for most of the students in my cohort of about 16 physics PGDE students.
 
-At the same time as thinking about how it's gone so far, and sharing some of the student feedback, I am also going to pull together some notes from discussions with colleagues about how to prepare for a "digital-first" or hybridised model of teaching when the next cohort arrives in mid-September, several weeks later than usual.
+At the same time as thinking about how it's gone so far, and sharing some of the student feedback, I am also going to reflect briefly on one aspect of how to prepare for a "digital-first" or hybridised model of teaching when the next cohort arrives in mid-September, several weeks later than usual.
 
 ## The values of near future teaching
 The [Near Future Teaching project](https://www.nearfutureteaching.ed.ac.uk/) ran between 2017 and 2019, with the goal to develop a values-based vision for the future of digital education at the University of Edinburgh. In planning for a different delivery, it is worth considering the four values[^thanksval] the project identified:
