@@ -101,4 +101,36 @@ The selection of elements can be conditional using boolean values in another vec
 
 In the last example above, ```fives == 0``` is a vector of boolean values. Used as a selector in the `nums` vector, only the `TRUE` elements are selected.
 
+## Matrices
+A matrix in R is a collection of elements, all of the same data type, arranged in 2 dimensions of rows and columns.
+
+```r
+> # A matrix that contain the numbers 1 up to 9 in 3 rows
+> matrix(1:9, byrow = TRUE, nrow = 3)
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+> 
+```
+The access indicators are shown in the row labels and column headers above. So, element [2,3] of the matrix contains the value 6. The first row of `my_matrix` is the vector `my_matrix[1,]`. Row and column names can be set for matrices, as they can be for vectors. This can be done by calling rownames() and colnames(), or at the time the matrix is set up.
+
+```r
+# Construct star_wars_matrix
+box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
+                           dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
+                                           c("US", "non-US")))
+```
+
+The function `cbind()` binds columns to an existing matrix. `rbind()` does the same thing for adding row vectors to a matrix. `rowSums()` and `colSums()` do what they sound like - making new vectors ready to be bound into the source matrix if required.
+
+Arithmetic operators work element-wise on matrices.
+
+## Factors
+
+## Data Frames
+
+## Lists
+
 ## Notes and references
