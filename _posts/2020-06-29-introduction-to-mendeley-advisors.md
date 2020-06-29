@@ -14,7 +14,7 @@ tags:
 
 # permalink:
 ---
-This webinar was run for the benefit of Mendeley advisors[^portal]. I thought I might run a session on citation and referencing for students and so went to this webinar for a refresher on the advisor programme.
+This webinar was run for the benefit of Mendeley advisors. I thought I might run a session on citation and referencing for students and so went to this webinar for a refresher on the advisor programme.
 
 The webinar was presented by Dr Rob Moore, an AP at Old Dominion University, USA, and Rachel Brennesholtz, Head of Mendeley advisors programme at Elsevier in Amsterdam, who gave an introduction.
 
@@ -24,7 +24,7 @@ Rob cited the principal advantage of Mendeley over Zotero as the ability to anno
 He then discussed his demonstration approach when showing Mendeley to new users, which starts with input of several citations, showing the immediate build of the bibliography files. He then moved to demonstration of annotation of pdfs on an iPad.
 
 ## The advisor community
-Rachel told us about the world-wide community of advisors and users, and shared some statistics on its reach - 22,000 students were introduced to it in about 300 events in 2019. She shared a links to the advisor community and advised us to email community-@-mendeley.com[^ticks] if the advisor badge doesn't show on your profile.
+Rachel told us about the world-wide community of advisors and users, and shared some statistics on its reach - 22,000 students were introduced to it in about 300 events in 2019. She shared a links to the advisor community[^portal] and advised us to email community-@-mendeley.com[^ticks] if the advisor badge doesn't show on your profile.
 
 Benefits of the programme include expanded network storage (7.5 GB) and exclusive product updates and webinars. There's merchandise, too (t-shirts, pens and stickers, etc). You have to register an event to get these, which can be online or in person. The Mendeley event can be part of other events (such as sessions on citation and referencing for example). Allow 4 weeks to get your stuff from Amsterdam.
 
