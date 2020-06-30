@@ -10,11 +10,12 @@ published: true
 tags:
 - Jekyll
 - Linux
+- Git
 # permalink:
 ---
 I've been building a site using Jekyll and hosting the code on GitHub. The site is available on GitHub pages from the ```docs``` folder in the ```master```branch, but I wanted to deploy it to a server running Centos and Apache.
 
-On the VPS, from behind the ```httpdocs``` or web-facing folder, clone the GitHub repository into a new folder (in his example, both the repository and the local folder are called "foobar"):
+On the VPS, from behind the ```httpdocs``` or web-facing folder, clone the GitHub repository into a new folder (in this example, both the repository and the local folder are called "foobar"):
 
 ```sh
 $ git clone https://github.com/githubuser/foobar.git foobar
