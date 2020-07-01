@@ -174,7 +174,7 @@ OK, I get it. It's like Church. Keeping saying the mantras, singing the hymns, r
 
 *When might teachers use this feature?* - I wouldn't normally, unless I had a vision impaired student who preferred it, but can see why some might be tempted to try it.
 
-#### Things just don't work <a name=disnaewerk></a>
+#### Things just don't work <a name="disnaewerk"></a>
 {:.no_toc}
 I discovered more functionality glitches as I followed the "getting the most..." video. I think these are bugs, rather than poor connectivity between the various interfaces - Teams, the OneNote app, the different websites that manage the spaces, etc. **Things just don't work: it's clunky and inconsistent in daily usage, resulting in huge time costs for the teacher.** For example, in OneNote app, I found "Manage Notebooks" which popped up what looks like a browser container, where I added a *teacher only* space without errors. This did not add the teacher only space in the Class Notebook in the app, but it *was* visible in the browser. Browser and app were synching OK, because I could type in one and see the changes with less than a second of latency in the other[^later].
 
