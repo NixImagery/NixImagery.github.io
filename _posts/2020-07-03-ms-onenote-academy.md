@@ -207,7 +207,13 @@ Just as challenging as the last one. Earned myself a "Certified Microsoft Innova
 ## Review of progress and next steps
 What I have learned in the past few hours (a lot more than the two hours these two courses suggest) is that Microsoft tools are most definitely not the way forward for my hybridised teaching in the autumn. Too much time is required in trouble-shooting problems, bugs, inadequately documented differences between platforms, and design flaws. I want a piece of chalk, not a stick of cheese and some certified training in how to use it on a blackboard.
 
-Your mileage may vary, of course: if you are fully embedded within the Redmond way of things, then good luck to you. This particular teacher is going to be innovative in other ways, and not be burdened by having to work this difficult software. Class Notebook is not going to feature in my teaching.
+Your mileage may vary, of course: if you are fully embedded within the Redmond way of things, then good luck to you. This particular teacher is going to be innovative in other ways, and not be burdened by having to work this difficult software. Class Notebook ~~is not going to~~ **may not**[^sarah] feature in my teaching.
+
+[^sarah]: [Sarah Clark](https://twitter.com/Sfm36), a Biology Teacher in Fife, [tweeted a response](https://twitter.com/Sfm36/status/1278439974522757120) to this article when it was cross-posted to [ScotEduBlogs](https://twitter.com/ScotEduBlogs):
+	
+	<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We have found that OneNote has been working very well on our classrooms. We have had some sync issues but these are usually fixed by a quick sign out/sign in. Kids have found it easy to use, agree some features not available on Mac. Would encourage <a href="https://twitter.com/cullaloe?ref_src=twsrc%5Etfw">@cullaloe</a> to have a play</p>&mdash; Sarah Clark (@Sfm36) <a href="https://twitter.com/Sfm36/status/1278439974522757120?ref_src=twsrc%5Etfw">July 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	
+	OK, Sarah. Thank you for your comment and encouragement. I wonder if all of the difficulties I have been having with OneNote have been related to authorisation and that this "quick sign out/sign in" is just one of the habits to develop when using this toolset. It does indicate fragility in the system but perhaps it's one of those ways of working people have to adopt. I'll take another look, perhaps.
 
 I completed the rest of the [OneNote Teacher Academy](https://education.microsoft.com/en-us/learningpath/b6e3b5f2) learning path (without taking notes, digital or otherwise) and earned my badge. 
 
