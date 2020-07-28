@@ -3,9 +3,9 @@ layout: post
 title: Datacamp course - intermediate R
 date: 2020-07-10
 # description: 
-# img: new-years-day.jpg
-# fig-caption: New Year's Day
-# fig-attrib: Nick Hood
+img: _DSF7259.jpg
+fig-caption: Achmelvich Beach
+fig-attrib: Nick Hood
 published: yes
 tags:
 - Data
