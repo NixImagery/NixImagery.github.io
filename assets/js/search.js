@@ -12,8 +12,8 @@
         lastSearchResultHash,
 		posts = [];
 		
-		document.write("jsjsjsj ");
-		document.write(searchEl.id);
+		// document.write("jsjsjsj ");
+		// document.write(searchEl.id);
 
     // Changes XML to JSON
     // Modified version from here: http://davidwalsh.name/convert-xml-json
