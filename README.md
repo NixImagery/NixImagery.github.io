@@ -7,4 +7,4 @@ The site is based on [Jekyll Minimal theme](https://github.com/pages-themes/mini
 I am a Senior Teaching Fellow at Edinburgh University and maintain an interest in programming and artificial intelligence. You can find my current cv [here](http://cullaloe.com/cv.pdf) (pdf, 100kB).
 
 
-Nick Hood FRSA
+Nick Hood
