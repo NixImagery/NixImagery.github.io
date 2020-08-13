@@ -13,7 +13,7 @@ tags:
 
 # permalink:
 ---
-This afternoon I attended the SSERC Virtual Summer School session on Diagnostic Questioning, presented by Stuart Farmer. This was a remote version of the session under the same name and received well previously.
+This afternoon I attended the SSERC Virtual Summer School session on Diagnostic Questioning, presented by Stuart Farmer. This was a remote version of the session under the same name and received well previously. Apologies for the very terse notes - I've not had time to write them up (and it's now nearly 3 months later).
 
 ## Notes and references
 Dunlosky, J. et al. (2013) ‘Improving students’ learning with effective learning techniques: Promising directions from cognitive and educational psychology’, Psychological Science in the Public Interest, Supplement, 14(1), pp. 4–58. doi: 10.1177/1529100612453266.
