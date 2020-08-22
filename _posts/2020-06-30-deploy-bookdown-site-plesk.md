@@ -30,10 +30,10 @@ I set up a specific domain `static.cullaloe.net` for this project, and secured i
 Clone the GitHub repository into a new folder somewhere behind the web-facing directory (i.e. not in *httpdocs*). In this example, both the repository and the local folder are called "foobar":
 
 ```sh
-$ git clone https://github.com/githubuser/foobar.git /var/www/vhosts/[domain]
+$ git clone https://github.com/githubuser/foobar.git /var/www/vhosts/[domain]/foobar
 ```
 
-It is not necessary to specify the target directory, you'll get that as default. It is not possible[^afaik] to selectively clone a github project: it's all or nothing. `/var/www/vhosts/[domain]/foobar` now contains all of the source files of the project.
+It is not necessary to specify the target directory, you'll get that as default. If you do, the new directory must be empty. It is not possible[^afaik] to selectively clone a github project: it's all or nothing. `/var/www/vhosts/[domain]/foobar` now contains all of the source files of the project.
 
 [^afaik]: As far as I know, anyway.
 
