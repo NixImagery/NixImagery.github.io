@@ -107,7 +107,10 @@ Having uploaded these two files to the Learn Item, it is necessary to edit the H
 </video>
 </p>
 ```
-The path to video and the `vtt` files is available in the links to them put thee by Learn when you uploaded the files. It is not necessary to keep these links.
+
+### Bizarre path changes
+
+The path to video and the `vtt` files is available in the links to them put there by Learn when you uploaded the files. It is not necessary to keep these links, but there is another little feature you should be aware of. When you upload a file like this, it will be given a path that ends in something like "mp4" or "vtt". If you use this path in your `source` or `track` tags above, it will not work. This is because Learn **changes the url for embedded files after your edits are submitted.** This behaviour makes no sense to me, but what it means is that you will have to (1) upload the files and submit the edits to the item you are creating, then (2) edit it again and get the new paths to use in the `source` and `track` tags. Just another bizarre feature of Blackboard Learn, I suppose.
 
 ## Finished, part two
 
