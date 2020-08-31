@@ -101,12 +101,14 @@ Having uploaded these two files to the Learn Item, it is necessary to edit the H
 ```html
 <p>  
 <video width="640" height="360" controls="controls">
-	<source src="https://www.learn.ed.ac.uk/path-to-video" type="video/mp4">  
-	<track src="https://www.learn.ed.ac.uk/path-to-vtt-file" kind="captions" srclang="en" label="English" default>
+	<source src="https://www.learn.ed.ac.uk/path-to-video" type="video/mp4" />  
+	<track src="https://www.learn.ed.ac.uk/path-to-vtt-file" kind="captions" srclang="en" label="English" default />
 	Your browser does not support the video tag.
 </video>
 </p>
 ```
+
+Irrespective of what you type in the editor, Learn will try to close the `<track>` tags, even though they shouldn't be. It will result in user of older browsers not seeing the message about not supporting the video tag. I have little sympathy for them.
 
 ### Bizarre path changes
 
