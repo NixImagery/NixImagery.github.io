@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Video capture and production including subtitles
+title: Video capture and production including closed captions 
 date: 2020-08-30
 # description: 
 img: Screenshot-2020-08-30.png
