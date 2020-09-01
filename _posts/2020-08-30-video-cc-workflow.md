@@ -26,6 +26,8 @@ Here's my take on a workflow model to make this work well. There are existing fa
 
 I like to do a task and complete it: I like to get it right and take my time over that. Once it's done, I like to move on to the next set of tasks. To that end, here is a way I have found of creating video, with quality captioning for those who need it, and the ability to switch it off for those who find it a distraction.
 
+**Edit:** I've updated this in light of new insight from my colleague, Audrey Cameron, about adding `.srt` files to Media Hopper video uploads.
+
 ## Contents
 {:.no_toc}
 
@@ -61,11 +63,17 @@ This file can now be edited, correcting any errors in the transcription and chun
 1
 00:00:01,00 --> 00:00:01,30
 Welcome to my interesting video.
+
+2
+00:00:01,50 --> 00:00:02,30
+Everybody says how good my videos are.
 ```
 
 Finally, you will need this transcript in the correct format for embedding into the video file. This is a simple matter of changing the filetype to .srt (which is a "SubRip Subtitle" file). 
 
 ## Add Closed Captions to the video file
+
+*Note, this step may not be necessary.* If you are uploading to Media Hopper or a similar service that allows uploading of `.srt` files, you don't need to add the captions to the video file itself.
 
 The `ffmpeg` tool is best for this. This tool (and others you might need) can be installed simply using `brew` if it isn't already on your system. I don't propose to detail how to do this, but in essence, it's a matter of typing`$ brew install ffmpeg` in a terminal window. Once you have it, add the captions:
 
@@ -82,13 +90,13 @@ I need to distribute this video using resources within the VLE (virtual learning
 
 ## Media Hopper Create
 
-It's easy to upload a video to the Blackboard VLE by clicking on `Media Hopper Create` in the `Tools` menu. This is very nice but this process strips out the captions track. Embedding the uploaded video offer no CC option to viewers and no captions are visible. This is clearly a fault in the Media Hopper Create system.
+It's easy to upload a video to the Blackboard VLE by clicking on `Media Hopper Create` in the `Tools` menu. This is very nice but this process ignores any embedded captions track. Captions must be uploaded in their own file, in `.srt` format. The service is fussy about the formatting of text within the file, and will just stop working if it finds something it doesn't like. Get the format right, however, and it works just fine, for English captions at least.
 
-You can ask for subtitles to be created for the uploaded video but this is an automated and low-quality service that isn't really any good. It creates, ironically, a CC track that is inferior to the one included in the uploaded file.
+You can ask for subtitles to be automatically created for the uploaded video but this is a machine-based and low-quality service that isn't really any good. It creates, ironically, a CC track that is inferior to the one included in the uploaded file. It is possible to order a professional transcription from the University transcription service, although I haven't considered this.
 
-## A workaround
+## A workaround if you can't use Media Hopper Create
 
-I have found a way of getting around this difficulty: within Learn, add a new item. This is effectively a webpage, and using the editing tools, you can upload two files. The first is the mp4 video file (it is not necessary for this file to have the embedded captions track).
+An alternative way to embed media without using Media Hopper is as follows. Within Learn, add a new item. This is effectively a webpage, and using the editing tools, you can upload two files. The first is the mp4 video file (it is not necessary for this file to have the embedded captions track).
 
 The second file contains the captions and timing information in our `srt` file, but needs to be in a different format. This format is **Web Video Text Tracks (VTT)**, and is easily obtained using ffmpeg:
 
