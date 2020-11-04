@@ -1,5 +1,5 @@
-title: '@cullaloe | Tech, tales and imagery'
-description: '@cullaloe'
+title: 'Tech, tales and imagery'
+description: 'formerly @cullaloe'
 analytics: UA-29333042-8 # Google Analytics
 show_downloads: true
 # theme: jekyll-theme-minimal
@@ -23,11 +23,11 @@ author: Nick Hood # add your name
 author-img: nick-hood.jpg # add your photo
 about-author: Tech, tales and imagery # add description
 about-page: about
-social-twitter: cullaloe # add your Twitter handle
-social-facebook: cullaloe # add your Facebook handle
-social-github: cullaloe # add your Github handle
+social-twitter: NixImagery # add your Twitter handle
+social-facebook: NixImagery # add your Facebook handle
+social-github: NixImagery # add your Github handle
 social-linkedin: cullaloe # add your Linkedin handle
-social-email: nick@cullaloe.net # add your Email address
+social-email: nick@NixImagery.net # add your Email address
 
 # Disqus
 discus-identifier: cullaloe-gh # add your discus identifier
