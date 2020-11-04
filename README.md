@@ -1,4 +1,4 @@
-# cullaloe.github.io
+# NixImagery.github.io (formerly cullaloe.github.io)
 
 This repository is the source for a blog that contains posts on coding, technical matters and things related to my online services like the VPS that hosts the various websites I operate. Some of these posts have been migrated from the old WordPress site.
 
