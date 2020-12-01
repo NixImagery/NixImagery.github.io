@@ -34,7 +34,7 @@ task :generate do
   })).process
 end
 ```
-You can test your site in your development machine (I'm using a Mac) using a python http server to render the static site thus:
+You can build and test your site in your development machine (I'm using a Mac) using a python http server to render the static site thus:
 
 ```sh
 $ rake generate
@@ -42,7 +42,7 @@ Configuration file: /your/path/to/GitHub/projectname/_config.yml
 $ cd docs/
 $ python3 -m http.server
 ```
-
+### Deploy
 You should place an empty `.nojekyll` file in the root of your project to tell GitHub not to bother rebuilding the site. You're just deploying static files to the `docs` folder. Once you're ready to deploy, you can publish via rake. The rest of the `Rakefile` looks like this:
 
 ```ruby
@@ -95,4 +95,4 @@ Already on 'master'
 Your branch is up to date with 'origin/master'.
 Finished.
 ```
-Or if you're in a hurry, just issue `rake` to get the default *Commit via Rake* commit message.
+Notice a call to publish will also generate the site for you. If you're in a hurry, just issue `rake` to get the default *Commit via Rake* commit message.
