@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech, tales and imagery</title>
+    <description>A technical blog</description>
+    <link>https://cullaloe.com/</link>
+    <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 01 Dec 2020 15:51:38 +0000</pubDate>
+    <lastBuildDate>Tue, 01 Dec 2020 15:51:38 +0000</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>Github/Jekyll site update via Rake</title>
+        <description>&lt;p&gt;I wanted a quick way to provide useful comments on commits made in development of a Jekyll site which is deployed on GitHub. This method offers a couple of rake tasks to first quickly build the site locally, placing the output into the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docs&lt;/code&gt; folder; then to commit and push the changes to GitHub once you’re happy. All of this code goes in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rubygems'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rake'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rdoc'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'date'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'yaml'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tmpdir'&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll'&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Generate blog files&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:generate&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;destination&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;docs&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;You can build and test your site in your development machine (I’m using a Mac) using a python http server to render the static site thus:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rake generate
+Configuration file: /your/path/to/GitHub/projectname/_config.yml
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;docs/
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python3 &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; http.server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;deploy&quot;&gt;Deploy&lt;/h3&gt;
+&lt;p&gt;You should place an empty &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; file in the root of your project to tell GitHub not to bother rebuilding the site. You’re just deploying static files to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docs&lt;/code&gt; folder. Once you’re ready to deploy, you can publish via rake. The rest of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt; looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Usage:&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# $ rake&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# $ rake generate&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# $ rake publish&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# $ rake publish[&quot;Your comment here&quot;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Generate and publish blog to master/docs&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;with_defaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;var: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Commit via Rake'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mktmpdir&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mv docs/* &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git checkout -B master&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rm -rf docs/*&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mv &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/* docs&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git add .&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git commit -a -m &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;inspect&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git push origin master --force&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git checkout master&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;echo Finished.&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:default&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;For example, you might publish using this command from the project folder:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rake publish[&lt;span class=&quot;s2&quot;&gt;&quot;Example updates&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /your/path/to/GitHub/projectname/&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Configuration file: /your/path/to/GitHub/projectname/_config.yml
+D	docs/yyyy/mm/dd/some-files.html
+....
+Reset branch &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;'origin/master'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;master abcdefg] Example updates
+ n files changed, p insertions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, q deletions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;-&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Enumerating objects: r, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Counting objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nn/nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Delta compression using up to x threads
+Compressing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mm/mm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Writing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mm/mm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 1234 bytes | 123.00 KiB/s, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Total mm &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, reused 0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+remote: Resolving deltas: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nn/nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, completed with nn &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;objects.
+To https://github.com/YourGHName/projectname.git
+   0aa7f2g..abcdefg  master -&amp;gt; master
+Already on &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;'origin/master'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Finished.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Notice a call to publish will also generate the site for you. If you’re in a hurry, just issue &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt; to get the default &lt;em&gt;Commit via Rake&lt;/em&gt; commit message.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/jekyll-update-via-rake/</link>
+        <guid isPermaLink="true">https://cullaloe.com/jekyll-update-via-rake/</guid>
+        
+        <category>Jekyll</category>
+        
+        <category>Git</category>
+        
+        <category>Rake</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Data Ethics, AI and Responsible Innovation</title>
+        <description>&lt;p&gt;In November, I took part in 4 weeks of a 5-week MOOC offered by the University of Edinburgh via the edX platform, &lt;a href=&quot;https://courses.edx.org/courses/course-v1:EdinburghX+DEI01x+3T2020/course/&quot;&gt;Data Ethics, AI and Responsible Innovation&lt;/a&gt;. I had various difficulties with the course itself, culminating in a barrier to my continuing.&lt;/p&gt;
+
+&lt;p&gt;You can read my notes on the course, including a personal reflection, at the &lt;a href=&quot;https://cullaloe.com/DataEthicsMOOC/&quot;&gt;blog I kept on the MOOC&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/data-ethics-mooc/</link>
+        <guid isPermaLink="true">https://cullaloe.com/data-ethics-mooc/</guid>
+        
+        <category>CPD</category>
+        
+        <category>AI</category>
+        
+        <category>MOOC</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Climate Change Mitigating Technologies</title>
+        <description>&lt;p&gt;I had the chance to sit in on the &lt;a href=&quot;https://www.parliament.scot/msps/science-and-technology.aspx&quot;&gt;cross-party group on science&lt;/a&gt;, in which there were two presentations on the topic, the first from Rebecca Bell, &lt;a href=&quot;https://www.sccs.org.uk/&quot;&gt;Scottish CCS&lt;/a&gt;&lt;sup id=&quot;fnref:sccs&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:sccs&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; on Carbon Capture and Storage. The second was given by Richard Gow, &lt;a href=&quot;https://www.drax.com/&quot;&gt;Drax&lt;/a&gt;&lt;sup id=&quot;fnref:drax&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:drax&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; on Bioenergy with Carbon Capture and Storage. The latter presentation called for policy help in rewarding negative carbon emissions, which are an odd omission from the accounting model used in climate change impact measurement.&lt;/p&gt;
+
+&lt;p&gt;Both provided a really useful understanding and overview of what carbon emission and capture is about and how it is working, with an emphasis on what is happening in Scotland within a very clear European context. I found the presentations, both neither slick nor sales-focused, extremely engaging and helpful in thinking about CO\(_2\) emissions.&lt;/p&gt;
+
+&lt;p&gt;There was a lively and wide-ranging Q &amp;amp; A session chaired by Craig Denham of the RSE. Questions were both technical and social: there was good representation of young people through, for example, asking about the skills required to find careers in CCS. My own question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For teachers, are there any behaviours they can model for young people that will enable them to take a specific personal responsibility for action in tackling CO\(_2\) accrual in the atmosphere?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I suspect this was a question outside of the scope of the presentations (focusing on individual action) but it was picked up by Craig, which I am thankful for. Richard picked this up first and acknowleged the criticism of BECCS for being remote from personal action but pushed back against this by linking to personal choices such as taking less flights. Rebecca added to that by pointing to transport choices like taking your bike, or wearing a jumper instead of turning up the heating, which are easily modelled and reinforced by educators. She also pointed to &lt;a href=&quot;https://www.sccs.org.uk/opportunities/education-training/36-ccs-education-centre&quot;&gt;SCCS resources related to CfE&lt;/a&gt;, and the &lt;a href=&quot;https://learningforsustainabilityscotland.org/&quot;&gt;LfS Scotland&lt;/a&gt; resources. I particularly liked the &lt;a href=&quot;https://co2degrees.com/content/crown-estate-and-geobus-education-resources%20&quot;&gt;GeoBus Education Resources site&lt;/a&gt; which is designed to provide teachers with an introduction to CCS, providing experiments, activities, lessons and homework ideas as well as links to a number of other useful CCS education resources, which are linked to English Key Stage 3 and Scotland’s CfE: &lt;a href=&quot;http://co2degrees.com/sites/default/files/appendix_curriculum_for_excellence.pdf&quot;&gt;this pdf&lt;/a&gt; links the resource to the Experiences and Outcomes.&lt;/p&gt;
+
+&lt;p&gt;The resources available in the websites of both organisions are very accessible and immediately useful in schools in, for example, projects within the interdisciplinary topic of sustainable energy production. It is particularly warming to see the interest and promotion of positive problem solving through the cross-party group. I am thankful to them for opening up this session to interested parties and applaud the the work being done by SCCS and Drax.&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;p&gt;The header image is part of an infographic available at &lt;a href=&quot;https://www.sccs.org.uk/images/about/infographics-a0-jan19-landscape.pdf&quot;&gt;SCCS&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:sccs&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Scottish CCS is “a partnership of the British Geological Survey, Heriot-Watt University, the University of Aberdeen, the University of Edinburgh and the University of Strathclyde working together with universities across Scotland.” &lt;a href=&quot;#fnref:sccs&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:drax&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;This is the group that operates Drax Power Station which is moving from coal-fired to biomass and leads on innovation and development in the technologies of Bioenergy with Carbon Capture and Storage (BECCS). &lt;a href=&quot;#fnref:drax&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/x-party-group/</link>
+        <guid isPermaLink="true">https://cullaloe.com/x-party-group/</guid>
+        
+        <category>Education</category>
+        
+        <category>CCS</category>
+        
+        <category>BACCS</category>
+        
+        <category>IDL</category>
+        
+        <category>CPD</category>
+        
+        <category>Physics</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Video including closed captions, method 2</title>
+        <description>&lt;p&gt;Further to &lt;a href=&quot;/video-cc-workflow&quot;&gt;this recent post&lt;/a&gt; on capturing, processing and captioning video, my colleague, Dr. Audrey Cameron, advised me to try YouTube for capturing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; captions file more quickly. I am thankful to her for this, because although I was aware of YouTube’s rapidly improving automatic captioning (I use it myself when I watch with sound off, for example), I didn’t know that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; file can be downloaded. Here’s a revised approach I am using today.&lt;/p&gt;
+
+&lt;h2 id=&quot;capturing-the-video-and-audio&quot;&gt;Capturing the video and audio&lt;/h2&gt;
+
+&lt;p&gt;For capturing an old-fashioned lecture-style talk using &lt;a href=&quot;https://www.apple.com/uk/keynote/&quot;&gt;KeyNote&lt;/a&gt;, I use the facility to record a presentation (from the Play menu). The presentation can be exported as a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.m4v&lt;/code&gt; video file with sound. &lt;strong&gt;At the same time&lt;/strong&gt; as recording the presentation in KeyNote, I also record myself on my &lt;a href=&quot;https://fujifilm-x.com/global/products/cameras/x-t2/&quot;&gt;Fuji X-T2 camera&lt;/a&gt; and capture a high quality audio track separately on a &lt;a href=&quot;https://www.zoom.co.jp/products/handy-recorder/h1-handy-recorder&quot;&gt;Zoom H-1&lt;/a&gt; recorder. A “pro” tip to is to clap just before you start presenting – it leaves a nice spike in the audio waveforms, making it easy to line up the separate tracks. You can also pretend to be Steven Spielberg or Alfred Hitchcock, according to your &lt;em&gt;genre&lt;/em&gt;, by saying, “Action!” at the same time.&lt;/p&gt;
+
+&lt;h2 id=&quot;processing&quot;&gt;Processing&lt;/h2&gt;
+
+&lt;p&gt;Import the video and audio tracks into &lt;a href=&quot;https://www.apple.com/uk/imovie/&quot;&gt;iMovie&lt;/a&gt;, align them using the spike from your clap, and check that the audio is the same length as in the video track of the speaker. I found that for longer videos, over 15 minutes, they can be different. This difference produces an echo effect, eventually separating the video from the soundtrack, like a Swedish movie. Adjusting the audio to align properly can easily be done in iMovie using the speed adjustment. Once the clips are aligned, you can turn the audio level of the video clips down to zero, so only the high quality track remains.&lt;/p&gt;
+
+&lt;p&gt;The next thing I do is to change the video track of the presenter to “Picture in picture”, so viewers can see me presenting within the slides: I think this is a bit of a substitute for one of the features I miss from live presenting, which is managing the attention of the viewer. I normally do this by blanking the display, which has the effect of moving the eyes in the room from the screen to my face – a powerful way to add contrast to your talk. This “mini me” within the slides can be faded in or out, according to what you want the students to focus on at any point. Other effects are possible, like switching to embedding the presentation within the presenter video.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Screenshot 2020-09-11 at 07.53.03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The finished project can be exported via the Share menu to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.mp4&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-the-transcript&quot;&gt;Getting the transcript&lt;/h2&gt;
+
+&lt;p&gt;The video can be uploaded to YouTube now: you’ll need a verified account to upload clips longer than 15 minutes, which means giving Google your phone number. I baulked at this at first, but expedient is the slayer of principle, and in this case, privacy. Make sure you click “Private” when saving the clip. These lectures are not for public consumption.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Screenshot 2020-09-11 at 07.23.47.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After a while – maybe 30 minutes, depending on the length of your video – the automatically-generated captions file can be edited using a really nice editing interface in &lt;a href=&quot;https://studio.youtube.com/&quot;&gt;YouTube Studio&lt;/a&gt; designed for the purpose. You will need to add punctuation and if you wish, add comments to your own commentary. Once that has been done, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; file is ready to download.&lt;/p&gt;
+
+&lt;h2 id=&quot;media-hopper-create&quot;&gt;Media Hopper Create&lt;/h2&gt;
+
+&lt;p&gt;Your video can now be used within your local VLE, in my case, Blackboard Learn, by uploading via the media manager, &lt;a href=&quot;https://media.ed.ac.uk/&quot;&gt;Media Hopper&lt;/a&gt;. Once uploaded, you can then add closed captions by uploading the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; file alongside it. Students then have a choice whether to access captions within the video sequences or not.&lt;/p&gt;
+
+&lt;h3 id=&quot;another-hitch&quot;&gt;Another Hitch&lt;/h3&gt;
+&lt;p&gt;I was about to post this, all smug, like, as I uploaded the latest video made with this method, when I hit a “file too large” error when uploading to Media Hopper. The video I had made was just short of 18 minutes and had a file size of 1.2GB. Now, mp4 is an efficient container format so I maybe made too many “best quality” choices in making the video: high definition 1080p for the presenter, same for the KeyNote. Rather than go back and do it all again, I resorted to ffmpeg to make me a reduced bitrate version. I thought halving the bitrate might produce a file half the size.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; mybigvideo.mp4 	&lt;span class=&quot;c&quot;&gt;# find out what the current bitrate is..&lt;/span&gt;
+...
+  Duration: 00:17:28.55, start: 0.000000, bitrate: 9978 kb/s
+...
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; mybigvideo.mp4 &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; 4489k mysmallervideo.mp4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This made (after thrashing my 5-year old MacBook Air for about 25 minutes) a file – as hoped for – half the size (673 MB).&lt;/p&gt;
+
+&lt;h2 id=&quot;deployment-to-a-website&quot;&gt;Deployment to a website&lt;/h2&gt;
+
+&lt;p&gt;To use the video and captions file together within a webpage is straightfroward, except that the captions need to be in a different format. This format is &lt;strong&gt;Web Video Text Tracks (VTT)&lt;/strong&gt;, and is easily obtained using ffmpeg:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; srtfile.srt subtitlefile.vtt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The web page needs the following code (adapted to your own file paths, obviously):&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;video&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;640&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;360&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;controls=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;controls&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.learn.ed.ac.uk/path-to-video.mp4&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;  
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;track&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.learn.ed.ac.uk/path-to-vtt-file.vtt&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;kind=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;captions&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;srclang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;English&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	Your browser does not support the video tag.
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Video production for ‘digital first’ teaching strategies needed in response to COVID-19 measures or similar, is a non-trivial task. Including closed captions is an additional time multiplier. Personally, I don’t like asynchronous teaching at all: it misses so many important aspects of good pedagogy, aspects which are easily ignored by administrators of education in the pursuit of apparent economies or easy fixes. I am at ease, however, with an established workflow.&lt;/p&gt;
+
+&lt;p&gt;I am thankful to my colleague, Audrey, for her patience and support in helping me get to this solution. We both have a lot of videos to make, and now it will not take me as long as it might have done.&lt;/p&gt;
+
+&lt;!--## Footnotes--&gt;
+</description>
+        <pubDate>Fri, 11 Sep 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/video-cc-workflow-2/</link>
+        <guid isPermaLink="true">https://cullaloe.com/video-cc-workflow-2/</guid>
+        
+        <category>Education</category>
+        
+        <category>Digital Literacy</category>
+        
+        <category>Video</category>
+        
+        <category>Closed Caption</category>
+        
+        <category>OSX</category>
+        
+        <category>Transcription</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>IOP CLPL: Smartphone practicals</title>
+        <description>&lt;p&gt;The IoP in Scotland is putting on a rich catalogue of online CLPL for the community of physics teachers, and presented by colleagues from that same community. I accessed one of these after the event, because it had been recorded and published by Drew Burrett on &lt;a href=&quot;https://www.youtube.com/watch?v=TJvuI5g0WNI&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This session was hosted by Stuart Farmer and Jenny Hargreaves, and presented by Murat Gullen and Martyn Crawshaw, who gave us a practical introduction to using tools for data capture and analysis using the suite of sensors on most modern phones. They presented a brief rationale, acknowledging that although not all children have a smart phone, most have access to one. The scope (pun intended) for teachers to offer practical sessions using their own equipment was also underlined.&lt;/p&gt;
+
+&lt;p&gt;The first tool discussed was &lt;a href=&quot;https://phyphox.org/&quot;&gt;PhyPhox&lt;/a&gt; which not only can access all of the phone’s sensors, it has a number of built-in activities and tools to make use of the data captured. These can be exported in several formats, or posted to Dropbox for later discussion. What I hadn’t realised is that there is a built-in web server accessed through the “triple dots” at the top right of the phone screen which enables display and control of the app from any nearby browser, provided that the computer is on the same network (it uses a 192.168.x.x IP address).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_1E1AE83E2C49-1.jpeg&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;/assets/img/phyphox.png&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;Screenshots of Phyphox on iPhone and Browser (uses the language of the phone)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Martyn started by talking about &lt;a href=&quot;https://apps.apple.com/us/app/vernier-video-physics/id389784247&quot;&gt;Vernier video&lt;/a&gt; tracking and analysis software, similar to the java &lt;a href=&quot;https://www.physlets.org/tracker/&quot;&gt;Tracker&lt;/a&gt; program. He went on to demonstrate Pasco’s &lt;a href=&quot;https://www.pasco.com/products/software/sparkvue&quot;&gt;SparkVue&lt;/a&gt; app, what Martyn called the “twenty-first century version” of Data Studio found in many schools. It allows connection to onboard sensors and also Pasco equipment in the lab.&lt;/p&gt;
+
+&lt;p&gt;It was made clear that teachers should take care not to assume that their pupils are tech-savvy enough to know how to use all of the tools and interfaces without support and guidance.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Don’t lose the learning!” – Martyn Crawshaw&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Excellent stuff, as ever, with a lively Q &amp;amp; A at the end. I’m going to share this with my students.&lt;/p&gt;
+
+&lt;!--## Footnotes--&gt;
+</description>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/iop-clpl-smartphone-practicals/</link>
+        <guid isPermaLink="true">https://cullaloe.com/iop-clpl-smartphone-practicals/</guid>
+        
+        <category>Education</category>
+        
+        <category>Physics</category>
+        
+        <category>Practicals</category>
+        
+        <category>CPD</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Video capture and production including closed captions</title>
+        <description>&lt;h2 class=&quot;no_toc&quot; id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;I am required to produce video resources for my students who are coming to the University very soon, either in person or digitally: our teaching under the COVID adjustments is “digital first”. We are also particularly keen to support those students who might require captions on their videos. This isn’t just those who might be hearing or visually impaired, it’s all students who might like the ability sometimes to have the extra clarity provided by words on the screen that reflect the words spoken by the presenter.&lt;/p&gt;
+
+&lt;p&gt;Here’s my take on a workflow model to make this work well. There are existing facilities to do this semi-automatically – uploaded videos can have an automated transcription generated but this takes a lot of time, and requires the creator to go back on subsequent days to hand-edit any errors or make any other adjustments.&lt;/p&gt;
+
+&lt;p&gt;I like to do a task and complete it: I like to get it right and take my time over that. Once it’s done, I like to move on to the next set of tasks. To that end, here is a way I have found of creating video, with quality captioning for those who need it, and the ability to switch it off for those who find it a distraction.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; I’ve updated this in light of new insight from my colleague, Audrey Cameron, about adding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; files to Media Hopper video uploads.&lt;/p&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#subtitles-vs-captions&quot; id=&quot;markdown-toc-subtitles-vs-captions&quot;&gt;Subtitles vs. captions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#capturing-the-video-and-audio&quot; id=&quot;markdown-toc-capturing-the-video-and-audio&quot;&gt;Capturing the video and audio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#processing&quot; id=&quot;markdown-toc-processing&quot;&gt;Processing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#getting-the-transcript&quot; id=&quot;markdown-toc-getting-the-transcript&quot;&gt;Getting the transcript&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#add-closed-captions-to-the-video-file&quot; id=&quot;markdown-toc-add-closed-captions-to-the-video-file&quot;&gt;Add Closed Captions to the video file&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#finished-part-one&quot; id=&quot;markdown-toc-finished-part-one&quot;&gt;Finished, part one&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#media-hopper-create&quot; id=&quot;markdown-toc-media-hopper-create&quot;&gt;Media Hopper Create&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#a-workaround-if-you-cant-use-media-hopper-create&quot; id=&quot;markdown-toc-a-workaround-if-you-cant-use-media-hopper-create&quot;&gt;A workaround if you can’t use Media Hopper Create&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#bizarre-path-changes&quot; id=&quot;markdown-toc-bizarre-path-changes&quot;&gt;Bizarre path changes&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#finished-part-two&quot; id=&quot;markdown-toc-finished-part-two&quot;&gt;Finished, part two&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;subtitles-vs-captions&quot;&gt;Subtitles vs. captions&lt;/h2&gt;
+
+&lt;p&gt;Subtitles are embedded in DVD movies and the like for languages other than that on the audio. Multiple subtitle tracks can be embedded within a title, or switched off if the audio track is in the native language of the speaker. Captions, on the other hand, are a transcription of dialogue in the video. &lt;strong&gt;Closed captions&lt;/strong&gt; are distinguished from &lt;strong&gt;open captions&lt;/strong&gt; by being able to be switched off if required. Open captions are often embedded in the video and cannot be turned off. My intention in this workflow is to provide closed captions.&lt;/p&gt;
+
+&lt;h2 id=&quot;capturing-the-video-and-audio&quot;&gt;Capturing the video and audio&lt;/h2&gt;
+
+&lt;p&gt;I captured my video for the proof-of-concept using a &lt;a href=&quot;https://fujifilm-x.com/global/products/cameras/x-t2/&quot;&gt;Fuji X-T2&lt;/a&gt; APS-C digital mirrorless camera which takes 1080p (1920 x 1080) video. Although the camera records stereo audio, I prefer to capture audio separately using a &lt;a href=&quot;https://www.zoom.co.jp/products/handy-recorder/h1-handy-recorder&quot;&gt;Zoom H-1&lt;/a&gt; recorder. The quality is much better, not least because the mic is with the speaker, not the camera.&lt;/p&gt;
+
+&lt;h2 id=&quot;processing&quot;&gt;Processing&lt;/h2&gt;
+
+&lt;p&gt;I import the video and audio tracks into &lt;a href=&quot;https://www.apple.com/uk/imovie/&quot;&gt;iMovie&lt;/a&gt;, trim out the top and tail and make other edits, and remove the embedded audio track captured by the camera. This is replaced with the Zoom audio, which can be a bit of a fiddle to align well with the video. The audio waveform can help here but that depends on the recording environment. Depending on the exposure settings on the camera, you might want to “enhance” the video in iMovie for a contrastier image. Once you have added any title sequences (or credits) and  transitions, export the finished video (via the “share” menu) as an mp4 file.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-the-transcript&quot;&gt;Getting the transcript&lt;/h2&gt;
+
+&lt;p&gt;Open the mp4 file in Quicktime and export as an audio file, the default m4a format is OK. This file can be uploaded to a blank Word document in Office 365 via the Dictate drop-down menu (select Transcribe). This will do a pretty decent job of turning your dialogue into text.&lt;/p&gt;
+
+&lt;p&gt;Save the .docx file and convert it to a plain text format - I prefer markdown, although this isn’t necessary provided you can finish up with a plain text file. I do the conversion using pandoc:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pandoc transcript.docx &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; transcript.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This file can now be edited, correcting any errors in the transcription and chunking the dialogue to make it show at the right time during the video. This is easily done with the video window open on the desktop next to your editor. You should add section markers and timestamps for subtitles as you go through the video. A minimal example:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
+00:00:01,00 &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 00:00:01,30
+Welcome to my interesting video.
+
+2
+00:00:01,50 &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 00:00:02,30
+Everybody says how good my videos are.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, you will need this transcript in the correct format for embedding into the video file. This is a simple matter of changing the filetype to .srt (which is a “SubRip Subtitle” file).&lt;/p&gt;
+
+&lt;h2 id=&quot;add-closed-captions-to-the-video-file&quot;&gt;Add Closed Captions to the video file&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Note, this step may not be necessary.&lt;/em&gt; If you are uploading to Media Hopper or a similar service that allows uploading of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; files, you don’t need to add the captions to the video file itself.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ffmpeg&lt;/code&gt; tool is best for this. This tool (and others you might need) can be installed simply using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brew&lt;/code&gt; if it isn’t already on your system. I don’t propose to detail how to do this, but in essence, it’s a matter of typing&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ brew install ffmpeg&lt;/code&gt; in a terminal window. Once you have it, add the captions:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; videofile.mp4 &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; transcriptfile.srt &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;:v copy &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;:a copy  &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;:s mov_text &lt;span class=&quot;nt&quot;&gt;-metadata&lt;/span&gt;:s:s:0 &lt;span class=&quot;nv&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;eng output.mp4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The program accepts input files, which are you video and the srt file containing the captions and timings. Video and audio are merely copied to the output file.&lt;/p&gt;
+
+&lt;h2 id=&quot;finished-part-one&quot;&gt;Finished, part one&lt;/h2&gt;
+
+&lt;p&gt;The video file you have just created is now shareable: users can play it on their machines and opt to switch captioning on or off if they wish. Their computer may choose to control this behaviour automatically if local settings allow it.&lt;/p&gt;
+
+&lt;p&gt;I need to distribute this video using resources within the VLE (virtual learning environment, in my case, Blackboard Learn and &lt;a href=&quot;https://media.ed.ac.uk/&quot;&gt;Media Hopper&lt;/a&gt;. This is where it gets sticky.&lt;/p&gt;
+
+&lt;h2 id=&quot;media-hopper-create&quot;&gt;Media Hopper Create&lt;/h2&gt;
+
+&lt;p&gt;It’s easy to upload a video to the Blackboard VLE by clicking on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Media Hopper Create&lt;/code&gt; in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tools&lt;/code&gt; menu. This is very nice but this process ignores any embedded captions track. Captions must be uploaded in their own file, in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; format. The service is fussy about the formatting of text within the file, and will just stop working if it finds something it doesn’t like. Get the format right, however, and it works just fine, for English captions at least.&lt;/p&gt;
+
+&lt;p&gt;You can ask for subtitles to be automatically created for the uploaded video but this is a machine-based and low-quality service that isn’t really any good. It creates, ironically, a CC track that is inferior to the one included in the uploaded file. It is possible to order a professional transcription from the University transcription service, although I haven’t considered this.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-workaround-if-you-cant-use-media-hopper-create&quot;&gt;A workaround if you can’t use Media Hopper Create&lt;/h2&gt;
+
+&lt;p&gt;An alternative way to embed media without using Media Hopper is as follows. Within Learn, add a new item. This is effectively a webpage, and using the editing tools, you can upload two files. The first is the mp4 video file (it is not necessary for this file to have the embedded captions track).&lt;/p&gt;
+
+&lt;p&gt;The second file contains the captions and timing information in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;srt&lt;/code&gt; file, but needs to be in a different format. This format is &lt;strong&gt;Web Video Text Tracks (VTT)&lt;/strong&gt;, and is easily obtained using ffmpeg:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; srtfile.srt subtitlefile.vtt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Having uploaded these two files to the Learn Item, it is necessary to edit the HTML using the built-in HTML editor (click the double chevron at the right end of the tool bar to reveal it). The item source should be edited to contain a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;video&amp;gt;&lt;/code&gt; tag:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;video&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;640&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;360&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;controls=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;controls&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.learn.ed.ac.uk/path-to-video&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;  
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;track&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.learn.ed.ac.uk/path-to-vtt-file&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;kind=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;captions&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;srclang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;English&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	Your browser does not support the video tag.
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Irrespective of what you type in the editor, Learn will try to close the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;track&amp;gt;&lt;/code&gt; tags, even though they shouldn’t be. It will result in users of older browsers not seeing the message about not supporting the video tag. I have little sympathy for them.&lt;/p&gt;
+
+&lt;h3 id=&quot;bizarre-path-changes&quot;&gt;Bizarre path changes&lt;/h3&gt;
+
+&lt;p&gt;The path to video and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vtt&lt;/code&gt; files is available in the links to them put there by Learn when you uploaded the files. It is not necessary to keep these links, but there is another little feature you should be aware of. When you upload a file like this, it will be given a path that ends in something like “mp4” or “vtt”. If you use this path in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;track&lt;/code&gt; tags above, it will not work. This is because Learn &lt;strong&gt;changes the url for embedded files after your edits are submitted.&lt;/strong&gt; This behaviour makes no sense to me, but what it means is that you will have to (1) upload the files and submit the edits to the item you are creating, then (2) edit it again and get the new paths to use in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;track&lt;/code&gt; tags. Just another bizarre feature of Blackboard Learn, I suppose.&lt;/p&gt;
+
+&lt;h2 id=&quot;finished-part-two&quot;&gt;Finished, part two&lt;/h2&gt;
+
+&lt;p&gt;This is a workaround but we now have the facility to make and upload good quality video with closed captioning that can be viewed by students within their Learn course.&lt;/p&gt;
+
+&lt;!--## Footnotes--&gt;
+</description>
+        <pubDate>Sun, 30 Aug 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/video-cc-workflow/</link>
+        <guid isPermaLink="true">https://cullaloe.com/video-cc-workflow/</guid>
+        
+        <category>Education</category>
+        
+        <category>Digital Literacy</category>
+        
+        <category>Video</category>
+        
+        <category>Closed Caption</category>
+        
+        <category>OSX</category>
+        
+        <category>Transcription</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Merge join data files on 2 columns with python</title>
+        <description>&lt;p&gt;This was posted on a forum:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I have two enormous data sets - 2 million rows in each one. I have them in ASCII format. Each set has three columns. The first two columns are identical for both sets - essentially, coordinates. The third row in each set gives the temperature at that location for two different substances.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I am trying to find a way to create a single table with 4 columns, the first two being the coordinates and the third and fourth being the different temperatures.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Excel gives up after 1,000,000 rows.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Can anyone suggest a (free) tool that can do this - and then preferably allow for some analysis - plotting temp 1 against temp 2, for instance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I thought about this on and off during one of those challenging COVID days, and finally sat down in the evening and knocked up a quick solution to the first part of the problem, using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;file 1.csv, 2.csv contain data:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;1.csv 
+&lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;y&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;t1&quot;&lt;/span&gt;
+42,35,122
+39,44,242
+12,43,188
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;2.csv 
+&lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;y&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;t2&quot;&lt;/span&gt;
+53,22,192
+39,44,122
+22,56,238
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Launching &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python 3&lt;/code&gt;&lt;sup id=&quot;fnref:why&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:why&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python3
+Python 3.6.2 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;GCC 4.2.1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Apple Inc. build 5666&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;dot 3&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt; on darwin
+Type &lt;span class=&quot;s2&quot;&gt;&quot;help&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;copyright&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;credits&quot;&lt;/span&gt; or &lt;span class=&quot;s2&quot;&gt;&quot;license&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;more information.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2.csv”)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;(check it looks ok)&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;122&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;39&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;242&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;188&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;53&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;192&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;39&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;122&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;56&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;238&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Make an outer join of these two tables on the two coordinate columns:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;merged_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;y&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'outer’)
+
+&amp;gt;&amp;gt;&amp;gt; merged_data.head()
+    x   y     t1     t2
+0  42  35  122.0    NaN
+1  39  44  242.0  122.0
+2  12  43  188.0    NaN
+3  53  22    NaN  192.0
+4  22  56    NaN  238.0
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;“NaN” is not your Nan, it’s just “not a number”, or “no data here”.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;merged_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;out.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;… and back in the shell, we can see the result…&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;out.csv 
+x,y,t1,t2
+42,35,122.0,
+39,44,242.0,122.0
+12,43,188.0,
+53,22,,192.0
+22,56,,238.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;… your merged file, sir.&lt;/p&gt;
+
+&lt;p&gt;It ought to work with a few million rows. I didn’t answer the final part of the OP’s question but it ought to easy enough with this example - a million or more rows, might be a different problem.&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:why&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;I am using python3 because OSX has a legacy version 2 nobody dares touch. On other systems you might want to use just “python” and “pip” in the above examples. You might have to install pandas first, using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ pip3 install pandas&lt;/code&gt;. &lt;a href=&quot;#fnref:why&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 27 Aug 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/merge-2-col-csv/</link>
+        <guid isPermaLink="true">https://cullaloe.com/merge-2-col-csv/</guid>
+        
+        <category>Python</category>
+        
+        <category>Data</category>
+        
+        <category>OSX</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Practice worth sharing seminar</title>
+        <description>&lt;p&gt;This is one of a number of “sharing good practice” seminars organised by my colleagues at Moray House, and was more of an exploratory talk given by Dr. Laura Colucci-Gray. These are my notes, made during her talk: as much reflection as reporting. Any errors are my responsibility.&lt;/p&gt;
+
+&lt;p&gt;Laura reflected on observing her own children learning alone during the “lockdown” of COVID-19 and thought of the dynamic of (on the one hand) being connected, but (on the other) being disconnected at the same time. She observed that the machine that connects us leaves us no environmental cues, compared to the “real world” environment, which has displays, visual clues, artefacts of daily working to attest to the impact of our interactions with other human beings.&lt;/p&gt;
+
+&lt;p&gt;She included readings from literature on the work of the teacher, who has a role of “packaging” content for learners and set this in contrast to the context of learning in a social setting. This tension, she characterised as a danger in asynchronous learning contexts. She placed learners in our thinking not so much as &lt;em&gt;individual units&lt;/em&gt; but humans undergoing a process of &lt;em&gt;co-operative effort&lt;/em&gt; that takes place between binaries like male/female, nature/technology, local/global, and so on.&lt;/p&gt;
+
+&lt;p&gt;The traces we leave behind need to be thought about when planning and teaching in an asynchronous space. Laura exemplified this in image-making, experience of physical spaces, and in “utilising modes other than language creates space for different ways of knowing or being” (Liamputtong &amp;amp; Rumbold, 2008&lt;sup id=&quot;fnref:lr&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:lr&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;). The latter quote is in context of the use of music as making traces as a “soundtrack” to a learning course.&lt;/p&gt;
+
+&lt;p&gt;The theme emerged further in Laura’s ideas for using traces to provoke shared experiences, and through these shared experiences, my view is that a stronger learning community is established. She provoked the delegates to think and talk about how we can make use of the technology to create artistically shared experiences; how far to go to enable sharing something of themselves and teachers; what opportunities do we have in putting ourselves in the process of co-learning with our students?&lt;/p&gt;
+
+&lt;p&gt;At this point, a rich discussion followed, exploring the possibilities for us as teachers moving forward into a more asynchronous mode of practice. For me, this was an outstanding provocation for my thinking, as I set about more detailed preparation for new students arriving (virtually, mostly) very soon.&lt;/p&gt;
+
+&lt;p&gt;My own comment related to Lackovic’s &lt;em&gt;inquiry graphics&lt;/em&gt;&lt;sup id=&quot;fnref:nl&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:nl&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; that we have worked with in interpretation and creation of imagery for understanding. I went on to ask how we develop the skills in our students to be able to communicate and express themselves using drawing and music, as much as we do with academic literacy now.&lt;/p&gt;
+
+&lt;p&gt;The final part of the discussion considered the opportunity and challenge in enabling &lt;em&gt;safely&lt;/em&gt; the participation (or non-participation) of students in activities designed to “share something of themselves”. This was powerful and no less provocative to our practice and a memorable conclusion to an excellent session.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:lr&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Liamputtong, P. (2008) Knowing differently : arts-based and collaborative research methods, New York, Nova Science Publishers. &lt;a href=&quot;#fnref:lr&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:nl&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;See, for example, Lackovic, N. and Crook, C. (2012) ‘Designs for learning, image-based concept inquiry, a DBR research project’, in Designs for Learning 2012, Designs for Learning, Copenhagen, Denmark, Aalborg Universitet København, pp. 47–48. &lt;a href=&quot;#fnref:nl&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/practice-worth-sharing-asynchronous/</link>
+        <guid isPermaLink="true">https://cullaloe.com/practice-worth-sharing-asynchronous/</guid>
+        
+        <category>Remote teaching</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Nextcloud calendar embedding</title>
+        <description>&lt;p&gt;I needed to embed a &lt;a href=&quot;https://nextcloud.com/&quot;&gt;NextCloud&lt;/a&gt; calendar within another website. Next cloud offers an embed code block which looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;400&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;215&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://your.tld/index.php/apps/calendar/embed/50m3rAnD0mC0d3z&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Because NextCloud sets some fairly intelligent security defaults, this results in the browser throwing a “refused to connect” error unless the site you embed the calendar iframe on is on the same domain as your NextCloud instance. See the header image for what this looks like.&lt;/p&gt;
+
+&lt;p&gt;The solution lies in allowing your target web server to connect to your NextCloud server. This is not done in NginX/Apache settings because these will be overridden by NextCloud anyway. Instead, edit the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ContentSecurityPolicy.php&lt;/code&gt; file for NextCloud. This file is located in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/lib/public/AppFramework/Http/&lt;/code&gt; folder of your NextCloud installation.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cd&quot;&gt;/** @var array Domains from which iframes can be loaded */&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$allowedFrameDomains&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+	&lt;span class=&quot;s1&quot;&gt;'https://*.yourdomain.tld'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    
+&lt;span class=&quot;cd&quot;&gt;/** @var array Domains which can embed this Nextcloud instance */&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$allowedFrameAncestors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+		&lt;span class=&quot;s1&quot;&gt;'\'self\''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    	&lt;span class=&quot;s1&quot;&gt;'https://*.yourdomain.tld'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;With the above edits (no server restart required), the calendar will embed quite happily. There is no need to implement the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Frame-Options&lt;/code&gt; HTTP header documented elsewhere as this is obsolete. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Security-Policy&lt;/code&gt; header delivered by the above fix from within NextCloud is enough.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 05 Aug 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/nextcloud-calendar-embed/</link>
+        <guid isPermaLink="true">https://cullaloe.com/nextcloud-calendar-embed/</guid>
+        
+        <category>Linux</category>
+        
+        <category>Nextcloud</category>
+        
+        <category>Content-Security-Policy</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Datacamp course - intermediate R</title>
+        <description>&lt;p&gt;Continuing my journey into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;, the next course in the R programming track at DataCamp is &lt;a href=&quot;https://campus.datacamp.com/courses/intermediate-r&quot;&gt;Intermediate R&lt;/a&gt;. This course is presented by &lt;a href=&quot;https://www.datacamp.com/instructors/filipsch&quot;&gt;Filip Schouwenaars&lt;/a&gt;. It teaches language syntax and programming conventions, building on &lt;a href=&quot;/introduction-to-R-datacamp&quot;&gt;the last course&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#conditionals-and-control-flow&quot; id=&quot;markdown-toc-conditionals-and-control-flow&quot;&gt;Conditionals and Control Flow&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#relational-operators&quot; id=&quot;markdown-toc-relational-operators&quot;&gt;Relational operators&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#logical-operators&quot; id=&quot;markdown-toc-logical-operators&quot;&gt;Logical operators&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#conditional-statements&quot; id=&quot;markdown-toc-conditional-statements&quot;&gt;Conditional statements&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#evaluation-and-next-steps&quot; id=&quot;markdown-toc-evaluation-and-next-steps&quot;&gt;Evaluation and next steps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#references&quot; id=&quot;markdown-toc-references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conditionals-and-control-flow&quot;&gt;Conditionals and Control Flow&lt;/h2&gt;
+&lt;h3 id=&quot;relational-operators&quot;&gt;Relational operators&lt;/h3&gt;
+&lt;p&gt;This section begins with a talk-through the main relational operators in R, with simple examples, followed by exercises in the virtual lab.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;			&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Equality&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oranges'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apples'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Inequality&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oranges'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apples'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Strings compare alphabetically&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oranges'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apples'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apples'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'bananas'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dragon fruit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tomato'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oranges'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;		&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Works on vectors (and matrices)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRUE&lt;/code&gt; coerces to the value 1, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FALSE&lt;/code&gt;, 0. So truth is greater!&lt;/p&gt;
+
+&lt;h3 id=&quot;logical-operators&quot;&gt;Logical operators&lt;/h3&gt;
+&lt;p&gt;Syntax for these familiar operators is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;!&lt;/code&gt;, for logical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AND&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OR&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NOT&lt;/code&gt;, respectively. They have high precedence and therefore do not need brackets around expressions:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Logical operators may be used on matrices and vectors:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that double-signed operators like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; work only on the first element of a vector.&lt;/p&gt;
+
+&lt;h3 id=&quot;conditional-statements&quot;&gt;Conditional statements&lt;/h3&gt;
+&lt;p&gt;Again, familiar syntax here, with the conditional test in brackets; code blocks in curly braces; and two statement words, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'x is negative'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'x is zero'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'x is positive'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Notice that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else if&lt;/code&gt; statements come on the same line as the closign curly brace of the associated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; statement. Once a conditional test evaluates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRUE&lt;/code&gt;, the corresponding code block is executed and the remaining code within the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; control structure is ignored. Conditional statements may be nested.&lt;/p&gt;
+
+&lt;h2 id=&quot;evaluation-and-next-steps&quot;&gt;Evaluation and next steps&lt;/h2&gt;
+&lt;p&gt;There is a greater teacher presence in this course than the previous, through the use of video presentations to support the hands-on interactive labs.&lt;/p&gt;
+
+&lt;p&gt;Thus far into the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; Programming Track with Datacamp, I have stopped because I have hit an unexpected paywall. Continuing requires a commitment of at least $25 per month, which is good value if I were continuing with courses several hours per day but not appropriate for my current ad-hoc engagement. The day job takes priority, which means &lt;em&gt;all&lt;/em&gt; of the available time mostly. I’ll be switching to other resources from now, probably starting with &lt;em&gt;R for Data Science&lt;/em&gt;&lt;sup id=&quot;fnref:Grolemund2016&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:Grolemund2016&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, or at least the &lt;a href=&quot;https://r4ds.had.co.nz/&quot;&gt;online version&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:Grolemund2016&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Grolemund, G. and Wickham, H. (2016) R for Data Science, O’Reilly Media. &lt;a href=&quot;#fnref:Grolemund2016&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 10 Jul 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/intermediate-R-datacamp/</link>
+        <guid isPermaLink="true">https://cullaloe.com/intermediate-R-datacamp/</guid>
+        
+        <category>Data</category>
+        
+        <category>R</category>
+        
+        <category>CPD</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
