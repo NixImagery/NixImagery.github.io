@@ -5,9 +5,9 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Dec 2020 15:55:12 +0000</pubDate>
-    <lastBuildDate>Tue, 01 Dec 2020 15:55:12 +0000</lastBuildDate>
-    <generator>Jekyll v4.1.1</generator>
+    <pubDate>Sat, 19 Dec 2020 18:54:46 +0000</pubDate>
+    <lastBuildDate>Sat, 19 Dec 2020 18:54:46 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Github/Jekyll site update via Rake</title>
