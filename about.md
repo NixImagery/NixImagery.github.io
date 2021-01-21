@@ -21,7 +21,7 @@ I am also a keen amateur photographer. You can see my photographs on a number of
 
 Other websites I write or host include [tales of the family](https://cullaloe.com/family/), [The Natural Partners Project](https://naturalpartnersproject.org/), and [Kara Mudie's photography site](https://karamudie.co.uk/). [Cullaloe.net](https://cullaloe.net/) is our server home, housing data services and the VPS.
 
-You can find my current cv [here](http://cullaloe.com/cv.pdf) (pdf, 100kB).
+You can find my current cv [here](https://github.com/NixImagery/CV/blob/master/cv.pdf) (pdf, 100kB).
 
 
 Nick Hood
