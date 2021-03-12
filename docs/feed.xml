@@ -5,9 +5,49 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Feb 2021 08:17:17 +0000</pubDate>
-    <lastBuildDate>Thu, 11 Feb 2021 08:17:17 +0000</lastBuildDate>
+    <pubDate>Fri, 12 Mar 2021 15:11:06 +0000</pubDate>
+    <lastBuildDate>Fri, 12 Mar 2021 15:11:06 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>The Problem of Educational Theory</title>
+        <description>&lt;p&gt;This was an online seminar offered by my own Institute, presented by &lt;a href=&quot;https://stefansiegel.de/&quot;&gt;Stefan Siegel&lt;/a&gt;, a doctoral student from Augsberg. The seminar was introduced by Professor Gert Biesta from ETL and attended by delegates from Edinburgh and overseas.&lt;/p&gt;
+
+&lt;p&gt;Stefan began with a quick survey of delegates to get the feel of how we feel about educational theory: is it a distinct discipline in its own right, or is it interdisciplinary, and challenged us to name an educational theory. I feel that educational theory is clearly distinct from others, and not a sub-field of (say) psychology. He was able to immediately share the analysis of the audience responses. He went on to discuss his research and thesis before setting out the agenda.&lt;/p&gt;
+
+&lt;h2 id=&quot;theorising-education&quot;&gt;Theorising education&lt;/h2&gt;
+&lt;p&gt;Development of educational theory has proceeded differently in the Anglo-American context than “Continental”. In the former, it is viewed as interdisciplinary, whereas in the latter, it is more a field in its own right, referred to as &lt;em&gt;Pädagogik&lt;/em&gt;, established in the 1920s in Germany. Its roots being in philosophy, it evolved to make use of more quantitative methods. Problems discussed focused initially on the certainty of definition in German educational theory. Stefan’s narrative went on to examine terms, including &lt;em&gt;theory&lt;/em&gt; and &lt;em&gt;education&lt;/em&gt;, and discussed the challenge of defining these things. Stefan made frequent reference to Biesta (2013) – other works, of course, but this popped up quite a lot.&lt;/p&gt;
+
+&lt;p&gt;The talk progressed towards a definition of educational theory and considered the strengths and shortcomings of defining educational theories according to how narrow these definitions are.&lt;/p&gt;
+
+&lt;h2 id=&quot;discussion&quot;&gt;Discussion&lt;/h2&gt;
+
+&lt;p&gt;A rich conversation developed in considering the questions that help to define a field theory or discipline. The consideration of the terms used on the continent was helpful for me, including terms that combine more than one, such as teaching and learning, in German &lt;em&gt;Lehren und Lernen&lt;/em&gt;. Perhaps it is just a semantic point and there’s no difference other than hearing one term when two are said.&lt;/p&gt;
+
+&lt;h2 id=&quot;reflections&quot;&gt;Reflections&lt;/h2&gt;
+
+&lt;p&gt;The problem with language is that it doesn’t belong to anyone, so it can be used and abused by everyone with impunity. Within education, in my experience, this results in the hijacking of common terms for new purpose: the first time I came across this was in my probationary year when I had to endure a talk on &lt;em&gt;enterprise education&lt;/em&gt;, which I argued at the time, had absolutely nothing to do with enterprise the way I understood it from over 20 years in commerce and industry. There are plenty of others: &lt;em&gt;inclusion&lt;/em&gt;, for example, ultimately even &lt;em&gt;education&lt;/em&gt;, &lt;em&gt;teaching&lt;/em&gt; and &lt;em&gt;learning&lt;/em&gt;. See Biesta (2005) for a discussion on the latter.&lt;/p&gt;
+
+&lt;p&gt;What is clearer to me now is the understanding that a &lt;em&gt;theory&lt;/em&gt; is inextricably linked to the questions it attempts to answer. The terms of the question are where the focus and clarity are required in their definition in order to make sense of what the theory means.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;Biesta, G. (2013) ‘Giving Teaching Back to Education: Responding to the Disappearance of the Teacher’, Phenomenology &amp;amp; Practice, vol. 6, no. 2, pp. 35–49.&lt;/p&gt;
+
+&lt;p&gt;Biesta, G. (2005) ‘Against learning. Reclaiming a language for education in an age of learning.’, Nordic Studies in Education = Nordisk Pedagogik, Nordic Educational Research Association (NERA), vol. 25, no. 1, pp. 54–66 [Online]. DOI: 10.1177/00187267030568002.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/seminar-educational-theory/</link>
+        <guid isPermaLink="true">https://cullaloe.com/seminar-educational-theory/</guid>
+        
+        <category>CPD</category>
+        
+        <category>Research</category>
+        
+        <category>Education</category>
+        
+        
+      </item>
     
       <item>
         <title>Github/Jekyll site update via Rake</title>
@@ -618,94 +658,6 @@ x,y,t1,t2
         <category>Nextcloud</category>
         
         <category>Content-Security-Policy</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Datacamp course - intermediate R</title>
-        <description>&lt;p&gt;Continuing my journey into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;, the next course in the R programming track at DataCamp is &lt;a href=&quot;https://campus.datacamp.com/courses/intermediate-r&quot;&gt;Intermediate R&lt;/a&gt;. This course is presented by &lt;a href=&quot;https://www.datacamp.com/instructors/filipsch&quot;&gt;Filip Schouwenaars&lt;/a&gt;. It teaches language syntax and programming conventions, building on &lt;a href=&quot;/introduction-to-R-datacamp&quot;&gt;the last course&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#conditionals-and-control-flow&quot; id=&quot;markdown-toc-conditionals-and-control-flow&quot;&gt;Conditionals and Control Flow&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#relational-operators&quot; id=&quot;markdown-toc-relational-operators&quot;&gt;Relational operators&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#logical-operators&quot; id=&quot;markdown-toc-logical-operators&quot;&gt;Logical operators&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#conditional-statements&quot; id=&quot;markdown-toc-conditional-statements&quot;&gt;Conditional statements&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#evaluation-and-next-steps&quot; id=&quot;markdown-toc-evaluation-and-next-steps&quot;&gt;Evaluation and next steps&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#references&quot; id=&quot;markdown-toc-references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;conditionals-and-control-flow&quot;&gt;Conditionals and Control Flow&lt;/h2&gt;
-&lt;h3 id=&quot;relational-operators&quot;&gt;Relational operators&lt;/h3&gt;
-&lt;p&gt;This section begins with a talk-through the main relational operators in R, with simple examples, followed by exercises in the virtual lab.&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;			&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Equality&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oranges'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apples'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Inequality&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oranges'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apples'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Strings compare alphabetically&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oranges'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apples'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apples'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'bananas'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dragon fruit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tomato'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'oranges'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;		&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Works on vectors (and matrices)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRUE&lt;/code&gt; coerces to the value 1, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FALSE&lt;/code&gt;, 0. So truth is greater!&lt;/p&gt;
-
-&lt;h3 id=&quot;logical-operators&quot;&gt;Logical operators&lt;/h3&gt;
-&lt;p&gt;Syntax for these familiar operators is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;!&lt;/code&gt;, for logical &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AND&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OR&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NOT&lt;/code&gt;, respectively. They have high precedence and therefore do not need brackets around expressions:&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Logical operators may be used on matrices and vectors:&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that double-signed operators like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; work only on the first element of a vector.&lt;/p&gt;
-
-&lt;h3 id=&quot;conditional-statements&quot;&gt;Conditional statements&lt;/h3&gt;
-&lt;p&gt;Again, familiar syntax here, with the conditional test in brackets; code blocks in curly braces; and two statement words, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'x is negative'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'x is zero'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'x is positive'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Notice that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else if&lt;/code&gt; statements come on the same line as the closign curly brace of the associated &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; statement. Once a conditional test evaluates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TRUE&lt;/code&gt;, the corresponding code block is executed and the remaining code within the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; control structure is ignored. Conditional statements may be nested.&lt;/p&gt;
-
-&lt;h2 id=&quot;evaluation-and-next-steps&quot;&gt;Evaluation and next steps&lt;/h2&gt;
-&lt;p&gt;There is a greater teacher presence in this course than the previous, through the use of video presentations to support the hands-on interactive labs.&lt;/p&gt;
-
-&lt;p&gt;Thus far into the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; Programming Track with Datacamp, I have stopped because I have hit an unexpected paywall. Continuing requires a commitment of at least $25 per month, which is good value if I were continuing with courses several hours per day but not appropriate for my current ad-hoc engagement. The day job takes priority, which means &lt;em&gt;all&lt;/em&gt; of the available time mostly. I’ll be switching to other resources from now, probably starting with &lt;em&gt;R for Data Science&lt;/em&gt;&lt;sup id=&quot;fnref:Grolemund2016&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:Grolemund2016&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, or at least the &lt;a href=&quot;https://r4ds.had.co.nz/&quot;&gt;online version&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:Grolemund2016&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Grolemund, G. and Wickham, H. (2016) R for Data Science, O’Reilly Media. &lt;a href=&quot;#fnref:Grolemund2016&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 10 Jul 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/intermediate-R-datacamp/</link>
-        <guid isPermaLink="true">https://cullaloe.com/intermediate-R-datacamp/</guid>
-        
-        <category>Data</category>
-        
-        <category>R</category>
-        
-        <category>CPD</category>
         
         
       </item>
