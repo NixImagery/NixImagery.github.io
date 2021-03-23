@@ -11,12 +11,21 @@ plugins:
   - jemoji
   # - jekyll-feed - replaced with feed.xml template
   - jekyll-sitemap
-
+  - jekyll-scholar
 
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cullaloe.com" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: cullaloe #if your site has a twitter account, enter it here
+
+scholar:
+  style: apa
+  locale: en
+
+  source: /Users/nickhood/Dropbox/Bibliographies
+  bibliography: library.bib
+
+  query: "@*"
 
 # Author Settings
 author: Nick Hood # add your name
