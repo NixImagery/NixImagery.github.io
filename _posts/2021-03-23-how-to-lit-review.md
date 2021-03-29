@@ -24,7 +24,7 @@ To get started with your own literature review, find 4 to 6 literature reviews a
 ## Getting started
 A sketch or visual representation can help organise thinking and develop understanding when writing a literature review. Steps to this are:
 
-* find the literature (e.g. [Google Scholar](https://scholar.google.com/)), noting how well cited they are
+* find the literature (e.g. [Web of Science](https://apps.webofknowledge.com/), [ERIC](https://eric.ed.gov/), or even [Google Scholar](https://scholar.google.com/)), noting how well cited they are
 * screen (scan) about 20 articles to check they are on the topic.
 * within those articles, look for themes -- of agreement or disagreement, cultures, or contexts
 
@@ -38,7 +38,7 @@ A good literature search is systematic, starting with **background reading**: fr
 
 Now you are ready to try your **resources for finding literature**: many universities have unified search tools such as [DiscoverEd](https://discovered.ed.ac.uk/) but you will need to find more specific sources relevant to your field. Your library will have a databases A-Z or [listed by topic](https://www.ed.ac.uk/information-services/library-museum-gallery/finding-resources/library-databases/databases-subject-a-z) which will help you make a list of resources to search for literature.
 
-You will need to develop a good technique for asking the search engine in a way that yields helpful results. Logical combination of terms (like AND, OR) and using wild cards are required, and will be determined by the search tool you are using. Read the [help pages](https://scholar.google.com/intl/en/scholar/help.html) and learn how to work the tool properly before spending hours with it.
+You will need to develop a good technique for asking the search engine in a way that yields helpful results. Logical combination of terms (like AND, OR) and using wild cards are required, and will be determined by the search tool you are using. Read the help pages (e.g. for [Web of Science](https://images.webofknowledge.com/WOKRS535R111/help/WOS/hp_search.html), [ERIC](https://eric.ed.gov/?advanced) or [Google Scholar](https://scholar.google.com/intl/en/scholar/help.html)) and learn how to work the tool properly before spending hours with it.
 
 Finally, as you find papers and articles to read, try to organise them logically: identify and prioritise the important papers (e.g. those that everyone else cites); group them by sub-topic or theme; push peripheral papers aside until you need to draw them into your research or thesis. A good reference manager like [Mendeley](https://www.elsevier.com/solutions/mendeley) is invaluable for keeping track and organising what you find. It then makes the task citing and referencing extremely straightforward.
 
@@ -60,3 +60,6 @@ As well as drawing on my own experience in initial teacher education, and inform
 {% reference White2018 %}
 
 {% reference Librarian2012 %}
+
+<hr/>
+EDIT 29 March 21: added WoK and ERIC

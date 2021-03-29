@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Mar 2021 22:03:07 +0000</pubDate>
-    <lastBuildDate>Fri, 26 Mar 2021 22:03:07 +0000</lastBuildDate>
+    <pubDate>Mon, 29 Mar 2021 08:04:23 +0100</pubDate>
+    <lastBuildDate>Mon, 29 Mar 2021 08:04:23 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -23,7 +23,7 @@
 &lt;p&gt;A sketch or visual representation can help organise thinking and develop understanding when writing a literature review. Steps to this are:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;find the literature (e.g. &lt;a href=&quot;https://scholar.google.com/&quot;&gt;Google Scholar&lt;/a&gt;), noting how well cited they are&lt;/li&gt;
+  &lt;li&gt;find the literature (e.g. &lt;a href=&quot;https://apps.webofknowledge.com/&quot;&gt;Web of Science&lt;/a&gt;, &lt;a href=&quot;https://eric.ed.gov/&quot;&gt;ERIC&lt;/a&gt;, or even &lt;a href=&quot;https://scholar.google.com/&quot;&gt;Google Scholar&lt;/a&gt;), noting how well cited they are&lt;/li&gt;
   &lt;li&gt;screen (scan) about 20 articles to check they are on the topic.&lt;/li&gt;
   &lt;li&gt;within those articles, look for themes – of agreement or disagreement, cultures, or contexts&lt;/li&gt;
 &lt;/ul&gt;
@@ -38,7 +38,7 @@
 
 &lt;p&gt;Now you are ready to try your &lt;strong&gt;resources for finding literature&lt;/strong&gt;: many universities have unified search tools such as &lt;a href=&quot;https://discovered.ed.ac.uk/&quot;&gt;DiscoverEd&lt;/a&gt; but you will need to find more specific sources relevant to your field. Your library will have a databases A-Z or &lt;a href=&quot;https://www.ed.ac.uk/information-services/library-museum-gallery/finding-resources/library-databases/databases-subject-a-z&quot;&gt;listed by topic&lt;/a&gt; which will help you make a list of resources to search for literature.&lt;/p&gt;
 
-&lt;p&gt;You will need to develop a good technique for asking the search engine in a way that yields helpful results. Logical combination of terms (like AND, OR) and using wild cards are required, and will be determined by the search tool you are using. Read the &lt;a href=&quot;https://scholar.google.com/intl/en/scholar/help.html&quot;&gt;help pages&lt;/a&gt; and learn how to work the tool properly before spending hours with it.&lt;/p&gt;
+&lt;p&gt;You will need to develop a good technique for asking the search engine in a way that yields helpful results. Logical combination of terms (like AND, OR) and using wild cards are required, and will be determined by the search tool you are using. Read the help pages (e.g. for &lt;a href=&quot;https://images.webofknowledge.com/WOKRS535R111/help/WOS/hp_search.html&quot;&gt;Web of Science&lt;/a&gt;, &lt;a href=&quot;https://eric.ed.gov/?advanced&quot;&gt;ERIC&lt;/a&gt; or &lt;a href=&quot;https://scholar.google.com/intl/en/scholar/help.html&quot;&gt;Google Scholar&lt;/a&gt;) and learn how to work the tool properly before spending hours with it.&lt;/p&gt;
 
 &lt;p&gt;Finally, as you find papers and articles to read, try to organise them logically: identify and prioritise the important papers (e.g. those that everyone else cites); group them by sub-topic or theme; push peripheral papers aside until you need to draw them into your research or thesis. A good reference manager like &lt;a href=&quot;https://www.elsevier.com/solutions/mendeley&quot;&gt;Mendeley&lt;/a&gt; is invaluable for keeping track and organising what you find. It then makes the task citing and referencing extremely straightforward.&lt;/p&gt;
 
@@ -60,6 +60,10 @@
 &lt;p&gt;&lt;span id=&quot;White2018&quot;&gt;White, C. (2018). How to Conduct an Effective Literature Review. In &lt;i&gt;SAGE Research Methods Video: Practical Research and Academic Skills&lt;/i&gt;. https://doi.org/10.4135/9781526442734&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;span id=&quot;Librarian2012&quot;&gt;Faculty Librarians. (2012). &lt;i&gt;Doing a literature search : a step by step guide&lt;/i&gt;. &lt;i&gt;March&lt;/i&gt;, 1–21.&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;EDIT 29 March 21: added WoK and ERIC&lt;/p&gt;
 </description>
         <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
         <link>https://cullaloe.com/how-to-lit-review/</link>
