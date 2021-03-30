@@ -156,10 +156,10 @@
       <p>Over the weekend, as I was updating DNS tables for a client, I thought I’d sharpen up my server mail settings to make the mail service more robust. I’ve seen (unrelated to this) an increase in spam recently and it had been on my mind to do more to combat it. These notes set out broadly how I configure my mail server.</p>
 
 <h2 id="mail-server-settings">Mail server settings</h2>
-<p>The mail server I use is Postfix/Dovecot. Using the Plesk control interface on my VPS<sup id="fnref:vps" role="doc-noteref"><a href="#fn:vps" class="footnote">1</a></sup>, there are a number of settings needed to mitigate the scourge that is spam emails. From Tools &amp; Settings, select Server-wide mail settings make these changes.</p>
+<p>The mail server I use is Postfix/Dovecot. Using the Plesk control interface on my VPS<sup id="fnref:vps" role="doc-noteref"><a href="#fn:vps" class="footnote" rel="footnote">1</a></sup>, there are a number of settings needed to mitigate the scourge that is spam emails. From Tools &amp; Settings, select Server-wide mail settings make these changes.</p>
 
 <h3 id="using-dns-blacklisting">Using DNS Blacklisting</h3>
-<p>The first thing to do is to switch on spam protection based on DNS blackhole lists such as <a href="https://www.spamhaus.org/">zen.spamhaus.org</a>, <a href="https://abuse.ch/">spam.abuse.ch</a> and <a href="https://imp.ch/">spamrbl.imp.ch</a>. Also, when you do get spam in your inbox, report it immediately. This means just copying the message source<sup id="fnref:notthat" role="doc-noteref"><a href="#fn:notthat" class="footnote">2</a></sup> into a form at somewhere like <a href="https://www.spamcop.net/">SpamCop.net</a>, who will send abuse reports to the ISPs that allow the spammers access to the internet. What we hope is that these providers will shut them down, but some are repeat offenders: all of my recent reports have gone to <a href="https://www.cloudflare.com/">CloudFlare</a> who seem reluctant to combat internet abuse, perhaps because they are making money out of it.</p>
+<p>The first thing to do is to switch on spam protection based on DNS blackhole lists such as <a href="https://www.spamhaus.org/">zen.spamhaus.org</a>, <a href="https://abuse.ch/">spam.abuse.ch</a> and <a href="https://imp.ch/">spamrbl.imp.ch</a>. Also, when you do get spam in your inbox, report it immediately. This means just copying the message source<sup id="fnref:notthat" role="doc-noteref"><a href="#fn:notthat" class="footnote" rel="footnote">2</a></sup> into a form at somewhere like <a href="https://www.spamcop.net/">SpamCop.net</a>, who will send abuse reports to the ISPs that allow the spammers access to the internet. What we hope is that these providers will shut them down, but some are repeat offenders: all of my recent reports have gone to <a href="https://www.cloudflare.com/">CloudFlare</a> who seem reluctant to combat internet abuse, perhaps because they are making money out of it.</p>
 
 <h2 id="spf">SPF</h2>
 <p><a href="https://www.rfc-editor.org/info/rfc7208">Sender Policy Framework</a> is designed to allow domain admins to authorise the servers that are allowed to use their domain names. Receiving mail servers can check that authorisation by looking up the SPF record of the domain claimed in the “from” field of an email.</p>
@@ -185,7 +185,7 @@
 <p>Within the Plesk server-wide mail settings panel, you can now check <code class="language-plaintext highlighter-rouge">Enable DMARC to check incoming mail</code>.</p>
 
 <h2 id="summary">Summary</h2>
-<p>The final DNS aligns with the server settings to provide a more robust and spam-free<sup id="fnref:orly" role="doc-noteref"><a href="#fn:orly" class="footnote">3</a></sup> mail experience. An example DNS set of mail-related TXT entries:</p>
+<p>The final DNS aligns with the server settings to provide a more robust and spam-free<sup id="fnref:orly" role="doc-noteref"><a href="#fn:orly" class="footnote" rel="footnote">3</a></sup> mail experience. An example DNS set of mail-related TXT entries:</p>
 
 <table>
   <thead>

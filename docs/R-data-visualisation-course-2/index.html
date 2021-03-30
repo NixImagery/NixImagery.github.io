@@ -378,7 +378,7 @@
 </ul>
 
 <h3 id="discussing-challenge-2-and-feeling-lost">Discussing Challenge 2 and feeling lost</h3>
-<p>No time to spend on this before the next class, so I just sat back and tried to follow the discussion<sup id="fnref:fml" role="doc-noteref"><a href="#fn:fml" class="footnote">1</a></sup>.</p>
+<p>No time to spend on this before the next class, so I just sat back and tried to follow the discussion<sup id="fnref:fml" role="doc-noteref"><a href="#fn:fml" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <h3 id="boxplots">Boxplots</h3>
 
@@ -391,13 +391,13 @@
   <li>The dots represent the outliers</li>
 </ul>
 
-<p>In R, boxplots are another geometry<sup id="fnref:gallery" role="doc-noteref"><a href="#fn:gallery" class="footnote">2</a></sup>:</p>
+<p>In R, boxplots are another geometry<sup id="fnref:gallery" role="doc-noteref"><a href="#fn:gallery" class="footnote" rel="footnote">2</a></sup>:</p>
 
 <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ggplot</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Species</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Petal.Width</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="n">Species</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_boxplot</span><span class="p">()</span><span class="w">
 </span></code></pre></div></div>
 
 <h3 id="playing-with-colours">Playing with colours</h3>
-<p>There are a number of colour themes within R to allow you to make beautiful and readable plots and graphs. What is important, as with all open source, is that when using different packages and utilities, you must RTFM<sup id="fnref:rtm" role="doc-noteref"><a href="#fn:rtm" class="footnote">3</a></sup>.</p>
+<p>There are a number of colour themes within R to allow you to make beautiful and readable plots and graphs. What is important, as with all open source, is that when using different packages and utilities, you must RTFM<sup id="fnref:rtm" role="doc-noteref"><a href="#fn:rtm" class="footnote" rel="footnote">3</a></sup>.</p>
 
 <p>These are invoked with colour commands and palettes, like <code class="language-plaintext highlighter-rouge">scale_color_manual</code> here:</p>
 

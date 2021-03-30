@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 Mar 2021 08:04:23 +0100</pubDate>
-    <lastBuildDate>Mon, 29 Mar 2021 08:04:23 +0100</lastBuildDate>
+    <pubDate>Tue, 30 Mar 2021 15:26:43 +0100</pubDate>
+    <lastBuildDate>Tue, 30 Mar 2021 15:26:43 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -234,7 +234,7 @@ Finished.
     
       <item>
         <title>Climate Change Mitigating Technologies</title>
-        <description>&lt;p&gt;I had the chance to sit in on the &lt;a href=&quot;https://www.parliament.scot/msps/science-and-technology.aspx&quot;&gt;cross-party group on science&lt;/a&gt;, in which there were two presentations on the topic, the first from Rebecca Bell, &lt;a href=&quot;https://www.sccs.org.uk/&quot;&gt;Scottish CCS&lt;/a&gt;&lt;sup id=&quot;fnref:sccs&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:sccs&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; on Carbon Capture and Storage. The second was given by Richard Gow, &lt;a href=&quot;https://www.drax.com/&quot;&gt;Drax&lt;/a&gt;&lt;sup id=&quot;fnref:drax&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:drax&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; on Bioenergy with Carbon Capture and Storage. The latter presentation called for policy help in rewarding negative carbon emissions, which are an odd omission from the accounting model used in climate change impact measurement.&lt;/p&gt;
+        <description>&lt;p&gt;I had the chance to sit in on the &lt;a href=&quot;https://www.parliament.scot/msps/science-and-technology.aspx&quot;&gt;cross-party group on science&lt;/a&gt;, in which there were two presentations on the topic, the first from Rebecca Bell, &lt;a href=&quot;https://www.sccs.org.uk/&quot;&gt;Scottish CCS&lt;/a&gt;&lt;sup id=&quot;fnref:sccs&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:sccs&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; on Carbon Capture and Storage. The second was given by Richard Gow, &lt;a href=&quot;https://www.drax.com/&quot;&gt;Drax&lt;/a&gt;&lt;sup id=&quot;fnref:drax&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:drax&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; on Bioenergy with Carbon Capture and Storage. The latter presentation called for policy help in rewarding negative carbon emissions, which are an odd omission from the accounting model used in climate change impact measurement.&lt;/p&gt;
 
 &lt;p&gt;Both provided a really useful understanding and overview of what carbon emission and capture is about and how it is working, with an emphasis on what is happening in Scotland within a very clear European context. I found the presentations, both neither slick nor sales-focused, extremely engaging and helpful in thinking about CO\(_2\) emissions.&lt;/p&gt;
 
@@ -577,7 +577,7 @@ Everybody says how good my videos are.
 22,56,238
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Launching &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python 3&lt;/code&gt;&lt;sup id=&quot;fnref:why&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:why&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Launching &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python 3&lt;/code&gt;&lt;sup id=&quot;fnref:why&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:why&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python3
 Python 3.6.2 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
@@ -663,13 +663,13 @@ x,y,t1,t2
 
 &lt;p&gt;She included readings from literature on the work of the teacher, who has a role of “packaging” content for learners and set this in contrast to the context of learning in a social setting. This tension, she characterised as a danger in asynchronous learning contexts. She placed learners in our thinking not so much as &lt;em&gt;individual units&lt;/em&gt; but humans undergoing a process of &lt;em&gt;co-operative effort&lt;/em&gt; that takes place between binaries like male/female, nature/technology, local/global, and so on.&lt;/p&gt;
 
-&lt;p&gt;The traces we leave behind need to be thought about when planning and teaching in an asynchronous space. Laura exemplified this in image-making, experience of physical spaces, and in “utilising modes other than language creates space for different ways of knowing or being” (Liamputtong &amp;amp; Rumbold, 2008&lt;sup id=&quot;fnref:lr&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:lr&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;). The latter quote is in context of the use of music as making traces as a “soundtrack” to a learning course.&lt;/p&gt;
+&lt;p&gt;The traces we leave behind need to be thought about when planning and teaching in an asynchronous space. Laura exemplified this in image-making, experience of physical spaces, and in “utilising modes other than language creates space for different ways of knowing or being” (Liamputtong &amp;amp; Rumbold, 2008&lt;sup id=&quot;fnref:lr&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:lr&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;). The latter quote is in context of the use of music as making traces as a “soundtrack” to a learning course.&lt;/p&gt;
 
 &lt;p&gt;The theme emerged further in Laura’s ideas for using traces to provoke shared experiences, and through these shared experiences, my view is that a stronger learning community is established. She provoked the delegates to think and talk about how we can make use of the technology to create artistically shared experiences; how far to go to enable sharing something of themselves and teachers; what opportunities do we have in putting ourselves in the process of co-learning with our students?&lt;/p&gt;
 
 &lt;p&gt;At this point, a rich discussion followed, exploring the possibilities for us as teachers moving forward into a more asynchronous mode of practice. For me, this was an outstanding provocation for my thinking, as I set about more detailed preparation for new students arriving (virtually, mostly) very soon.&lt;/p&gt;
 
-&lt;p&gt;My own comment related to Lackovic’s &lt;em&gt;inquiry graphics&lt;/em&gt;&lt;sup id=&quot;fnref:nl&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:nl&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; that we have worked with in interpretation and creation of imagery for understanding. I went on to ask how we develop the skills in our students to be able to communicate and express themselves using drawing and music, as much as we do with academic literacy now.&lt;/p&gt;
+&lt;p&gt;My own comment related to Lackovic’s &lt;em&gt;inquiry graphics&lt;/em&gt;&lt;sup id=&quot;fnref:nl&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:nl&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; that we have worked with in interpretation and creation of imagery for understanding. I went on to ask how we develop the skills in our students to be able to communicate and express themselves using drawing and music, as much as we do with academic literacy now.&lt;/p&gt;
 
 &lt;p&gt;The final part of the discussion considered the opportunity and challenge in enabling &lt;em&gt;safely&lt;/em&gt; the participation (or non-participation) of students in activities designed to “share something of themselves”. This was powerful and no less provocative to our practice and a memorable conclusion to an excellent session.&lt;/p&gt;
 

@@ -147,7 +147,7 @@
         <h1 class="page-title">Arch Linux on OSX</h1>
         <div class="page-date"><span>2019, Aug 31&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>I’ve wanted to take a look at Arch Linux for a while now, and when a student got me to connect her inherited Arch laptop to the University Wi-Fi network last week, I was reminded that this lightweight distribution is attractive to the increasingly paranoid control freak that I am becoming. Having toyed with the idea of spending money on an XPS or some other super-cool hacker machine, and having been defeated by prudence, here’s how I got it running as a first-time-out instance on my University MacBook Air<sup id="fnref:Mac" role="doc-noteref"><a href="#fn:Mac" class="footnote">1</a></sup>.</p>
+      <p>I’ve wanted to take a look at Arch Linux for a while now, and when a student got me to connect her inherited Arch laptop to the University Wi-Fi network last week, I was reminded that this lightweight distribution is attractive to the increasingly paranoid control freak that I am becoming. Having toyed with the idea of spending money on an XPS or some other super-cool hacker machine, and having been defeated by prudence, here’s how I got it running as a first-time-out instance on my University MacBook Air<sup id="fnref:Mac" role="doc-noteref"><a href="#fn:Mac" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <h2 id="the-host">The Host</h2>
 <p>Like I said, I really can’t justify a separate development machine, especially as I have use of a decent spec laptop. The <a href="https://www.archlinux.org/download/">Arch download page</a> includes a number of different ways of acquiring the distro, including using <a href="https://app.vagrantup.com/archlinux/boxes/archlinux">Vagrant</a> with VirtualBox, which I had intended to plug an Arch ISO disk into.</p>
@@ -161,7 +161,7 @@
 </code></pre></div></div>
 
 <h2 id="arch">Arch</h2>
-<p>Firing up Arch itself could be done the same way, but the Vagrant site hints that once Vagrant is installed on your dev machine, all you need is a Vagrantfile with the right info in it. Here’s the MWE<sup id="fnref:MWE" role="doc-noteref"><a href="#fn:MWE" class="footnote">2</a></sup> I started with. It uses ruby syntax, and was simply a new directory containing a single file called <code class="language-plaintext highlighter-rouge">Vagrantfile</code>:</p>
+<p>Firing up Arch itself could be done the same way, but the Vagrant site hints that once Vagrant is installed on your dev machine, all you need is a Vagrantfile with the right info in it. Here’s the MWE<sup id="fnref:MWE" role="doc-noteref"><a href="#fn:MWE" class="footnote" rel="footnote">2</a></sup> I started with. It uses ruby syntax, and was simply a new directory containing a single file called <code class="language-plaintext highlighter-rouge">Vagrantfile</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Vagrant</span><span class="p">.</span><span class="nf">configure</span><span class="p">(</span><span class="s2">"2"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
   <span class="n">config</span><span class="p">.</span><span class="nf">vm</span><span class="p">.</span><span class="nf">box</span> <span class="o">=</span> <span class="s2">"archlinux/archlinux"</span>
