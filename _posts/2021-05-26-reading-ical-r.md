@@ -105,6 +105,6 @@ Date|Holiday
 2022-12-27|Christmas Day
 
 ## Conclusion 
-I now have a way of automatically updating the calendar in the VLE for my course, my only having to rebuild the site after a change in the master calendar. This is hugely useful within my workflow and reduces the risk of redundancy or error when there is more than one master. Next steps are to make this produce a GANTT chart.
+I now have a way of automatically updating the calendar in the VLE for my course, by only having to rebuild the site after a change in the master calendar. This is hugely useful within my workflow and reduces the risk of divergence or error when there is more than one master. Next steps are to make this produce a GANTT chart.
 
 <!--## Footnotes-->
