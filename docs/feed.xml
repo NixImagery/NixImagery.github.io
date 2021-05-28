@@ -5,9 +5,229 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 30 Apr 2021 21:24:22 +0100</pubDate>
-    <lastBuildDate>Fri, 30 Apr 2021 21:24:22 +0100</lastBuildDate>
+    <pubDate>Fri, 28 May 2021 17:45:23 +0100</pubDate>
+    <lastBuildDate>Fri, 28 May 2021 17:45:23 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Reading iCal in R</title>
+        <description>&lt;p&gt;Being organised is an important habit for anyone in these days of scope creep – the tendency for more and more to be done as part of the job. We’re all trying to maximise our capacity, so eliminating duplication of effort is one way to avoid wasting time doing unnecessary admin. Productivity tools like email and calendars have replaced the memo and diary of pre-Internet days, but there are many brands and infrastructures, often competing with each other. The result can be that we end up keeping several email accounts, and several calendars with the inevitable double booking and confusion.&lt;/p&gt;
+
+&lt;p&gt;My policy is wherever possible to keep one master data source: documents are configuration managed and stored safely, checked out and checked in when updated and with a visible, reversible change history. Calendars for each project are aggregated in a suitable viewer from master files in &lt;a href=&quot;https://en.wikipedia.org/wiki/ICalendar&quot;&gt;iCal&lt;/a&gt; format, allowing them to be easily shared and syndicated.&lt;/p&gt;
+
+&lt;p&gt;Planning for next academic year, I wanted to display a simple GANTT chart for students of the overall course structure. This, because I had previously been duplicating weekly details from the master calendar. I wanted a way to automatically generate mini-GANTTs for each week in the Virtual Learning Environment (VLE) from the course calendar. Here’s how I did it: the VLE is written and published in &lt;a href=&quot;https://bookdown.org/&quot;&gt;Bookdown&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, there is already a &lt;a href=&quot;https://cran.r-project.org/package=calendar&quot;&gt;package&lt;/a&gt; for reading and manipulating iCal files. You may need to install this first.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;install.packages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;calendar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So, firstly we want to grab data from the iCal feed. This is the path to an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ics&lt;/code&gt; file or the ical data for the calendar: make sure it’s not just a link to a web interface for the calendar.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mydat&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readLines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://www.gov.uk/bank-holidays/england-and-wales.ics&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s worth checking that this has returned something useful: the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head()&lt;/code&gt; function returns the first few lines and an iCal file should look something like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mydat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;BEGIN:VCALENDAR&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                     
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;VERSION:2.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                         
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;METHOD:PUBLISH&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                      
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PRODID:-//uk.gov/GOVUK calendars//EN&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;CALSCALE:GREGORIAN&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                  
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;BEGIN:VEVENT&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;       
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ic_dataframe()&lt;/code&gt; to organise this flat file into something more structured, again peeking in at the first few column header names in the data frame:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mydf&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ic_dataframe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mydat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mydf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DTEND;VALUE=DATE&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DTSTART;VALUE=DATE&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SUMMARY&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;           
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UID&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SEQUENCE&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;           &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DTSTAMP&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                          
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Selecting the information you need from that is a matter of applying filters. A new data frame using the first 3 columns:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mydf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DTSTART;VALUE=DATE&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mydf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SUMMARY&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DTSTART.VALUE.DATE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SUMMARY&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2016-01-01&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;New&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Year&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Day&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2016-03-25&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;            &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Good&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Friday&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2016-03-28&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;          &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Easter&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Monday&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2016-05-02&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Early&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;May&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bank&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;holiday&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2016-05-30&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Spring&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bank&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;holiday&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2016-08-29&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Summer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bank&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;holiday&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Selecting only Jubilee holidays using the logical form of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grepl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Jubilee&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SUMMARY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DTSTART.VALUE.DATE&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;                       &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SUMMARY&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;         &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2022-06-03&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Platinum&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Jubilee&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bank&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;holiday&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Adding new headings using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setnames&lt;/code&gt; from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data.table&lt;/code&gt; library, then removing row numbers and displaying as a table.&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Date&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Event name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grepl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2022&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;knitr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;From&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caption&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2022 Holiday Calendar'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row.names&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Which will yield a table in your book(down):&lt;/p&gt;
+
+&lt;p&gt;Table 1: 2022 Holiday Calendar&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+      &lt;th&gt;Holiday&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-01-03&lt;/td&gt;
+      &lt;td&gt;New Year’s Day&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-04-15&lt;/td&gt;
+      &lt;td&gt;Good Friday&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-04-18&lt;/td&gt;
+      &lt;td&gt;Easter Monday&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-05-02&lt;/td&gt;
+      &lt;td&gt;Early May bank holiday&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-06-02&lt;/td&gt;
+      &lt;td&gt;Spring bank holiday&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-06-03&lt;/td&gt;
+      &lt;td&gt;Platinum Jubilee bank holiday&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-08-29&lt;/td&gt;
+      &lt;td&gt;Summer bank holiday&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-12-26&lt;/td&gt;
+      &lt;td&gt;Boxing Day&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2022-12-27&lt;/td&gt;
+      &lt;td&gt;Christmas Day&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I now have a way of automatically updating the calendar in the VLE for my course, my only having to rebuild the site after a change in the master calendar. This is hugely useful within my workflow and reduces the risk of redundancy or error when there is more than one master. Next steps are to make this produce a GANTT chart.&lt;/p&gt;
+
+&lt;!--## Footnotes--&gt;
+</description>
+        <pubDate>Wed, 26 May 2021 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/reading-ical-r/</link>
+        <guid isPermaLink="true">https://cullaloe.com/reading-ical-r/</guid>
+        
+        <category>R</category>
+        
+        <category>Data</category>
+        
+        <category>Software</category>
+        
+        <category>iCal</category>
+        
+        <category>Configuration Management</category>
+        
+        <category>CPD</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Manjaro Linux on a MacBook Pro</title>
+        <description>&lt;p&gt;This is how I set up &lt;a href=&quot;https://manjaro.org/downloads/official/xfce/&quot;&gt;Manjaro XFCE Linux&lt;/a&gt;, a lightweight but robust and stable version of &lt;a href=&quot;https://archlinux.org/&quot;&gt;Arch Linux&lt;/a&gt;, on an old &lt;a href=&quot;https://apple-history.com/mbp_13_mid_09&quot;&gt;(2009) MacBook Pro&lt;/a&gt; past its service life. The idea is to try living with it as a device for research, data capture and analysis and writing up of a PhD thesis (with a view to buying &lt;a href=&quot;https://starlabs.systems/pages/starbook&quot;&gt;a better machine&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;There is plenty of information on how to get Manjaro on to a USB stick and then onto your hardware, so I will not go into details of that. I will instead focus on how I got that basic system working with my writing workflow.&lt;/p&gt;
+
+&lt;h2 id=&quot;software-management&quot;&gt;Software management&lt;/h2&gt;
+
+&lt;p&gt;There are &lt;a href=&quot;https://wiki.manjaro.org/index.php?title=Pacman_Overview&quot;&gt;tools built in&lt;/a&gt; to Manjaro for managing, installing and maintaining a good range of software but not everything I like to use: fortunately, there is a large community of developers and supporters for Arch and Manjaro who work to bring a lot more software to your installation. This can be found at the &lt;a href=&quot;https://aur.archlinux.org/&quot;&gt;Arch User Repository (AUR)&lt;/a&gt;. To use it, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;base-develop&lt;/code&gt; package is installed, as well as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;pacman &lt;span class=&quot;nt&quot;&gt;-Sy&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--needed&lt;/span&gt; base-devel git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Whilst it is possible to install software all over your new system, I like to  keep the source in one place, where I can find, update and remember it. Installation is simple enough from there, starting with Google Chrome (not Chromium, by the way, because I work across multiple platforms and require the sync of Google bookmarks, for example).&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;Software
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Software/
+git clone https://aur.archlinux.org/google-chrome.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;google-chrome/
+makepkg &lt;span class=&quot;nt&quot;&gt;-sri&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The same method can be used to install other useful packages and tools like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;slack-desktop&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rstudio-desktop-bin&lt;/code&gt; (be careful to get the right version of RStudio) and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mendeleydesktop&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;mendeley&quot;&gt;Mendeley&lt;/h3&gt;
+
+&lt;p&gt;For my library and reference manager Mendeley, I like to use the watched folder feature of the desktop app, although this may not remain as Elsevier develop the Mendeley suite of applications. At the last Mendeley advisor’s meeting (4th May) we were told that there are no immediate plans to withdraw the desktop app, although it will eventually go. Create the folder and locate it in the app:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; ../Desktop/Mendeley&lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;drop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;dropbox&quot;&gt;Dropbox&lt;/h3&gt;
+
+&lt;p&gt;I use Dropbox to keep copies of literature, bibtex and other cross-platform files. This will not install without setting up the gpg keys thus:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://aur.archlinux.org/dropbox.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;dropbox/
+gpg &lt;span class=&quot;nt&quot;&gt;--recv-keys&lt;/span&gt; 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+makepkg &lt;span class=&quot;nt&quot;&gt;-sri&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Thanks to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yan12125&lt;/code&gt; on &lt;a href=&quot;https://aur.archlinux.org/packages/dropbox/&quot;&gt;AUR&lt;/a&gt; for that particular tip. It’s worth, when installing from AUR, having a quick read through any comments in the repository to check how problematic, or indeed, well-maintained, it is.&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-up-workflow&quot;&gt;Setting up workflow&lt;/h2&gt;
+
+&lt;p&gt;Now we have some basic tools, we can pick up development workflow on the new machine. I created a working folder within &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Documents&lt;/code&gt; into which I can clone my repositories.&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h3&gt;
+
+&lt;p&gt;The first project I did any work on was the one you are reading: my technical blog, which is hosted on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github&lt;/code&gt; and served by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll&lt;/code&gt;. That didn’t go too well, and I was temporarily stuck in a login loop, in which my password was accepted by Manjaro but the login prompt was continually re-presented. I found the cause of this to be a problem with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundler-exec&lt;/code&gt;. How I got there:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pamac build jekyll
+jekyll s &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docs &lt;span class=&quot;c&quot;&gt;# threw error, unable to find bundler&lt;/span&gt;
+pamac build bundler-exec
+jekyll s &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docs &lt;span class=&quot;c&quot;&gt;# threw another error, missing gems&lt;/span&gt;
+bundle update
+nano Gemfile	&lt;span class=&quot;c&quot;&gt;# to add a suitable gem repository source&lt;/span&gt;
+bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# to install missing gems&lt;/span&gt;
+jekyll s &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Rebooting overnight, I returned to the machine and couldn’t log in using the GUI. Thanks to &lt;a href=&quot;https://ask.csdn.net/questions/4365676&quot;&gt;weixin_39958100&lt;/a&gt;, I located the problem in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.xsession-errors&lt;/code&gt; log, by logging in to the terminal using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl-alt-fn-F2&lt;/code&gt;. It was easy then to remove the script throwing the error that was blocking the log in:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; .xsession-errors
+&lt;span class=&quot;nb&quot;&gt;sudo rm&lt;/span&gt; /etc/profile.d/bundlerexec.sh 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Sun, 09 May 2021 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/frankie/</link>
+        <guid isPermaLink="true">https://cullaloe.com/frankie/</guid>
+        
+        <category>Linux</category>
+        
+        <category>Research</category>
+        
+        <category>Software</category>
+        
+        
+      </item>
     
       <item>
         <title>How to do a literature review</title>
@@ -536,161 +756,6 @@ Everybody says how good my videos are.
         <category>OSX</category>
         
         <category>Transcription</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Merge join data files on 2 columns with python</title>
-        <description>&lt;p&gt;This was posted on a forum:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I have two enormous data sets - 2 million rows in each one. I have them in ASCII format. Each set has three columns. The first two columns are identical for both sets - essentially, coordinates. The third row in each set gives the temperature at that location for two different substances.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I am trying to find a way to create a single table with 4 columns, the first two being the coordinates and the third and fourth being the different temperatures.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Excel gives up after 1,000,000 rows.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Can anyone suggest a (free) tool that can do this - and then preferably allow for some analysis - plotting temp 1 against temp 2, for instance.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I thought about this on and off during one of those challenging COVID days, and finally sat down in the evening and knocked up a quick solution to the first part of the problem, using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;file 1.csv, 2.csv contain data:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;1.csv 
-&lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;y&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;t1&quot;&lt;/span&gt;
-42,35,122
-39,44,242
-12,43,188
-
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;2.csv 
-&lt;span class=&quot;s2&quot;&gt;&quot;x&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;y&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;t2&quot;&lt;/span&gt;
-53,22,192
-39,44,122
-22,56,238
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Launching &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python 3&lt;/code&gt;&lt;sup id=&quot;fnref:why&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:why&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python3
-Python 3.6.2 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;GCC 4.2.1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Apple Inc. build 5666&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;dot 3&lt;span class=&quot;o&quot;&gt;)]&lt;/span&gt; on darwin
-Type &lt;span class=&quot;s2&quot;&gt;&quot;help&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;copyright&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;credits&quot;&lt;/span&gt; or &lt;span class=&quot;s2&quot;&gt;&quot;license&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;more information.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2.csv”)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;(check it looks ok)&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;122&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;39&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;242&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;43&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;188&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;53&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;192&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;39&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;122&lt;/span&gt;
-&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;56&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;238&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Make an outer join of these two tables on the two coordinate columns:&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;merged_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csv1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;y&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;how&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'outer’)
-
-&amp;gt;&amp;gt;&amp;gt; merged_data.head()
-    x   y     t1     t2
-0  42  35  122.0    NaN
-1  39  44  242.0  122.0
-2  12  43  188.0    NaN
-3  53  22    NaN  192.0
-4  22  56    NaN  238.0
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;“NaN” is not your Nan, it’s just “not a number”, or “no data here”.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;merged_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;out.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;… and back in the shell, we can see the result…&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;out.csv 
-x,y,t1,t2
-42,35,122.0,
-39,44,242.0,122.0
-12,43,188.0,
-53,22,,192.0
-22,56,,238.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;… your merged file, sir.&lt;/p&gt;
-
-&lt;p&gt;It ought to work with a few million rows. I didn’t answer the final part of the OP’s question but it ought to easy enough with this example - a million or more rows, might be a different problem.&lt;/p&gt;
-
-&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:why&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;I am using python3 because OSX has a legacy version 2 nobody dares touch. On other systems you might want to use just “python” and “pip” in the above examples. You might have to install pandas first, using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ pip3 install pandas&lt;/code&gt;. &lt;a href=&quot;#fnref:why&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 27 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/merge-2-col-csv/</link>
-        <guid isPermaLink="true">https://cullaloe.com/merge-2-col-csv/</guid>
-        
-        <category>Python</category>
-        
-        <category>Data</category>
-        
-        <category>OSX</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Practice worth sharing seminar</title>
-        <description>&lt;p&gt;This is one of a number of “sharing good practice” seminars organised by my colleagues at Moray House, and was more of an exploratory talk given by Dr. Laura Colucci-Gray. These are my notes, made during her talk: as much reflection as reporting. Any errors are my responsibility.&lt;/p&gt;
-
-&lt;p&gt;Laura reflected on observing her own children learning alone during the “lockdown” of COVID-19 and thought of the dynamic of (on the one hand) being connected, but (on the other) being disconnected at the same time. She observed that the machine that connects us leaves us no environmental cues, compared to the “real world” environment, which has displays, visual clues, artefacts of daily working to attest to the impact of our interactions with other human beings.&lt;/p&gt;
-
-&lt;p&gt;She included readings from literature on the work of the teacher, who has a role of “packaging” content for learners and set this in contrast to the context of learning in a social setting. This tension, she characterised as a danger in asynchronous learning contexts. She placed learners in our thinking not so much as &lt;em&gt;individual units&lt;/em&gt; but humans undergoing a process of &lt;em&gt;co-operative effort&lt;/em&gt; that takes place between binaries like male/female, nature/technology, local/global, and so on.&lt;/p&gt;
-
-&lt;p&gt;The traces we leave behind need to be thought about when planning and teaching in an asynchronous space. Laura exemplified this in image-making, experience of physical spaces, and in “utilising modes other than language creates space for different ways of knowing or being” (Liamputtong &amp;amp; Rumbold, 2008&lt;sup id=&quot;fnref:lr&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:lr&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;). The latter quote is in context of the use of music as making traces as a “soundtrack” to a learning course.&lt;/p&gt;
-
-&lt;p&gt;The theme emerged further in Laura’s ideas for using traces to provoke shared experiences, and through these shared experiences, my view is that a stronger learning community is established. She provoked the delegates to think and talk about how we can make use of the technology to create artistically shared experiences; how far to go to enable sharing something of themselves and teachers; what opportunities do we have in putting ourselves in the process of co-learning with our students?&lt;/p&gt;
-
-&lt;p&gt;At this point, a rich discussion followed, exploring the possibilities for us as teachers moving forward into a more asynchronous mode of practice. For me, this was an outstanding provocation for my thinking, as I set about more detailed preparation for new students arriving (virtually, mostly) very soon.&lt;/p&gt;
-
-&lt;p&gt;My own comment related to Lackovic’s &lt;em&gt;inquiry graphics&lt;/em&gt;&lt;sup id=&quot;fnref:nl&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:nl&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; that we have worked with in interpretation and creation of imagery for understanding. I went on to ask how we develop the skills in our students to be able to communicate and express themselves using drawing and music, as much as we do with academic literacy now.&lt;/p&gt;
-
-&lt;p&gt;The final part of the discussion considered the opportunity and challenge in enabling &lt;em&gt;safely&lt;/em&gt; the participation (or non-participation) of students in activities designed to “share something of themselves”. This was powerful and no less provocative to our practice and a memorable conclusion to an excellent session.&lt;/p&gt;
-
-&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
-
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:lr&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Liamputtong, P. (2008) Knowing differently : arts-based and collaborative research methods, New York, Nova Science Publishers. &lt;a href=&quot;#fnref:lr&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:nl&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;See, for example, Lackovic, N. and Crook, C. (2012) ‘Designs for learning, image-based concept inquiry, a DBR research project’, in Designs for Learning 2012, Designs for Learning, Copenhagen, Denmark, Aalborg Universitet København, pp. 47–48. &lt;a href=&quot;#fnref:nl&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/practice-worth-sharing-asynchronous/</link>
-        <guid isPermaLink="true">https://cullaloe.com/practice-worth-sharing-asynchronous/</guid>
-        
-        <category>Remote teaching</category>
         
         
       </item>

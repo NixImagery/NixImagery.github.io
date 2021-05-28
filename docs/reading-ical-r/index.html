@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<title>Reading iCal in R - Tech, tales and imagery</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Tech, tales and imagery" property="og:site_name">
+  
+    <meta content="Reading iCal in R" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="A technical blog" property="og:description">
+  
+  
+    <meta content="https://cullaloe.com/reading-ical-r/" property="og:url">
+  
+  
+    <meta content="2021-05-26T00:00:00+01:00" property="article:published_time">
+    <meta content="https://cullaloe.com/about/" property="article:author">
+  
+  
+    <meta content="https://cullaloe.com/assets/img/R0000956.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="R" property="article:tag">
+    
+    <meta content="Data" property="article:tag">
+    
+    <meta content="Software" property="article:tag">
+    
+    <meta content="iCal" property="article:tag">
+    
+    <meta content="Configuration Management" property="article:tag">
+    
+    <meta content="CPD" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@cullaloe">
+    <meta name="twitter:creator" content="@NixImagery">
+  
+    <meta name="twitter:title" content="Reading iCal in R">
+  
+  
+    <meta name="twitter:url" content="https://cullaloe.com/reading-ical-r/">
+  
+  
+    <meta name="twitter:description" content="A technical blog">
+  
+  
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/R0000956.jpg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+  <!-- Academicons -->
+  <link rel="stylesheet" href="/assets/fonts/academicons/css/academicons.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/search.css">
+
+
+
+<!-- Buy me a coffee -->
+<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="cullaloe" data-description="Helpful? Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="right" data-x_margin="18" data-y_margin="18"></script>
+<!-- /Buy me a coffee -->
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/nick-hood.jpg" alt="Nick Hood"></a>
+      </div>
+      <div class="author-name">by <a href="/about" target="_self" class="plain">Nick Hood</a></div>
+      <p><a href="/tags" target="_self" class="plain">Tech, tales and imagery</a></p>
+      <div class="search" id="js-search">
+        <input type="text" placeholder="type to search..." class="search__input" id="js-search__input">
+      </div>
+    </div>
+    <ul class="search__results" id="js-search__results"></ul>
+</header> <!-- End Header -->
+
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/NixImagery" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://orcid.org/0000-0001-7891-9736" target="_blank"><i class="ai ai-orcid-square" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/NixImagery" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/NixImagery" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li><a href="https://instagram.com/NixImagery" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        
+        
+        
+          <li class="email"><a href="mailto:nick@cullaloe.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2021 &copy; Nick Hood</p>
+      <hr>Worried about online abuse? <a href="https://www.ceop.police.uk/safety-centre/">Report it to CEOP</a>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/R0000956.jpg alt="Reading iCal in R">
+        
+          <figcaption>Langholm
+            
+              <br/><div class="attrib">Nick Hood</div>
+            
+          </figcaption>
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Reading iCal in R</h1>
+        <div class="page-date"><span>2021, May 26&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Being organised is an important habit for anyone in these days of scope creep – the tendency for more and more to be done as part of the job. We’re all trying to maximise our capacity, so eliminating duplication of effort is one way to avoid wasting time doing unnecessary admin. Productivity tools like email and calendars have replaced the memo and diary of pre-Internet days, but there are many brands and infrastructures, often competing with each other. The result can be that we end up keeping several email accounts, and several calendars with the inevitable double booking and confusion.</p>
+
+<p>My policy is wherever possible to keep one master data source: documents are configuration managed and stored safely, checked out and checked in when updated and with a visible, reversible change history. Calendars for each project are aggregated in a suitable viewer from master files in <a href="https://en.wikipedia.org/wiki/ICalendar">iCal</a> format, allowing them to be easily shared and syndicated.</p>
+
+<p>Planning for next academic year, I wanted to display a simple GANTT chart for students of the overall course structure. This, because I had previously been duplicating weekly details from the master calendar. I wanted a way to automatically generate mini-GANTTs for each week in the Virtual Learning Environment (VLE) from the course calendar. Here’s how I did it: the VLE is written and published in <a href="https://bookdown.org/">Bookdown</a>.</p>
+
+<p>Fortunately, there is already a <a href="https://cran.r-project.org/package=calendar">package</a> for reading and manipulating iCal files. You may need to install this first.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"calendar"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>So, firstly we want to grab data from the iCal feed. This is the path to an <code class="language-plaintext highlighter-rouge">.ics</code> file or the ical data for the calendar: make sure it’s not just a link to a web interface for the calendar.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">mydat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readLines</span><span class="p">(</span><span class="s2">"https://www.gov.uk/bank-holidays/england-and-wales.ics"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>It’s worth checking that this has returned something useful: the <code class="language-plaintext highlighter-rouge">head()</code> function returns the first few lines and an iCal file should look something like this:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">mydat</span><span class="p">)</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"BEGIN:VCALENDAR"</span><span class="w">                     
+</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="s2">"VERSION:2.0"</span><span class="w">                         
+</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="s2">"METHOD:PUBLISH"</span><span class="w">                      
+</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="s2">"PRODID:-//uk.gov/GOVUK calendars//EN"</span><span class="w">
+</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="s2">"CALSCALE:GREGORIAN"</span><span class="w">                  
+</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="s2">"BEGIN:VEVENT"</span><span class="w">       
+</span><span class="o">&gt;</span><span class="w"> 
+</span></code></pre></div></div>
+
+<p>We can use <code class="language-plaintext highlighter-rouge">ic_dataframe()</code> to organise this flat file into something more structured, again peeking in at the first few column header names in the data frame:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">mydf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ic_dataframe</span><span class="p">(</span><span class="n">mydat</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="nf">names</span><span class="p">(</span><span class="n">mydf</span><span class="p">))</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"DTEND;VALUE=DATE"</span><span class="w">   </span><span class="s2">"DTSTART;VALUE=DATE"</span><span class="w"> </span><span class="s2">"SUMMARY"</span><span class="w">           
+</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="s2">"UID"</span><span class="w">                </span><span class="s2">"SEQUENCE"</span><span class="w">           </span><span class="s2">"DTSTAMP"</span><span class="w">                          
+</span><span class="o">&gt;</span><span class="w"> 
+</span></code></pre></div></div>
+<p>Selecting the information you need from that is a matter of applying filters. A new data frame using the first 3 columns:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">set1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">mydf</span><span class="p">[</span><span class="s2">"DTSTART;VALUE=DATE"</span><span class="p">],</span><span class="n">mydf</span><span class="p">[</span><span class="s2">"SUMMARY"</span><span class="p">])</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">set1</span><span class="p">)</span><span class="w">
+  </span><span class="n">DTSTART.VALUE.DATE</span><span class="w">                </span><span class="n">SUMMARY</span><span class="w">
+</span><span class="m">1</span><span class="w">         </span><span class="m">2016-01-01</span><span class="w">         </span><span class="n">New</span><span class="w"> </span><span class="n">Year</span><span class="err">’</span><span class="n">s</span><span class="w"> </span><span class="n">Day</span><span class="w">
+</span><span class="m">2</span><span class="w">         </span><span class="m">2016-03-25</span><span class="w">            </span><span class="n">Good</span><span class="w"> </span><span class="n">Friday</span><span class="w">
+</span><span class="m">3</span><span class="w">         </span><span class="m">2016-03-28</span><span class="w">          </span><span class="n">Easter</span><span class="w"> </span><span class="n">Monday</span><span class="w">
+</span><span class="m">4</span><span class="w">         </span><span class="m">2016-05-02</span><span class="w"> </span><span class="n">Early</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="n">holiday</span><span class="w">
+</span><span class="m">5</span><span class="w">         </span><span class="m">2016-05-30</span><span class="w">    </span><span class="n">Spring</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="n">holiday</span><span class="w">
+</span><span class="m">6</span><span class="w">         </span><span class="m">2016-08-29</span><span class="w">    </span><span class="n">Summer</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="n">holiday</span><span class="w">
+</span></code></pre></div></div>
+<p>Selecting only Jubilee holidays using the logical form of <code class="language-plaintext highlighter-rouge">grep</code>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">set2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span><span class="n">grepl</span><span class="p">(</span><span class="s2">"Jubilee"</span><span class="p">,</span><span class="n">set1</span><span class="o">$</span><span class="n">SUMMARY</span><span class="p">))</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">set2</span><span class="p">)</span><span class="w">
+   </span><span class="n">DTSTART.VALUE.DATE</span><span class="w">                       </span><span class="n">SUMMARY</span><span class="w">
+</span><span class="m">54</span><span class="w">         </span><span class="m">2022-06-03</span><span class="w"> </span><span class="n">Platinum</span><span class="w"> </span><span class="n">Jubilee</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="n">holiday</span><span class="w">
+</span></code></pre></div></div>
+<p>Adding new headings using <code class="language-plaintext highlighter-rouge">setnames</code> from the <code class="language-plaintext highlighter-rouge">data.table</code> library, then removing row numbers and displaying as a table.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span><span class="w">
+</span><span class="n">setnames</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Date"</span><span class="p">,</span><span class="s2">"Event name"</span><span class="p">))</span><span class="w">
+</span><span class="n">set2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span><span class="n">grepl</span><span class="p">(</span><span class="s2">"2022"</span><span class="p">,</span><span class="n">set1</span><span class="o">$</span><span class="n">Date</span><span class="p">))</span><span class="w">
+</span><span class="n">knitr</span><span class="o">::</span><span class="n">kable</span><span class="p">(</span><span class="n">set2</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">set2</span><span class="o">$</span><span class="n">From</span><span class="p">),],</span><span class="w"> </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'2022 Holiday Calendar'</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+
+</span></code></pre></div></div>
+
+<p>Which will yield a table in your book(down):</p>
+
+<p>Table 1: 2022 Holiday Calendar</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Holiday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2022-01-03</td>
+      <td>New Year’s Day</td>
+    </tr>
+    <tr>
+      <td>2022-04-15</td>
+      <td>Good Friday</td>
+    </tr>
+    <tr>
+      <td>2022-04-18</td>
+      <td>Easter Monday</td>
+    </tr>
+    <tr>
+      <td>2022-05-02</td>
+      <td>Early May bank holiday</td>
+    </tr>
+    <tr>
+      <td>2022-06-02</td>
+      <td>Spring bank holiday</td>
+    </tr>
+    <tr>
+      <td>2022-06-03</td>
+      <td>Platinum Jubilee bank holiday</td>
+    </tr>
+    <tr>
+      <td>2022-08-29</td>
+      <td>Summer bank holiday</td>
+    </tr>
+    <tr>
+      <td>2022-12-26</td>
+      <td>Boxing Day</td>
+    </tr>
+    <tr>
+      <td>2022-12-27</td>
+      <td>Christmas Day</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>I now have a way of automatically updating the calendar in the VLE for my course, my only having to rebuild the site after a change in the master calendar. This is hugely useful within my workflow and reduces the risk of redundancy or error when there is more than one master. Next steps are to make this produce a GANTT chart.</p>
+
+<!--## Footnotes-->
+
+      <div class="page-footer">
+        <div class="page-share">Share this post on 
+          <a href="https://twitter.com/intent/tweet?text=Reading iCal in R&url=https://cullaloe.com/reading-ical-r/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/reading-ical-r/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#R" class="tag">&#35; R</a>
+          
+            <a href="/tags#Data" class="tag">&#35; Data</a>
+          
+            <a href="/tags#Software" class="tag">&#35; Software</a>
+          
+            <a href="/tags#iCal" class="tag">&#35; iCal</a>
+          
+            <a href="/tags#Configuration+Management" class="tag">&#35; Configuration Management</a>
+          
+            <a href="/tags#CPD" class="tag">&#35; CPD</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//cullaloe-gh.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-29333042-8', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+	<!-- Scripts -->
+  <!-- Search Js -->
+<script src="/assets/js/search.js"></script>
+  
+</body>
+</html>
