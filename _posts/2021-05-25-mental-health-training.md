@@ -13,7 +13,7 @@ tags:
 
 # permalink:
 ---
-As a personal tutor with pastoral as well as academic responsibility for a group of students, I took advantage of an online CPD session on mental health run by colleagues form the University disability office and counselling service. This was principally to refresh my skills and understanding but as always with these things, there were new things we were challenged to think about.
+As a personal tutor with pastoral as well as academic responsibility for a group of students, I took advantage of an online CPD session on mental health run by colleagues from the University disability office and counselling service. This was principally to refresh my skills and understanding but as always with these things, there were new things we were challenged to think about.
 
 ![](/assets/img/IMG_9333.jpg)
 *The mental health continuum*
