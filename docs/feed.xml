@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 28 May 2021 20:35:29 +0100</pubDate>
-    <lastBuildDate>Fri, 28 May 2021 20:35:29 +0100</lastBuildDate>
+    <pubDate>Fri, 04 Jun 2021 16:53:52 +0100</pubDate>
+    <lastBuildDate>Fri, 04 Jun 2021 16:53:52 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -146,6 +146,46 @@
         <category>Configuration Management</category>
         
         <category>CPD</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Mental Health Training</title>
+        <description>&lt;p&gt;As a personal tutor with pastoral as well as academic responsibility for a group of students, I took advantage of an online CPD session on mental health run by colleagues form the University disability office and counselling service. This was principally to refresh my skills and understanding but as always with these things, there were new things we were challenged to think about.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_9333.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;The mental health continuum&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;One of these was the mental health continuum, a helpful way of thinking about how people may have a range of mental health from &lt;em&gt;good&lt;/em&gt; to &lt;em&gt;bad&lt;/em&gt;, yet also be somewhere between &lt;em&gt;ill&lt;/em&gt; and &lt;em&gt;not ill&lt;/em&gt;: it is possible for people to be ill and yet who seem to be coping well with it: perhaps by using strategies or medication to help them manage and function. Equally, people who are not ill may be suffering with stress or as a consequence of life events. I find this little device (my quick sketch above) great to normalise the range of health people may have and to help keep this idea to the fore when talking to tutees in future.&lt;/p&gt;
+
+&lt;p&gt;We were reminded of the range of support services available in the University for students: I have experience of these from several years of supporting students on the very intensive experience that PGDE can be, some of whom have brought with them their own stories and experiences and who have needed continuing support. This has not always been optimal in my experience, where specialist services are required but I do know that in the main, my colleagues in places like the &lt;a href=&quot;https://www.ed.ac.uk/chaplaincy&quot;&gt;Chaplaincy&lt;/a&gt; and the &lt;a href=&quot;https://www.ed.ac.uk/student-disability-service&quot;&gt;disability service&lt;/a&gt; have done and continue to do, superb work on behalf of the students. Where the resources of the University are limited, we were advised that things like private counselling may be available on the students’ parents’ health insurance, for example.&lt;/p&gt;
+
+&lt;p&gt;Where the limits of support are reached, it can be easy to characterise the support offered as being part of “the illusion of inclusion” (cf. “ethics washing”, see &lt;a href=&quot;https://cullaloe.com/DataEthicsMOOC/what-are-ethics.html&quot;&gt;this post&lt;/a&gt; for details). This may be cynical: the University is rich but it wouldn’t last long if every student drew too heavily on its resources. I am put in mind of the old caveat&lt;sup id=&quot;fnref:caveat21-05&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:caveat21-05&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;p&gt;“… in serving a friend or Brother in time of need, without detriment to ourselves or connections.”&lt;/p&gt;
+
+&lt;p&gt;As always, we do our best, whether those we serve realise it or not. As part of that, our skills need to be at least good enough not to make things worse: so, this course included reminders about using non-verbal skills of engagement and listening; of not reacting; of respecting boundaries. The advice included lessons from the past year, paying attention, for example, when talking to students online to look at the camera, not their eyes on your screen. I came to this awareness early last year because I often use two screens, and situate the conference window on the display that has the camera. It is easy to let the tech fool you into a misalignment with the other person’s reality.&lt;/p&gt;
+
+&lt;p&gt;The session overran, unfortunately, which meant that a number of us had to bail before it ended, but there was time to engage with a couple of (fictionalised) case studies, which was helpful. It was valuable, nonetheless, and will hopefully help me support my continuing students and the new cohort arriving in August.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:caveat21-05&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;From the Working Tools of the Entered Apprentice, &lt;span id=&quot;Emulation13&quot;&gt;Emulation Lodge of Improvement. (2015). &lt;i&gt;Emulation Ritual&lt;/i&gt; (13th ed.). Lewis Masonic.&lt;/span&gt; &lt;a href=&quot;#fnref:caveat21-05&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 25 May 2021 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/mental-health-training/</link>
+        <guid isPermaLink="true">https://cullaloe.com/mental-health-training/</guid>
+        
+        <category>CPD</category>
+        
+        <category>Wellbeing</category>
         
         
       </item>
@@ -620,142 +660,6 @@ Finished.
         <category>Practicals</category>
         
         <category>CPD</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Video capture and production including closed captions</title>
-        <description>&lt;h2 class=&quot;no_toc&quot; id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;I am required to produce video resources for my students who are coming to the University very soon, either in person or digitally: our teaching under the COVID adjustments is “digital first”. We are also particularly keen to support those students who might require captions on their videos. This isn’t just those who might be hearing or visually impaired, it’s all students who might like the ability sometimes to have the extra clarity provided by words on the screen that reflect the words spoken by the presenter.&lt;/p&gt;
-
-&lt;p&gt;Here’s my take on a workflow model to make this work well. There are existing facilities to do this semi-automatically – uploaded videos can have an automated transcription generated but this takes a lot of time, and requires the creator to go back on subsequent days to hand-edit any errors or make any other adjustments.&lt;/p&gt;
-
-&lt;p&gt;I like to do a task and complete it: I like to get it right and take my time over that. Once it’s done, I like to move on to the next set of tasks. To that end, here is a way I have found of creating video, with quality captioning for those who need it, and the ability to switch it off for those who find it a distraction.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; I’ve updated this in light of new insight from my colleague, Audrey Cameron, about adding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; files to Media Hopper video uploads.&lt;/p&gt;
-
-&lt;h2 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#subtitles-vs-captions&quot; id=&quot;markdown-toc-subtitles-vs-captions&quot;&gt;Subtitles vs. captions&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#capturing-the-video-and-audio&quot; id=&quot;markdown-toc-capturing-the-video-and-audio&quot;&gt;Capturing the video and audio&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#processing&quot; id=&quot;markdown-toc-processing&quot;&gt;Processing&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#getting-the-transcript&quot; id=&quot;markdown-toc-getting-the-transcript&quot;&gt;Getting the transcript&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#add-closed-captions-to-the-video-file&quot; id=&quot;markdown-toc-add-closed-captions-to-the-video-file&quot;&gt;Add Closed Captions to the video file&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#finished-part-one&quot; id=&quot;markdown-toc-finished-part-one&quot;&gt;Finished, part one&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#media-hopper-create&quot; id=&quot;markdown-toc-media-hopper-create&quot;&gt;Media Hopper Create&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#a-workaround-if-you-cant-use-media-hopper-create&quot; id=&quot;markdown-toc-a-workaround-if-you-cant-use-media-hopper-create&quot;&gt;A workaround if you can’t use Media Hopper Create&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#bizarre-path-changes&quot; id=&quot;markdown-toc-bizarre-path-changes&quot;&gt;Bizarre path changes&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#finished-part-two&quot; id=&quot;markdown-toc-finished-part-two&quot;&gt;Finished, part two&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;subtitles-vs-captions&quot;&gt;Subtitles vs. captions&lt;/h2&gt;
-
-&lt;p&gt;Subtitles are embedded in DVD movies and the like for languages other than that on the audio. Multiple subtitle tracks can be embedded within a title, or switched off if the audio track is in the native language of the speaker. Captions, on the other hand, are a transcription of dialogue in the video. &lt;strong&gt;Closed captions&lt;/strong&gt; are distinguished from &lt;strong&gt;open captions&lt;/strong&gt; by being able to be switched off if required. Open captions are often embedded in the video and cannot be turned off. My intention in this workflow is to provide closed captions.&lt;/p&gt;
-
-&lt;h2 id=&quot;capturing-the-video-and-audio&quot;&gt;Capturing the video and audio&lt;/h2&gt;
-
-&lt;p&gt;I captured my video for the proof-of-concept using a &lt;a href=&quot;https://fujifilm-x.com/global/products/cameras/x-t2/&quot;&gt;Fuji X-T2&lt;/a&gt; APS-C digital mirrorless camera which takes 1080p (1920 x 1080) video. Although the camera records stereo audio, I prefer to capture audio separately using a &lt;a href=&quot;https://www.zoom.co.jp/products/handy-recorder/h1-handy-recorder&quot;&gt;Zoom H-1&lt;/a&gt; recorder. The quality is much better, not least because the mic is with the speaker, not the camera.&lt;/p&gt;
-
-&lt;h2 id=&quot;processing&quot;&gt;Processing&lt;/h2&gt;
-
-&lt;p&gt;I import the video and audio tracks into &lt;a href=&quot;https://www.apple.com/uk/imovie/&quot;&gt;iMovie&lt;/a&gt;, trim out the top and tail and make other edits, and remove the embedded audio track captured by the camera. This is replaced with the Zoom audio, which can be a bit of a fiddle to align well with the video. The audio waveform can help here but that depends on the recording environment. Depending on the exposure settings on the camera, you might want to “enhance” the video in iMovie for a contrastier image. Once you have added any title sequences (or credits) and  transitions, export the finished video (via the “share” menu) as an mp4 file.&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-the-transcript&quot;&gt;Getting the transcript&lt;/h2&gt;
-
-&lt;p&gt;Open the mp4 file in Quicktime and export as an audio file, the default m4a format is OK. This file can be uploaded to a blank Word document in Office 365 via the Dictate drop-down menu (select Transcribe). This will do a pretty decent job of turning your dialogue into text.&lt;/p&gt;
-
-&lt;p&gt;Save the .docx file and convert it to a plain text format - I prefer markdown, although this isn’t necessary provided you can finish up with a plain text file. I do the conversion using pandoc:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pandoc transcript.docx &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; transcript.md
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This file can now be edited, correcting any errors in the transcription and chunking the dialogue to make it show at the right time during the video. This is easily done with the video window open on the desktop next to your editor. You should add section markers and timestamps for subtitles as you go through the video. A minimal example:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
-00:00:01,00 &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 00:00:01,30
-Welcome to my interesting video.
-
-2
-00:00:01,50 &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; 00:00:02,30
-Everybody says how good my videos are.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Finally, you will need this transcript in the correct format for embedding into the video file. This is a simple matter of changing the filetype to .srt (which is a “SubRip Subtitle” file).&lt;/p&gt;
-
-&lt;h2 id=&quot;add-closed-captions-to-the-video-file&quot;&gt;Add Closed Captions to the video file&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Note, this step may not be necessary.&lt;/em&gt; If you are uploading to Media Hopper or a similar service that allows uploading of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; files, you don’t need to add the captions to the video file itself.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ffmpeg&lt;/code&gt; tool is best for this. This tool (and others you might need) can be installed simply using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brew&lt;/code&gt; if it isn’t already on your system. I don’t propose to detail how to do this, but in essence, it’s a matter of typing&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ brew install ffmpeg&lt;/code&gt; in a terminal window. Once you have it, add the captions:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; videofile.mp4 &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; transcriptfile.srt &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;:v copy &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;:a copy  &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt;:s mov_text &lt;span class=&quot;nt&quot;&gt;-metadata&lt;/span&gt;:s:s:0 &lt;span class=&quot;nv&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;eng output.mp4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The program accepts input files, which are you video and the srt file containing the captions and timings. Video and audio are merely copied to the output file.&lt;/p&gt;
-
-&lt;h2 id=&quot;finished-part-one&quot;&gt;Finished, part one&lt;/h2&gt;
-
-&lt;p&gt;The video file you have just created is now shareable: users can play it on their machines and opt to switch captioning on or off if they wish. Their computer may choose to control this behaviour automatically if local settings allow it.&lt;/p&gt;
-
-&lt;p&gt;I need to distribute this video using resources within the VLE (virtual learning environment, in my case, Blackboard Learn and &lt;a href=&quot;https://media.ed.ac.uk/&quot;&gt;Media Hopper&lt;/a&gt;. This is where it gets sticky.&lt;/p&gt;
-
-&lt;h2 id=&quot;media-hopper-create&quot;&gt;Media Hopper Create&lt;/h2&gt;
-
-&lt;p&gt;It’s easy to upload a video to the Blackboard VLE by clicking on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Media Hopper Create&lt;/code&gt; in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tools&lt;/code&gt; menu. This is very nice but this process ignores any embedded captions track. Captions must be uploaded in their own file, in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; format. The service is fussy about the formatting of text within the file, and will just stop working if it finds something it doesn’t like. Get the format right, however, and it works just fine, for English captions at least.&lt;/p&gt;
-
-&lt;p&gt;You can ask for subtitles to be automatically created for the uploaded video but this is a machine-based and low-quality service that isn’t really any good. It creates, ironically, a CC track that is inferior to the one included in the uploaded file. It is possible to order a professional transcription from the University transcription service, although I haven’t considered this.&lt;/p&gt;
-
-&lt;h2 id=&quot;a-workaround-if-you-cant-use-media-hopper-create&quot;&gt;A workaround if you can’t use Media Hopper Create&lt;/h2&gt;
-
-&lt;p&gt;An alternative way to embed media without using Media Hopper is as follows. Within Learn, add a new item. This is effectively a webpage, and using the editing tools, you can upload two files. The first is the mp4 video file (it is not necessary for this file to have the embedded captions track).&lt;/p&gt;
-
-&lt;p&gt;The second file contains the captions and timing information in our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;srt&lt;/code&gt; file, but needs to be in a different format. This format is &lt;strong&gt;Web Video Text Tracks (VTT)&lt;/strong&gt;, and is easily obtained using ffmpeg:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; srtfile.srt subtitlefile.vtt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Having uploaded these two files to the Learn Item, it is necessary to edit the HTML using the built-in HTML editor (click the double chevron at the right end of the tool bar to reveal it). The item source should be edited to contain a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;video&amp;gt;&lt;/code&gt; tag:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;  
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;video&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;640&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;360&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;controls=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;controls&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.learn.ed.ac.uk/path-to-video&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;  
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;track&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.learn.ed.ac.uk/path-to-vtt-file&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;kind=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;captions&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;srclang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;English&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	Your browser does not support the video tag.
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Irrespective of what you type in the editor, Learn will try to close the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;track&amp;gt;&lt;/code&gt; tags, even though they shouldn’t be. It will result in users of older browsers not seeing the message about not supporting the video tag. I have little sympathy for them.&lt;/p&gt;
-
-&lt;h3 id=&quot;bizarre-path-changes&quot;&gt;Bizarre path changes&lt;/h3&gt;
-
-&lt;p&gt;The path to video and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vtt&lt;/code&gt; files is available in the links to them put there by Learn when you uploaded the files. It is not necessary to keep these links, but there is another little feature you should be aware of. When you upload a file like this, it will be given a path that ends in something like “mp4” or “vtt”. If you use this path in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;track&lt;/code&gt; tags above, it will not work. This is because Learn &lt;strong&gt;changes the url for embedded files after your edits are submitted.&lt;/strong&gt; This behaviour makes no sense to me, but what it means is that you will have to (1) upload the files and submit the edits to the item you are creating, then (2) edit it again and get the new paths to use in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;track&lt;/code&gt; tags. Just another bizarre feature of Blackboard Learn, I suppose.&lt;/p&gt;
-
-&lt;h2 id=&quot;finished-part-two&quot;&gt;Finished, part two&lt;/h2&gt;
-
-&lt;p&gt;This is a workaround but we now have the facility to make and upload good quality video with closed captioning that can be viewed by students within their Learn course.&lt;/p&gt;
-
-&lt;!--## Footnotes--&gt;
-</description>
-        <pubDate>Sun, 30 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/video-cc-workflow/</link>
-        <guid isPermaLink="true">https://cullaloe.com/video-cc-workflow/</guid>
-        
-        <category>Education</category>
-        
-        <category>Digital Literacy</category>
-        
-        <category>Video</category>
-        
-        <category>Closed Caption</category>
-        
-        <category>OSX</category>
-        
-        <category>Transcription</category>
         
         
       </item>

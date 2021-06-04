@@ -80,7 +80,7 @@ GEM
     mini_portile2 (2.5.1)
     minitest (5.14.4)
     namae (1.1.1)
-    nokogiri (1.11.5)
+    nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     pathutil (0.16.2)
@@ -99,12 +99,11 @@ GEM
       unicode-display_width (~> 1.1, >= 1.1.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (1.6.0)
+    unicode-display_width (1.7.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
-  universal-darwin-20
 
 DEPENDENCIES
   jekyll-feed
@@ -114,4 +113,4 @@ DEPENDENCIES
   jemoji
 
 BUNDLED WITH
-   2.2.18
+   2.2.19
