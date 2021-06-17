@@ -22,7 +22,7 @@ scholar:
   style: apa
   locale: en
 
-  source: /Users/nickhood/Dropbox/Bibliographies
+  source: /Users/v1nhood/Dropbox/Bibliographies
   bibliography: library.bib
 
   query: "@*"

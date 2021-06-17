@@ -5,9 +5,48 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Jun 2021 20:00:01 +0100</pubDate>
-    <lastBuildDate>Fri, 04 Jun 2021 20:00:01 +0100</lastBuildDate>
+    <pubDate>Thu, 17 Jun 2021 13:53:00 +0100</pubDate>
+    <lastBuildDate>Thu, 17 Jun 2021 13:53:00 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Four Photos, Four Edits</title>
+        <description>&lt;p&gt;Capture One is my preferred choice of image editor, for its support programme as much as its functionality. This morning, I attended one of their many excellent editing seminars, to catch up with the current software and make sure I’m not missing any tricks, along with delegates from around the world.&lt;/p&gt;
+
+&lt;p&gt;The seminar was presented by &lt;a href=&quot;https://www.linkedin.com/in/david-grover-1a52a74/?originalSubdomain=uk&quot;&gt;David Grover&lt;/a&gt;, Phase One’s Global Manager of Training. He took four images, one at a time, and talked through his workflow.&lt;/p&gt;
+
+&lt;p&gt;David starts with &lt;em&gt;composition and framing&lt;/em&gt;, cropping and adjusting keystone if required to fine tune the lines within the image. He moves on to adjust &lt;em&gt;exposure or brightness&lt;/em&gt;, depending on existing brighter areas within the image. Brightness works only on mid-tones, whereas exposure is a global adjustment. Moving on to the &lt;em&gt;levels histogram&lt;/em&gt; reveals any flatness in the image which can be adjusted by pulling in the range of tones. Again, &lt;em&gt;shadows and blacks&lt;/em&gt; work on different ranges within the image, with blacks more narrow than the shadows adjustment. These can be selectively lifted to improve contrast.&lt;/p&gt;
+
+&lt;p&gt;With one image, which had a brighter side than the other, David applied a graduated mask, adjusting the fall-off to limit the extent, and reducing exposure within the masked area. Further masks were used to create vignetting. Each mask is applied in its own separate, named layer. Named, so you can remember what each layer does!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Screenshot 2021-06-17 at 09.42.36.png&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;David Grover demonstrates the use of layers&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Style brushes, a new feature in Capture One Pro 21,  were demonstrated also: I have found these to be a very quick and powerful way to make improvements in an image, especially in lifting localised highlights for impact. This is one of the tricks used by landscape photographers to make those stunning shots you wish you could take. A landscape image was edited following a similar process to the first, urban, image, with the addition of some colour toning. David brushed in a clarity (mid-range contrast) adjustment in the sea using a filled layer to first adjust the effect, then clearing the mask before brushing it back in to the area of interest. Colour balance was achieved using a new layer, which technique allows for comparison, which stops you going too far with the adjustment. The settings for this adjustment were saved as a custom style brush, making it available for use on any other image.&lt;/p&gt;
+
+&lt;p&gt;The use of heal brushes to remove unwanted clutter on a beach was demonstrated and in response to Q&amp;amp;A, David led a nice discussion on the difference between luma (stable colour) and RGB (impacts colour) curves and their combination in the contrast slider in Capture One.&lt;/p&gt;
+
+&lt;p&gt;Noise reduction was demonstrated in an image of a flower, along with sharpening of the flower independently of the background using the colour editor (and preview) to make a new mask – “a bit of a hidden feature”, according to David. This is an extremely powerful tool and something I did not know about before. The refinement of the mask is also very smart.&lt;/p&gt;
+
+&lt;p&gt;The final image in the seminar was another landscape. A similar workflow was followed as for the other images, with more focus on the colours in the image, using style brushes to warm up the foreground and lift shadows in a more distant rock formation. Contrast was improved using the custom style brush created in the previous image edit. A final saturation lift completed the final edit.&lt;/p&gt;
+
+&lt;p&gt;Further tutorial resources are available (and worth following up) in the Capture One &lt;a href=&quot;https://youtu.be/rV7no5j1tNU&quot;&gt;YouTube channel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+
+&lt;p&gt;“Red Campion” image © Nick Hood 2021.&lt;br /&gt;
+Original “India” image in the screenshot © &lt;a href=&quot;https://www.emily-teague.com/India&quot;&gt;Emily Teague&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 17 Jun 2021 10:30:00 +0100</pubDate>
+        <link>https://cullaloe.com/capture-one-seminar/</link>
+        <guid isPermaLink="true">https://cullaloe.com/capture-one-seminar/</guid>
+        
+        <category>CPD</category>
+        
+        <category>Photography</category>
+        
+        
+      </item>
     
       <item>
         <title>Reading iCal in R</title>
@@ -71,7 +110,7 @@
 &lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data.table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setnames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Date&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Event name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;grepl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2022&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;knitr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;From&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caption&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2022 Holiday Calendar'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row.names&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;knitr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;From&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caption&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;2022 Holiday Calendar&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row.names&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -384,13 +423,13 @@ jekyll s &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docs
 
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rubygems'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rake'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rdoc'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'date'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'yaml'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tmpdir'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll'&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;rubygems&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;rake&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;rdoc&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;date&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;yaml&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;tmpdir&apos;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;jekyll&apos;&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Generate blog files&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:generate&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
@@ -418,7 +457,7 @@ Configuration file: /your/path/to/GitHub/projectname/_config.yml
 
 &lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Generate and publish blog to master/docs&quot;&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;with_defaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;var: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Commit via Rake'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;with_defaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;var: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Commit via Rake&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mktmpdir&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;mv docs/* &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
     &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git checkout -B master&quot;&lt;/span&gt;
@@ -441,8 +480,8 @@ Configuration file: /your/path/to/GitHub/projectname/_config.yml
 Configuration file: /your/path/to/GitHub/projectname/_config.yml
 D	docs/yyyy/mm/dd/some-files.html
 ....
-Reset branch &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;
-Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;'origin/master'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Reset branch &lt;span class=&quot;s1&quot;&gt;&apos;master&apos;&lt;/span&gt;
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;&apos;origin/master&apos;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;master abcdefg] Example updates
  n files changed, p insertions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, q deletions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;-&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 Enumerating objects: r, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
@@ -454,8 +493,8 @@ Total mm &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta nn&lt;span class=&q
 remote: Resolving deltas: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nn/nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, completed with nn &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;objects.
 To https://github.com/YourGHName/projectname.git
    0aa7f2g..abcdefg  master -&amp;gt; master
-Already on &lt;span class=&quot;s1&quot;&gt;'master'&lt;/span&gt;
-Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;'origin/master'&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Already on &lt;span class=&quot;s1&quot;&gt;&apos;master&apos;&lt;/span&gt;
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;&apos;origin/master&apos;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 Finished.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Notice a call to publish will also generate the site for you. If you’re in a hurry, just issue &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt; to get the default &lt;em&gt;Commit via Rake&lt;/em&gt; commit message.&lt;/p&gt;
@@ -622,44 +661,6 @@ Finished.
         <category>OSX</category>
         
         <category>Transcription</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>IOP CLPL: Smartphone practicals</title>
-        <description>&lt;p&gt;The IoP in Scotland is putting on a rich catalogue of online CLPL for the community of physics teachers, and presented by colleagues from that same community. I accessed one of these after the event, because it had been recorded and published by Drew Burrett on &lt;a href=&quot;https://www.youtube.com/watch?v=TJvuI5g0WNI&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This session was hosted by Stuart Farmer and Jenny Hargreaves, and presented by Murat Gullen and Martyn Crawshaw, who gave us a practical introduction to using tools for data capture and analysis using the suite of sensors on most modern phones. They presented a brief rationale, acknowledging that although not all children have a smart phone, most have access to one. The scope (pun intended) for teachers to offer practical sessions using their own equipment was also underlined.&lt;/p&gt;
-
-&lt;p&gt;The first tool discussed was &lt;a href=&quot;https://phyphox.org/&quot;&gt;PhyPhox&lt;/a&gt; which not only can access all of the phone’s sensors, it has a number of built-in activities and tools to make use of the data captured. These can be exported in several formats, or posted to Dropbox for later discussion. What I hadn’t realised is that there is a built-in web server accessed through the “triple dots” at the top right of the phone screen which enables display and control of the app from any nearby browser, provided that the computer is on the same network (it uses a 192.168.x.x IP address).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_1E1AE83E2C49-1.jpeg&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;/assets/img/phyphox.png&quot; alt=&quot;&quot; /&gt;
-&lt;em&gt;Screenshots of Phyphox on iPhone and Browser (uses the language of the phone)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Martyn started by talking about &lt;a href=&quot;https://apps.apple.com/us/app/vernier-video-physics/id389784247&quot;&gt;Vernier video&lt;/a&gt; tracking and analysis software, similar to the java &lt;a href=&quot;https://www.physlets.org/tracker/&quot;&gt;Tracker&lt;/a&gt; program. He went on to demonstrate Pasco’s &lt;a href=&quot;https://www.pasco.com/products/software/sparkvue&quot;&gt;SparkVue&lt;/a&gt; app, what Martyn called the “twenty-first century version” of Data Studio found in many schools. It allows connection to onboard sensors and also Pasco equipment in the lab.&lt;/p&gt;
-
-&lt;p&gt;It was made clear that teachers should take care not to assume that their pupils are tech-savvy enough to know how to use all of the tools and interfaces without support and guidance.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Don’t lose the learning!” – Martyn Crawshaw&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Excellent stuff, as ever, with a lively Q &amp;amp; A at the end. I’m going to share this with my students.&lt;/p&gt;
-
-&lt;!--## Footnotes--&gt;
-</description>
-        <pubDate>Tue, 01 Sep 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/iop-clpl-smartphone-practicals/</link>
-        <guid isPermaLink="true">https://cullaloe.com/iop-clpl-smartphone-practicals/</guid>
-        
-        <category>Education</category>
-        
-        <category>Physics</category>
-        
-        <category>Practicals</category>
-        
-        <category>CPD</category>
         
         
       </item>
