@@ -34,7 +34,7 @@ D	docs/yyyy/mm/dd/some-files.html
 
 ## Two terminals
 
-When developing, I use two terminal windows in the dev folder -- one do do file operations and the like, the other to run a local version of the site while I test. The quick way to get the second window open within your current working directory is to issue this commmand:
+When developing, I use two terminal windows in the dev folder -- one to do file operations and the like, the other to run a local version of the site while I test. The quick way to get the second window open within your current working directory is to issue this commmand:
 
 ```zsh
 % open -a Terminal .

@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Aug 2021 10:20:17 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Aug 2021 10:20:17 +0100</lastBuildDate>
+    <pubDate>Sun, 08 Aug 2021 17:40:00 +0100</pubDate>
+    <lastBuildDate>Sun, 08 Aug 2021 17:40:00 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -30,7 +30,7 @@ D	docs/yyyy/mm/dd/some-files.html
 
 &lt;h2 id=&quot;two-terminals&quot;&gt;Two terminals&lt;/h2&gt;
 
-&lt;p&gt;When developing, I use two terminal windows in the dev folder – one do do file operations and the like, the other to run a local version of the site while I test. The quick way to get the second window open within your current working directory is to issue this commmand:&lt;/p&gt;
+&lt;p&gt;When developing, I use two terminal windows in the dev folder – one to do file operations and the like, the other to run a local version of the site while I test. The quick way to get the second window open within your current working directory is to issue this commmand:&lt;/p&gt;
 
 &lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% open &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; Terminal &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
