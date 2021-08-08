@@ -5,9 +5,50 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Jun 2021 13:53:00 +0100</pubDate>
-    <lastBuildDate>Thu, 17 Jun 2021 13:53:00 +0100</lastBuildDate>
+    <pubDate>Sun, 08 Aug 2021 10:11:27 +0100</pubDate>
+    <lastBuildDate>Sun, 08 Aug 2021 10:11:27 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Jekyll development in zsh</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/jekyll-update-via-rake&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rake publish[&lt;span class=&quot;s2&quot;&gt;&quot;Example updates&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /your/path/to/GitHub/projectname/&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Configuration file: /your/path/to/GitHub/projectname/_config.yml
+D	docs/yyyy/mm/dd/some-files.html
+....
+Reset branch &lt;span class=&quot;s1&quot;&gt;&apos;master&apos;&lt;/span&gt;
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;&apos;origin/master&apos;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;master abcdefg] Example updates
+ n files changed, p insertions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, q deletions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;-&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Enumerating objects: r, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Counting objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nn/nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Delta compression using up to x threads
+Compressing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mm/mm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Writing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mm/mm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 1234 bytes | 123.00 KiB/s, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Total mm &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, reused 0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+remote: Resolving deltas: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nn/nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, completed with nn &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;objects.
+To https://github.com/YourGHName/projectname.git
+   0aa7f2g..abcdefg  master -&amp;gt; master
+Already on &lt;span class=&quot;s1&quot;&gt;&apos;master&apos;&lt;/span&gt;
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;&apos;origin/master&apos;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Finished.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Notice a call to publish will also generate the site for you. If you’re in a hurry, just issue &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt; to get the default &lt;em&gt;Commit via Rake&lt;/em&gt; commit message.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Aug 2021 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/new-terminal/</link>
+        <guid isPermaLink="true">https://cullaloe.com/new-terminal/</guid>
+        
+        <category>Jekyll</category>
+        
+        <category>Git</category>
+        
+        <category>Rake</category>
+        
+        
+      </item>
     
       <item>
         <title>Four Photos, Four Edits</title>

@@ -5,9 +5,50 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Jun 2021 13:53:00 +0100</pubDate>
-    <lastBuildDate>Thu, 17 Jun 2021 13:53:00 +0100</lastBuildDate>
+    <pubDate>Sun, 08 Aug 2021 10:11:27 +0100</pubDate>
+    <lastBuildDate>Sun, 08 Aug 2021 10:11:27 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Jekyll development in zsh</title>
+        <description>&lt;p&gt;&lt;a href=&quot;/jekyll-update-via-rake&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;rake publish[&lt;span class=&quot;s2&quot;&gt;&quot;Example updates&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; /your/path/to/GitHub/projectname/&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Configuration file: /your/path/to/GitHub/projectname/_config.yml
+D	docs/yyyy/mm/dd/some-files.html
+....
+Reset branch &lt;span class=&quot;s1&quot;&gt;&apos;master&apos;&lt;/span&gt;
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;&apos;origin/master&apos;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;master abcdefg] Example updates
+ n files changed, p insertions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, q deletions&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;-&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Enumerating objects: r, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Counting objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nn/nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Delta compression using up to x threads
+Compressing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mm/mm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Writing objects: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mm/mm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, 1234 bytes | 123.00 KiB/s, &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Total mm &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, reused 0 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;delta 0&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+remote: Resolving deltas: 100% &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;nn/nn&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;, completed with nn &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;objects.
+To https://github.com/YourGHName/projectname.git
+   0aa7f2g..abcdefg  master -&amp;gt; master
+Already on &lt;span class=&quot;s1&quot;&gt;&apos;master&apos;&lt;/span&gt;
+Your branch is up to &lt;span class=&quot;nb&quot;&gt;date &lt;/span&gt;with &lt;span class=&quot;s1&quot;&gt;&apos;origin/master&apos;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+Finished.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Notice a call to publish will also generate the site for you. If you’re in a hurry, just issue &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt; to get the default &lt;em&gt;Commit via Rake&lt;/em&gt; commit message.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Aug 2021 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/new-terminal/</link>
+        <guid isPermaLink="true">https://cullaloe.com/new-terminal/</guid>
+        
+        <category>Jekyll</category>
+        
+        <category>Git</category>
+        
+        <category>Rake</category>
+        
+        
+      </item>
     
       <item>
         <title>Four Photos, Four Edits</title>
@@ -576,91 +617,6 @@ Finished.
         <category>CPD</category>
         
         <category>Physics</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Video including closed captions, method 2</title>
-        <description>&lt;p&gt;Further to &lt;a href=&quot;/video-cc-workflow&quot;&gt;this recent post&lt;/a&gt; on capturing, processing and captioning video, my colleague, Dr. Audrey Cameron, advised me to try YouTube for capturing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; captions file more quickly. I am thankful to her for this, because although I was aware of YouTube’s rapidly improving automatic captioning (I use it myself when I watch with sound off, for example), I didn’t know that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; file can be downloaded. Here’s a revised approach I am using today.&lt;/p&gt;
-
-&lt;h2 id=&quot;capturing-the-video-and-audio&quot;&gt;Capturing the video and audio&lt;/h2&gt;
-
-&lt;p&gt;For capturing an old-fashioned lecture-style talk using &lt;a href=&quot;https://www.apple.com/uk/keynote/&quot;&gt;KeyNote&lt;/a&gt;, I use the facility to record a presentation (from the Play menu). The presentation can be exported as a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.m4v&lt;/code&gt; video file with sound. &lt;strong&gt;At the same time&lt;/strong&gt; as recording the presentation in KeyNote, I also record myself on my &lt;a href=&quot;https://fujifilm-x.com/global/products/cameras/x-t2/&quot;&gt;Fuji X-T2 camera&lt;/a&gt; and capture a high quality audio track separately on a &lt;a href=&quot;https://www.zoom.co.jp/products/handy-recorder/h1-handy-recorder&quot;&gt;Zoom H-1&lt;/a&gt; recorder. A “pro” tip to is to clap just before you start presenting – it leaves a nice spike in the audio waveforms, making it easy to line up the separate tracks. You can also pretend to be Steven Spielberg or Alfred Hitchcock, according to your &lt;em&gt;genre&lt;/em&gt;, by saying, “Action!” at the same time.&lt;/p&gt;
-
-&lt;h2 id=&quot;processing&quot;&gt;Processing&lt;/h2&gt;
-
-&lt;p&gt;Import the video and audio tracks into &lt;a href=&quot;https://www.apple.com/uk/imovie/&quot;&gt;iMovie&lt;/a&gt;, align them using the spike from your clap, and check that the audio is the same length as in the video track of the speaker. I found that for longer videos, over 15 minutes, they can be different. This difference produces an echo effect, eventually separating the video from the soundtrack, like a Swedish movie. Adjusting the audio to align properly can easily be done in iMovie using the speed adjustment. Once the clips are aligned, you can turn the audio level of the video clips down to zero, so only the high quality track remains.&lt;/p&gt;
-
-&lt;p&gt;The next thing I do is to change the video track of the presenter to “Picture in picture”, so viewers can see me presenting within the slides: I think this is a bit of a substitute for one of the features I miss from live presenting, which is managing the attention of the viewer. I normally do this by blanking the display, which has the effect of moving the eyes in the room from the screen to my face – a powerful way to add contrast to your talk. This “mini me” within the slides can be faded in or out, according to what you want the students to focus on at any point. Other effects are possible, like switching to embedding the presentation within the presenter video.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Screenshot 2020-09-11 at 07.53.03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The finished project can be exported via the Share menu to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.mp4&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-the-transcript&quot;&gt;Getting the transcript&lt;/h2&gt;
-
-&lt;p&gt;The video can be uploaded to YouTube now: you’ll need a verified account to upload clips longer than 15 minutes, which means giving Google your phone number. I baulked at this at first, but expedient is the slayer of principle, and in this case, privacy. Make sure you click “Private” when saving the clip. These lectures are not for public consumption.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Screenshot 2020-09-11 at 07.23.47.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;After a while – maybe 30 minutes, depending on the length of your video – the automatically-generated captions file can be edited using a really nice editing interface in &lt;a href=&quot;https://studio.youtube.com/&quot;&gt;YouTube Studio&lt;/a&gt; designed for the purpose. You will need to add punctuation and if you wish, add comments to your own commentary. Once that has been done, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; file is ready to download.&lt;/p&gt;
-
-&lt;h2 id=&quot;media-hopper-create&quot;&gt;Media Hopper Create&lt;/h2&gt;
-
-&lt;p&gt;Your video can now be used within your local VLE, in my case, Blackboard Learn, by uploading via the media manager, &lt;a href=&quot;https://media.ed.ac.uk/&quot;&gt;Media Hopper&lt;/a&gt;. Once uploaded, you can then add closed captions by uploading the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.srt&lt;/code&gt; file alongside it. Students then have a choice whether to access captions within the video sequences or not.&lt;/p&gt;
-
-&lt;h3 id=&quot;another-hitch&quot;&gt;Another Hitch&lt;/h3&gt;
-&lt;p&gt;I was about to post this, all smug, like, as I uploaded the latest video made with this method, when I hit a “file too large” error when uploading to Media Hopper. The video I had made was just short of 18 minutes and had a file size of 1.2GB. Now, mp4 is an efficient container format so I maybe made too many “best quality” choices in making the video: high definition 1080p for the presenter, same for the KeyNote. Rather than go back and do it all again, I resorted to ffmpeg to make me a reduced bitrate version. I thought halving the bitrate might produce a file half the size.&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; mybigvideo.mp4 	&lt;span class=&quot;c&quot;&gt;# find out what the current bitrate is..&lt;/span&gt;
-...
-  Duration: 00:17:28.55, start: 0.000000, bitrate: 9978 kb/s
-...
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; mybigvideo.mp4 &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; 4489k mysmallervideo.mp4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This made (after thrashing my 5-year old MacBook Air for about 25 minutes) a file – as hoped for – half the size (673 MB).&lt;/p&gt;
-
-&lt;h2 id=&quot;deployment-to-a-website&quot;&gt;Deployment to a website&lt;/h2&gt;
-
-&lt;p&gt;To use the video and captions file together within a webpage is straightfroward, except that the captions need to be in a different format. This format is &lt;strong&gt;Web Video Text Tracks (VTT)&lt;/strong&gt;, and is easily obtained using ffmpeg:&lt;/p&gt;
-
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; srtfile.srt subtitlefile.vtt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The web page needs the following code (adapted to your own file paths, obviously):&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;  
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;video&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;640&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;360&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;controls=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;controls&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;source&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.learn.ed.ac.uk/path-to-video.mp4&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;video/mp4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;  
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;track&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.learn.ed.ac.uk/path-to-vtt-file.vtt&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;kind=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;captions&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;srclang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;English&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	Your browser does not support the video tag.
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/video&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Video production for ‘digital first’ teaching strategies needed in response to COVID-19 measures or similar, is a non-trivial task. Including closed captions is an additional time multiplier. Personally, I don’t like asynchronous teaching at all: it misses so many important aspects of good pedagogy, aspects which are easily ignored by administrators of education in the pursuit of apparent economies or easy fixes. I am at ease, however, with an established workflow.&lt;/p&gt;
-
-&lt;p&gt;I am thankful to my colleague, Audrey, for her patience and support in helping me get to this solution. We both have a lot of videos to make, and now it will not take me as long as it might have done.&lt;/p&gt;
-
-&lt;!--## Footnotes--&gt;
-</description>
-        <pubDate>Fri, 11 Sep 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/video-cc-workflow-2/</link>
-        <guid isPermaLink="true">https://cullaloe.com/video-cc-workflow-2/</guid>
-        
-        <category>Education</category>
-        
-        <category>Digital Literacy</category>
-        
-        <category>Video</category>
-        
-        <category>Closed Caption</category>
-        
-        <category>OSX</category>
-        
-        <category>Transcription</category>
         
         
       </item>
