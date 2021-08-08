@@ -24,7 +24,7 @@
     <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/Ilford-Delta-3200-20201127_20085880.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/R0001012.JPG" property="og:image">
   
   
     
@@ -33,9 +33,7 @@
     
     <meta content="Jekyll" property="article:tag">
     
-    <meta content="Git" property="article:tag">
-    
-    <meta content="Rake" property="article:tag">
+    <meta content="zsh" property="article:tag">
     
   
 
@@ -52,7 +50,7 @@
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/Ilford-Delta-3200-20201127_20085880.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/R0001012.JPG">
   
 
 	<meta name="description" content="">
@@ -144,9 +142,9 @@
     
     <div class="page-cover-image">
       <figure>
-        <img class="page-image" src=/assets/img/Ilford-Delta-3200-20201127_20085880.jpg alt="Jekyll development in zsh">
+        <img class="page-image" src=/assets/img/R0001012.JPG alt="Jekyll development in zsh">
         
-          <figcaption>Yester Castle
+          <figcaption>Culross
             
               <br/><div class="attrib">Nick Hood</div>
             
@@ -160,31 +158,30 @@
         <h1 class="page-title">Jekyll development in zsh</h1>
         <div class="page-date"><span>2021, Aug 08&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p><a href="/jekyll-update-via-rake">Link</a></p>
+      <p>A <a href="/jekyll-update-via-rake">recent post</a> on updating jekyll websites deployed on GitHub describes how this was done on a mac. Apple being Apple, and the advancement of technology being what it is, things have changed slightly such that the workflow needs a slight adjustment.</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rake publish[<span class="s2">"Example updates"</span><span class="o">]</span>
-<span class="o">(</span><span class="k">in</span> /your/path/to/GitHub/projectname/<span class="o">)</span>
+<h2 id="zsh">zsh</h2>
+
+<p>Recent OSX (now called MacOS) updates have changed the default shell programme from the Bourne Again Shell <code class="language-plaintext highlighter-rouge">bash</code> to the extended version of this, the Z Shell <code class="language-plaintext highlighter-rouge">zsh</code>. The first impact of this is that the <code class="language-plaintext highlighter-rouge">rake</code> command (or any command passing square brackets) doesn’t work any more:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rake publish[<span class="s2">"Test update"</span><span class="o">]</span>
+zsh: no matches found: publish[Test update]
+</code></pre></div></div>
+<p>This is simply because <code class="language-plaintext highlighter-rouge">zsh</code> requires the square bracket characters to be escaped:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rake publish<span class="se">\[</span><span class="s2">"Test update"</span><span class="se">\]</span>
 Configuration file: /your/path/to/GitHub/projectname/_config.yml
 D	docs/yyyy/mm/dd/some-files.html
 ....
-Reset branch <span class="s1">'master'</span>
-Your branch is up to <span class="nb">date </span>with <span class="s1">'origin/master'</span><span class="nb">.</span>
-<span class="o">[</span>master abcdefg] Example updates
- n files changed, p insertions<span class="o">(</span>+<span class="o">)</span>, q deletions<span class="o">(</span>-<span class="o">)</span>
-Enumerating objects: r, <span class="k">done</span><span class="nb">.</span>
-Counting objects: 100% <span class="o">(</span>nn/nn<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
-Delta compression using up to x threads
-Compressing objects: 100% <span class="o">(</span>mm/mm<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
-Writing objects: 100% <span class="o">(</span>mm/mm<span class="o">)</span>, 1234 bytes | 123.00 KiB/s, <span class="k">done</span><span class="nb">.</span>
-Total mm <span class="o">(</span>delta nn<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
-remote: Resolving deltas: 100% <span class="o">(</span>nn/nn<span class="o">)</span>, completed with nn <span class="nb">local </span>objects.
-To https://github.com/YourGHName/projectname.git
-   0aa7f2g..abcdefg  master -&gt; master
-Already on <span class="s1">'master'</span>
-Your branch is up to <span class="nb">date </span>with <span class="s1">'origin/master'</span><span class="nb">.</span>
-Finished.
 </code></pre></div></div>
-<p>Notice a call to publish will also generate the site for you. If you’re in a hurry, just issue <code class="language-plaintext highlighter-rouge">rake</code> to get the default <em>Commit via Rake</em> commit message.</p>
+
+<h2 id="two-terminals">Two terminals</h2>
+
+<p>When developing, I use two terminal windows in the dev folder – one do do file operations and the like, the other to run a local version of the site while I test. The quick way to get the second window open within your current working directory is to issue this commmand:</p>
+
+<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% open <span class="nt">-a</span> Terminal <span class="nb">.</span>
+</code></pre></div></div>
+
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
@@ -196,9 +193,7 @@ Finished.
           
             <a href="/tags#Jekyll" class="tag">&#35; Jekyll</a>
           
-            <a href="/tags#Git" class="tag">&#35; Git</a>
-          
-            <a href="/tags#Rake" class="tag">&#35; Rake</a>
+            <a href="/tags#zsh" class="tag">&#35; zsh</a>
           
         </div>
       </div>

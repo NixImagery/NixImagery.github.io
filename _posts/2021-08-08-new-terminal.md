@@ -3,41 +3,40 @@ layout: post
 title: Jekyll development in zsh
 # date: 2019-11-26 20:10
 # description: 
-img: Ilford-Delta-3200-20201127_20085880.jpg
-fig-caption: Yester Castle
+img: R0001012.JPG
+fig-caption: Culross
 fig-attrib: Nick Hood
 published: true
 tags:
 - Jekyll
-- Git
-- Rake
+- zsh
 # permalink:
 ---
 
-[Link](/jekyll-update-via-rake)
+A [recent post](/jekyll-update-via-rake) on updating jekyll websites deployed on GitHub describes how this was done on a mac. Apple being Apple, and the advancement of technology being what it is, things have changed slightly such that the workflow needs a slight adjustment.
 
+## zsh
 
-```sh
-$ rake publish["Example updates"]
-(in /your/path/to/GitHub/projectname/)
+Recent OSX (now called MacOS) updates have changed the default shell programme from the Bourne Again Shell `bash` to the extended version of this, the Z Shell `zsh`. The first impact of this is that the `rake` command (or any command passing square brackets) doesn't work any more:
+
+```bash
+% rake publish["Test update"]
+zsh: no matches found: publish[Test update]
+```
+This is simply because `zsh` requires the square bracket characters to be escaped:
+
+```zsh
+% rake publish\["Test update"\]
 Configuration file: /your/path/to/GitHub/projectname/_config.yml
 D	docs/yyyy/mm/dd/some-files.html
 ....
-Reset branch 'master'
-Your branch is up to date with 'origin/master'.
-[master abcdefg] Example updates
- n files changed, p insertions(+), q deletions(-)
-Enumerating objects: r, done.
-Counting objects: 100% (nn/nn), done.
-Delta compression using up to x threads
-Compressing objects: 100% (mm/mm), done.
-Writing objects: 100% (mm/mm), 1234 bytes | 123.00 KiB/s, done.
-Total mm (delta nn), reused 0 (delta 0)
-remote: Resolving deltas: 100% (nn/nn), completed with nn local objects.
-To https://github.com/YourGHName/projectname.git
-   0aa7f2g..abcdefg  master -> master
-Already on 'master'
-Your branch is up to date with 'origin/master'.
-Finished.
 ```
-Notice a call to publish will also generate the site for you. If you're in a hurry, just issue `rake` to get the default *Commit via Rake* commit message.
+
+## Two terminals
+
+When developing, I use two terminal windows in the dev folder -- one do do file operations and the like, the other to run a local version of the site while I test. The quick way to get the second window open within your current working directory is to issue this commmand:
+
+```zsh
+% open -a Terminal .
+```
+
