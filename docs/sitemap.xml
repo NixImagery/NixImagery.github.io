@@ -5,12 +5,12 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Aug 2021 11:53:45 +0100</pubDate>
-    <lastBuildDate>Sun, 22 Aug 2021 11:53:45 +0100</lastBuildDate>
+    <pubDate>Sun, 22 Aug 2021 11:56:59 +0100</pubDate>
+    <lastBuildDate>Sun, 22 Aug 2021 11:56:59 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
-        <title>Purge your Mac from OneDrive</title>
+        <title>Purge your Mac of OneDrive</title>
         <description>&lt;p&gt;It doesn’t take much experience with Microsoft’s OneDrive to learn that it is an unmitigated car-crash: it purports to be a productivity tool that makes it possible to share files quickly and easily.&lt;/p&gt;
 
 &lt;p&gt;For those used to the MacOS experience, with smooth drag-and-drop, quick look, finder previews and right-click extensions (I like “New Terminal at Folder”), the promise of doing the same for your work’s OneDrive as you do for your DropBox or ownCloud folders is enough to tempt you in to installing OneDrive.&lt;/p&gt;
