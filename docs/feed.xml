@@ -5,9 +5,44 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Aug 2021 17:40:00 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Aug 2021 17:40:00 +0100</lastBuildDate>
+    <pubDate>Sun, 22 Aug 2021 11:53:45 +0100</pubDate>
+    <lastBuildDate>Sun, 22 Aug 2021 11:53:45 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Purge your Mac from OneDrive</title>
+        <description>&lt;p&gt;It doesn’t take much experience with Microsoft’s OneDrive to learn that it is an unmitigated car-crash: it purports to be a productivity tool that makes it possible to share files quickly and easily.&lt;/p&gt;
+
+&lt;p&gt;For those used to the MacOS experience, with smooth drag-and-drop, quick look, finder previews and right-click extensions (I like “New Terminal at Folder”), the promise of doing the same for your work’s OneDrive as you do for your DropBox or ownCloud folders is enough to tempt you in to installing OneDrive.&lt;/p&gt;
+
+&lt;p&gt;Having done this, and realised that despite looking like a duck, it doesn’t walk like a duck, nor quack much. More of a woof, really. So, rather than be burdened by the workflow friction that Microsoft provides to the World’s economy, I resolved to (a) not use OneDrive unless I had to, and (b) stick to using the web interface when I do.&lt;/p&gt;
+
+&lt;p&gt;I didn’t log out, or stop the service – it had crashed anyway – just dragged the OneDrive.app from the Applications folder to the bin, along with anything that looked connected to it in these folders:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;~/Library/Application Support/&lt;/li&gt;
+  &lt;li&gt;~/Library/Containers/&lt;/li&gt;
+  &lt;li&gt;~/Library/Caches/&lt;/li&gt;
+  &lt;li&gt;~/Library/Preferences/&lt;/li&gt;
+  &lt;li&gt;~/Library/Cookies/&lt;/li&gt;
+  &lt;li&gt;~/Library/Logs/&lt;/li&gt;
+  &lt;li&gt;~/Library/LaunchAgents/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Empty the trash and you’re free of it.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Aug 2021 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/onedrive/</link>
+        <guid isPermaLink="true">https://cullaloe.com/onedrive/</guid>
+        
+        <category>MacOS</category>
+        
+        <category>Microsoft</category>
+        
+        <category>OneNote</category>
+        
+        
+      </item>
     
       <item>
         <title>Jekyll development in zsh</title>
@@ -565,55 +600,6 @@ Finished.
         <category>AI</category>
         
         <category>MOOC</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Climate Change Mitigating Technologies</title>
-        <description>&lt;p&gt;I had the chance to sit in on the &lt;a href=&quot;https://www.parliament.scot/msps/science-and-technology.aspx&quot;&gt;cross-party group on science&lt;/a&gt;, in which there were two presentations on the topic, the first from Rebecca Bell, &lt;a href=&quot;https://www.sccs.org.uk/&quot;&gt;Scottish CCS&lt;/a&gt;&lt;sup id=&quot;fnref:sccs&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:sccs&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; on Carbon Capture and Storage. The second was given by Richard Gow, &lt;a href=&quot;https://www.drax.com/&quot;&gt;Drax&lt;/a&gt;&lt;sup id=&quot;fnref:drax&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:drax&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; on Bioenergy with Carbon Capture and Storage. The latter presentation called for policy help in rewarding negative carbon emissions, which are an odd omission from the accounting model used in climate change impact measurement.&lt;/p&gt;
-
-&lt;p&gt;Both provided a really useful understanding and overview of what carbon emission and capture is about and how it is working, with an emphasis on what is happening in Scotland within a very clear European context. I found the presentations, both neither slick nor sales-focused, extremely engaging and helpful in thinking about CO\(_2\) emissions.&lt;/p&gt;
-
-&lt;p&gt;There was a lively and wide-ranging Q &amp;amp; A session chaired by Craig Denham of the RSE. Questions were both technical and social: there was good representation of young people through, for example, asking about the skills required to find careers in CCS. My own question:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For teachers, are there any behaviours they can model for young people that will enable them to take a specific personal responsibility for action in tackling CO\(_2\) accrual in the atmosphere?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I suspect this was a question outside of the scope of the presentations (focusing on individual action) but it was picked up by Craig, which I am thankful for. Richard picked this up first and acknowleged the criticism of BECCS for being remote from personal action but pushed back against this by linking to personal choices such as taking less flights. Rebecca added to that by pointing to transport choices like taking your bike, or wearing a jumper instead of turning up the heating, which are easily modelled and reinforced by educators. She also pointed to &lt;a href=&quot;https://www.sccs.org.uk/opportunities/education-training/36-ccs-education-centre&quot;&gt;SCCS resources related to CfE&lt;/a&gt;, and the &lt;a href=&quot;https://learningforsustainabilityscotland.org/&quot;&gt;LfS Scotland&lt;/a&gt; resources. I particularly liked the &lt;a href=&quot;https://co2degrees.com/content/crown-estate-and-geobus-education-resources%20&quot;&gt;GeoBus Education Resources site&lt;/a&gt; which is designed to provide teachers with an introduction to CCS, providing experiments, activities, lessons and homework ideas as well as links to a number of other useful CCS education resources, which are linked to English Key Stage 3 and Scotland’s CfE: &lt;a href=&quot;http://co2degrees.com/sites/default/files/appendix_curriculum_for_excellence.pdf&quot;&gt;this pdf&lt;/a&gt; links the resource to the Experiences and Outcomes.&lt;/p&gt;
-
-&lt;p&gt;The resources available in the websites of both organisions are very accessible and immediately useful in schools in, for example, projects within the interdisciplinary topic of sustainable energy production. It is particularly warming to see the interest and promotion of positive problem solving through the cross-party group. I am thankful to them for opening up this session to interested parties and applaud the the work being done by SCCS and Drax.&lt;/p&gt;
-
-&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-&lt;p&gt;The header image is part of an infographic available at &lt;a href=&quot;https://www.sccs.org.uk/images/about/infographics-a0-jan19-landscape.pdf&quot;&gt;SCCS&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:sccs&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Scottish CCS is “a partnership of the British Geological Survey, Heriot-Watt University, the University of Aberdeen, the University of Edinburgh and the University of Strathclyde working together with universities across Scotland.” &lt;a href=&quot;#fnref:sccs&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:drax&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;This is the group that operates Drax Power Station which is moving from coal-fired to biomass and leads on innovation and development in the technologies of Bioenergy with Carbon Capture and Storage (BECCS). &lt;a href=&quot;#fnref:drax&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/x-party-group/</link>
-        <guid isPermaLink="true">https://cullaloe.com/x-party-group/</guid>
-        
-        <category>Education</category>
-        
-        <category>CCS</category>
-        
-        <category>BACCS</category>
-        
-        <category>IDL</category>
-        
-        <category>CPD</category>
-        
-        <category>Physics</category>
         
         
       </item>

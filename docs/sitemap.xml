@@ -5,9 +5,44 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Aug 2021 17:40:00 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Aug 2021 17:40:00 +0100</lastBuildDate>
+    <pubDate>Sun, 22 Aug 2021 11:53:45 +0100</pubDate>
+    <lastBuildDate>Sun, 22 Aug 2021 11:53:45 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Purge your Mac from OneDrive</title>
+        <description>&lt;p&gt;It doesn’t take much experience with Microsoft’s OneDrive to learn that it is an unmitigated car-crash: it purports to be a productivity tool that makes it possible to share files quickly and easily.&lt;/p&gt;
+
+&lt;p&gt;For those used to the MacOS experience, with smooth drag-and-drop, quick look, finder previews and right-click extensions (I like “New Terminal at Folder”), the promise of doing the same for your work’s OneDrive as you do for your DropBox or ownCloud folders is enough to tempt you in to installing OneDrive.&lt;/p&gt;
+
+&lt;p&gt;Having done this, and realised that despite looking like a duck, it doesn’t walk like a duck, nor quack much. More of a woof, really. So, rather than be burdened by the workflow friction that Microsoft provides to the World’s economy, I resolved to (a) not use OneDrive unless I had to, and (b) stick to using the web interface when I do.&lt;/p&gt;
+
+&lt;p&gt;I didn’t log out, or stop the service – it had crashed anyway – just dragged the OneDrive.app from the Applications folder to the bin, along with anything that looked connected to it in these folders:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;~/Library/Application Support/&lt;/li&gt;
+  &lt;li&gt;~/Library/Containers/&lt;/li&gt;
+  &lt;li&gt;~/Library/Caches/&lt;/li&gt;
+  &lt;li&gt;~/Library/Preferences/&lt;/li&gt;
+  &lt;li&gt;~/Library/Cookies/&lt;/li&gt;
+  &lt;li&gt;~/Library/Logs/&lt;/li&gt;
+  &lt;li&gt;~/Library/LaunchAgents/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Empty the trash and you’re free of it.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Aug 2021 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/onedrive/</link>
+        <guid isPermaLink="true">https://cullaloe.com/onedrive/</guid>
+        
+        <category>MacOS</category>
+        
+        <category>Microsoft</category>
+        
+        <category>OneNote</category>
+        
+        
+      </item>
     
       <item>
         <title>Jekyll development in zsh</title>
