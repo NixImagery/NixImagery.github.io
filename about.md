@@ -11,7 +11,7 @@ tags: about # add tag
 # permalink: /about
 ---
 
-I am a Senior Teaching Fellow at Edinburgh University’s Moray House School of Education, leading teacher education in science and physics across primary and secondary sectors.
+I am a Lecturer and PhD researcher in Education at Edinburgh University’s Moray House School of Education. I am currently leading teacher education in science and physics across primary and secondary sectors.
 
 Before spending time in education, I held technical and commercial roles in military operations, aviation, IT, simulation and training. Trade certifications include Microsoft Certified Solution Developer (MCSD). My ongoing interests include intelligent automation and the potential this has in teaching and learning.
 

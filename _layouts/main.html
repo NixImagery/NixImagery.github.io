@@ -19,7 +19,16 @@ layout: default
 
   <footer>
     <section class="contact">
-      <h3 class="contact-title">Contact me</h3>
+      <h3 class="contact-title">Navigate</h3>
+      <ul>
+        <li><a href="{{site.baseurl}}/" target="_self"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="{{site.baseurl}}/about" target="_self"><i class="fa fa-info" aria-hidden="true"></i></a></li>
+        <li><a href="{{site.baseurl}}/tags" target="_self"><i class="fa fa-tags" aria-hidden="true"></i></a></li>
+        <li><a href="{{site.baseurl}}/feed.xml" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+      </ul>
+    </section> <!-- End Section links -->
+    <section class="contact">
+      <h3 class="contact-title">Connect</h3>
       <ul>
         {% if site.social-twitter %}
           <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
