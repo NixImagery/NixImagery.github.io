@@ -5,11 +5,11 @@ layout: default
 <aside class="sidebar">
   <header>
     <div class="about">
+      <p>cullaloe.com<br/>{{ site.about-author }}</p>
       <div class="cover-author-image">
         <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
       </div>
-      <div class="author-name">by <a href="{{site.baseurl}}/{{ site.about-page }}" target="_self" class="plain">{{site.author}}</a></div>
-      <p><a href="{{site.baseurl}}/tags" target="_self" class="plain">{{ site.about-author }}</a></p>
+      <!-- <div class="author-name">by <a href="{{site.baseurl}}/{{ site.about-page }}" target="_self" class="plain">{{site.author}}</a></div> -->
       <div class="search" id="js-search">
         <input type="text" placeholder="type to search..." class="search__input" id="js-search__input">
       </div>
@@ -21,10 +21,11 @@ layout: default
     <section class="contact">
       <h3 class="contact-title">Navigate</h3>
       <ul>
-        <li><a href="{{site.baseurl}}/" target="_self"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        <li><a href="{{site.baseurl}}/about" target="_self"><i class="fa fa-info" aria-hidden="true"></i></a></li>
-        <li><a href="{{site.baseurl}}/tags" target="_self"><i class="fa fa-tags" aria-hidden="true"></i></a></li>
-        <li><a href="{{site.baseurl}}/feed.xml" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+        <li><a href="{{site.baseurl}}/" target="_self" title="Home"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a href="{{site.baseurl}}/about" target="_self" title="About"><i class="fa fa-info" aria-hidden="true"></i></a></li>
+        <li><a href="{{site.baseurl}}/tags" target="_self" title="Tags and Topics"><i class="fa fa-tags" aria-hidden="true"></i></a></li>
+        <li><a href="//static.cullaloe.net/Research" target="_blank" title="My research diary (login required)"><i class="fa fa-mortar-board" aria-hidden="true"></i></a></li>
+        <li><a href="{{site.baseurl}}/feed.xml" target="_blank" title="RSS XML feed"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
       </ul>
     </section> <!-- End Section links -->
     <section class="contact">
