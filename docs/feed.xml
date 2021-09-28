@@ -5,39 +5,9 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Sep 2021 20:27:01 +0100</pubDate>
-    <lastBuildDate>Sun, 26 Sep 2021 20:27:01 +0100</lastBuildDate>
+    <pubDate>Tue, 28 Sep 2021 14:36:54 +0100</pubDate>
+    <lastBuildDate>Tue, 28 Sep 2021 14:36:54 +0100</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
-    
-      <item>
-        <title>LibSmart I</title>
-        <description>&lt;p&gt;This introductory course provided by the University of Edinburgh’s library is structured along basic lines:&lt;/p&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Module 1&lt;/dt&gt;
-  &lt;dd&gt;Getting Started with the Library - Accessing and using online library resources for your studies.&lt;/dd&gt;
-  &lt;dt&gt;Module 2&lt;/dt&gt;
-  &lt;dd&gt;Your Information Landscape - Explore and use key library resources appropriate to your discipline.&lt;/dd&gt;
-  &lt;dt&gt;Module 3&lt;/dt&gt;
-  &lt;dd&gt;Finding and Retrieval - Find material for an essay or report on a topic.&lt;/dd&gt;
-  &lt;dt&gt;Module 4&lt;/dt&gt;
-  &lt;dd&gt;Managing Information - Manage the information you’ve found and avoid information overload.&lt;/dd&gt;
-  &lt;dt&gt;Module 5&lt;/dt&gt;
-  &lt;dd&gt;Referencing and avoiding plagiarism - Use Library tools to develop good academic practice with citation and referencing.&lt;/dd&gt;
-&lt;/dl&gt;
-</description>
-        <pubDate>Sun, 26 Sep 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/libsmart-i/</link>
-        <guid isPermaLink="true">https://cullaloe.com/libsmart-i/</guid>
-        
-        <category>PhD</category>
-        
-        <category>CPD</category>
-        
-        <category>Library</category>
-        
-        
-      </item>
     
       <item>
         <title>Purge your Mac of OneDrive</title>
@@ -611,6 +581,25 @@ Finished.
         <category>Git</category>
         
         <category>Rake</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Data Ethics, AI and Responsible Innovation</title>
+        <description>&lt;p&gt;In November, I took part in 4 weeks of a 5-week MOOC offered by the University of Edinburgh via the edX platform, &lt;a href=&quot;https://courses.edx.org/courses/course-v1:EdinburghX+DEI01x+3T2020/course/&quot;&gt;Data Ethics, AI and Responsible Innovation&lt;/a&gt;. I had various difficulties with the course itself, culminating in a barrier to my continuing.&lt;/p&gt;
+
+&lt;p&gt;You can read my notes on the course, including a personal reflection, at the &lt;a href=&quot;https://cullaloe.com/DataEthicsMOOC/&quot;&gt;blog I kept on the MOOC&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/data-ethics-mooc/</link>
+        <guid isPermaLink="true">https://cullaloe.com/data-ethics-mooc/</guid>
+        
+        <category>CPD</category>
+        
+        <category>AI</category>
+        
+        <category>MOOC</category>
         
         
       </item>
