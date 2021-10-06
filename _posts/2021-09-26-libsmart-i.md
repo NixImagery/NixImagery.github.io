@@ -35,8 +35,8 @@ It's been helpful to return to basics in this module and check that I'm not miss
 
 [DiscoverEd]: http://discovered.ed.ac.uk
 
-Module 2
-: Your Information Landscape - Explore and use key library resources appropriate to your discipline.
+## Module 2: Your Information Landscape
+Explore and use key library resources appropriate to your discipline.
 
 Module 3
 : Finding and Retrieval - Find material for an essay or report on a topic.
