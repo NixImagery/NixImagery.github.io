@@ -51,4 +51,8 @@ Information sources can be broadly categorised into three types:
 
 #### Evaluating information
 
-A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University [@MeriamLibrary-CaliforniaStateUniversityChico2015].
+A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University {% cite MeriamLibrary-CaliforniaStateUniversityChico2015 -A %}.
+
+## References
+
+{% bibliography --cited %}

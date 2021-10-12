@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Oct 2021 16:07:51 +0100</pubDate>
-    <lastBuildDate>Tue, 12 Oct 2021 16:07:51 +0100</lastBuildDate>
+    <pubDate>Tue, 12 Oct 2021 17:05:55 +0100</pubDate>
+    <lastBuildDate>Tue, 12 Oct 2021 17:05:55 +0100</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -169,7 +169,11 @@ txt = txt.lower()
 
 &lt;h4 id=&quot;evaluating-information&quot;&gt;Evaluating information&lt;/h4&gt;
 
-&lt;p&gt;A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University [@MeriamLibrary-CaliforniaStateUniversityChico2015].&lt;/p&gt;
+&lt;p&gt;A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University &lt;a class=&quot;citation&quot; href=&quot;#MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;(&lt;i&gt;Evaluating Information – Applying the CRAAP Test&lt;/i&gt;, 2015)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;Meriam Library - California State University Chico. (2015). &lt;i&gt;Evaluating Information – Applying the CRAAP Test&lt;/i&gt;. 17. https://www.csuchico.edu/lins/handouts/eval_websites.pdf&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Sun, 26 Sep 2021 00:00:00 +0100</pubDate>
         <link>https://cullaloe.com/libsmart-i/</link>
