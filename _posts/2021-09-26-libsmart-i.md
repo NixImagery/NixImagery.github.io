@@ -6,7 +6,7 @@ title: LibSmart I
 img: R0001067.jpg
 fig-caption: Polney Loch
 fig-attrib: Nick Hood
-published: no
+published: yes
 tags:
 - PhD
 - CPD
@@ -14,9 +14,9 @@ tags:
 # permalink:
 ---
 
-This introductory course provided by the University of Edinburgh's library is structured along basic lines: 
+This introductory course provided by the University of Edinburgh's library is structured in five modules. 
 
-## Module 1: Getting Started with the Library
+### Module 1: Getting Started with the Library
 Accessing and using online library resources for your studies. This begins with the task of setting up a "Pebble Pad" blog (the reason for which isn't apparent), which itself begins with a series of "helpful" videos. 
 
 I find video an extremely frustrating and patronising format and will always prefer to read a few well-chosen words that cut to the chase. Almost every instructional video I have ever seen seems to have been designed to meet a requirement to have video as part of the instruction tools. I have never seen one that was better than words on a page. I include the videos I have made in that.
@@ -25,7 +25,7 @@ I find video an extremely frustrating and patronising format and will always pre
 
 It's been helpful to return to basics in this module and check that I'm not missing anything fundamentally useful in accessing the library. I have found the library interfaces generally quite self-explanatory and intuitive to use, especially if you take the time to read the interface carefully.
 
-### Resources
+#### Resources
 
 * [Study Skills Guides] - a resource list for all students, covering general study skills, academic writing, referencing, critical thinking, reflective writing, literature reviews and so on.
 
@@ -35,14 +35,20 @@ It's been helpful to return to basics in this module and check that I'm not miss
 
 [DiscoverEd]: http://discovered.ed.ac.uk
 
-## Module 2: Your Information Landscape
-Explore and use key library resources appropriate to your discipline.
+### Module 2: Your Information Landscape
+Explore and use key library resources appropriate to your discipline. Useful areas here include the [subject guide for Education and ITE](https://edinburgh-uk.libguides.com/Education-and-Teacher-Training) and a [video on literature search](https://media.ed.ac.uk/id/1_qb7es7qm).
 
-Module 3
-: Finding and Retrieval - Find material for an essay or report on a topic.
+### Modules 3 -- 5
+These address finding and retrieval; managing information and referencing. I went through these quickly to see what's new or useful. From these...
 
-Module 4
-: Managing Information - Manage the information you've found and avoid information overload.
+#### Identifying source categories
 
-Module 5
-: Referencing and avoiding plagiarism - Use Library tools to develop good academic practice with citation and referencing.
+Information sources can be broadly categorised into three types:
+
+* Primary or original sources
+* Secondary sources provide interpretation, commentary or analysis
+* Tertiary or reference sources are dictionaries, encyclopaedias or indexes of primary and secondary information
+
+#### Evaluating information
+
+A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University [@MeriamLibrary-CaliforniaStateUniversityChico2015].

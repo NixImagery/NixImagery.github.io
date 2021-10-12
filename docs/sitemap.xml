@@ -5,9 +5,184 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Sep 2021 14:36:54 +0100</pubDate>
-    <lastBuildDate>Tue, 28 Sep 2021 14:36:54 +0100</lastBuildDate>
-    <generator>Jekyll v4.2.0</generator>
+    <pubDate>Tue, 12 Oct 2021 16:07:51 +0100</pubDate>
+    <lastBuildDate>Tue, 12 Oct 2021 16:07:51 +0100</lastBuildDate>
+    <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Introduction to Text Analysis</title>
+        <description>&lt;p&gt;I booked on to the &lt;a href=&quot;https://www.cdcs.ed.ac.uk/events/introduction-text-analysis&quot;&gt;CDCS Introduction to Text Analysis&lt;/a&gt; 2-hour course and installed &lt;a href=&quot;http://www.nltk.org/install.html&quot;&gt;nltk&lt;/a&gt; in preparation. This 2-hour “silent disco” online event is an intermediate Python course on using the NLTK package.&lt;/p&gt;
+
+&lt;h3 id=&quot;introduction-to-text-analysis&quot;&gt;Introduction to Text Analysis&lt;/h3&gt;
+
+&lt;p&gt;The workshop uses Notable but I ran the &lt;a href=&quot;https://digital-exploits.edina.ac.uk/intro-ta/files/intro_text_analysis-2021.ipynb&quot;&gt;notebook&lt;/a&gt; in Visual Studio (because it’s a good IDE). The notebook is written in markdown text with code blocks interspersed in “cells” throughout the document.&lt;/p&gt;
+
+&lt;p&gt;The workshop begins with some exercises in the IDE to get used to running python code within the cells to do something with text strings, using variables, e.g.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;first_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ada&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;last_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;lovelace&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;full_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos; &apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last_name&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# combine strings with a space inbetween
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;full_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;file-handling&quot;&gt;File handling&lt;/h3&gt;
+
+&lt;p&gt;Basic file actions are rehearsed including opening and reading a file, and using text manipulation functions:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python3&quot;&gt;file = open(&quot;origin-intro.txt&quot;)
+
+txt = file.read()
+txt = txt.lower()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;nltk&quot;&gt;NLTK&lt;/h3&gt;
+
+&lt;p&gt;The Python package NLTK provides a set of natural languages algorithms e.g. tokenizing, part-of-speech tagging, stemming, sentiment analysis, topic segmentation, and named entity recognition. We played with some of these using the text extracts we had been given.&lt;/p&gt;
+
+&lt;h4 id=&quot;tokenization&quot;&gt;Tokenization&lt;/h4&gt;
+&lt;p&gt;Text analysis begins with breaking down a block of text into smaller chunks such as words or sentences. This is called &lt;em&gt;Tokenization&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk.tokenize&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sent_tokenize&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# or word_tokenize for words
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;origin-intro.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# open file
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# add file contents to variable
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;tokenized_text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sent_tokenize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tokenized_text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;cleaning-text&quot;&gt;Cleaning text&lt;/h4&gt;
+
+&lt;p&gt;The initial part of this process in preparing for analysis is:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open the file and assign it to a variable&lt;/li&gt;
+  &lt;li&gt;Convert to lower case&lt;/li&gt;
+  &lt;li&gt;Split into tokens&lt;/li&gt;
+  &lt;li&gt;remove stopwords&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;“Stop” words are sometimes called filler words: they are the common words that don’t add much meaning to a sentence.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk.tokenize&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word_tokenize&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;origin-intro.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# open file
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# add file contents to variable
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# lower case text
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;[^\w\s]&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#remove punctuation (note use of regex)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tokenized_word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;word_tokenize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;filtered_word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tokenized_word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop_words&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;filtered_word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Filterd Words:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filtered_word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;further-functions-and-libraries&quot;&gt;Further functions and libraries&lt;/h3&gt;
+
+&lt;p&gt;Working through the notebook, running code and downloading libraries as required, I was able to easily clean blocks of text; tokenize and count words; plot frequency distributions; tag parts of speech; identify common bigrams and n-grams (word pairs and n-word groups).&lt;/p&gt;
+
+&lt;h3 id=&quot;fun-with-trump&quot;&gt;Fun with Trump&lt;/h3&gt;
+
+&lt;p&gt;A delightful bit of fun was had analysing President Trump’s Tweets using this code to fetch the text:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;urllib.request&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;https://learn.edina.ac.uk/intro-ta/files/trump-tweet-archive.csv&apos;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# download the file
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urllib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlopen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# assign the contents of the file to a variable (csv)
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;tweets.csv&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;wb&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# create a new file and save the contents of &apos;csv&apos; to this file
+&lt;/span&gt;    &lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;CSV file created&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What do you think was the top 4-gram in all of this data?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;make america great again! 390&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Of course it was.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;This was a very nice way to run through a tutorial notebook and learn a few tricks in python for text analysis, with support running in the background if I needed it. The format is powerful; it focuses you on the task within the time window allocated and helps you avoid distractions. Although it’s self-study (and as such relies on good quality materials in the first place), it’s OK to play a bit too, because there’s help at hand if you come unstuck. Well done, &lt;a href=&quot;https://www.cdcs.ed.ac.uk/training&quot;&gt;CDCS&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 12 Oct 2021 15:30:00 +0100</pubDate>
+        <link>https://cullaloe.com/cdcs-text-analysis/</link>
+        <guid isPermaLink="true">https://cullaloe.com/cdcs-text-analysis/</guid>
+        
+        <category>PhD</category>
+        
+        <category>CPD</category>
+        
+        <category>Text Analysis</category>
+        
+        <category>CDCS</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>LibSmart I</title>
+        <description>&lt;p&gt;This introductory course provided by the University of Edinburgh’s library is structured in five modules.&lt;/p&gt;
+
+&lt;h3 id=&quot;module-1-getting-started-with-the-library&quot;&gt;Module 1: Getting Started with the Library&lt;/h3&gt;
+&lt;p&gt;Accessing and using online library resources for your studies. This begins with the task of setting up a “Pebble Pad” blog (the reason for which isn’t apparent), which itself begins with a series of “helpful” videos.&lt;/p&gt;
+
+&lt;p&gt;I find video an extremely frustrating and patronising format and will always prefer to read a few well-chosen words that cut to the chase. Almost every instructional video I have ever seen seems to have been designed to meet a requirement to have video as part of the instruction tools. I have never seen one that was better than words on a page. I include the videos I have made in that.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;How to access online library resources&lt;/em&gt; provides basic access information including how to set up the VPN, and how to navigate the menus in the MyEd university landing pages to find library search tools like &lt;a href=&quot;http://discovered.ed.ac.uk&quot;&gt;DiscoverEd&lt;/a&gt;. The video for this section is available as a pdf: it’s as if someone’s listening! &lt;em&gt;Understanding and Accessing Your Reading List&lt;/em&gt; isn’t at first sight relevant to PhD – because there are no reading lists for PhD – but it’s possible to look in on other courses or browse the &lt;a href=&quot;https://eu01.alma.exlibrisgroup.com/leganto/readinglist/searchlists&quot;&gt;Resource Lists&lt;/a&gt;. &lt;em&gt;Start Searching DiscoverEd&lt;/em&gt; offers some practice with the university library search interface as well as again providing stats on how much stuff there is in the library. The module finishes with &lt;em&gt;Making the Most of Library Resources&lt;/em&gt; which shows how to find help.&lt;/p&gt;
+
+&lt;p&gt;It’s been helpful to return to basics in this module and check that I’m not missing anything fundamentally useful in accessing the library. I have found the library interfaces generally quite self-explanatory and intuitive to use, especially if you take the time to read the interface carefully.&lt;/p&gt;
+
+&lt;h4 id=&quot;resources&quot;&gt;Resources&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eu01.alma.exlibrisgroup.com/leganto/public/44UOE_INST/lists/27615489290002466?auth=SAML&quot;&gt;Study Skills Guides&lt;/a&gt; - a resource list for all students, covering general study skills, academic writing, referencing, critical thinking, reflective writing, literature reviews and so on.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;module-2-your-information-landscape&quot;&gt;Module 2: Your Information Landscape&lt;/h3&gt;
+&lt;p&gt;Explore and use key library resources appropriate to your discipline. Useful areas here include the &lt;a href=&quot;https://edinburgh-uk.libguides.com/Education-and-Teacher-Training&quot;&gt;subject guide for Education and ITE&lt;/a&gt; and a &lt;a href=&quot;https://media.ed.ac.uk/id/1_qb7es7qm&quot;&gt;video on literature search&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;modules-3--5&quot;&gt;Modules 3 – 5&lt;/h3&gt;
+&lt;p&gt;These address finding and retrieval; managing information and referencing. I went through these quickly to see what’s new or useful. From these…&lt;/p&gt;
+
+&lt;h4 id=&quot;identifying-source-categories&quot;&gt;Identifying source categories&lt;/h4&gt;
+
+&lt;p&gt;Information sources can be broadly categorised into three types:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Primary or original sources&lt;/li&gt;
+  &lt;li&gt;Secondary sources provide interpretation, commentary or analysis&lt;/li&gt;
+  &lt;li&gt;Tertiary or reference sources are dictionaries, encyclopaedias or indexes of primary and secondary information&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;evaluating-information&quot;&gt;Evaluating information&lt;/h4&gt;
+
+&lt;p&gt;A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University [@MeriamLibrary-CaliforniaStateUniversityChico2015].&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Sep 2021 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/libsmart-i/</link>
+        <guid isPermaLink="true">https://cullaloe.com/libsmart-i/</guid>
+        
+        <category>PhD</category>
+        
+        <category>CPD</category>
+        
+        <category>Library</category>
+        
+        
+      </item>
     
       <item>
         <title>Purge your Mac of OneDrive</title>
