@@ -60,7 +60,7 @@ This was quite easy for me to think about because I already know the work and st
 
 We are asked to post an image of something related to your research topic and describe (it) in a few words. I found this delightful quote from Doris Lessing to go with those few words:
 
-> ![](/assets/img/Doris.jpeg)
+> ![](/assets/img/Doris.jpg)
 
 > My research begins with an analysis of a particular genre of radio broadcasting with the aim of identifying and revealing its hidden pedagogy. I hope to go on to try it out.
 
