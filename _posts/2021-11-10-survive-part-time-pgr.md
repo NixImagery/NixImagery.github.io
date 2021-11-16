@@ -6,7 +6,7 @@ date: 2021-11-10 19:30
 img: R0001125.jpg
 fig-caption: Sneaky Pete's
 fig-attrib: Nick Hood
-published: no
+published: yes
 tags:
 - PhD
 - CPD
@@ -15,7 +15,7 @@ tags:
 # permalink:
 ---
 
-Another excellent online course provided by the University's IAD.
+Notes from another excellent online course provided by the University's IAD.
 
 ## Pre course Actions
 
@@ -56,6 +56,24 @@ Talk about your research
 Accept advice gracefully, and park it
 : When you talk to other people, they may well have their own ideas or a book/paper/journal for you to read. Keep track of that stuff but sustain your immediate direction -- don't be distracted by what others think you should be reading. Make time for it when you can to check back on once you have progressed what you're working on *today*.
 
-## The course
+## The seminar
+
+The 90-minute seminar was led by [Steve Hutchinson](https://www.hutchinsontraining.com/) who I have met before on a speed-reading course. He's an impressive teacher, whether in the 2-D Zoom space or 3-D in real life, where he is a pretty impressive sketch noter. I still have his notes from that on my office wall: and still use the methods he taught me. Delegates were grouped for chatting about what works and what doesn't: based on our preparatory notes and conversations between us. As well as my top five above, there were some superb ideas to help, including:
+
+* writing is output, even if it's shit;
+* when you stop writing, note down prompts for next time
+* get some time in early, before looking at your emails
+* don't compare yourself with other people (especially full-timers)
+* focusing in small chunks of time
+
+It's also important to keep yourself reminded of why your PhD is important to you: what motivates you about it and the things you are learning. The vision involves "bricks, walls, and cathedrals": the to-do list is the day to day reification of this idea. 
+
+> "The PhD is a project to be managed, not a quest for truth."
+
+There were plenty of other ideas and strategies shared, reference within the course handout, that make it a useful reference to return to, especially when it might get sticky. Of greatest importance is the repeated reminder that **the purpose is to pass**.
+
+## Conclusions
+
+This was absolutely well worth doing: both the preparation, the thinking, and also the engagement with the seminar. The delegates connected in a really lovely way, all fully supportive and empathic. I am thankful to them, and to Steve, and to the IAD for this course.
 
 ## Notes and references
