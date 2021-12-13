@@ -10,6 +10,7 @@ fig-attrib: Nick Hood
 tags:
     - CPD
     - AI
+    - ITFutures
 ---
 The theme of the 2019 [IT Futures Conference](https://www.itfutures.ed.ac.uk/) was "Automating our future: opportunities and threats." It was opened by [Prof. Peter Mathieson](https://www.ed.ac.uk/principals-office/principal-biography), who put a positive and hopeful spin on what for some may have been a depressing morning after the election that returned Boris Johnson a "[huge great stonking mandate](https://www.conservativehome.com/video/2019/12/listen-a-huge-great-stonking-mandate-the-prime-ministers-victory-speech-at-cchq.html)." 
 

@@ -800,6 +800,12 @@ img + em {
   font-size: 14px;
 }
 
+img[src*="#thumbnail"] {
+  width:150px;
+  border: 1px solid black;
+  float: right;
+}
+
 blockquote {
   border-left: 5px solid #000;
   padding-left: 1.1rem;
