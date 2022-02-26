@@ -12,6 +12,8 @@ tags:
 - PhD
 # permalink:
 ---
+**EDIT:** This post has been updated for 2022. [Find it here](/phd-workflow-22).
+
 I've been setting up document repositories and workflows for a potential new research project which will consider teaching approaches for the understanding of complex ideas. In the project, there will be criticism of social constructivism as a default pedagogy and examination of intelligent automation of teaching.
 
 # Workflow

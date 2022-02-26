@@ -12,6 +12,10 @@ plugins:
   # - jekyll-feed - replaced with feed.xml template
   - jekyll-sitemap
   - jekyll-scholar
+  - jekyll-mermaid
+
+mermaid:
+  src: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog

@@ -5,9 +5,157 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Dec 2021 17:13:47 +0000</pubDate>
-    <lastBuildDate>Tue, 14 Dec 2021 17:13:47 +0000</lastBuildDate>
+    <pubDate>Sat, 26 Feb 2022 19:39:17 +0000</pubDate>
+    <lastBuildDate>Sat, 26 Feb 2022 19:39:17 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>PhD Tools and software</title>
+        <description>&lt;p&gt;I responded to a Twitter conversation about software used to write a thesis:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Markdown, Pandoc to pdf with Mendeley. I edit in VSCode, and config manage using GitHub. If anyone at &lt;a href=&quot;https://twitter.com/MorayHouse?ref_src=twsrc%5Etfw&quot;&gt;@MorayHouse&lt;/a&gt; wants a demo/tutorial, let me know.&lt;/p&gt;&amp;mdash; Nick Hood (@cullaloe) &lt;a href=&quot;https://twitter.com/cullaloe/status/1494320531436228613?ref_src=twsrc%5Etfw&quot;&gt;February 17, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/Christina_Mik&quot;&gt;@Christina_Mik&lt;/a&gt; asked for a demo, which I am happy to do in person but haven’t the time to make a video of. What I have done instead is to adapt notes from the online thesis to describe the workflow and tools I am using.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;platform&quot;&gt;Platform&lt;/h2&gt;
+
+&lt;p&gt;I try as much as possible to eliminate duplication of both effort and data and have learned that text-based files free me from the tyranny of proprietary idiosyncracies. All of what follows can be achieved on pretty much any modern computing platform: Windows, Linux, whatever. The main platform I use is a MacBook Air running macOS Big Sur 11.&lt;/p&gt;
+
+&lt;h2 id=&quot;workflow&quot;&gt;Workflow&lt;/h2&gt;
+
+&lt;p&gt;I have three kinds of document to produce. The first kind are short, maybe only one to a few pages, or a presentation file, usually in the form of a printable pdf. Next, are the public articles such as the one you are reading. Finally, there are extended works which should be kept private but sharable until they are ready, like a thesis.&lt;/p&gt;
+
+&lt;p&gt;For all three kinds of document, I use plain text files which are readable across many platforms, and which are easily backed up and managed. I absolutely do not care about formatting whilst I am writing, it is just a distraction: I can get a machine to make it pretty when I am ready to publish or share. Here is a graphic of my writing workflow:&lt;/p&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;mermaid&quot;&gt;
+graph TD
+    subgraph Literature
+    A([Reading])--&amp;gt;B[Citation &amp;amp; References]--&amp;gt;C[/Mendeley Desktop/]--&amp;gt;E(Bibtex file)
+    B--&amp;gt;D[/Mendeley Web Importer/]--&amp;gt;DD--&amp;gt;C
+    C--&amp;gt;DD[(Mendeley library)]
+    end
+    subgraph Writing
+    A--&amp;gt;F([Thinking and analysis])--&amp;gt;G(Writing)--&amp;gt;H[/Visual Studio Code or MacDown /]--&amp;gt;X(Markdown text file)
+    X--&amp;gt;L[(GitHub repository)]--&amp;gt;X
+    end
+&lt;/div&gt;
+
+&lt;p&gt;Notice that the net output is in two files: the &lt;strong&gt;markdown text file&lt;/strong&gt;, and the &lt;strong&gt;bibtex file&lt;/strong&gt; containing all of the sources I have cited.&lt;/p&gt;
+
+&lt;h2 id=&quot;citation-and-referencing&quot;&gt;Citation and referencing&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.mendeley.com/&quot;&gt;Mendeley&lt;/a&gt; is a reference manager suite that includes a &lt;a href=&quot;https://www.mendeley.com/reference-management/mendeley-desktop&quot;&gt;desktop application&lt;/a&gt; to access and manage your own library of references, and generates &lt;a href=&quot;http://www.bibtex.org/&quot;&gt;bibtex&lt;/a&gt; files which can be used by text processors. Note that the desktop application is not being supported now: there is a newer and much less useful &lt;a href=&quot;https://www.mendeley.com/download-reference-manager&quot;&gt;Mendeley Reference Manager&lt;/a&gt;. Many users have been lobbying Elsevier, who own Mendeley, to reinstate the Mendeley Desktop app or add its functionality to the new Reference Manager.&lt;/p&gt;
+
+&lt;p&gt;The most useful feature of Mendeley Desktop, apart from importing and managing my reference library, is the automatic creation and update of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bib&lt;/code&gt; file of the entire library, or optionally, separate bib files for each folder. The bib file is used by \(\LaTeX\) and pandoc when generating your document output, to insert correctly formatted citations and your bibliography.&lt;/p&gt;
+
+&lt;h2 id=&quot;document-production&quot;&gt;Document production&lt;/h2&gt;
+
+&lt;p&gt;All of my documents are written in some form of &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For writing casual or stand-alone documents (reports, presentations, articles), I may use the &lt;a href=&quot;https://macdown.uranusjr.com/&quot;&gt;Macdown&lt;/a&gt; open source Markdown editor for macOS, but more often there are several documents “on the go” at once within the same folder, when I find the &lt;a href=&quot;https://visualstudio.microsoft.com/&quot;&gt;Visual Studio Code&lt;/a&gt; IDE &lt;sup id=&quot;fnref:wssat&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:wssat&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; easiest to use for editing. It can be used to edit csv &lt;sup id=&quot;fnref:wassat2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:wassat2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; files with &lt;a href=&quot;https://marketplace.visualstudio.com/publishers/janisdd&quot;&gt;Janis DD&lt;/a&gt;’s &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv&quot;&gt;Edit CSV&lt;/a&gt; plugin.&lt;/p&gt;
+
+&lt;p&gt;Here’s a visual of how the three types of document are produced from the markdown source file and the bibtex file:&lt;/p&gt;
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;mermaid&quot;&gt;
+graph LR
+    T(Bibtex file) --&amp;gt; J
+    U(Markdown text file) --&amp;gt; J
+    subgraph &quot;Stand alone&quot;
+    J[/Pandoc/]--&amp;gt;K(.pdf or .docx)
+    end
+    T--&amp;gt;Q
+    U--&amp;gt;Q
+    subgraph Public/blog
+    Q[/Jekyll/]--&amp;gt;R(.html)--&amp;gt;S(&quot;Website (GitHub Pages, public)&quot;)
+    end
+    T--&amp;gt;M
+    U--&amp;gt;M
+    subgraph Extended
+    M[/R Studio/]--&amp;gt;P[Bookdown]--&amp;gt;N(.html, .pdf or .docx)--&amp;gt;O(&quot;Website (Static, secure)&quot;)
+    end
+&lt;/div&gt;
+
+&lt;h3 id=&quot;stand-alone-documents&quot;&gt;Stand-alone documents&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pandoc.org/&quot;&gt;pandoc&lt;/a&gt; is used to generate stand-alone documents from markdown source with &lt;a href=&quot;https://github.com/jgm/pandoc-citeproc&quot;&gt;pandoc-citeproc&lt;/a&gt; taking care of linking to bibliographies. Diagrams in these documents (like the graphics in this post) are produced using the &lt;a href=&quot;https://github.com/raghur/mermaid-filter&quot;&gt;mermaid&lt;/a&gt; filter for pandoc.&lt;/p&gt;
+
+&lt;p&gt;Documents written in markdown often include a short &lt;a href=&quot;https://yaml.org/&quot;&gt;YAML&lt;/a&gt; header containing information about it and instructions for pandoc, etc. Here is an example markdown document, with a YAML header:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;My amazing document&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Nick Hood&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;bibliography&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/path/to/your/library.bib&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;\today&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+
+&lt;span class=&quot;gh&quot;&gt;# My heading&lt;/span&gt;
+Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting.
+
+&lt;span class=&quot;gu&quot;&gt;## A subheading&lt;/span&gt;
+Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. 
+
+&lt;span class=&quot;gu&quot;&gt;## A paragraph with a reference in it&lt;/span&gt;
+Here is some text which is my interpretation of what someone else wrote about [@OxfordEnglishDictionary]. 
+
+&lt;span class=&quot;gh&quot;&gt;# References&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To make a pdf of this document using pandoc, we type this in a terminal window:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pandoc &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; filename.md &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; filename.pdf &lt;span class=&quot;nt&quot;&gt;--citeproc&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It produces &lt;a href=&quot;/assets/docs/filename.pdf&quot;&gt;this file&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;extended-documents-not-public-eg-thesis&quot;&gt;Extended documents, not public (e.g. Thesis)&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; and the &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt; IDE are used for larger documents and data processing &lt;a class=&quot;citation&quot; href=&quot;#RCoreTeam2021&quot;&gt;(R Core Team, 2021)&lt;/a&gt;, mostly within &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RStudio&lt;/code&gt;. My (non-public) thesis website is made using the &lt;a href=&quot;https://bookdown.org/&quot;&gt;Bookdown&lt;/a&gt; R package &lt;a class=&quot;citation&quot; href=&quot;#Xie2016&quot;&gt;(Xie, 2016; Xie, 2020)&lt;/a&gt;, which itself uses pandoc to generate HTML, Word and pdf documents. Read more about how I do this &lt;a href=&quot;/deploy-bookdown-site-plesk/&quot;&gt;in this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;public-web-articles-like-the-one-youre-reading&quot;&gt;Public web articles (like the one you’re reading)&lt;/h3&gt;
+
+&lt;p&gt;This site is hosted on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; which renders files uploaded and hosted there. It is possible to have GitHub use &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; but I prefer to build the pages on my local machine and have GitHub render static HTML. I have found this to be more stable and less prone to attack. Read more about that &lt;a href=&quot;/jekyll-update-via-rake&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;deploy-jekyll-site-from-github&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;broadcast-acquisition&quot;&gt;Broadcast acquisition&lt;/h2&gt;
+
+&lt;p&gt;Not related to general projects but certainly useful in mine is the ability to capture for my own use, BBC radio programmes. &lt;a href=&quot;https://github.com/get-iplayer/get_iplayer&quot;&gt;get_iPlayer&lt;/a&gt; is a command-line programme written in Perl which downloads TV and radio programmes from BBC iPlayer/BBC Sounds &lt;a class=&quot;citation&quot; href=&quot;#notnac2021&quot;&gt;(&lt;i&gt;Get-Iplayer/get_iplayer&lt;/i&gt;, 2021)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;configuration-managementbackup&quot;&gt;Configuration management/backup&lt;/h2&gt;
+
+&lt;p&gt;Source documents and data files, all in text format, are retained in a &lt;a href=&quot;https://github.com/NixImagery&quot;&gt;GitHub private repository&lt;/a&gt;. Not only does that mean that everything is backed up against loss or damage to a computer, it is also protected against me: I can roll back changes if I need to, or launch my computer off a cliff without losing my work. Not likely, but you wear a seat belt, don’t you?&lt;/p&gt;
+
+&lt;h2 id=&quot;notes-and-references&quot;&gt;Notes and references&lt;/h2&gt;
+
+&lt;p&gt;This post originally appeared as &lt;a href=&quot;/phd-workflow&quot;&gt;PhD Workflow&lt;/a&gt; in July 2019 and has been updated with links and references to describe my current model. I hope it’s useful.&lt;/p&gt;
+
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;RCoreTeam2021&quot;&gt;R Core Team. (2021). &lt;i&gt;R: A Language and Environment for Statistical Computing&lt;/i&gt;. R Foundation for Statistical Computing. https://www.r-project.org/&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Xie2016&quot;&gt;Xie, Y. (2016). &lt;i&gt;bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. Chapman and Hall/CRC. https://github.com/rstudio/bookdown&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Xie2020&quot;&gt;Xie, Y. (2020). &lt;i&gt;bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. https://github.com/rstudio/bookdown&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;notnac2021&quot;&gt;&lt;i&gt;get-iplayer/get_iplayer&lt;/i&gt;. (2021). Github. https://github.com/get-iplayer/get_iplayer&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:wssat&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Integrated Development Environment &lt;a href=&quot;#fnref:wssat&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:wassat2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Comma-separated variables. Very simple data format that R Studio loves to turn into beautiful graphics. &lt;a href=&quot;#fnref:wassat2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/phd-workflow-22</link>
+        <guid isPermaLink="true">https://cullaloe.com/phd-workflow-22</guid>
+        
+        <category>Markdown</category>
+        
+        <category>PhD</category>
+        
+        
+      </item>
     
       <item>
         <title>IT Futures Conference</title>
@@ -752,45 +900,6 @@ D	docs/yyyy/mm/dd/some-files.html
         <category>Jekyll</category>
         
         <category>zsh</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Four Photos, Four Edits</title>
-        <description>&lt;p&gt;Capture One is my preferred choice of image editor, for its support programme as much as its functionality. This morning, I attended one of their many excellent editing seminars, to catch up with the current software and make sure I’m not missing any tricks, along with delegates from around the world.&lt;/p&gt;
-
-&lt;p&gt;The seminar was presented by &lt;a href=&quot;https://www.linkedin.com/in/david-grover-1a52a74/?originalSubdomain=uk&quot;&gt;David Grover&lt;/a&gt;, Phase One’s Global Manager of Training. He took four images, one at a time, and talked through his workflow.&lt;/p&gt;
-
-&lt;p&gt;David starts with &lt;em&gt;composition and framing&lt;/em&gt;, cropping and adjusting keystone if required to fine tune the lines within the image. He moves on to adjust &lt;em&gt;exposure or brightness&lt;/em&gt;, depending on existing brighter areas within the image. Brightness works only on mid-tones, whereas exposure is a global adjustment. Moving on to the &lt;em&gt;levels histogram&lt;/em&gt; reveals any flatness in the image which can be adjusted by pulling in the range of tones. Again, &lt;em&gt;shadows and blacks&lt;/em&gt; work on different ranges within the image, with blacks more narrow than the shadows adjustment. These can be selectively lifted to improve contrast.&lt;/p&gt;
-
-&lt;p&gt;With one image, which had a brighter side than the other, David applied a graduated mask, adjusting the fall-off to limit the extent, and reducing exposure within the masked area. Further masks were used to create vignetting. Each mask is applied in its own separate, named layer. Named, so you can remember what each layer does!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/Screenshot 2021-06-17 at 09.42.36.png&quot; alt=&quot;&quot; /&gt;
-&lt;em&gt;David Grover demonstrates the use of layers&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Style brushes, a new feature in Capture One Pro 21,  were demonstrated also: I have found these to be a very quick and powerful way to make improvements in an image, especially in lifting localised highlights for impact. This is one of the tricks used by landscape photographers to make those stunning shots you wish you could take. A landscape image was edited following a similar process to the first, urban, image, with the addition of some colour toning. David brushed in a clarity (mid-range contrast) adjustment in the sea using a filled layer to first adjust the effect, then clearing the mask before brushing it back in to the area of interest. Colour balance was achieved using a new layer, which technique allows for comparison, which stops you going too far with the adjustment. The settings for this adjustment were saved as a custom style brush, making it available for use on any other image.&lt;/p&gt;
-
-&lt;p&gt;The use of heal brushes to remove unwanted clutter on a beach was demonstrated and in response to Q&amp;amp;A, David led a nice discussion on the difference between luma (stable colour) and RGB (impacts colour) curves and their combination in the contrast slider in Capture One.&lt;/p&gt;
-
-&lt;p&gt;Noise reduction was demonstrated in an image of a flower, along with sharpening of the flower independently of the background using the colour editor (and preview) to make a new mask – “a bit of a hidden feature”, according to David. This is an extremely powerful tool and something I did not know about before. The refinement of the mask is also very smart.&lt;/p&gt;
-
-&lt;p&gt;The final image in the seminar was another landscape. A similar workflow was followed as for the other images, with more focus on the colours in the image, using style brushes to warm up the foreground and lift shadows in a more distant rock formation. Contrast was improved using the custom style brush created in the previous image edit. A final saturation lift completed the final edit.&lt;/p&gt;
-
-&lt;p&gt;Further tutorial resources are available (and worth following up) in the Capture One &lt;a href=&quot;https://youtu.be/rV7no5j1tNU&quot;&gt;YouTube channel&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
-
-&lt;p&gt;“Red Campion” image © Nick Hood 2021.&lt;br /&gt;
-Original “India” image in the screenshot © &lt;a href=&quot;https://www.emily-teague.com/India&quot;&gt;Emily Teague&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 17 Jun 2021 10:30:00 +0100</pubDate>
-        <link>https://cullaloe.com/capture-one-seminar/</link>
-        <guid isPermaLink="true">https://cullaloe.com/capture-one-seminar/</guid>
-        
-        <category>CPD</category>
-        
-        <category>Photography</category>
         
         
       </item>

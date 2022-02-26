@@ -6,4 +6,5 @@ group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-scholar'
   gem 'webrick'
+  gem 'jekyll-mermaid'
 end
