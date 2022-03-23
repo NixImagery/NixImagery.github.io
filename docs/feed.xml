@@ -5,9 +5,81 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Feb 2022 19:39:17 +0000</pubDate>
-    <lastBuildDate>Sat, 26 Feb 2022 19:39:17 +0000</lastBuildDate>
-    <generator>Jekyll v4.2.1</generator>
+    <pubDate>Wed, 23 Mar 2022 12:56:31 +0000</pubDate>
+    <lastBuildDate>Wed, 23 Mar 2022 12:56:31 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>Chicago author-date with ibid</title>
+        <description>&lt;p&gt;One of my supervisors recently suggested:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Just a stylistic thing going forward, but where you have recently cited the same author, you can use Ibid (e.g. (Ibid: 2) or similar), rather than include their names again”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is great advice and something I had seen before. I use &lt;a href=&quot;https://www.mendeley.com/DOWNLOAD-DESKTOP/&quot;&gt;Mendeley Desktop&lt;/a&gt; as my academic library and reference manager, which plays nicely with my &lt;a href=&quot;/phd-workflow-22&quot;&gt;writing workflow&lt;/a&gt;. I am used to using the so-called “Harvard” citation style, otherwise known as “author-date” because it looks like this: &lt;a class=&quot;citation&quot; href=&quot;#bresson1999the&quot;&gt;(Cartier-Bresson, 1999)&lt;/a&gt; but had not worked out how to have the software automatically detect when &lt;em&gt;ibid.&lt;/em&gt; is appropriate.&lt;/p&gt;
+
+&lt;p&gt;The key to it is in the &lt;a href=&quot;https://citationstyles.org/&quot;&gt;citation style&lt;/a&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file that tells your typesetting program how to format citations. There are thousands of these, publicly accessible over at the &lt;a href=&quot;https://www.zotero.org/styles&quot;&gt;Zotero Style Repository&lt;/a&gt; or &lt;a href=&quot;https://github.com/citation-style-language/styles&quot;&gt;Github&lt;/a&gt;. I wanted to use a popular &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csl&lt;/code&gt; style using the globally recognised &lt;a href=&quot;https://www.chicagomanualofstyle.org/&quot;&gt;Chicago Style Manual&lt;/a&gt; but the use of &lt;em&gt;ibid&lt;/em&gt; has been deprecated there. They favour the use of a short form citation which is well suited to the numbered footnote alternative to author-date.&lt;/p&gt;
+
+&lt;p&gt;With a little leg work I found that it is quite easy to adapt &lt;a href=&quot;https://www.zotero.org/styles/chicago-author-date&quot;&gt;the current Chicago author-date&lt;/a&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file to include the &lt;em&gt;ibid&lt;/em&gt; feature from &lt;a href=&quot;https://www.zotero.org/styles/chicago-note-bibliography-with-ibid&quot;&gt;its numbered footnote sister&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-adaptation&quot;&gt;The adaptation&lt;/h2&gt;
+
+&lt;p&gt;Starting with a copy of the author-date &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file (obviously change the name). find the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;citation&amp;gt;&lt;/code&gt; tag and merge the equivalent code from the fullnote with ibid &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file. It should look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;citation&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;et-al-min=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;et-al-use-first=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-year-suffix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-names=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-givenname=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;givenname-disambiguation-rule=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;primary-name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;collapse=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;year&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;after-collapse-delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;; &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;layout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;prefix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;(&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;suffix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;)&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;; &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;choose&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;position=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid-with-locator&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;term=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;point-locators-subsequent&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;else-if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;position=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;term=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/else-if&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;else&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;contributors-short&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;date-in-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;point-locators&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/else&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/choose&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/layout&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/citation&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It is also necessary to pull in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-locators-subsequent&lt;/code&gt; macro. Paste it below the other macros in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;All that is required now is to point the rendering software to the style file, in my case, by editing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yaml&lt;/code&gt; header in my markdown document, or the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file for this site.&lt;/p&gt;
+
+&lt;p&gt;I don’t feel that I should push this back to the open source repositories because it’s just my own hack that works for me, but you can download my version of &lt;a href=&quot;/assets/docs/chicago-author-date-with-ibid.csl&quot;&gt;chicago-author-date-with-ibid.csl&lt;/a&gt; to adapt for your own use.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;bresson1999the&quot;&gt;Cartier-Bresson, Henri. 1999. &lt;i&gt;The Mind’s Eye : Writings on Photography and Photographers&lt;/i&gt;. New York, N.Y: Aperture.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/chicago-author-date-with-ibid/</link>
+        <guid isPermaLink="true">https://cullaloe.com/chicago-author-date-with-ibid/</guid>
+        
+        <category>CSL</category>
+        
+        <category>PhD</category>
+        
+        <category>Mendeley</category>
+        
+        <category>Software</category>
+        
+        <category>Writing</category>
+        
+        
+      </item>
     
       <item>
         <title>PhD Tools and software</title>
@@ -121,7 +193,7 @@ Here is some text which is my interpretation of what someone else wrote about [@
 
 &lt;h2 id=&quot;broadcast-acquisition&quot;&gt;Broadcast acquisition&lt;/h2&gt;
 
-&lt;p&gt;Not related to general projects but certainly useful in mine is the ability to capture for my own use, BBC radio programmes. &lt;a href=&quot;https://github.com/get-iplayer/get_iplayer&quot;&gt;get_iPlayer&lt;/a&gt; is a command-line programme written in Perl which downloads TV and radio programmes from BBC iPlayer/BBC Sounds &lt;a class=&quot;citation&quot; href=&quot;#notnac2021&quot;&gt;(&lt;i&gt;Get-Iplayer/get_iplayer&lt;/i&gt;, 2021)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Not related to general projects but certainly useful in mine is the ability to capture for my own use, BBC radio programmes. &lt;a href=&quot;https://github.com/get-iplayer/get_iplayer&quot;&gt;get_iPlayer&lt;/a&gt; is a command-line programme written in Perl which downloads TV and radio programmes from BBC iPlayer/BBC Sounds &lt;a class=&quot;citation&quot; href=&quot;#notnac2021&quot;&gt;(“Get-Iplayer/get_iplayer,” 2021)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;configuration-managementbackup&quot;&gt;Configuration management/backup&lt;/h2&gt;
 
@@ -131,10 +203,10 @@ Here is some text which is my interpretation of what someone else wrote about [@
 
 &lt;p&gt;This post originally appeared as &lt;a href=&quot;/phd-workflow&quot;&gt;PhD Workflow&lt;/a&gt; in July 2019 and has been updated with links and references to describe my current model. I hope it’s useful.&lt;/p&gt;
 
-&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;RCoreTeam2021&quot;&gt;R Core Team. (2021). &lt;i&gt;R: A Language and Environment for Statistical Computing&lt;/i&gt;. R Foundation for Statistical Computing. https://www.r-project.org/&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;Xie2016&quot;&gt;Xie, Y. (2016). &lt;i&gt;bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. Chapman and Hall/CRC. https://github.com/rstudio/bookdown&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;Xie2020&quot;&gt;Xie, Y. (2020). &lt;i&gt;bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. https://github.com/rstudio/bookdown&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;notnac2021&quot;&gt;&lt;i&gt;get-iplayer/get_iplayer&lt;/i&gt;. (2021). Github. https://github.com/get-iplayer/get_iplayer&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;RCoreTeam2021&quot;&gt;R Core Team. 2021. “R: A Language and Environment for Statistical Computing.” Vienna, Austria: R Foundation for Statistical Computing. https://www.r-project.org/.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Xie2016&quot;&gt;Xie, Yihui. 2016. &lt;i&gt;Bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. Boca Raton, Florida: Chapman and Hall/CRC. https://github.com/rstudio/bookdown.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Xie2020&quot;&gt;———. 2020. “Bookdown: Authoring Books and Technical Documents with R Markdown.” https://github.com/rstudio/bookdown.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;notnac2021&quot;&gt;“Get-Iplayer/get_iplayer.” 2021. Github. https://github.com/get-iplayer/get_iplayer.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:wssat&quot; role=&quot;doc-endnote&quot;&gt;
@@ -307,7 +379,7 @@ Director of PG Research
 &lt;p&gt;Summarising the purpose of the literature review, John quoted from a textbook on sports research methods:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;“By the end of the literature review section in our papers, a reader should not only be able to predict the question driving a study, but clearly understand why someone would ask this question to begin with.”&lt;/em&gt; – &lt;a class=&quot;citation&quot; href=&quot;#Atkinson2012&quot;&gt;(Atkinson, 2012, p. 131)&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;“By the end of the literature review section in our papers, a reader should not only be able to predict the question driving a study, but clearly understand why someone would ask this question to begin with.”&lt;/em&gt; – &lt;a class=&quot;citation&quot; href=&quot;#Atkinson2012&quot;&gt;(Atkinson, 2012)&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;planning-a-literature-review&quot;&gt;Planning a literature review&lt;/h2&gt;
@@ -376,7 +448,7 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 
-&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Atkinson2012&quot;&gt;Atkinson, M. (2012). Literature Reviews. In &lt;i&gt;Key Concepts in Sport and Exercise Research Methods&lt;/i&gt; (pp. 1–245). https://doi.org/10.4135/9781446288092&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Atkinson2012&quot;&gt;Atkinson, Michael. 2012. “Literature Reviews.” In &lt;i&gt;Key Concepts in Sport and Exercise Research Methods&lt;/i&gt;, 1–245. https://doi.org/10.4135/9781446288092.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Mon, 22 Nov 2021 15:00:00 +0000</pubDate>
         <link>https://cullaloe.com/writing-lit-review/</link>
@@ -812,11 +884,11 @@ txt = txt.lower()
 
 &lt;h4 id=&quot;evaluating-information&quot;&gt;Evaluating information&lt;/h4&gt;
 
-&lt;p&gt;A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University &lt;a class=&quot;citation&quot; href=&quot;#MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;(&lt;i&gt;Evaluating Information – Applying the CRAAP Test&lt;/i&gt;, 2015)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University &lt;a class=&quot;citation&quot; href=&quot;#MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;(2015)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 
-&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;Meriam Library - California State University Chico. (2015). &lt;i&gt;Evaluating Information – Applying the CRAAP Test&lt;/i&gt;. 17. https://www.csuchico.edu/lins/handouts/eval_websites.pdf&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;Meriam Library - California State University Chico. 2015. “Evaluating Information – Applying the CRAAP Test,” 17. https://www.csuchico.edu/lins/handouts/eval_websites.pdf.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Sun, 26 Sep 2021 00:00:00 +0100</pubDate>
         <link>https://cullaloe.com/libsmart-i/</link>
@@ -862,44 +934,6 @@ txt = txt.lower()
         <category>Microsoft</category>
         
         <category>OneNote</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Jekyll development in zsh</title>
-        <description>&lt;p&gt;A &lt;a href=&quot;/jekyll-update-via-rake&quot;&gt;recent post&lt;/a&gt; on updating jekyll websites deployed on GitHub describes how this was done on a mac. Apple being Apple, and the advancement of technology being what it is, things have changed slightly such that the workflow needs a slight adjustment.&lt;/p&gt;
-
-&lt;h2 id=&quot;zsh&quot;&gt;zsh&lt;/h2&gt;
-
-&lt;p&gt;Recent OSX (now called MacOS) updates have changed the default shell programme from the Bourne Again Shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bash&lt;/code&gt; to the extended version of this, the Z Shell &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt;. The first impact of this is that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt; command (or any command passing square brackets) doesn’t work any more:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% rake publish[&lt;span class=&quot;s2&quot;&gt;&quot;Test update&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-zsh: no matches found: publish[Test update]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This is simply because &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zsh&lt;/code&gt; requires the square bracket characters to be escaped:&lt;/p&gt;
-
-&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% rake publish&lt;span class=&quot;se&quot;&gt;\[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Test update&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]&lt;/span&gt;
-Configuration file: /your/path/to/GitHub/projectname/_config.yml
-D	docs/yyyy/mm/dd/some-files.html
-....
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;two-terminals&quot;&gt;Two terminals&lt;/h2&gt;
-
-&lt;p&gt;When developing, I use two terminal windows in the dev folder – one to do file operations and the like, the other to run a local version of the site while I test. The quick way to get the second window open within your current working directory is to issue this commmand:&lt;/p&gt;
-
-&lt;div class=&quot;language-zsh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% open &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; Terminal &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-</description>
-        <pubDate>Sun, 08 Aug 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/new-terminal/</link>
-        <guid isPermaLink="true">https://cullaloe.com/new-terminal/</guid>
-        
-        <category>Jekyll</category>
-        
-        <category>zsh</category>
         
         
       </item>

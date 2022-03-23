@@ -6,6 +6,8 @@ show_downloads: true
 
 # Build Settings
 markdown: kramdown
+highlighter: rouge
+
 plugins:
   - jekyll-paginate
   - jemoji
@@ -23,8 +25,8 @@ url: "https://cullaloe.com" # the base hostname & protocol for your site, e.g. h
 site-twitter: cullaloe #if your site has a twitter account, enter it here
 
 scholar:
-  style: apa
-  locale: en
+  style: /Users/v1nhood/Dropbox/styles/chicago-author-date-with-ibid.csl
+#  locale: en
 
   source: /Users/v1nhood/Dropbox/Bibliographies
   bibliography: library.bib

@@ -5,9 +5,81 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Feb 2022 19:39:17 +0000</pubDate>
-    <lastBuildDate>Sat, 26 Feb 2022 19:39:17 +0000</lastBuildDate>
-    <generator>Jekyll v4.2.1</generator>
+    <pubDate>Wed, 23 Mar 2022 12:56:31 +0000</pubDate>
+    <lastBuildDate>Wed, 23 Mar 2022 12:56:31 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>Chicago author-date with ibid</title>
+        <description>&lt;p&gt;One of my supervisors recently suggested:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Just a stylistic thing going forward, but where you have recently cited the same author, you can use Ibid (e.g. (Ibid: 2) or similar), rather than include their names again”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is great advice and something I had seen before. I use &lt;a href=&quot;https://www.mendeley.com/DOWNLOAD-DESKTOP/&quot;&gt;Mendeley Desktop&lt;/a&gt; as my academic library and reference manager, which plays nicely with my &lt;a href=&quot;/phd-workflow-22&quot;&gt;writing workflow&lt;/a&gt;. I am used to using the so-called “Harvard” citation style, otherwise known as “author-date” because it looks like this: &lt;a class=&quot;citation&quot; href=&quot;#bresson1999the&quot;&gt;(Cartier-Bresson, 1999)&lt;/a&gt; but had not worked out how to have the software automatically detect when &lt;em&gt;ibid.&lt;/em&gt; is appropriate.&lt;/p&gt;
+
+&lt;p&gt;The key to it is in the &lt;a href=&quot;https://citationstyles.org/&quot;&gt;citation style&lt;/a&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file that tells your typesetting program how to format citations. There are thousands of these, publicly accessible over at the &lt;a href=&quot;https://www.zotero.org/styles&quot;&gt;Zotero Style Repository&lt;/a&gt; or &lt;a href=&quot;https://github.com/citation-style-language/styles&quot;&gt;Github&lt;/a&gt;. I wanted to use a popular &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csl&lt;/code&gt; style using the globally recognised &lt;a href=&quot;https://www.chicagomanualofstyle.org/&quot;&gt;Chicago Style Manual&lt;/a&gt; but the use of &lt;em&gt;ibid&lt;/em&gt; has been deprecated there. They favour the use of a short form citation which is well suited to the numbered footnote alternative to author-date.&lt;/p&gt;
+
+&lt;p&gt;With a little leg work I found that it is quite easy to adapt &lt;a href=&quot;https://www.zotero.org/styles/chicago-author-date&quot;&gt;the current Chicago author-date&lt;/a&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file to include the &lt;em&gt;ibid&lt;/em&gt; feature from &lt;a href=&quot;https://www.zotero.org/styles/chicago-note-bibliography-with-ibid&quot;&gt;its numbered footnote sister&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-adaptation&quot;&gt;The adaptation&lt;/h2&gt;
+
+&lt;p&gt;Starting with a copy of the author-date &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file (obviously change the name). find the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;citation&amp;gt;&lt;/code&gt; tag and merge the equivalent code from the fullnote with ibid &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file. It should look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;citation&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;et-al-min=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;et-al-use-first=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-year-suffix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-names=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-givenname=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;givenname-disambiguation-rule=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;primary-name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;collapse=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;year&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;after-collapse-delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;; &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;layout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;prefix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;(&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;suffix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;)&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;; &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;choose&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;position=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid-with-locator&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;term=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;point-locators-subsequent&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;else-if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;position=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;term=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/else-if&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;else&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;contributors-short&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;date-in-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;point-locators&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/else&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/choose&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/layout&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/citation&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It is also necessary to pull in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-locators-subsequent&lt;/code&gt; macro. Paste it below the other macros in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;All that is required now is to point the rendering software to the style file, in my case, by editing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yaml&lt;/code&gt; header in my markdown document, or the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file for this site.&lt;/p&gt;
+
+&lt;p&gt;I don’t feel that I should push this back to the open source repositories because it’s just my own hack that works for me, but you can download my version of &lt;a href=&quot;/assets/docs/chicago-author-date-with-ibid.csl&quot;&gt;chicago-author-date-with-ibid.csl&lt;/a&gt; to adapt for your own use.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;bresson1999the&quot;&gt;Cartier-Bresson, Henri. 1999. &lt;i&gt;The Mind’s Eye : Writings on Photography and Photographers&lt;/i&gt;. New York, N.Y: Aperture.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/chicago-author-date-with-ibid/</link>
+        <guid isPermaLink="true">https://cullaloe.com/chicago-author-date-with-ibid/</guid>
+        
+        <category>CSL</category>
+        
+        <category>PhD</category>
+        
+        <category>Mendeley</category>
+        
+        <category>Software</category>
+        
+        <category>Writing</category>
+        
+        
+      </item>
     
       <item>
         <title>PhD Tools and software</title>
@@ -121,7 +193,7 @@ Here is some text which is my interpretation of what someone else wrote about [@
 
 &lt;h2 id=&quot;broadcast-acquisition&quot;&gt;Broadcast acquisition&lt;/h2&gt;
 
-&lt;p&gt;Not related to general projects but certainly useful in mine is the ability to capture for my own use, BBC radio programmes. &lt;a href=&quot;https://github.com/get-iplayer/get_iplayer&quot;&gt;get_iPlayer&lt;/a&gt; is a command-line programme written in Perl which downloads TV and radio programmes from BBC iPlayer/BBC Sounds &lt;a class=&quot;citation&quot; href=&quot;#notnac2021&quot;&gt;(&lt;i&gt;Get-Iplayer/get_iplayer&lt;/i&gt;, 2021)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Not related to general projects but certainly useful in mine is the ability to capture for my own use, BBC radio programmes. &lt;a href=&quot;https://github.com/get-iplayer/get_iplayer&quot;&gt;get_iPlayer&lt;/a&gt; is a command-line programme written in Perl which downloads TV and radio programmes from BBC iPlayer/BBC Sounds &lt;a class=&quot;citation&quot; href=&quot;#notnac2021&quot;&gt;(“Get-Iplayer/get_iplayer,” 2021)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;configuration-managementbackup&quot;&gt;Configuration management/backup&lt;/h2&gt;
 
@@ -131,10 +203,10 @@ Here is some text which is my interpretation of what someone else wrote about [@
 
 &lt;p&gt;This post originally appeared as &lt;a href=&quot;/phd-workflow&quot;&gt;PhD Workflow&lt;/a&gt; in July 2019 and has been updated with links and references to describe my current model. I hope it’s useful.&lt;/p&gt;
 
-&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;RCoreTeam2021&quot;&gt;R Core Team. (2021). &lt;i&gt;R: A Language and Environment for Statistical Computing&lt;/i&gt;. R Foundation for Statistical Computing. https://www.r-project.org/&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;Xie2016&quot;&gt;Xie, Y. (2016). &lt;i&gt;bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. Chapman and Hall/CRC. https://github.com/rstudio/bookdown&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;Xie2020&quot;&gt;Xie, Y. (2020). &lt;i&gt;bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. https://github.com/rstudio/bookdown&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;notnac2021&quot;&gt;&lt;i&gt;get-iplayer/get_iplayer&lt;/i&gt;. (2021). Github. https://github.com/get-iplayer/get_iplayer&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;RCoreTeam2021&quot;&gt;R Core Team. 2021. “R: A Language and Environment for Statistical Computing.” Vienna, Austria: R Foundation for Statistical Computing. https://www.r-project.org/.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Xie2016&quot;&gt;Xie, Yihui. 2016. &lt;i&gt;Bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. Boca Raton, Florida: Chapman and Hall/CRC. https://github.com/rstudio/bookdown.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Xie2020&quot;&gt;———. 2020. “Bookdown: Authoring Books and Technical Documents with R Markdown.” https://github.com/rstudio/bookdown.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;notnac2021&quot;&gt;“Get-Iplayer/get_iplayer.” 2021. Github. https://github.com/get-iplayer/get_iplayer.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:wssat&quot; role=&quot;doc-endnote&quot;&gt;
@@ -307,7 +379,7 @@ Director of PG Research
 &lt;p&gt;Summarising the purpose of the literature review, John quoted from a textbook on sports research methods:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;“By the end of the literature review section in our papers, a reader should not only be able to predict the question driving a study, but clearly understand why someone would ask this question to begin with.”&lt;/em&gt; – &lt;a class=&quot;citation&quot; href=&quot;#Atkinson2012&quot;&gt;(Atkinson, 2012, p. 131)&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;“By the end of the literature review section in our papers, a reader should not only be able to predict the question driving a study, but clearly understand why someone would ask this question to begin with.”&lt;/em&gt; – &lt;a class=&quot;citation&quot; href=&quot;#Atkinson2012&quot;&gt;(Atkinson, 2012)&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;planning-a-literature-review&quot;&gt;Planning a literature review&lt;/h2&gt;
@@ -376,7 +448,7 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 
-&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Atkinson2012&quot;&gt;Atkinson, M. (2012). Literature Reviews. In &lt;i&gt;Key Concepts in Sport and Exercise Research Methods&lt;/i&gt; (pp. 1–245). https://doi.org/10.4135/9781446288092&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Atkinson2012&quot;&gt;Atkinson, Michael. 2012. “Literature Reviews.” In &lt;i&gt;Key Concepts in Sport and Exercise Research Methods&lt;/i&gt;, 1–245. https://doi.org/10.4135/9781446288092.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Mon, 22 Nov 2021 15:00:00 +0000</pubDate>
         <link>https://cullaloe.com/writing-lit-review/</link>
@@ -812,11 +884,11 @@ txt = txt.lower()
 
 &lt;h4 id=&quot;evaluating-information&quot;&gt;Evaluating information&lt;/h4&gt;
 
-&lt;p&gt;A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University &lt;a class=&quot;citation&quot; href=&quot;#MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;(&lt;i&gt;Evaluating Information – Applying the CRAAP Test&lt;/i&gt;, 2015)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University &lt;a class=&quot;citation&quot; href=&quot;#MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;(2015)&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 
-&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;Meriam Library - California State University Chico. (2015). &lt;i&gt;Evaluating Information – Applying the CRAAP Test&lt;/i&gt;. 17. https://www.csuchico.edu/lins/handouts/eval_websites.pdf&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;Meriam Library - California State University Chico. 2015. “Evaluating Information – Applying the CRAAP Test,” 17. https://www.csuchico.edu/lins/handouts/eval_websites.pdf.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Sun, 26 Sep 2021 00:00:00 +0100</pubDate>
         <link>https://cullaloe.com/libsmart-i/</link>
@@ -1108,7 +1180,7 @@ Original “India” image in the screenshot © &lt;a href=&quot;https://www.emi
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:caveat21-05&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;From the Working Tools of the Entered Apprentice, &lt;span id=&quot;Emulation13&quot;&gt;Emulation Lodge of Improvement. (2015). &lt;i&gt;Emulation Ritual&lt;/i&gt; (13th ed.). Lewis Masonic.&lt;/span&gt; &lt;a href=&quot;#fnref:caveat21-05&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;From the Working Tools of the Entered Apprentice, &lt;span id=&quot;Emulation13&quot;&gt;Emulation Lodge of Improvement. 2015. &lt;i&gt;Emulation Ritual&lt;/i&gt;. 13th ed. London: Lewis Masonic.&lt;/span&gt; &lt;a href=&quot;#fnref:caveat21-05&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -1251,9 +1323,9 @@ jekyll s &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docs
 &lt;p&gt;As well as drawing on my own experience in initial teacher education, and information from the &lt;a href=&quot;https://www.ed.ac.uk/institute-academic-development/postgraduate/doctoral&quot;&gt;IAD&lt;/a&gt; at the University of Edinburgh, I have also used the following in writing this post.&lt;/p&gt;
 
 &lt;!--&lt;ol class=&quot;bibliography&quot;&gt;&lt;/ol&gt;--&gt;
-&lt;p&gt;&lt;span id=&quot;White2018&quot;&gt;White, C. (2018). How to Conduct an Effective Literature Review. In &lt;i&gt;SAGE Research Methods Video: Practical Research and Academic Skills&lt;/i&gt;. https://doi.org/10.4135/9781526442734&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span id=&quot;White2018&quot;&gt;White, Claire. 2018. “How to Conduct an Effective Literature Review.” &lt;i&gt;SAGE Research Methods Video: Practical Research and Academic Skills&lt;/i&gt;. London. https://doi.org/10.4135/9781526442734.&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;span id=&quot;Librarian2012&quot;&gt;Faculty Librarians. (2012). &lt;i&gt;Doing a literature search : a step by step guide&lt;/i&gt;. &lt;i&gt;March&lt;/i&gt;, 1–21.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span id=&quot;Librarian2012&quot;&gt;Faculty Librarians. 2012. “Doing a Literature Search : a Step by Step Guide,” no. March: 1–21.&lt;/span&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1556,6 +1628,44 @@ Finished.
         <category>OSX</category>
         
         <category>Transcription</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>IOP CLPL: Smartphone practicals</title>
+        <description>&lt;p&gt;The IoP in Scotland is putting on a rich catalogue of online CLPL for the community of physics teachers, and presented by colleagues from that same community. I accessed one of these after the event, because it had been recorded and published by Drew Burrett on &lt;a href=&quot;https://www.youtube.com/watch?v=TJvuI5g0WNI&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This session was hosted by Stuart Farmer and Jenny Hargreaves, and presented by Murat Gullen and Martyn Crawshaw, who gave us a practical introduction to using tools for data capture and analysis using the suite of sensors on most modern phones. They presented a brief rationale, acknowledging that although not all children have a smart phone, most have access to one. The scope (pun intended) for teachers to offer practical sessions using their own equipment was also underlined.&lt;/p&gt;
+
+&lt;p&gt;The first tool discussed was &lt;a href=&quot;https://phyphox.org/&quot;&gt;PhyPhox&lt;/a&gt; which not only can access all of the phone’s sensors, it has a number of built-in activities and tools to make use of the data captured. These can be exported in several formats, or posted to Dropbox for later discussion. What I hadn’t realised is that there is a built-in web server accessed through the “triple dots” at the top right of the phone screen which enables display and control of the app from any nearby browser, provided that the computer is on the same network (it uses a 192.168.x.x IP address).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_1E1AE83E2C49-1.jpeg&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;/assets/img/phyphox.png&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;Screenshots of Phyphox on iPhone and Browser (uses the language of the phone)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Martyn started by talking about &lt;a href=&quot;https://apps.apple.com/us/app/vernier-video-physics/id389784247&quot;&gt;Vernier video&lt;/a&gt; tracking and analysis software, similar to the java &lt;a href=&quot;https://www.physlets.org/tracker/&quot;&gt;Tracker&lt;/a&gt; program. He went on to demonstrate Pasco’s &lt;a href=&quot;https://www.pasco.com/products/software/sparkvue&quot;&gt;SparkVue&lt;/a&gt; app, what Martyn called the “twenty-first century version” of Data Studio found in many schools. It allows connection to onboard sensors and also Pasco equipment in the lab.&lt;/p&gt;
+
+&lt;p&gt;It was made clear that teachers should take care not to assume that their pupils are tech-savvy enough to know how to use all of the tools and interfaces without support and guidance.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Don’t lose the learning!” – Martyn Crawshaw&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Excellent stuff, as ever, with a lively Q &amp;amp; A at the end. I’m going to share this with my students.&lt;/p&gt;
+
+&lt;!--## Footnotes--&gt;
+</description>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/iop-clpl-smartphone-practicals/</link>
+        <guid isPermaLink="true">https://cullaloe.com/iop-clpl-smartphone-practicals/</guid>
+        
+        <category>Education</category>
+        
+        <category>Physics</category>
+        
+        <category>Practicals</category>
+        
+        <category>CPD</category>
         
         
       </item>
@@ -1883,44 +1993,6 @@ x,y,t1,t2
         <category>Nextcloud</category>
         
         <category>Content-Security-Policy</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>IOP CLPL: Smartphone practicals</title>
-        <description>&lt;p&gt;The IoP in Scotland is putting on a rich catalogue of online CLPL for the community of physics teachers, and presented by colleagues from that same community. I accessed one of these after the event, because it had been recorded and published by Drew Burrett on &lt;a href=&quot;https://www.youtube.com/watch?v=TJvuI5g0WNI&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This session was hosted by Stuart Farmer and Jenny Hargreaves, and presented by Murat Gullen and Martyn Crawshaw, who gave us a practical introduction to using tools for data capture and analysis using the suite of sensors on most modern phones. They presented a brief rationale, acknowledging that although not all children have a smart phone, most have access to one. The scope (pun intended) for teachers to offer practical sessions using their own equipment was also underlined.&lt;/p&gt;
-
-&lt;p&gt;The first tool discussed was &lt;a href=&quot;https://phyphox.org/&quot;&gt;PhyPhox&lt;/a&gt; which not only can access all of the phone’s sensors, it has a number of built-in activities and tools to make use of the data captured. These can be exported in several formats, or posted to Dropbox for later discussion. What I hadn’t realised is that there is a built-in web server accessed through the “triple dots” at the top right of the phone screen which enables display and control of the app from any nearby browser, provided that the computer is on the same network (it uses a 192.168.x.x IP address).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_1E1AE83E2C49-1.jpeg&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;/assets/img/phyphox.png&quot; alt=&quot;&quot; /&gt;
-&lt;em&gt;Screenshots of Phyphox on iPhone and Browser (uses the language of the phone)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Martyn started by talking about &lt;a href=&quot;https://apps.apple.com/us/app/vernier-video-physics/id389784247&quot;&gt;Vernier video&lt;/a&gt; tracking and analysis software, similar to the java &lt;a href=&quot;https://www.physlets.org/tracker/&quot;&gt;Tracker&lt;/a&gt; program. He went on to demonstrate Pasco’s &lt;a href=&quot;https://www.pasco.com/products/software/sparkvue&quot;&gt;SparkVue&lt;/a&gt; app, what Martyn called the “twenty-first century version” of Data Studio found in many schools. It allows connection to onboard sensors and also Pasco equipment in the lab.&lt;/p&gt;
-
-&lt;p&gt;It was made clear that teachers should take care not to assume that their pupils are tech-savvy enough to know how to use all of the tools and interfaces without support and guidance.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Don’t lose the learning!” – Martyn Crawshaw&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Excellent stuff, as ever, with a lively Q &amp;amp; A at the end. I’m going to share this with my students.&lt;/p&gt;
-
-&lt;!--## Footnotes--&gt;
-</description>
-        <pubDate>Sun, 02 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/iop-clpl-smartphone-practicals/</link>
-        <guid isPermaLink="true">https://cullaloe.com/iop-clpl-smartphone-practicals/</guid>
-        
-        <category>Education</category>
-        
-        <category>Physics</category>
-        
-        <category>Practicals</category>
-        
-        <category>CPD</category>
         
         
       </item>
@@ -3609,6 +3681,103 @@ which is output as html:&lt;/p&gt;
       </item>
     
       <item>
+        <title>Securing mail using DKIM</title>
+        <description>&lt;p&gt;Over the weekend, as I was updating DNS tables for a client, I thought I’d sharpen up my server mail settings to make the mail service more robust. I’ve seen (unrelated to this) an increase in spam recently and it had been on my mind to do more to combat it. These notes set out broadly how I configure my mail server.&lt;/p&gt;
+
+&lt;h2 id=&quot;mail-server-settings&quot;&gt;Mail server settings&lt;/h2&gt;
+&lt;p&gt;The mail server I use is Postfix/Dovecot. Using the Plesk control interface on my VPS&lt;sup id=&quot;fnref:vps&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:vps&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, there are a number of settings needed to mitigate the scourge that is spam emails. From Tools &amp;amp; Settings, select Server-wide mail settings make these changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-dns-blacklisting&quot;&gt;Using DNS Blacklisting&lt;/h3&gt;
+&lt;p&gt;The first thing to do is to switch on spam protection based on DNS blackhole lists such as &lt;a href=&quot;https://www.spamhaus.org/&quot;&gt;zen.spamhaus.org&lt;/a&gt;, &lt;a href=&quot;https://abuse.ch/&quot;&gt;spam.abuse.ch&lt;/a&gt; and &lt;a href=&quot;https://imp.ch/&quot;&gt;spamrbl.imp.ch&lt;/a&gt;. Also, when you do get spam in your inbox, report it immediately. This means just copying the message source&lt;sup id=&quot;fnref:notthat&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:notthat&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; into a form at somewhere like &lt;a href=&quot;https://www.spamcop.net/&quot;&gt;SpamCop.net&lt;/a&gt;, who will send abuse reports to the ISPs that allow the spammers access to the internet. What we hope is that these providers will shut them down, but some are repeat offenders: all of my recent reports have gone to &lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;CloudFlare&lt;/a&gt; who seem reluctant to combat internet abuse, perhaps because they are making money out of it.&lt;/p&gt;
+
+&lt;h2 id=&quot;spf&quot;&gt;SPF&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7208&quot;&gt;Sender Policy Framework&lt;/a&gt; is designed to allow domain admins to authorise the servers that are allowed to use their domain names. Receiving mail servers can check that authorisation by looking up the SPF record of the domain claimed in the “from” field of an email.&lt;/p&gt;
+
+&lt;p&gt;Within the Plesk panel for the mail server, under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SPF spam protection&lt;/code&gt;, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable SPF spam protection to check incoming mail&lt;/code&gt; and select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Only create Received-SPF headers, never block&lt;/code&gt; from the drop-down. Your domains should also have an SPF code in the DNS table. This acts like a return address on a snail-mail envelope. Servers can check the sender’s IP against this DNS record to check that it is allowed to send mail on behalf of the domain. This record identifies the version of SPF being used (always 1 at the moment), which records pertain and what policy should be applied to mail that fails to be verified when this record is checked by the receiving mail server. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a&lt;/code&gt; is a hard fail setting which advises rejection of mail that doesn’t match the record parameters. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~a&lt;/code&gt; is a soft fail, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+a&lt;/code&gt; is like leaving your keys in the front door. Use the hard fail setting.&lt;/p&gt;
+
+&lt;h2 id=&quot;dkim&quot;&gt;DKIM&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc6376&quot;&gt;DomainKeys Identified Mail (DKIM)&lt;/a&gt; is a system that allows the mail server to “certify” emails to assert their authenticity. This is achieved through a cryptographic signature and by querying the signer’s domain directly to retrieve a key. This requires another couple of entries in the DNS table to contain the keys (see table below for examples). Take care when entering your key that you do not inadvertently introduce spaces in the long key. They will invalidate your key.&lt;/p&gt;
+
+&lt;p&gt;To enable this on the VPS, in the server-wide mail settings interface in Plesk, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Verify incoming mail&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow signing outgoing mail&lt;/code&gt; under DKIM spam protection. In the panel for each subscription (domain), in the Mail Settings tab, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Use DKIM spam protection system to sign outgoing email messages&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;dmarc&quot;&gt;DMARC&lt;/h2&gt;
+&lt;p&gt;Bringing the measures together, with a DNS-based reporting mechanism that closes the loop, is &lt;a href=&quot;https://www.rfc-editor.org/info/rfc7489&quot;&gt;Domain-based Message Authentication, Reporting, and Conformance (DMARC)&lt;/a&gt;. This helps protect the domain from unauthorized use. It also requires a DNS TXT entry which identifies policy for handling non-aligned (mail that looks like it might be spam) emails, and a place to send reports about incidents. Setting up needs the policy to be passive, or “reporting only”, set by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p-none&lt;/code&gt; in the DNS record. Increasing levels of confidence in the deliverability of email from the server allows organisations to increase this policy to “quarantine”, or even “reject”. Email reports are sent for authentication failure (forensic) and summary information (aggregate) to the email addresses in the record.&lt;/p&gt;
+
+&lt;p&gt;If you want to send your DMARC reports to an address at a different domain, then that domain needs a DNS record to authorize the the reports:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reportingdomain.tld._report._dmarc TXT v=DMARC1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If the target domain for the reports is being used for several domains (as in my case), then you can specify a wildcard entry:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*._report._dmarc TXT v=DMARC1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Within the Plesk server-wide mail settings panel, you can now check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable DMARC to check incoming mail&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;The final DNS aligns with the server settings to provide a more robust and spam-free&lt;sup id=&quot;fnref:orly&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:orly&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; mail experience. An example DNS set of mail-related TXT entries:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Host name&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Record type&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Address&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;@&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;v=spf1 +a +mx -all&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;_domainkey&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;o=-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;default._domainkey&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;v=DKIM1;k=rsa; p=yourkeygoeshere&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;_dmarc&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;v=DMARC1; p=none; rua=mailto:aggregate@yourdomain.tld; ruf=mailto:forensics@yourdomain.tld; fo=1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://mxtoolbox.com/&quot;&gt;mxtoolbox&lt;/a&gt; for providing a suite of extremely useful tools and information. Although there is &lt;a href=&quot;https://ietf.org/standards/rfcs/&quot;&gt;RFC&lt;/a&gt;, this would have been much harder to do without your help. Most of the DKIM verifiers out there don’t actually check the validity of the signature key: &lt;a href=&quot;https://www.dmarcanalyzer.com/&quot;&gt;DMARCAnalyzer&lt;/a&gt; does, thanks also to them for this service.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:vps&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Virtual private server. Literally, a Dell server, in a rack, connected to the T1 backbone in London. Mine runs Centos, a variant of RedHat specifically designed for this kind of job. My ISP for the past 20 years has been &lt;a href=&quot;https://hostinguk.net/&quot;&gt;Hosting UK&lt;/a&gt;, run by Phil Parry, who set the business up in his garage. It’s now part of the Scottish IT business &lt;a href=&quot;https://www.iomart.com/&quot;&gt;IoMart&lt;/a&gt;. &lt;a href=&quot;#fnref:vps&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:notthat&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Not the body of the email. The DNS blacklisters need to see the contents of the email header, which reveals where it came from and how it was routed to your computer. Filter scores are also included here. On a mac, if you’re using Mail.app, just click in the body of the mail message and click cmd-alt-u to get a pop-up with the email message source. Cmd-a, cmd-c, and then paste it in the textbox on the spamcop form. &lt;a href=&quot;#fnref:notthat&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:orly&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Well, we will see how it goes. &lt;a href=&quot;#fnref:orly&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 01 Jun 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/securing-mail-with-dkim/</link>
+        <guid isPermaLink="true">https://cullaloe.com/securing-mail-with-dkim/</guid>
+        
+        <category>Plesk</category>
+        
+        <category>DNS</category>
+        
+        
+      </item>
+    
+      <item>
         <title>Virtual Physics Staffroom again</title>
         <description>&lt;p&gt;On the last two Fridays, I participated in two more of the IoP’s Virtual Physics Staffroom online 40-minute&lt;sup id=&quot;fnref:zoom&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:zoom&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Zoom meetings. On the 22nd May, the focus was on practicals and skills development, and the 29th saw a session focused on the pedagogy of blended learning.&lt;/p&gt;
 
@@ -4143,103 +4312,6 @@ There is nothing more important in realising that you are not alone just now.&lt
         <category>Remote teaching</category>
         
         <category>CPD</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Securing mail using DKIM</title>
-        <description>&lt;p&gt;Over the weekend, as I was updating DNS tables for a client, I thought I’d sharpen up my server mail settings to make the mail service more robust. I’ve seen (unrelated to this) an increase in spam recently and it had been on my mind to do more to combat it. These notes set out broadly how I configure my mail server.&lt;/p&gt;
-
-&lt;h2 id=&quot;mail-server-settings&quot;&gt;Mail server settings&lt;/h2&gt;
-&lt;p&gt;The mail server I use is Postfix/Dovecot. Using the Plesk control interface on my VPS&lt;sup id=&quot;fnref:vps&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:vps&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, there are a number of settings needed to mitigate the scourge that is spam emails. From Tools &amp;amp; Settings, select Server-wide mail settings make these changes.&lt;/p&gt;
-
-&lt;h3 id=&quot;using-dns-blacklisting&quot;&gt;Using DNS Blacklisting&lt;/h3&gt;
-&lt;p&gt;The first thing to do is to switch on spam protection based on DNS blackhole lists such as &lt;a href=&quot;https://www.spamhaus.org/&quot;&gt;zen.spamhaus.org&lt;/a&gt;, &lt;a href=&quot;https://abuse.ch/&quot;&gt;spam.abuse.ch&lt;/a&gt; and &lt;a href=&quot;https://imp.ch/&quot;&gt;spamrbl.imp.ch&lt;/a&gt;. Also, when you do get spam in your inbox, report it immediately. This means just copying the message source&lt;sup id=&quot;fnref:notthat&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:notthat&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; into a form at somewhere like &lt;a href=&quot;https://www.spamcop.net/&quot;&gt;SpamCop.net&lt;/a&gt;, who will send abuse reports to the ISPs that allow the spammers access to the internet. What we hope is that these providers will shut them down, but some are repeat offenders: all of my recent reports have gone to &lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;CloudFlare&lt;/a&gt; who seem reluctant to combat internet abuse, perhaps because they are making money out of it.&lt;/p&gt;
-
-&lt;h2 id=&quot;spf&quot;&gt;SPF&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7208&quot;&gt;Sender Policy Framework&lt;/a&gt; is designed to allow domain admins to authorise the servers that are allowed to use their domain names. Receiving mail servers can check that authorisation by looking up the SPF record of the domain claimed in the “from” field of an email.&lt;/p&gt;
-
-&lt;p&gt;Within the Plesk panel for the mail server, under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SPF spam protection&lt;/code&gt;, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable SPF spam protection to check incoming mail&lt;/code&gt; and select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Only create Received-SPF headers, never block&lt;/code&gt; from the drop-down. Your domains should also have an SPF code in the DNS table. This acts like a return address on a snail-mail envelope. Servers can check the sender’s IP against this DNS record to check that it is allowed to send mail on behalf of the domain. This record identifies the version of SPF being used (always 1 at the moment), which records pertain and what policy should be applied to mail that fails to be verified when this record is checked by the receiving mail server. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a&lt;/code&gt; is a hard fail setting which advises rejection of mail that doesn’t match the record parameters. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~a&lt;/code&gt; is a soft fail, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+a&lt;/code&gt; is like leaving your keys in the front door. Use the hard fail setting.&lt;/p&gt;
-
-&lt;h2 id=&quot;dkim&quot;&gt;DKIM&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc6376&quot;&gt;DomainKeys Identified Mail (DKIM)&lt;/a&gt; is a system that allows the mail server to “certify” emails to assert their authenticity. This is achieved through a cryptographic signature and by querying the signer’s domain directly to retrieve a key. This requires another couple of entries in the DNS table to contain the keys (see table below for examples). Take care when entering your key that you do not inadvertently introduce spaces in the long key. They will invalidate your key.&lt;/p&gt;
-
-&lt;p&gt;To enable this on the VPS, in the server-wide mail settings interface in Plesk, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Verify incoming mail&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow signing outgoing mail&lt;/code&gt; under DKIM spam protection. In the panel for each subscription (domain), in the Mail Settings tab, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Use DKIM spam protection system to sign outgoing email messages&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;dmarc&quot;&gt;DMARC&lt;/h2&gt;
-&lt;p&gt;Bringing the measures together, with a DNS-based reporting mechanism that closes the loop, is &lt;a href=&quot;https://www.rfc-editor.org/info/rfc7489&quot;&gt;Domain-based Message Authentication, Reporting, and Conformance (DMARC)&lt;/a&gt;. This helps protect the domain from unauthorized use. It also requires a DNS TXT entry which identifies policy for handling non-aligned (mail that looks like it might be spam) emails, and a place to send reports about incidents. Setting up needs the policy to be passive, or “reporting only”, set by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p-none&lt;/code&gt; in the DNS record. Increasing levels of confidence in the deliverability of email from the server allows organisations to increase this policy to “quarantine”, or even “reject”. Email reports are sent for authentication failure (forensic) and summary information (aggregate) to the email addresses in the record.&lt;/p&gt;
-
-&lt;p&gt;If you want to send your DMARC reports to an address at a different domain, then that domain needs a DNS record to authorize the the reports:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reportingdomain.tld._report._dmarc TXT v=DMARC1&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;If the target domain for the reports is being used for several domains (as in my case), then you can specify a wildcard entry:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*._report._dmarc TXT v=DMARC1&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Within the Plesk server-wide mail settings panel, you can now check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable DMARC to check incoming mail&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;The final DNS aligns with the server settings to provide a more robust and spam-free&lt;sup id=&quot;fnref:orly&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:orly&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; mail experience. An example DNS set of mail-related TXT entries:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Host name&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Record type&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Address&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;@&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;v=spf1 +a +mx -all&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;_domainkey&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;o=-&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;default._domainkey&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;v=DKIM1;k=rsa; p=yourkeygoeshere&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;_dmarc&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;v=DMARC1; p=none; rua=mailto:aggregate@yourdomain.tld; ruf=mailto:forensics@yourdomain.tld; fo=1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&quot;https://mxtoolbox.com/&quot;&gt;mxtoolbox&lt;/a&gt; for providing a suite of extremely useful tools and information. Although there is &lt;a href=&quot;https://ietf.org/standards/rfcs/&quot;&gt;RFC&lt;/a&gt;, this would have been much harder to do without your help. Most of the DKIM verifiers out there don’t actually check the validity of the signature key: &lt;a href=&quot;https://www.dmarcanalyzer.com/&quot;&gt;DMARCAnalyzer&lt;/a&gt; does, thanks also to them for this service.&lt;/p&gt;
-
-&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
-
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:vps&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Virtual private server. Literally, a Dell server, in a rack, connected to the T1 backbone in London. Mine runs Centos, a variant of RedHat specifically designed for this kind of job. My ISP for the past 20 years has been &lt;a href=&quot;https://hostinguk.net/&quot;&gt;Hosting UK&lt;/a&gt;, run by Phil Parry, who set the business up in his garage. It’s now part of the Scottish IT business &lt;a href=&quot;https://www.iomart.com/&quot;&gt;IoMart&lt;/a&gt;. &lt;a href=&quot;#fnref:vps&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:notthat&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Not the body of the email. The DNS blacklisters need to see the contents of the email header, which reveals where it came from and how it was routed to your computer. Filter scores are also included here. On a mac, if you’re using Mail.app, just click in the body of the mail message and click cmd-alt-u to get a pop-up with the email message source. Cmd-a, cmd-c, and then paste it in the textbox on the spamcop form. &lt;a href=&quot;#fnref:notthat&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:orly&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Well, we will see how it goes. &lt;a href=&quot;#fnref:orly&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Sat, 02 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/securing-mail-with-dkim/</link>
-        <guid isPermaLink="true">https://cullaloe.com/securing-mail-with-dkim/</guid>
-        
-        <category>Plesk</category>
-        
-        <category>DNS</category>
         
         
       </item>
