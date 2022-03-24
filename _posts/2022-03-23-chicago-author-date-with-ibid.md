@@ -29,7 +29,7 @@ With a little leg work I found that it is quite easy to adapt [the current Chica
 
 ## The adaptation
 
-Starting with a copy of the author-date `.csl` file (obviously change the name). find the `<citation>` tag and merge the equivalent code from the fullnote with ibid `.csl` file. It should look like this:
+Starting with a copy of the author-date `.csl` file (obviously change the name), find the `<citation>` tag and merge the equivalent code from the fullnote with ibid `.csl` file. It should look like this:
 
 ```xml
 <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true" givenname-disambiguation-rule="primary-name" collapse="year" after-collapse-delimiter="; ">

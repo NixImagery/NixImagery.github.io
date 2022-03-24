@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Mar 2022 12:56:31 +0000</pubDate>
-    <lastBuildDate>Wed, 23 Mar 2022 12:56:31 +0000</lastBuildDate>
+    <pubDate>Thu, 24 Mar 2022 16:52:17 +0000</pubDate>
+    <lastBuildDate>Thu, 24 Mar 2022 16:52:17 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -25,7 +25,7 @@
 
 &lt;h2 id=&quot;the-adaptation&quot;&gt;The adaptation&lt;/h2&gt;
 
-&lt;p&gt;Starting with a copy of the author-date &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file (obviously change the name). find the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;citation&amp;gt;&lt;/code&gt; tag and merge the equivalent code from the fullnote with ibid &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file. It should look like this:&lt;/p&gt;
+&lt;p&gt;Starting with a copy of the author-date &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file (obviously change the name), find the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;citation&amp;gt;&lt;/code&gt; tag and merge the equivalent code from the fullnote with ibid &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file. It should look like this:&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;citation&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;et-al-min=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;et-al-use-first=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-year-suffix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-names=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-givenname=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;givenname-disambiguation-rule=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;primary-name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;collapse=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;year&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;after-collapse-delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;; &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;layout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;prefix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;(&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;suffix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;)&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;; &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
