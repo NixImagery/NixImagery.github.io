@@ -5,9 +5,116 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 May 2022 06:46:50 +0100</pubDate>
-    <lastBuildDate>Thu, 19 May 2022 06:46:50 +0100</lastBuildDate>
+    <pubDate>Fri, 27 May 2022 13:16:09 +0100</pubDate>
+    <lastBuildDate>Fri, 27 May 2022 13:16:09 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>IoP Stirling Conference</title>
+        <description>&lt;p&gt;With a little nervousness, the Institute of Physics (IoP) returned to Stirling for the &lt;a href=&quot;http://www.stirlingmeeting.org/&quot;&gt;47th Stirling Physics Teachers Meeting&lt;/a&gt;, centre piece to the year’s CPD events offered or organised by the IoP including the 3-day residential school for teachers of which the conference forms an integral part. I joined delegates at the Stirling Court Hotel as much to re-connect with the physics teaching community after COVID as for the &lt;a href=&quot;http://www.stirlingmeeting.org/programme&quot;&gt;programme of events&lt;/a&gt;. This reflection is based on notes taken on the day; any errors or omissions are my responsibility. The sketches are for fun.&lt;/p&gt;
+
+&lt;h2 class=&quot;no_toc&quot; id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#fusion-power-for-the-future&quot; id=&quot;markdown-toc-fusion-power-for-the-future&quot;&gt;Fusion: power for the future&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#careers-in-the-physics-classroom&quot; id=&quot;markdown-toc-careers-in-the-physics-classroom&quot;&gt;Careers in the Physics Classroom&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#building-the-energy-system-of-the-future--one-innovation-at-a-time&quot; id=&quot;markdown-toc-building-the-energy-system-of-the-future--one-innovation-at-a-time&quot;&gt;Building the energy system of the future – one innovation at a time&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lunch-and-the-afternoon&quot; id=&quot;markdown-toc-lunch-and-the-afternoon&quot;&gt;Lunch and the afternoon&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#conclusion-and-next-steps&quot; id=&quot;markdown-toc-conclusion-and-next-steps&quot;&gt;Conclusion and next steps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#notes&quot; id=&quot;markdown-toc-notes&quot;&gt;Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;The conference theme was “Energy and Sustainability” and it was opened by &lt;a href=&quot;https://twitter.com/lftspace&quot;&gt;Dr. Laura Thomas&lt;/a&gt;, Chair of IOP Scotland after the first generous opportunity for networking around the exhibition space and coffee. Exhibits were relevant and interesting including a “help yourself” table of vintage physics books from &lt;a href=&quot;https://www.djb.co.uk/&quot;&gt;djb&lt;/a&gt;, showing off the sustainability spirit before we even got started. Laura reviewed the work of the &lt;a href=&quot;https://www.iop.org/physics-community/iop-membership-where-you-are/iop-scotland&quot;&gt;IoP in Scotland&lt;/a&gt; over the past couple of years, including the committee work and that of the IoP coaches in running CPD events and supporting teachers in schools and colleges. She also highlighted the “girls into physics” events which are starting up again, and the national &lt;a href=&quot;https://www.iop.org/strategy/limit-less&quot;&gt;Limit Less&lt;/a&gt; campaign to “support young people to change the world and fulfil their potential by doing physics”.&lt;/p&gt;
+
+&lt;p&gt;The conference was smooth and coherent, and nobody noticed the change in the running order from the advertised programme. As well as energy, there was a strong thread of making visible career pathways for children in the physics classroom. Three presentations from industry were connected by a real sense of optimism and opportunity for our children and their futures, right here in Scotland.&lt;/p&gt;
+
+&lt;h2 id=&quot;fusion-power-for-the-future&quot;&gt;Fusion: power for the future&lt;/h2&gt;
+
+&lt;p&gt;The University of Glasgow’s &lt;img src=&quot;/assets/img/IMG_9677.jpg#thumbnail&quot; alt=&quot;Declan&quot; /&gt;&lt;a href=&quot;https://www.gla.ac.uk/schools/physics/staff/declandiver/&quot;&gt;Prof. Declan Diver&lt;/a&gt; taught us that we don’t say “nuclear power” any more when talking about energy choices, because for most people this is synonymous with “nuclear waste” and the connotations of that are negative. Nuclear fission (“splitting the atom”) is not a sustainable source of energy (and never has been), whereas nuclear fusion is, especially now that some of the challenges have been overcome: we now speak to the public (and in classrooms) of “fission” or “fusion”: they are not the same and there is no waste with fusion, quite the reverse. Recent breakthroughs in the exhaust system have enabled fusion processes to be demonstrably self-fuelling as the tritium required is a product of the process of taking very low gas density hydrogen at a very high temperature and producing neutrons from it. The energy is captured from these neutrons in a lithium blanket to ultimately heat steam and drive turbines to generate electricity. This process is the other way of doing fusion: the physics teachers in the room were familiar with stellar fusion in which particles are brought together under extremely high pressure. The fusion in a tokamak is achieved by accelerating particles to high energy states using an electromagnetic field – as particles are driven around a circular path in the torus they increase the probability of a collision and thereby fusion reaction.&lt;/p&gt;
+
+&lt;p&gt;The hydrogen gas is required to be in the form of a plasma, a gas of free charged particles, and this is achieved in a toroidal&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; magnetic chamber (“tokamak” from the Russian). Production devices are more spherical and the first STEP&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; is expected to be online before the target date of 2040. Site selection for &lt;a href=&quot;https://step.ukaea.uk/&quot;&gt;the first UK station&lt;/a&gt; is under way and one of five contenders is at Ardeer in North Ayrshire, also famous for its &lt;a href=&quot;https://geohack.toolforge.org/geohack.php?pagename=Ardeer_Nudist_beach&amp;amp;params=55.614508_N_4.714867_W_&quot;&gt;nudist beach&lt;/a&gt;. If selected, construction begins there in 2023 on a brownfield site once an ICI works. 3,500 people will be involved in the 8-year build and 1,000 will operate it. The STEP sites are highly compact, occupying only 100 hectares (one square kilometre) to generate between 100 and 200 MW of energy.&lt;/p&gt;
+
+&lt;p&gt;Declan opened his talk with some motivators: between 4.2 and 8.7 million people are killed every year by burning fossil fuels; we have just over 10,000 days until &lt;a href=&quot;https://www.gov.uk/government/publications/net-zero-strategy&quot;&gt;net zero carbon emissions in 2050&lt;/a&gt; and it is impossible to meet energy demand within those targets using other renewable energy sources. Ardeer is the only Scottish site under consideration for the &lt;a href=&quot;https://world-nuclear-news.org/Articles/Five-bids-shortlisted-to-host-STEP-fusion-plant&quot;&gt;UK STEP project&lt;/a&gt; and although those other renewables sources are still required, the selection of Ardeer would be a significant factor in growing and sustaining Scotland’s already credible expertise in new energy production and distribution.&lt;/p&gt;
+
+&lt;h2 id=&quot;careers-in-the-physics-classroom&quot;&gt;Careers in the Physics Classroom&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_9678.jpg#thumbnail&quot; alt=&quot;Carol&quot; /&gt;Carol Davenport, director of Northumbria University’s &lt;a href=&quot;https://nustem.uk/about/people/&quot;&gt;nustem project&lt;/a&gt; gave delegates a call to action and seminar on how teachers, in particular physics teachers, might approach promoting STEM careers in their classrooms and why they should be doing so. She described how the number one career influence on young people is their family, and number two, ahead of careers advisors, friends, people in the field, employers or careers fairs, is teachers. For young people over 16 in physics and mathematics, their motivation is informed by key adults, how well they understand the subject and how well they have been taught. Teachers clearly have a role to play that ought not to be underestimated.&lt;/p&gt;
+
+&lt;p&gt;Carol urged us to avoid the “one-shot” special sessions on careers, rather, to use a drip-feed approach, seeking opportunities in schemes of work to connect, perhaps through starter activities, the course content to a real-world application. I am not sure that this is the right place for this because of the contraints on time to discuss and ask questions which children who are genuinely interested in following up need to satisfy. Rather, a fracture point within a lesson sequence might provide a realistic space, with examples or even an external visitor (in person or digital) input. Carol suggested &lt;a href=&quot;https://www.linkedin.com/&quot;&gt;LinkedIn&lt;/a&gt; as a resource to find those people you know, or who might be in your school area, willing to speak to young people about what it’s like to be a {&lt;em&gt;insert STEM profession here&lt;/em&gt;}. Her idea of creating an alumni group to enable and sustain contact with former pupils is a cracking idea but this needs to be owned and managed by the school to avoid it disappearing when a teacher moves on.&lt;/p&gt;
+
+&lt;p&gt;Nustem have a &lt;a href=&quot;https://nustem.uk/activities/&quot;&gt;collection of activites&lt;/a&gt; around STEM careers and what people in these jobs do for a living, including &lt;a href=&quot;https://nustem.uk/careers/&quot;&gt;career cards&lt;/a&gt; linked to the English curriculum. Carol seemed to respond positively to my suggestion that they follow the Imperial College’s &lt;a href=&quot;https://www.reachoutcpd.com/&quot;&gt;ReachOut CPD&lt;/a&gt; example of connecting the resources to CfE E&amp;amp;Os, specifically for Primary teachers who will also make great use of such a resource if that is done. Primary teachers in Scotland have a particular workflow that is understood by Imperial, hence their tagging of their CPD units by experiences and outcomes of the Scottish curriculum. The nustem activites and resources will, in my view, be similarly accessed if these keys are available to teachers, and more to the point, are not likely to be used if they are not. These teachers just don’t have the time to translate Key Stages and curricular references from the English culture that dominates nustem at the moment.&lt;/p&gt;
+
+&lt;p&gt;A nice touch with the nustem &lt;a href=&quot;https://nustem.uk/primarycareers/&quot;&gt;Primary Careers Tool&lt;/a&gt; is the hidden keywords in the image search links on each card, designed to compensate unconscious bias being exacerbated by Google’s image search bias. For example, on the card for &lt;a href=&quot;https://nustem.uk/careers_resource/mechanical-engineer/&quot;&gt;mechanical engineer&lt;/a&gt;, the image search phrase is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mechanical engineer AND female&lt;/code&gt;. Clumsy, but effective in presenting counter-stereotypical images to your children of what mechanical engineers look like.&lt;/p&gt;
+
+&lt;p&gt;One final powerful tool amongst the many great ideas Carol shared with us was the phrasing of career-oriented questions for young people: less, “what do you want to be when you grow up?” or “do you want to be a pilot?”, and more, “could you be a &lt;a href=&quot;https://nustem.uk/careers_resource/marine-engineer/&quot;&gt;marine engineer&lt;/a&gt;?”. Follow the link to that card and read the attributes: young people might like the idea of a job that asks them to be “passionate, imaginative, open-minded” in an environment that features working in and around water. Triggering the imagination seems to be key, and I remember seeing myself in various roles as influencing my own choices.&lt;/p&gt;
+
+&lt;h2 id=&quot;building-the-energy-system-of-the-future--one-innovation-at-a-time&quot;&gt;Building the energy system of the future – one innovation at a time&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_9679.jpg#thumbnail&quot; alt=&quot;Neil&quot; /&gt; For me, by far the most inspirational talk of the day was given by Neil Kermode&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, MD of the &lt;a href=&quot;https://www.emec.org.uk/&quot;&gt;European Marine Energy Centre&lt;/a&gt; (EMEC Ltd.) in Orkney. His engaging and entertaining yet punchy style told a story of innovation, creativity and resilience in design against the challenge to harvest the natural resources of the UK in terms of tide and waves. His Orcadian perspective placed his business firmly on our maps in a way that is immediately useful in our classrooms to connect the physics curriculum with exciting innovation and opportunity. EMEC are essentially a research and testing facility for tidal and wave energy capture that is supporting the development of our own secure energy supply for the future. Neil estimated that 20% of the UK energy demand might be met from the seas.&lt;/p&gt;
+
+&lt;p&gt;This is no trivial task, however, because there are design and infrastructure barriers to overcome which require the attention and commitment of government, which seems to be starting to manifest itself in Scotland, if still underdeveloped in Westminster. Neil said:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“If you build the infrastructure, stuff happens.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is consistent with my own view on the role of government on behalf of society. No roads, no commerce, no growth. No brainer. Extend that idea to the national grid, to terminals, to communication, and there the doors open to innovation and an energy-rich future for us all. It’s not rocket science, though, as Neil suggested: it’s much, much harder than rocket science in terms of the environment and scale of the devices under test. For example, the &lt;a href=&quot;https://orbitalmarine.com/o2/&quot;&gt;Orbital O2&lt;/a&gt; tidal turbine is 74 m long, has 10 m blades turning on legs under water containing “salt and biology”, generating up to 3 MW of power. Think of the mechanical forces acting on those bearings and structures.&lt;/p&gt;
+
+&lt;p&gt;The bigger challenge is how to make use of the energy captured, when Orkney isn’t on the 20th century national grid? Here’s where the innvoation really sparkles, in my mind, because using electrolysis to generate hydrogen and ammonia for storage from air and water is one thing: going beyond that to generate synthetic hydrocarbon fuels that will allow us to continue to aviate is something else. These are not pipe dreams or science fiction: &lt;a href=&quot;https://invinity.com/flow_battery_plus_tidal_green_hydrogen_orkney/&quot;&gt;flow batteries&lt;/a&gt; are working at EMEC; &lt;a href=&quot;https://gtr.ukri.org/projects?ref=73721&quot;&gt;Hydrogen-electric aircraft&lt;/a&gt; are flying; good examples of what Neil called, “learning by doing”. He left us with another quote, this time from John F. Kennedy’s address before the Irish Parliament on June 28th 1963:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“The problems of the world cannot possibly be solved by skeptics or cynics, whose horizons are limited by the obvious realities. We need men who can dream of things that never were, and ask why not.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;lunch-and-the-afternoon&quot;&gt;Lunch and the afternoon&lt;/h2&gt;
+
+&lt;p&gt;Networking is a hugely important part of an event like this, not least for connecting with new people and re-connecting with old friends and colleagues, but because it’s the most effective way that I know of improving teaching and learning in our classrooms. Dialogue, challenge, swapping ideas and making promises to follow up are crucial to stimulating reflection and improvements in practice. Lunch allowed this, of course, and so did the raggedy end of the day after the afternoon presentations.&lt;/p&gt;
+
+&lt;p&gt;I got less from the presentations in the afternoon than those in the morning for a couple of reasons. The first, was given by Jonathan Prescott, sales manager for  Mitsubishi Electric (Living Environmental Systems Division) who make heat pumps for the domestic and commercial markets. He explained a bit about what these are and how they work, which was interesting, and offered anyone who wanted it a visit for pupils to the &lt;a href=&quot;https://www.coolingpost.com/uk-news/mitsubishi-invests-15-3m-in-livingston-factory/&quot;&gt;factory in Livingston&lt;/a&gt;. I have spent too long in sales to enjoy a sales pitch, even one in this context. More info if you want it from &lt;a href=&quot;https://les.mitsubishielectric.co.uk/homeowners/our-heat-pumps&quot;&gt;ecodan.co.uk&lt;/a&gt;. For me, Jonathan’s talk didn’t speak to the expectations that the morning had raised.&lt;/p&gt;
+
+&lt;p&gt;The final session seemed to be something of a compromise, based on a much longer workshop on the Physics of Climate Change, given by IoP coaches Allan Reid and Andrew Bailey. I am not sure it worked much for me, mostly because I had trouble following what was happening, focused as it was on the intimacy of the front row of the audience. The workshop was based on the &lt;a href=&quot;https://resources.perimeterinstitute.ca/collections/lesson-compilations&quot;&gt;Perimeter Institute&lt;/a&gt;’s &lt;em&gt;Evidence for Climate Change&lt;/em&gt; enquiry-based lesson compilation which includes a range of activities for children to engage with, alongside video resources. They are certainly worth following up for any teacher.&lt;/p&gt;
+
+&lt;p&gt;For anyone interested in breathing, the &lt;a href=&quot;https://keelingcurve.ucsd.edu/&quot;&gt;Keeling Curve&lt;/a&gt; used by Allan and Andrew in their talk is worth spending a few minutes studying with a cup or glass of something reassuring. It will underscore the motivation for the theme of today’s conference and perhaps focus us all on why the innovation and efforts we heard about today are important and worth paying attention to.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion-and-next-steps&quot;&gt;Conclusion and next steps&lt;/h2&gt;
+
+&lt;p&gt;Writing up these notes has been helpful in making sense of what I learned at the conference. I have promised to arrange a meeting for my technician and I with Norman at &lt;a href=&quot;https://www.sserc.org.uk/&quot;&gt;SSERC&lt;/a&gt; to pick his brains on the zeitgeist of Scottish Physics practical work, so we can better prepare our students for it as they go on their placements and begin their careers.&lt;/p&gt;
+
+&lt;p&gt;For those readers who might seek further resources, let me recommend the Institute of Physics &lt;a href=&quot;https://spark.iop.org/&quot;&gt;IoP Spark&lt;/a&gt;, in particular the &lt;a href=&quot;https://spark.iop.org/stories-physics&quot;&gt;Stories from Physics&lt;/a&gt; downloadable pamphlets. These are full of accessible, fascinating tales of invention and discovery around the major themes of classroom physics. Good pedagogy, as I tell my students, is like telling a story. I heard some great stories today.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Think donut-shaped &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;STEP = spherical tokamak for energy production &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;who, I hope, can forgive my artistic impression in the margin. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 26 May 2022 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/stirling-conference-22</link>
+        <guid isPermaLink="true">https://cullaloe.com/stirling-conference-22</guid>
+        
+        <category>CPD</category>
+        
+        <category>Education</category>
+        
+        <category>IoP</category>
+        
+        <category>Physics</category>
+        
+        
+      </item>
     
       <item>
         <title>Chicago author-date with ibid</title>
@@ -899,41 +1006,6 @@ txt = txt.lower()
         <category>CPD</category>
         
         <category>Library</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Purge your Mac of OneDrive</title>
-        <description>&lt;p&gt;It doesn’t take much experience with Microsoft’s OneDrive to learn that it is an unmitigated car-crash: it purports to be a productivity tool that makes it possible to share files quickly and easily.&lt;/p&gt;
-
-&lt;p&gt;For those used to the MacOS experience, with smooth drag-and-drop, quick look, finder previews and right-click extensions (I like “New Terminal at Folder”), the promise of doing the same for your work’s OneDrive as you do for your DropBox or ownCloud folders is enough to tempt you in to installing OneDrive.&lt;/p&gt;
-
-&lt;p&gt;Having done this, and realised that despite looking like a duck, it doesn’t walk like a duck, nor quack much. More of a woof, really. So, rather than be burdened by the workflow friction that Microsoft provides to the World’s economy, I resolved to (a) not use OneDrive unless I had to, and (b) stick to using the web interface when I do.&lt;/p&gt;
-
-&lt;p&gt;I didn’t log out, or stop the service – it had crashed anyway – just dragged the OneDrive.app from the Applications folder to the bin, along with anything that looked connected to it in these folders:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;~/Library/Application Support/&lt;/li&gt;
-  &lt;li&gt;~/Library/Containers/&lt;/li&gt;
-  &lt;li&gt;~/Library/Caches/&lt;/li&gt;
-  &lt;li&gt;~/Library/Preferences/&lt;/li&gt;
-  &lt;li&gt;~/Library/Cookies/&lt;/li&gt;
-  &lt;li&gt;~/Library/Logs/&lt;/li&gt;
-  &lt;li&gt;~/Library/LaunchAgents/&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Empty the trash and you’re free of it.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 22 Aug 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/onedrive/</link>
-        <guid isPermaLink="true">https://cullaloe.com/onedrive/</guid>
-        
-        <category>MacOS</category>
-        
-        <category>Microsoft</category>
-        
-        <category>OneNote</category>
         
         
       </item>
