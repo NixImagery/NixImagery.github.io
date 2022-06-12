@@ -5,9 +5,118 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 May 2022 22:02:28 +0100</pubDate>
-    <lastBuildDate>Sun, 29 May 2022 22:02:28 +0100</lastBuildDate>
+    <pubDate>Sun, 12 Jun 2022 21:04:35 +0100</pubDate>
+    <lastBuildDate>Sun, 12 Jun 2022 21:04:35 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>Zettelkasten, or connecting ideas</title>
+        <description>&lt;p&gt;I have been struggling with stuttering engagement with reading in my PhD, with the consequence that I feel as if I do not yet have a coherent overall picture of the concepts I am trying to master, nor that I am making meaningful connections in the literature. A friend and colleague introduced me to the notes and ideas tool &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;, based on Luhmann’s &lt;em&gt;Zettelkasten&lt;/em&gt;, or card index system of connecting ideas &lt;a class=&quot;citation&quot; href=&quot;#Schmidt2016&quot;&gt;(Schmidt, 2016; Schmidt, 2018)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;capturing-information&quot;&gt;Capturing information&lt;/h2&gt;
+
+&lt;p&gt;The point of reading, at least in the context of a research project, is to assimilate interesting ideas and findings into your particular context. For the researcher, this context may be defined by the research question(s), or the topic of a literature review. Early attempts at this might involve highlighting passages of interest, or making marginal notes or underlining in the text. These “captures” are not much more useful than merely downloading interesting papers as pdf: all you end up with is a large collection of files, at best organised in folders. Referencing tools like Mendeley offer the ability to store notes with the files, which still avoids the intellectual engagement required to make sense of a broad literature base, or indeed, of trying to identify what is not there – the elusive “gap in the literature” that the research aims to fill. More is required: key ideas are needed to be processed and understood in order for meaning to be made.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“One cannot think without writing.” – Niklas Luhmann &lt;a class=&quot;citation&quot; href=&quot;#Ahrens2022&quot;&gt;(Ahrens, 2022)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;capturing-thought&quot;&gt;Capturing thought&lt;/h2&gt;
+
+&lt;p&gt;This processing requires effort and the deployment of language: ideas from reading may be paraphrased and meaningfully summarised as short notes. These are more than a simple statement of the “essence” of a paper, although this may be considered the minimum example. One academic has described as “thesisable prose”, the notes taken from a reading, paraphrased and restated within the reader’s context. This infers that what you write down at the time of reading needs to make sense at the level you are working, not only to others but also to your future self. How many times have I read my own notes and cursed myself for being too terse, too clever, or too sloppy? The advice I have from my supervisors is to read with the research question in view – to help sustain focus and avoid rabbit-holes, but also to keep the questions themselves under constant critical evaluation. This advice is meaningful at my early stage of a research project like this.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-discipline-of-metadata&quot;&gt;The discipline of metadata&lt;/h2&gt;
+
+&lt;p&gt;Organisation and structure of this library of collected thoughts and summaries is crucial for it to become useful. The usefulness goes beyond simply offering rapid retrieval of ideas and a tidy desk: it offers a reflective surface with which to interact, to provide deeper understanding, to make new meaning, to notice and make new connections, and to see your topic in the literature more comprehensively, complete with its gaps and inconsistencies.&lt;/p&gt;
+
+&lt;p&gt;Descriptive words may be used to categorise and group notes: academic readers are already familiar with &lt;em&gt;title&lt;/em&gt;, &lt;em&gt;abstract&lt;/em&gt;, &lt;em&gt;author&lt;/em&gt; and &lt;em&gt;keywords&lt;/em&gt; as descriptive metatdata about a published paper. Hashtags are a modern take on this, to associate information and ideas around a theme. These tags make searching easy, collecting &lt;a href=&quot;https://twitter.com/search?q=%23birds%20%23feather&quot;&gt;#birds of a #feather&lt;/a&gt; together. A unique number or code for each note allows them to be referenced in other notes, connecting ideas.&lt;/p&gt;
+
+&lt;h2 id=&quot;zettelkasten&quot;&gt;Zettelkasten&lt;/h2&gt;
+
+&lt;p&gt;In Niklas Luhmann’s method of making such notes, each is written on a uniquely-numbered paper slip (in German: &lt;em&gt;zettel&lt;/em&gt;) and placed in order in a box (&lt;em&gt;kasten&lt;/em&gt;, plural &lt;em&gt;kästen&lt;/em&gt;). Although Luhmann’s card numbering was used only to uniquely identify each card&lt;sup id=&quot;fnref:rbdms&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:rbdms&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, the numbering used may suggest a hierarchy of ideas; cards may reference others by the number of the referenced card; tags may be applied to collect and group ideas across hierarchies.&lt;/p&gt;
+
+&lt;p&gt;The numbering system of Zettelkasten is illustrated by &lt;a class=&quot;citation&quot; href=&quot;#Schmidt2016&quot;&gt;(Schmidt, 2016)&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1/1 Card with notes 
+    1/1a Card containing notes referring to a concept/idea from card 1/1 
+    1/1b Continuation of notes from card 1/1a 
+        1/1b1 Card containing notes referring to a concept/idea from card 1/1b 
+        1/1b2 Continuation of notes from card 1/1b1 
+1/2 Continuation of notes from card 1/1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The design of this is to deliberately avoid imposing structure on the notes as they are made, so as not to force thinking into a one-time-and-for-ever way of thinking. The principle is to allow the author to have &lt;a href=&quot;https://luhmann.surge.sh/communicating-with-slip-boxes&quot;&gt;a conversation&lt;/a&gt; with the collection of ideas, as they are made, and later, as they connect to existing thought. Luhmann called the system his “secondary memory” &lt;a class=&quot;citation&quot; href=&quot;#Schmidt2016&quot;&gt;(Schmidt, 2016)&lt;/a&gt; to almost infer a thinking partner in the process of reflecting on and interrogating his own ideas.&lt;/p&gt;
+
+&lt;p&gt;Luhmann was famously very productive, writing over 60 books over 40 years, from 90,000 hand-written notes which he organised in boxes, and indexed. The index or register provides a list of &lt;strong&gt;entry points&lt;/strong&gt; for each topic or keyword and is the first of four kinds of links used in the Zettelkasten system, only two of which are useful in a digital implementation. The other type of link is card-to-card, or &lt;strong&gt;hyperlinks&lt;/strong&gt; between related ideas. This makes the cards, texts that refer to other texts: they are &lt;em&gt;hypertext&lt;/em&gt; &lt;a class=&quot;citation&quot; href=&quot;#Berners-Lee1992&quot;&gt;(Berners-Lee, 1992)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;obsidian&quot;&gt;Obsidian&lt;/h2&gt;
+
+&lt;p&gt;There &lt;a href=&quot;https://takesmartnotes.com/tools/&quot;&gt;are several programs&lt;/a&gt; with which one may use Zettelkasten but I was specifically pointed at Obsidian and so tried it. The cards in this program are individual Markdown files, which sits well with my existing working habits. All of the written work I do, pretty much is in markdown (including the document you’re reading). I already have 20,000 words in my PhD files in the form of markdown, so this provided a rapid leg-up into Luhmann’s methodology, although not as immediate as I thought at first. This is because one the principal features of Zettelkasten is its atomicity: each card holds a single piece of knowledge, if you can picture such a thing. The cards are not chapters of books, nor papers on a topic: they are ideas, which may be linked to other ideas or classified in some meaningful way. The first task I had to do with (a copy of) my various pieces of writing around the subjects in my PhD is the break them into little pieces, each piece a detail, or aspect, of something larger: the hard work in creating and sustaining this workflow, and which Luhmann said occupied much of his productive time, is in connecting new cards into the exisiting deck. Here we can see that the process of engaging with reading is not a trivial task at all, but one in which all of one’s mental faculties are brought to bear.&lt;/p&gt;
+
+&lt;p&gt;Luhmann added references directly as he created a new card &lt;a class=&quot;citation&quot; href=&quot;#Schmidt2016&quot;&gt;(Schmidt, 2016)&lt;/a&gt; but also regularly refreshed and updated them. There were “hub” cards which arise where cards have a higher number of links to other cards: we might picture these as nodes in the Obsidian graph view of our collection of ideas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_9690.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This image was a screenshot from the mobile version of Obsidian, which allows me to use the program in the same way as I do on the desktop: I can edit, link and even dictate new notes on the fly: it’s not necessary to buy the &lt;a href=&quot;https://obsidian.md/sync&quot;&gt;Obsidian Sync&lt;/a&gt; subscription if you work in the same virtual space: for Apple infrastructure users, this means the iCloud Drive. My Zettelkasten is pushed from there on the desktop to its home in a GitHub private repository. The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own “card” collection:&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;gu&quot;&gt;## Chronotope&lt;/span&gt;
+William Benjamin recognised the significance of time in his &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;radio pedagogy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;Radio%20pedagogy.md&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;, as an essential part of the power of the medium. The setting of a story in space and time has been called the chronotope [@Bakhtin1981 119].
+
+ #chronotope
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+
+&lt;p&gt;This has been just an introduction for me to this “way in” to better writing productivity in my PhD. The tip came at the right time for me, at a point where I was struggling with momentum. I am thankful Ramsey Affifi for sharing his practice with me, and to Sönke Ahrens, whose book has just arrived and is the subject of my close attention for the next few days.&lt;/p&gt;
+
+&lt;h2 id=&quot;further-reading&quot;&gt;Further reading&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;https://en.wikipedia.org/wiki/Zettelkasten&lt;/li&gt;
+  &lt;li&gt;https://sociologica.unibo.it/article/view/8350/8272&lt;/li&gt;
+  &lt;li&gt;https://zettelkasten.de/introduction/&lt;/li&gt;
+  &lt;li&gt;https://www.sloww.co/zettelkasten/&lt;/li&gt;
+  &lt;li&gt;https://luhmann.surge.sh/communicating-with-slip-boxes&lt;/li&gt;
+  &lt;li&gt;https://takesmartnotes.com/, companion site to Sönke Ahrens’ excellent book &lt;a class=&quot;citation&quot; href=&quot;#Ahrens2022&quot;&gt;(Ahrens, 2022)&lt;/a&gt;, now in second edition.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There’s also more information in this blog about my &lt;a href=&quot;/phd-workflow-22&quot;&gt;PhD Workflow&lt;/a&gt; if you are interested.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Schmidt2016&quot;&gt;Schmidt, Johannes. 2016. “Niklas Luhmann‘s Card Index: Thinking Tool, Communication Partner, Publication Machine.” &lt;i&gt;Forgetting Machines. Knowledge Management Evolution in Early Modern Europe&lt;/i&gt; 53: 289–311. https://pub.uni-bielefeld.de/download/2942475/2942530/jschmidt_2016_niklas luhmanns card index.pdf.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Schmidt2018&quot;&gt;Schmidt, Johannes F.K. 2018. “Niklas Luhmann’s Card Index: The Fabrication of Serendipity.” &lt;i&gt;Sociologica&lt;/i&gt; 12 (1): 53–60. https://doi.org/10.6092/issn.1971-8853/8350.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Ahrens2022&quot;&gt;Ahrens, Sönke. 2022. &lt;i&gt;How to Take Smart Notes : One Simple Technique to Boost Writing, Learning and Thinking&lt;/i&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Berners-Lee1992&quot;&gt;Berners-Lee, T.J. 1992. “The World-Wide Web.” &lt;i&gt;Computer Networks and ISDN Systems&lt;/i&gt; 25 (4-5): 454–59. https://doi.org/10.1016/0169-7552(92)90039-S.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:rbdms&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;A relational database is made up of tables of records; each record in a table may be uniquely identified by a &lt;em&gt;key&lt;/em&gt;, often an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ID&lt;/code&gt; field. The database tables are boxes or &lt;em&gt;kästen&lt;/em&gt; and each record in a table is a card or &lt;em&gt;zettel&lt;/em&gt;. Seeking patterns and relationships in a relational database management system (&lt;a href=&quot;https://en.wikipedia.org/wiki/Relational_database&quot;&gt;RDBMS&lt;/a&gt;) demands skills in &lt;a href=&quot;https://en.wikipedia.org/wiki/SQL&quot;&gt;SQL&lt;/a&gt;. Databases are behind billions of websites and computer systems in use today. &lt;a href=&quot;#fnref:rbdms&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 09 Jun 2022 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/zettelkasten/</link>
+        <guid isPermaLink="true">https://cullaloe.com/zettelkasten/</guid>
+        
+        <category>Markdown</category>
+        
+        <category>PhD</category>
+        
+        <category>CPD</category>
+        
+        <category>Data</category>
+        
+        <category>Research</category>
+        
+        <category>Software</category>
+        
+        
+      </item>
     
       <item>
         <title>IoP Stirling Conference</title>
@@ -950,62 +1059,6 @@ txt = txt.lower()
         <category>Text Analysis</category>
         
         <category>CDCS</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>LibSmart I</title>
-        <description>&lt;p&gt;This introductory course provided by the University of Edinburgh’s library is structured in five modules.&lt;/p&gt;
-
-&lt;h3 id=&quot;module-1-getting-started-with-the-library&quot;&gt;Module 1: Getting Started with the Library&lt;/h3&gt;
-&lt;p&gt;Accessing and using online library resources for your studies. This begins with the task of setting up a “Pebble Pad” blog (the reason for which isn’t apparent), which itself begins with a series of “helpful” videos.&lt;/p&gt;
-
-&lt;p&gt;I find video an extremely frustrating and patronising format and will always prefer to read a few well-chosen words that cut to the chase. Almost every instructional video I have ever seen seems to have been designed to meet a requirement to have video as part of the instruction tools. I have never seen one that was better than words on a page. I include the videos I have made in that.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;How to access online library resources&lt;/em&gt; provides basic access information including how to set up the VPN, and how to navigate the menus in the MyEd university landing pages to find library search tools like &lt;a href=&quot;http://discovered.ed.ac.uk&quot;&gt;DiscoverEd&lt;/a&gt;. The video for this section is available as a pdf: it’s as if someone’s listening! &lt;em&gt;Understanding and Accessing Your Reading List&lt;/em&gt; isn’t at first sight relevant to PhD – because there are no reading lists for PhD – but it’s possible to look in on other courses or browse the &lt;a href=&quot;https://eu01.alma.exlibrisgroup.com/leganto/readinglist/searchlists&quot;&gt;Resource Lists&lt;/a&gt;. &lt;em&gt;Start Searching DiscoverEd&lt;/em&gt; offers some practice with the university library search interface as well as again providing stats on how much stuff there is in the library. The module finishes with &lt;em&gt;Making the Most of Library Resources&lt;/em&gt; which shows how to find help.&lt;/p&gt;
-
-&lt;p&gt;It’s been helpful to return to basics in this module and check that I’m not missing anything fundamentally useful in accessing the library. I have found the library interfaces generally quite self-explanatory and intuitive to use, especially if you take the time to read the interface carefully.&lt;/p&gt;
-
-&lt;h4 id=&quot;resources&quot;&gt;Resources&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://eu01.alma.exlibrisgroup.com/leganto/public/44UOE_INST/lists/27615489290002466?auth=SAML&quot;&gt;Study Skills Guides&lt;/a&gt; - a resource list for all students, covering general study skills, academic writing, referencing, critical thinking, reflective writing, literature reviews and so on.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;module-2-your-information-landscape&quot;&gt;Module 2: Your Information Landscape&lt;/h3&gt;
-&lt;p&gt;Explore and use key library resources appropriate to your discipline. Useful areas here include the &lt;a href=&quot;https://edinburgh-uk.libguides.com/Education-and-Teacher-Training&quot;&gt;subject guide for Education and ITE&lt;/a&gt; and a &lt;a href=&quot;https://media.ed.ac.uk/id/1_qb7es7qm&quot;&gt;video on literature search&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;modules-3--5&quot;&gt;Modules 3 – 5&lt;/h3&gt;
-&lt;p&gt;These address finding and retrieval; managing information and referencing. I went through these quickly to see what’s new or useful. From these…&lt;/p&gt;
-
-&lt;h4 id=&quot;identifying-source-categories&quot;&gt;Identifying source categories&lt;/h4&gt;
-
-&lt;p&gt;Information sources can be broadly categorised into three types:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Primary or original sources&lt;/li&gt;
-  &lt;li&gt;Secondary sources provide interpretation, commentary or analysis&lt;/li&gt;
-  &lt;li&gt;Tertiary or reference sources are dictionaries, encyclopaedias or indexes of primary and secondary information&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;evaluating-information&quot;&gt;Evaluating information&lt;/h4&gt;
-
-&lt;p&gt;A very useful stick-on-the-wall guide to selecting literature was published by the Meriam Library at California State University &lt;a class=&quot;citation&quot; href=&quot;#MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;(2015)&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-
-&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;Meriam Library - California State University Chico. 2015. “Evaluating Information – Applying the CRAAP Test,” 17. https://www.csuchico.edu/lins/handouts/eval_websites.pdf.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
-</description>
-        <pubDate>Sun, 26 Sep 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/libsmart-i/</link>
-        <guid isPermaLink="true">https://cullaloe.com/libsmart-i/</guid>
-        
-        <category>PhD</category>
-        
-        <category>CPD</category>
-        
-        <category>Library</category>
         
         
       </item>
