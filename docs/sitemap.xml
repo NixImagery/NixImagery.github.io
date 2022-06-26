@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jun 2022 12:16:06 +0100</pubDate>
-    <lastBuildDate>Sun, 26 Jun 2022 12:16:06 +0100</lastBuildDate>
+    <pubDate>Sun, 26 Jun 2022 12:51:27 +0100</pubDate>
+    <lastBuildDate>Sun, 26 Jun 2022 12:51:27 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -57,11 +57,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/IMG_9690.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This image was a screenshot from the mobile version of Obsidian, which allows you to use the program in the same way as on the desktop: you can edit, link and even dictate new notes on the fly.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; &lt;b&gt;EDIT, 26 June 22&lt;/b&gt; Unfotunately, iCloud sync doesn’t work reliably and so the mobile version is not a useful option for me.&lt;/div&gt;
-
-&lt;p&gt;The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own “card” collection:&lt;/p&gt;
+&lt;p&gt;This image was a screenshot from the mobile version of Obsidian, which allows me to use the program in the same way as I do on the desktop: I can edit, link and even dictate new notes on the fly: it’s not necessary to buy the &lt;a href=&quot;https://obsidian.md/sync&quot;&gt;Obsidian Sync&lt;/a&gt; subscription if you work in the same virtual space: for Apple infrastructure users, this means the iCloud Drive &lt;sup id=&quot;fnref:ic-fix&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ic-fix&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. My Zettelkasten is pushed from there on the desktop to its home in a GitHub private repository. The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own “card” collection:&lt;/p&gt;
 
 &lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;gu&quot;&gt;## Chronotope&lt;/span&gt;
@@ -99,6 +95,9 @@ William Benjamin recognised the significance of time in his &lt;span class=&quot
   &lt;ol&gt;
     &lt;li id=&quot;fn:rbdms&quot; role=&quot;doc-endnote&quot;&gt;
       &lt;p&gt;A relational database is made up of tables of records; each record in a table may be uniquely identified by a &lt;em&gt;key&lt;/em&gt;, often an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ID&lt;/code&gt; field. The database tables are boxes or &lt;em&gt;kästen&lt;/em&gt; and each record in a table is a card or &lt;em&gt;zettel&lt;/em&gt;. Seeking patterns and relationships in a relational database management system (&lt;a href=&quot;https://en.wikipedia.org/wiki/Relational_database&quot;&gt;RDBMS&lt;/a&gt;) demands skills in &lt;a href=&quot;https://en.wikipedia.org/wiki/SQL&quot;&gt;SQL&lt;/a&gt;. Databases are behind billions of websites and computer systems in use today. &lt;a href=&quot;#fnref:rbdms&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:ic-fix&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Be careful that iCloud doesn’t get stuck syncing. You can tell this by the presence of the little dotted cloud icon in Finder, which on mouse-over, tells you that the file or folder is “Waiting to Upload”. The program that gets stuck is bird, the backend process behind iCloud Drive, which can be unstuck by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;% pkill -f &apos;Support/bird&apos;&lt;/code&gt; in a terminal. Give it a minute and all should sync OK. &lt;a href=&quot;#fnref:ic-fix&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;

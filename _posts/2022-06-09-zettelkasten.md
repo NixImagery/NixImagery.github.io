@@ -63,11 +63,9 @@ Luhmann added references directly as he created a new card {% cite Schmidt2016 -
 
 ![](/assets/img/IMG_9690.PNG)
 
-This image was a screenshot from the mobile version of Obsidian, which allows you to use the program in the same way as on the desktop: you can edit, link and even dictate new notes on the fly. 
+This image was a screenshot from the mobile version of Obsidian, which allows me to use the program in the same way as I do on the desktop: I can edit, link and even dictate new notes on the fly: it's not necessary to buy the [Obsidian Sync](https://obsidian.md/sync) subscription if you work in the same virtual space: for Apple infrastructure users, this means the iCloud Drive [^ic-fix]. My Zettelkasten is pushed from there on the desktop to its home in a GitHub private repository. The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own "card" collection:
 
-<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>EDIT, 26 June 22</b> Unfotunately, iCloud sync doesn't work reliably and so the mobile version is not a useful option for me.</div>
-
-The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own "card" collection:
+[^ic-fix]: Be careful that iCloud doesn't get stuck syncing. You can tell this by the presence of the little dotted cloud icon in Finder, which on mouse-over, tells you that the file or folder is "Waiting to Upload". The program that gets stuck is bird, the backend process behind iCloud Drive, which can be unstuck by typing `% pkill -f 'Support/bird'` in a terminal. Give it a minute and all should sync OK.
 
 ```markdown
 
