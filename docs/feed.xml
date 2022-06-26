@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Jun 2022 21:04:35 +0100</pubDate>
-    <lastBuildDate>Sun, 12 Jun 2022 21:04:35 +0100</lastBuildDate>
+    <pubDate>Sun, 26 Jun 2022 12:16:06 +0100</pubDate>
+    <lastBuildDate>Sun, 26 Jun 2022 12:16:06 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -57,7 +57,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/IMG_9690.PNG&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This image was a screenshot from the mobile version of Obsidian, which allows me to use the program in the same way as I do on the desktop: I can edit, link and even dictate new notes on the fly: it’s not necessary to buy the &lt;a href=&quot;https://obsidian.md/sync&quot;&gt;Obsidian Sync&lt;/a&gt; subscription if you work in the same virtual space: for Apple infrastructure users, this means the iCloud Drive. My Zettelkasten is pushed from there on the desktop to its home in a GitHub private repository. The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own “card” collection:&lt;/p&gt;
+&lt;p&gt;This image was a screenshot from the mobile version of Obsidian, which allows you to use the program in the same way as on the desktop: you can edit, link and even dictate new notes on the fly.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-info&quot; role=&quot;alert&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; &lt;b&gt;EDIT, 26 June 22&lt;/b&gt; Unfotunately, iCloud sync doesn’t work reliably and so the mobile version is not a useful option for me.&lt;/div&gt;
+
+&lt;p&gt;The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own “card” collection:&lt;/p&gt;
 
 &lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;gu&quot;&gt;## Chronotope&lt;/span&gt;

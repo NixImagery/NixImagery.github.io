@@ -63,7 +63,11 @@ Luhmann added references directly as he created a new card {% cite Schmidt2016 -
 
 ![](/assets/img/IMG_9690.PNG)
 
-This image was a screenshot from the mobile version of Obsidian, which allows me to use the program in the same way as I do on the desktop: I can edit, link and even dictate new notes on the fly: it's not necessary to buy the [Obsidian Sync](https://obsidian.md/sync) subscription if you work in the same virtual space: for Apple infrastructure users, this means the iCloud Drive. My Zettelkasten is pushed from there on the desktop to its home in a GitHub private repository. The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own "card" collection:
+This image was a screenshot from the mobile version of Obsidian, which allows you to use the program in the same way as on the desktop: you can edit, link and even dictate new notes on the fly. 
+
+<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>EDIT, 26 June 22</b> Unfotunately, iCloud sync doesn't work reliably and so the mobile version is not a useful option for me.</div>
+
+The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own "card" collection:
 
 ```markdown
 
