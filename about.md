@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About me
-date: 2019-06-21 12:50:00 +0300
+date: 17 August 2022
 description: I like tech that works. # Add post description (optional)
 published: true
 img: IMG_8111-sm.JPG # Add image post (optional)
@@ -15,7 +15,7 @@ I am a Lecturer and PhD researcher in Education at Edinburgh University’s Mora
 
 Before spending time in education, I held technical and commercial roles in military operations, aviation, IT, simulation and training. Trade certifications include Microsoft Certified Solution Developer (MCSD). My ongoing interests include intelligent automation and the potential this has in teaching and learning.
 
-My professional designations include [Chartered Physicist (CPhys)](https://membership.iop.org/chartered-physicist-cphys), [Chartered Scientist (CSci)](https://sciencecouncil.org/scientists-science-technicians/which-professional-award-is-right-for-me/csci/), member of the Institute of Physics (MInstP) and member of the Royal Aeronautical Society (MRAeS).
+My professional designations include [Chartered Physicist (CPhys)](https://membership.iop.org/chartered-physicist-cphys), [Chartered Scientist (CSci)](https://sciencecouncil.org/scientists-science-technicians/which-professional-award-is-right-for-me/csci/), fellow of the Institute of Physics (FInstP) and member of the Royal Aeronautical Society (MRAeS).
 
 I am also a keen amateur photographer. You can see my photographs on a number of channels, including my own [niximagery](https://niximagery.com) website. I am a Fellow of the [Royal Society for Arts, Manufactures and Commerce](https://www.thersa.org/) (FRSA).
 

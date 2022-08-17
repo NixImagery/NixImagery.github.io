@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jun 2022 12:51:27 +0100</pubDate>
-    <lastBuildDate>Sun, 26 Jun 2022 12:51:27 +0100</lastBuildDate>
+    <pubDate>Wed, 17 Aug 2022 06:54:18 +0100</pubDate>
+    <lastBuildDate>Wed, 17 Aug 2022 06:54:18 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -423,7 +423,7 @@ Here is some text which is my interpretation of what someone else wrote about [@
 &lt;p&gt;This post originally appeared as &lt;a href=&quot;/phd-workflow&quot;&gt;PhD Workflow&lt;/a&gt; in July 2019 and has been updated with links and references to describe my current model. I hope it’s useful.&lt;/p&gt;
 
 &lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;RCoreTeam2021&quot;&gt;R Core Team. 2021. “R: A Language and Environment for Statistical Computing.” Vienna, Austria: R Foundation for Statistical Computing. https://www.r-project.org/.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span id=&quot;Xie2016&quot;&gt;Xie, Yihui. 2016. &lt;i&gt;Bookdown: Authoring Books and Technical Documents with R Markdown&lt;/i&gt;. Boca Raton, Florida: Chapman and Hall/CRC. https://github.com/rstudio/bookdown.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Xie2016&quot;&gt;Xie, Yihui. 2016. &lt;i&gt;Bookdown: Authoring Books and Technical Documents with {R} Markdown&lt;/i&gt;. Boca Raton, Florida: Chapman and Hall/CRC. https://github.com/rstudio/bookdown.&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span id=&quot;Xie2020&quot;&gt;———. 2020. “Bookdown: Authoring Books and Technical Documents with R Markdown.” https://github.com/rstudio/bookdown.&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span id=&quot;notnac2021&quot;&gt;“Get-Iplayer/get_iplayer.” 2021. Github. https://github.com/get-iplayer/get_iplayer.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
