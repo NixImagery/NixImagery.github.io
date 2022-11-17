@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/zettelkasten/" property="og:url">
+    <meta content="http://localhost:4000/zettelkasten/" property="og:url">
   
   
     <meta content="2022-06-09T00:00:00+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/DSF9026.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/DSF9026.jpg" property="og:image">
   
   
     
@@ -52,13 +52,13 @@
     <meta name="twitter:title" content="Zettelkasten, or connecting ideas">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/zettelkasten/">
+    <meta name="twitter:url" content="http://localhost:4000/zettelkasten/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/DSF9026.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/DSF9026.jpg">
   
 
 	<meta name="description" content="">
@@ -208,13 +208,13 @@
 
 <p>The numbering system of Zettelkasten is illustrated by <a class="citation" href="#Schmidt2016">(Schmidt, 2016)</a>:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1/1 Card with notes 
+<pre><code>1/1 Card with notes 
     1/1a Card containing notes referring to a concept/idea from card 1/1 
     1/1b Continuation of notes from card 1/1a 
         1/1b1 Card containing notes referring to a concept/idea from card 1/1b 
         1/1b2 Continuation of notes from card 1/1b1 
 1/2 Continuation of notes from card 1/1
-</code></pre></div></div>
+</code></pre>
 
 <p>The design of this is to deliberately avoid imposing structure on the notes as they are made, so as not to force thinking into a one-time-and-for-ever way of thinking. The principle is to allow the author to have <a href="https://luhmann.surge.sh/communicating-with-slip-boxes">a conversation</a> with the collection of ideas, as they are made, and later, as they connect to existing thought. Luhmann called the system his “secondary memory” <a class="citation" href="#Schmidt2016">(Schmidt, 2016)</a> to almost infer a thinking partner in the process of reflecting on and interrogating his own ideas.</p>
 
@@ -230,15 +230,19 @@
 
 <p>This image was a screenshot from the mobile version of Obsidian, which allows me to use the program in the same way as I do on the desktop: I can edit, link and even dictate new notes on the fly: it’s not necessary to buy the <a href="https://obsidian.md/sync">Obsidian Sync</a> subscription if you work in the same virtual space: for Apple infrastructure users, this means the iCloud Drive <sup id="fnref:ic-fix" role="doc-noteref"><a href="#fn:ic-fix" class="footnote" rel="footnote">2</a></sup>. My Zettelkasten is pushed from there on the desktop to its home in a GitHub private repository. The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own “card” collection:</p>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="gu">## Chronotope</span>
-William Benjamin recognised the significance of time in his <span class="p">[</span><span class="nv">radio pedagogy</span><span class="p">](</span><span class="sx">Radio%20pedagogy.md</span><span class="p">)</span>, as an essential part of the power of the medium. The setting of a story in space and time has been called the chronotope [@Bakhtin1981 119].
+<pre><code class="language-markdown">
+## Chronotope
+William Benjamin recognised the significance of time in his [radio pedagogy](Radio%20pedagogy.md), as an essential part of the power of the medium. The setting of a story in space and time has been called the chronotope [@Bakhtin1981 119].
 
  #chronotope
-</code></pre></div></div>
+</code></pre>
 <h2 id="next-steps">Next steps</h2>
 
-<p>This has been just an introduction for me to this “way in” to better writing productivity in my PhD. The tip came at the right time for me, at a point where I was struggling with momentum. I am thankful Ramsey Affifi for sharing his practice with me, and to Sönke Ahrens, whose book has just arrived and is the subject of my close attention for the next few days.</p>
+<p>This has been just an introduction for me to this “way in” to better writing productivity in my PhD. The tip came at the right time for me, at a point where I was struggling with momentum. I am thankful to Ramsey Affifi for sharing his practice with me, and to Sönke Ahrens, whose book has just arrived and is the subject of my close attention for the next few days.</p>
+
+<h2 id="later-edited-november-2022">Later (edited November 2022)</h2>
+
+<p>I ditched using Zettelkasten after a few weeks. I found that building and maintaining the <em>kasten</em> to be the main focus of my energy instead of reading and writing. I became more focused on form than function and quickly, this method got in my way. Because I am very much a part-time researcher (I have very much a full-time job), this was wasteful. I still largely agree with Luhmann’s quote above, that “One cannot think without writing”, so when I do engage with my research project, I am doing just that. I am glad I tried this approach though, it certainly looked useful for some projects.</p>
 
 <h2 id="further-reading">Further reading</h2>
 
@@ -265,18 +269,18 @@ William Benjamin recognised the significance of time in his <span class="p">[</s
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:rbdms" role="doc-endnote">
-      <p>A relational database is made up of tables of records; each record in a table may be uniquely identified by a <em>key</em>, often an <code class="language-plaintext highlighter-rouge">ID</code> field. The database tables are boxes or <em>kästen</em> and each record in a table is a card or <em>zettel</em>. Seeking patterns and relationships in a relational database management system (<a href="https://en.wikipedia.org/wiki/Relational_database">RDBMS</a>) demands skills in <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>. Databases are behind billions of websites and computer systems in use today. <a href="#fnref:rbdms" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>A relational database is made up of tables of records; each record in a table may be uniquely identified by a <em>key</em>, often an <code>ID</code> field. The database tables are boxes or <em>kästen</em> and each record in a table is a card or <em>zettel</em>. Seeking patterns and relationships in a relational database management system (<a href="https://en.wikipedia.org/wiki/Relational_database">RDBMS</a>) demands skills in <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>. Databases are behind billions of websites and computer systems in use today. <a href="#fnref:rbdms" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:ic-fix" role="doc-endnote">
-      <p>Be careful that iCloud doesn’t get stuck syncing. You can tell this by the presence of the little dotted cloud icon in Finder, which on mouse-over, tells you that the file or folder is “Waiting to Upload”. The program that gets stuck is bird, the backend process behind iCloud Drive, which can be unstuck by typing <code class="language-plaintext highlighter-rouge">% pkill -f 'Support/bird'</code> in a terminal. Give it a minute and all should sync OK. <a href="#fnref:ic-fix" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Be careful that iCloud doesn’t get stuck syncing. You can tell this by the presence of the little dotted cloud icon in Finder, which on mouse-over, tells you that the file or folder is “Waiting to Upload”. The program that gets stuck is bird, the backend process behind iCloud Drive, which can be unstuck by typing <code>% pkill -f 'Support/bird'</code> in a terminal. Give it a minute and all should sync OK. <a href="#fnref:ic-fix" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Zettelkasten, or connecting ideas&url=https://cullaloe.com/zettelkasten/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/zettelkasten/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Zettelkasten, or connecting ideas&url=http://localhost:4000/zettelkasten/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/zettelkasten/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

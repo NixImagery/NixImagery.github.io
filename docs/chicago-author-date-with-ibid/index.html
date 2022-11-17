@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/chicago-author-date-with-ibid/" property="og:url">
+    <meta content="http://localhost:4000/chicago-author-date-with-ibid/" property="og:url">
   
   
     <meta content="2022-03-23T00:00:00+00:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/DSF8831.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/DSF8831.jpg" property="og:image">
   
   
     
@@ -50,13 +50,13 @@
     <meta name="twitter:title" content="Chicago author-date with ibid">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/chicago-author-date-with-ibid/">
+    <meta name="twitter:url" content="http://localhost:4000/chicago-author-date-with-ibid/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/DSF8831.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/DSF8831.jpg">
   
 
 	<meta name="description" content="">
@@ -188,44 +188,44 @@
 
 <p>This is great advice and something I had seen before. I use <a href="https://www.mendeley.com/DOWNLOAD-DESKTOP/">Mendeley Desktop</a> as my academic library and reference manager, which plays nicely with my <a href="/phd-workflow-22">writing workflow</a>. I am used to using the so-called “Harvard” citation style, otherwise known as “author-date” because it looks like this: <a class="citation" href="#bresson1999the">(Cartier-Bresson, 1999)</a> but had not worked out how to have the software automatically detect when <em>ibid.</em> is appropriate.</p>
 
-<p>The key to it is in the <a href="https://citationstyles.org/">citation style</a> or <code class="language-plaintext highlighter-rouge">.csl</code> file that tells your typesetting program how to format citations. There are thousands of these, publicly accessible over at the <a href="https://www.zotero.org/styles">Zotero Style Repository</a> or <a href="https://github.com/citation-style-language/styles">Github</a>. I wanted to use a popular <code class="language-plaintext highlighter-rouge">csl</code> style using the globally recognised <a href="https://www.chicagomanualofstyle.org/">Chicago Style Manual</a> but the use of <em>ibid</em> has been deprecated there. They favour the use of a short form citation which is well suited to the numbered footnote alternative to author-date.</p>
+<p>The key to it is in the <a href="https://citationstyles.org/">citation style</a> or <code>.csl</code> file that tells your typesetting program how to format citations. There are thousands of these, publicly accessible over at the <a href="https://www.zotero.org/styles">Zotero Style Repository</a> or <a href="https://github.com/citation-style-language/styles">Github</a>. I wanted to use a popular <code>csl</code> style using the globally recognised <a href="https://www.chicagomanualofstyle.org/">Chicago Style Manual</a> but the use of <em>ibid</em> has been deprecated there. They favour the use of a short form citation which is well suited to the numbered footnote alternative to author-date.</p>
 
-<p>With a little leg work I found that it is quite easy to adapt <a href="https://www.zotero.org/styles/chicago-author-date">the current Chicago author-date</a> <code class="language-plaintext highlighter-rouge">.csl</code> file to include the <em>ibid</em> feature from <a href="https://www.zotero.org/styles/chicago-note-bibliography-with-ibid">its numbered footnote sister</a>.</p>
+<p>With a little leg work I found that it is quite easy to adapt <a href="https://www.zotero.org/styles/chicago-author-date">the current Chicago author-date</a> <code>.csl</code> file to include the <em>ibid</em> feature from <a href="https://www.zotero.org/styles/chicago-note-bibliography-with-ibid">its numbered footnote sister</a>.</p>
 
 <h2 id="the-adaptation">The adaptation</h2>
 
-<p>Starting with a copy of the author-date <code class="language-plaintext highlighter-rouge">.csl</code> file (obviously change the name), find the <code class="language-plaintext highlighter-rouge">&lt;citation&gt;</code> tag and merge the equivalent code from the fullnote with ibid <code class="language-plaintext highlighter-rouge">.csl</code> file. It should look like this:</p>
+<p>Starting with a copy of the author-date <code>.csl</code> file (obviously change the name), find the <code>&lt;citation&gt;</code> tag and merge the equivalent code from the fullnote with ibid <code>.csl</code> file. It should look like this:</p>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;citation</span> <span class="na">et-al-min=</span><span class="s">"4"</span> <span class="na">et-al-use-first=</span><span class="s">"1"</span> <span class="na">disambiguate-add-year-suffix=</span><span class="s">"true"</span> <span class="na">disambiguate-add-names=</span><span class="s">"true"</span> <span class="na">disambiguate-add-givenname=</span><span class="s">"true"</span> <span class="na">givenname-disambiguation-rule=</span><span class="s">"primary-name"</span> <span class="na">collapse=</span><span class="s">"year"</span> <span class="na">after-collapse-delimiter=</span><span class="s">"; "</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;layout</span> <span class="na">prefix=</span><span class="s">"("</span> <span class="na">suffix=</span><span class="s">")"</span> <span class="na">delimiter=</span><span class="s">"; "</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;group</span> <span class="na">delimiter=</span><span class="s">", "</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;choose&gt;</span>
-        <span class="nt">&lt;if</span> <span class="na">position=</span><span class="s">"ibid-with-locator"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;group</span> <span class="na">delimiter=</span><span class="s">", "</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;text</span> <span class="na">term=</span><span class="s">"ibid"</span><span class="nt">/&gt;</span>
-            <span class="nt">&lt;text</span> <span class="na">macro=</span><span class="s">"point-locators-subsequent"</span><span class="nt">/&gt;</span>
-          <span class="nt">&lt;/group&gt;</span>
-        <span class="nt">&lt;/if&gt;</span>
-        <span class="nt">&lt;else-if</span> <span class="na">position=</span><span class="s">"ibid"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;text</span> <span class="na">term=</span><span class="s">"ibid"</span><span class="nt">/&gt;</span>
-        <span class="nt">&lt;/else-if&gt;</span>
-        <span class="nt">&lt;else&gt;</span>
-            <span class="nt">&lt;group</span> <span class="na">delimiter=</span><span class="s">", "</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;text</span> <span class="na">macro=</span><span class="s">"contributors-short"</span><span class="nt">/&gt;</span>
-              <span class="nt">&lt;text</span> <span class="na">macro=</span><span class="s">"date-in-text"</span><span class="nt">/&gt;</span>
-              <span class="nt">&lt;text</span> <span class="na">macro=</span><span class="s">"point-locators"</span><span class="nt">/&gt;</span>
-            <span class="nt">&lt;/group&gt;</span>
-        <span class="nt">&lt;/else&gt;</span>
-        <span class="nt">&lt;/choose&gt;</span>
-      <span class="nt">&lt;/group&gt;</span>
-    <span class="nt">&lt;/layout&gt;</span>
-<span class="nt">&lt;/citation&gt;</span>
-</code></pre></div></div>
-<p>It is also necessary to pull in the <code class="language-plaintext highlighter-rouge">point-locators-subsequent</code> macro. Paste it below the other macros in the <code class="language-plaintext highlighter-rouge">.csl</code> file.</p>
+<pre><code class="language-xml">&lt;citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true" disambiguate-add-names="true" disambiguate-add-givenname="true" givenname-disambiguation-rule="primary-name" collapse="year" after-collapse-delimiter="; "&gt;
+    &lt;layout prefix="(" suffix=")" delimiter="; "&gt;
+      &lt;group delimiter=", "&gt;
+        &lt;choose&gt;
+        &lt;if position="ibid-with-locator"&gt;
+          &lt;group delimiter=", "&gt;
+            &lt;text term="ibid"/&gt;
+            &lt;text macro="point-locators-subsequent"/&gt;
+          &lt;/group&gt;
+        &lt;/if&gt;
+        &lt;else-if position="ibid"&gt;
+          &lt;text term="ibid"/&gt;
+        &lt;/else-if&gt;
+        &lt;else&gt;
+            &lt;group delimiter=", "&gt;
+              &lt;text macro="contributors-short"/&gt;
+              &lt;text macro="date-in-text"/&gt;
+              &lt;text macro="point-locators"/&gt;
+            &lt;/group&gt;
+        &lt;/else&gt;
+        &lt;/choose&gt;
+      &lt;/group&gt;
+    &lt;/layout&gt;
+&lt;/citation&gt;
+</code></pre>
+<p>It is also necessary to pull in the <code>point-locators-subsequent</code> macro. Paste it below the other macros in the <code>.csl</code> file.</p>
 
 <h2 id="usage">Usage</h2>
 
-<p>All that is required now is to point the rendering software to the style file, in my case, by editing the <code class="language-plaintext highlighter-rouge">yaml</code> header in my markdown document, or the <code class="language-plaintext highlighter-rouge">_config.yml</code> file for this site.</p>
+<p>All that is required now is to point the rendering software to the style file, in my case, by editing the <code>yaml</code> header in my markdown document, or the <code>_config.yml</code> file for this site.</p>
 
 <p>I don’t feel that I should push this back to the open source repositories because it’s just my own hack that works for me, but you can download my version of <a href="/assets/docs/chicago-author-date-with-ibid.csl">chicago-author-date-with-ibid.csl</a> to adapt for your own use.</p>
 
@@ -235,8 +235,8 @@
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Chicago author-date with ibid&url=https://cullaloe.com/chicago-author-date-with-ibid/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/chicago-author-date-with-ibid/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Chicago author-date with ibid&url=http://localhost:4000/chicago-author-date-with-ibid/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/chicago-author-date-with-ibid/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/deploy-bookdown-site-plesk/" property="og:url">
+    <meta content="http://localhost:4000/deploy-bookdown-site-plesk/" property="og:url">
   
   
     <meta content="2020-07-03T09:10:00+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/R0000570.JPG" property="og:image">
+    <meta content="http://localhost:4000/assets/img/R0000570.JPG" property="og:image">
   
   
     
@@ -48,13 +48,13 @@
     <meta name="twitter:title" content="Deploying a Bookdown site securely">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/deploy-bookdown-site-plesk/">
+    <meta name="twitter:url" content="http://localhost:4000/deploy-bookdown-site-plesk/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/R0000570.JPG">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/R0000570.JPG">
   
 
 	<meta name="description" content="">
@@ -171,48 +171,48 @@
       <p>I have been writing documentation for a project in markdown using <a href="https://rstudio.com/">RStudio</a>, which provides a nice way of packaging it all as a static (html) website. I wanted to share this work with colleagues securely.</p>
 
 <h2 id="writing-workflow">Writing workflow</h2>
-<p>The documents exist within an RStudio project and are built to a folder containing static files. That folder is by default <code class="language-plaintext highlighter-rouge">_book</code>,  but I change this to <code class="language-plaintext highlighter-rouge">docs</code> to make it easy to deploy as a github site if I wish<sup id="fnref:how" role="doc-noteref"><a href="#fn:how" class="footnote" rel="footnote">1</a></sup>. Configuration management is a crucial element to proper productivity, not just in software but also in all walks of life where documentation is important. Because of this, I use <a href="https://github.com/">github</a> to store my work safely, should I lose a laptop or suffer some other first-world calamity. It’s one of the reasons I use markdown when writing: configuration management is well-suited to text-based documents because it is easy to track and manage changes.</p>
+<p>The documents exist within an RStudio project and are built to a folder containing static files. That folder is by default <code>_book</code>,  but I change this to <code>docs</code> to make it easy to deploy as a github site if I wish<sup id="fnref:how" role="doc-noteref"><a href="#fn:how" class="footnote" rel="footnote">1</a></sup>. Configuration management is a crucial element to proper productivity, not just in software but also in all walks of life where documentation is important. Because of this, I use <a href="https://github.com/">github</a> to store my work safely, should I lose a laptop or suffer some other first-world calamity. It’s one of the reasons I use markdown when writing: configuration management is well-suited to text-based documents because it is easy to track and manage changes.</p>
 
 <p>Although I keep the source files on github, I haven’t published this project to github pages because it should not be publicly available: instead, I deploy to a VPS (Centos/Apache/Plesk), putting it all behind a login.</p>
 
 <h2 id="the-domain">The domain</h2>
-<p>I set up a specific domain <code class="language-plaintext highlighter-rouge">static.cullaloe.net</code> for this project, and secured it with an SSL certificate.</p>
+<p>I set up a specific domain <code>static.cullaloe.net</code> for this project, and secured it with an SSL certificate.</p>
 
 <h2 id="the-files">The files</h2>
 <p>Clone the GitHub repository into a new folder somewhere behind the web-facing directory (i.e. not in <em>httpdocs</em>). In this example, both the repository and the local folder are called “foobar”:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/githubuser/foobar.git /var/www/vhosts/[domain]/foobar
-</code></pre></div></div>
+<pre><code class="language-sh">$ git clone https://github.com/githubuser/foobar.git /var/www/vhosts/[domain]/foobar
+</code></pre>
 
-<p>It is not necessary to specify the target directory, you’ll get that as default. If you do, the new directory must be empty. It is not possible<sup id="fnref:afaik" role="doc-noteref"><a href="#fn:afaik" class="footnote" rel="footnote">2</a></sup> to selectively clone a github project: it’s all or nothing. <code class="language-plaintext highlighter-rouge">/var/www/vhosts/[domain]/foobar</code> now contains all of the source files of the project.</p>
+<p>It is not necessary to specify the target directory, you’ll get that as default. If you do, the new directory must be empty. It is not possible<sup id="fnref:afaik" role="doc-noteref"><a href="#fn:afaik" class="footnote" rel="footnote">2</a></sup> to selectively clone a github project: it’s all or nothing. <code>/var/www/vhosts/[domain]/foobar</code> now contains all of the source files of the project.</p>
 
 <h2 id="permissions">Permissions</h2>
-<p>You need to create a <code class="language-plaintext highlighter-rouge">.htpasswd</code> file in the server somewhere, containing the username and password you wish to grant access to your files to:</p>
+<p>You need to create a <code>.htpasswd</code> file in the server somewhere, containing the username and password you wish to grant access to your files to:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>/path/to/htpasswd <span class="nt">-c</span> /var/www/vhosts/[domain]/.htaccess user1
-</code></pre></div></div>
-<p>This prompts you for the password you wish to set for this user. Adding another user is the same command without the <code class="language-plaintext highlighter-rouge">-c</code> option.</p>
+<pre><code class="language-bash">$ /path/to/htpasswd -c /var/www/vhosts/[domain]/.htaccess user1
+</code></pre>
+<p>This prompts you for the password you wish to set for this user. Adding another user is the same command without the <code>-c</code> option.</p>
 
 <h2 id="the-server">The server</h2>
-<p>You need to tell the Apache, using <code class="language-plaintext highlighter-rouge">Alias</code>, where to find the files, and with <code class="language-plaintext highlighter-rouge">&lt;Location&gt;</code>, control who can access files at the URL you are trying to protect. In the Plesk control panel, <em>Apache &amp; nginx Settings for static.cullaloe.net ···</em>:</p>
+<p>You need to tell the Apache, using <code>Alias</code>, where to find the files, and with <code>&lt;Location&gt;</code>, control who can access files at the URL you are trying to protect. In the Plesk control panel, <em>Apache &amp; nginx Settings for static.cullaloe.net ···</em>:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Alias /foobar /var/www/vhosts/[domain]/foobar/docs
+<pre><code>Alias /foobar /var/www/vhosts/[domain]/foobar/docs
 &lt;Location /foobar&gt;
 	AuthType Basic
 	AuthName "Restricted access"
 	AuthUserFile /var/www/vhosts/[domain]/.htpasswd
 	Require user user1
 &lt;/Location&gt;
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="outcome">Outcome</h2>
-<p>I can easily continue to work on my project documentation, updating it from time to time for colleagues who are interested in seeing what I’m doing. I make (neurotic) use of github for configuration management and safekeeping of all my hard work anyway, so updating the site just requires <code class="language-plaintext highlighter-rouge">$ git pull</code> from the repository folder on the web server. They can then view the documentation in a browser, or download a pdf or docx that is up-to-date with my current progress.</p>
+<p>I can easily continue to work on my project documentation, updating it from time to time for colleagues who are interested in seeing what I’m doing. I make (neurotic) use of github for configuration management and safekeeping of all my hard work anyway, so updating the site just requires <code>$ git pull</code> from the repository folder on the web server. They can then view the documentation in a browser, or download a pdf or docx that is up-to-date with my current progress.</p>
 
 <h2 id="notes">Notes</h2>
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:how" role="doc-endnote">
-      <p>In <code class="language-plaintext highlighter-rouge">bookdown.yml</code>, add the line <code class="language-plaintext highlighter-rouge">output_dir: "docs"</code>. <a href="#fnref:how" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>In <code>bookdown.yml</code>, add the line <code>output_dir: "docs"</code>. <a href="#fnref:how" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:afaik" role="doc-endnote">
       <p>As far as I know, anyway. <a href="#fnref:afaik" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -222,8 +222,8 @@
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Deploying a Bookdown site securely&url=https://cullaloe.com/deploy-bookdown-site-plesk/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/deploy-bookdown-site-plesk/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Deploying a Bookdown site securely&url=http://localhost:4000/deploy-bookdown-site-plesk/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/deploy-bookdown-site-plesk/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

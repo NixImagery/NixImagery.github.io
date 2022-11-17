@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/video-cc-workflow/" property="og:url">
+    <meta content="http://localhost:4000/video-cc-workflow/" property="og:url">
   
   
     <meta content="2020-08-30T00:00:00+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/Screenshot-2020-08-30.png" property="og:image">
+    <meta content="http://localhost:4000/assets/img/Screenshot-2020-08-30.png" property="og:image">
   
   
     
@@ -52,13 +52,13 @@
     <meta name="twitter:title" content="Video capture and production including closed captions">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/video-cc-workflow/">
+    <meta name="twitter:url" content="http://localhost:4000/video-cc-workflow/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/Screenshot-2020-08-30.png">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/Screenshot-2020-08-30.png">
   
 
 	<meta name="description" content="">
@@ -180,7 +180,7 @@
 
 <p>I like to do a task and complete it: I like to get it right and take my time over that. Once it’s done, I like to move on to the next set of tasks. To that end, here is a way I have found of creating video, with quality captioning for those who need it, and the ability to switch it off for those who find it a distraction.</p>
 
-<p><strong>Edit:</strong> I’ve updated this in light of new insight from my colleague, Audrey Cameron, about adding <code class="language-plaintext highlighter-rouge">.srt</code> files to Media Hopper video uploads.</p>
+<p><strong>Edit:</strong> I’ve updated this in light of new insight from my colleague, Audrey Cameron, about adding <code>.srt</code> files to Media Hopper video uploads.</p>
 
 <h2 class="no_toc" id="contents">Contents</h2>
 
@@ -217,30 +217,30 @@
 
 <p>Save the .docx file and convert it to a plain text format - I prefer markdown, although this isn’t necessary provided you can finish up with a plain text file. I do the conversion using pandoc:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pandoc transcript.docx <span class="nt">-o</span> transcript.md
-</code></pre></div></div>
+<pre><code class="language-sh">$ pandoc transcript.docx -o transcript.md
+</code></pre>
 
 <p>This file can now be edited, correcting any errors in the transcription and chunking the dialogue to make it show at the right time during the video. This is easily done with the video window open on the desktop next to your editor. You should add section markers and timestamps for subtitles as you go through the video. A minimal example:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
-00:00:01,00 <span class="nt">--</span><span class="o">&gt;</span> 00:00:01,30
+<pre><code class="language-sh">1
+00:00:01,00 --&gt; 00:00:01,30
 Welcome to my interesting video.
 
 2
-00:00:01,50 <span class="nt">--</span><span class="o">&gt;</span> 00:00:02,30
+00:00:01,50 --&gt; 00:00:02,30
 Everybody says how good my videos are.
-</code></pre></div></div>
+</code></pre>
 
 <p>Finally, you will need this transcript in the correct format for embedding into the video file. This is a simple matter of changing the filetype to .srt (which is a “SubRip Subtitle” file).</p>
 
 <h2 id="add-closed-captions-to-the-video-file">Add Closed Captions to the video file</h2>
 
-<p><em>Note, this step may not be necessary.</em> If you are uploading to Media Hopper or a similar service that allows uploading of <code class="language-plaintext highlighter-rouge">.srt</code> files, you don’t need to add the captions to the video file itself.</p>
+<p><em>Note, this step may not be necessary.</em> If you are uploading to Media Hopper or a similar service that allows uploading of <code>.srt</code> files, you don’t need to add the captions to the video file itself.</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">ffmpeg</code> tool is best for this. This tool (and others you might need) can be installed simply using <code class="language-plaintext highlighter-rouge">brew</code> if it isn’t already on your system. I don’t propose to detail how to do this, but in essence, it’s a matter of typing<code class="language-plaintext highlighter-rouge">$ brew install ffmpeg</code> in a terminal window. Once you have it, add the captions:</p>
+<p>The <code>ffmpeg</code> tool is best for this. This tool (and others you might need) can be installed simply using <code>brew</code> if it isn’t already on your system. I don’t propose to detail how to do this, but in essence, it’s a matter of typing<code>$ brew install ffmpeg</code> in a terminal window. Once you have it, add the captions:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ffmpeg <span class="nt">-i</span> videofile.mp4 <span class="nt">-i</span> transcriptfile.srt <span class="nt">-c</span>:v copy <span class="nt">-c</span>:a copy  <span class="nt">-c</span>:s mov_text <span class="nt">-metadata</span>:s:s:0 <span class="nv">language</span><span class="o">=</span>eng output.mp4
-</code></pre></div></div>
+<pre><code class="language-sh">$ ffmpeg -i videofile.mp4 -i transcriptfile.srt -c:v copy -c:a copy  -c:s mov_text -metadata:s:s:0 language=eng output.mp4
+</code></pre>
 <p>The program accepts input files, which are you video and the srt file containing the captions and timings. Video and audio are merely copied to the output file.</p>
 
 <h2 id="finished-part-one">Finished, part one</h2>
@@ -251,7 +251,7 @@ Everybody says how good my videos are.
 
 <h2 id="media-hopper-create">Media Hopper Create</h2>
 
-<p>It’s easy to upload a video to the Blackboard VLE by clicking on <code class="language-plaintext highlighter-rouge">Media Hopper Create</code> in the <code class="language-plaintext highlighter-rouge">Tools</code> menu. This is very nice but this process ignores any embedded captions track. Captions must be uploaded in their own file, in <code class="language-plaintext highlighter-rouge">.srt</code> format. The service is fussy about the formatting of text within the file, and will just stop working if it finds something it doesn’t like. Get the format right, however, and it works just fine, for English captions at least.</p>
+<p>It’s easy to upload a video to the Blackboard VLE by clicking on <code>Media Hopper Create</code> in the <code>Tools</code> menu. This is very nice but this process ignores any embedded captions track. Captions must be uploaded in their own file, in <code>.srt</code> format. The service is fussy about the formatting of text within the file, and will just stop working if it finds something it doesn’t like. Get the format right, however, and it works just fine, for English captions at least.</p>
 
 <p>You can ask for subtitles to be automatically created for the uploaded video but this is a machine-based and low-quality service that isn’t really any good. It creates, ironically, a CC track that is inferior to the one included in the uploaded file. It is possible to order a professional transcription from the University transcription service, although I haven’t considered this.</p>
 
@@ -259,27 +259,27 @@ Everybody says how good my videos are.
 
 <p>An alternative way to embed media without using Media Hopper is as follows. Within Learn, add a new item. This is effectively a webpage, and using the editing tools, you can upload two files. The first is the mp4 video file (it is not necessary for this file to have the embedded captions track).</p>
 
-<p>The second file contains the captions and timing information in our <code class="language-plaintext highlighter-rouge">srt</code> file, but needs to be in a different format. This format is <strong>Web Video Text Tracks (VTT)</strong>, and is easily obtained using ffmpeg:</p>
+<p>The second file contains the captions and timing information in our <code>srt</code> file, but needs to be in a different format. This format is <strong>Web Video Text Tracks (VTT)</strong>, and is easily obtained using ffmpeg:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>ffmpeg <span class="nt">-i</span> srtfile.srt subtitlefile.vtt
-</code></pre></div></div>
+<pre><code class="language-sh">$ ffmpeg -i srtfile.srt subtitlefile.vtt
+</code></pre>
 
-<p>Having uploaded these two files to the Learn Item, it is necessary to edit the HTML using the built-in HTML editor (click the double chevron at the right end of the tool bar to reveal it). The item source should be edited to contain a <code class="language-plaintext highlighter-rouge">&lt;video&gt;</code> tag:</p>
+<p>Having uploaded these two files to the Learn Item, it is necessary to edit the HTML using the built-in HTML editor (click the double chevron at the right end of the tool bar to reveal it). The item source should be edited to contain a <code>&lt;video&gt;</code> tag:</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>  
-<span class="nt">&lt;video</span> <span class="na">width=</span><span class="s">"640"</span> <span class="na">height=</span><span class="s">"360"</span> <span class="na">controls=</span><span class="s">"controls"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">"https://www.learn.ed.ac.uk/path-to-video"</span> <span class="na">type=</span><span class="s">"video/mp4"</span><span class="nt">&gt;</span>  
-	<span class="nt">&lt;track</span> <span class="na">src=</span><span class="s">"https://www.learn.ed.ac.uk/path-to-vtt-file"</span> <span class="na">kind=</span><span class="s">"captions"</span> <span class="na">srclang=</span><span class="s">"en"</span> <span class="na">label=</span><span class="s">"English"</span> <span class="na">default</span><span class="nt">&gt;</span>
+<pre><code class="language-html">&lt;p&gt;  
+&lt;video width="640" height="360" controls="controls"&gt;
+	&lt;source src="https://www.learn.ed.ac.uk/path-to-video" type="video/mp4"&gt;  
+	&lt;track src="https://www.learn.ed.ac.uk/path-to-vtt-file" kind="captions" srclang="en" label="English" default&gt;
 	Your browser does not support the video tag.
-<span class="nt">&lt;/video&gt;</span>
-<span class="nt">&lt;/p&gt;</span>
-</code></pre></div></div>
+&lt;/video&gt;
+&lt;/p&gt;
+</code></pre>
 
-<p>Irrespective of what you type in the editor, Learn will try to close the <code class="language-plaintext highlighter-rouge">&lt;track&gt;</code> tags, even though they shouldn’t be. It will result in users of older browsers not seeing the message about not supporting the video tag. I have little sympathy for them.</p>
+<p>Irrespective of what you type in the editor, Learn will try to close the <code>&lt;track&gt;</code> tags, even though they shouldn’t be. It will result in users of older browsers not seeing the message about not supporting the video tag. I have little sympathy for them.</p>
 
 <h3 id="bizarre-path-changes">Bizarre path changes</h3>
 
-<p>The path to video and the <code class="language-plaintext highlighter-rouge">vtt</code> files is available in the links to them put there by Learn when you uploaded the files. It is not necessary to keep these links, but there is another little feature you should be aware of. When you upload a file like this, it will be given a path that ends in something like “mp4” or “vtt”. If you use this path in your <code class="language-plaintext highlighter-rouge">source</code> or <code class="language-plaintext highlighter-rouge">track</code> tags above, it will not work. This is because Learn <strong>changes the url for embedded files after your edits are submitted.</strong> This behaviour makes no sense to me, but what it means is that you will have to (1) upload the files and submit the edits to the item you are creating, then (2) edit it again and get the new paths to use in the <code class="language-plaintext highlighter-rouge">source</code> and <code class="language-plaintext highlighter-rouge">track</code> tags. Just another bizarre feature of Blackboard Learn, I suppose.</p>
+<p>The path to video and the <code>vtt</code> files is available in the links to them put there by Learn when you uploaded the files. It is not necessary to keep these links, but there is another little feature you should be aware of. When you upload a file like this, it will be given a path that ends in something like “mp4” or “vtt”. If you use this path in your <code>source</code> or <code>track</code> tags above, it will not work. This is because Learn <strong>changes the url for embedded files after your edits are submitted.</strong> This behaviour makes no sense to me, but what it means is that you will have to (1) upload the files and submit the edits to the item you are creating, then (2) edit it again and get the new paths to use in the <code>source</code> and <code>track</code> tags. Just another bizarre feature of Blackboard Learn, I suppose.</p>
 
 <h2 id="finished-part-two">Finished, part two</h2>
 
@@ -289,8 +289,8 @@ Everybody says how good my videos are.
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Video capture and production including closed captions&url=https://cullaloe.com/video-cc-workflow/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/video-cc-workflow/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Video capture and production including closed captions&url=http://localhost:4000/video-cc-workflow/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/video-cc-workflow/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

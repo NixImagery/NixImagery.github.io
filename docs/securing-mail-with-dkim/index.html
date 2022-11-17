@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/securing-mail-with-dkim/" property="og:url">
+    <meta content="http://localhost:4000/securing-mail-with-dkim/" property="og:url">
   
   
     <meta content="2020-06-01T00:00:00+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/R0000416.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/R0000416.jpg" property="og:image">
   
   
     
@@ -44,13 +44,13 @@
     <meta name="twitter:title" content="Securing mail using DKIM">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/securing-mail-with-dkim/">
+    <meta name="twitter:url" content="http://localhost:4000/securing-mail-with-dkim/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/R0000416.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/R0000416.jpg">
   
 
 	<meta name="description" content="">
@@ -175,25 +175,25 @@
 <h2 id="spf">SPF</h2>
 <p><a href="https://www.rfc-editor.org/info/rfc7208">Sender Policy Framework</a> is designed to allow domain admins to authorise the servers that are allowed to use their domain names. Receiving mail servers can check that authorisation by looking up the SPF record of the domain claimed in the “from” field of an email.</p>
 
-<p>Within the Plesk panel for the mail server, under <code class="language-plaintext highlighter-rouge">SPF spam protection</code>, check <code class="language-plaintext highlighter-rouge">Enable SPF spam protection to check incoming mail</code> and select <code class="language-plaintext highlighter-rouge">Only create Received-SPF headers, never block</code> from the drop-down. Your domains should also have an SPF code in the DNS table. This acts like a return address on a snail-mail envelope. Servers can check the sender’s IP against this DNS record to check that it is allowed to send mail on behalf of the domain. This record identifies the version of SPF being used (always 1 at the moment), which records pertain and what policy should be applied to mail that fails to be verified when this record is checked by the receiving mail server. <code class="language-plaintext highlighter-rouge">-a</code> is a hard fail setting which advises rejection of mail that doesn’t match the record parameters. <code class="language-plaintext highlighter-rouge">~a</code> is a soft fail, and <code class="language-plaintext highlighter-rouge">+a</code> is like leaving your keys in the front door. Use the hard fail setting.</p>
+<p>Within the Plesk panel for the mail server, under <code>SPF spam protection</code>, check <code>Enable SPF spam protection to check incoming mail</code> and select <code>Only create Received-SPF headers, never block</code> from the drop-down. Your domains should also have an SPF code in the DNS table. This acts like a return address on a snail-mail envelope. Servers can check the sender’s IP against this DNS record to check that it is allowed to send mail on behalf of the domain. This record identifies the version of SPF being used (always 1 at the moment), which records pertain and what policy should be applied to mail that fails to be verified when this record is checked by the receiving mail server. <code>-a</code> is a hard fail setting which advises rejection of mail that doesn’t match the record parameters. <code>~a</code> is a soft fail, and <code>+a</code> is like leaving your keys in the front door. Use the hard fail setting.</p>
 
 <h2 id="dkim">DKIM</h2>
 <p><a href="https://www.rfc-editor.org/info/rfc6376">DomainKeys Identified Mail (DKIM)</a> is a system that allows the mail server to “certify” emails to assert their authenticity. This is achieved through a cryptographic signature and by querying the signer’s domain directly to retrieve a key. This requires another couple of entries in the DNS table to contain the keys (see table below for examples). Take care when entering your key that you do not inadvertently introduce spaces in the long key. They will invalidate your key.</p>
 
-<p>To enable this on the VPS, in the server-wide mail settings interface in Plesk, check <code class="language-plaintext highlighter-rouge">Verify incoming mail</code> and <code class="language-plaintext highlighter-rouge">Allow signing outgoing mail</code> under DKIM spam protection. In the panel for each subscription (domain), in the Mail Settings tab, check <code class="language-plaintext highlighter-rouge">Use DKIM spam protection system to sign outgoing email messages</code>.</p>
+<p>To enable this on the VPS, in the server-wide mail settings interface in Plesk, check <code>Verify incoming mail</code> and <code>Allow signing outgoing mail</code> under DKIM spam protection. In the panel for each subscription (domain), in the Mail Settings tab, check <code>Use DKIM spam protection system to sign outgoing email messages</code>.</p>
 
 <h2 id="dmarc">DMARC</h2>
-<p>Bringing the measures together, with a DNS-based reporting mechanism that closes the loop, is <a href="https://www.rfc-editor.org/info/rfc7489">Domain-based Message Authentication, Reporting, and Conformance (DMARC)</a>. This helps protect the domain from unauthorized use. It also requires a DNS TXT entry which identifies policy for handling non-aligned (mail that looks like it might be spam) emails, and a place to send reports about incidents. Setting up needs the policy to be passive, or “reporting only”, set by <code class="language-plaintext highlighter-rouge">p-none</code> in the DNS record. Increasing levels of confidence in the deliverability of email from the server allows organisations to increase this policy to “quarantine”, or even “reject”. Email reports are sent for authentication failure (forensic) and summary information (aggregate) to the email addresses in the record.</p>
+<p>Bringing the measures together, with a DNS-based reporting mechanism that closes the loop, is <a href="https://www.rfc-editor.org/info/rfc7489">Domain-based Message Authentication, Reporting, and Conformance (DMARC)</a>. This helps protect the domain from unauthorized use. It also requires a DNS TXT entry which identifies policy for handling non-aligned (mail that looks like it might be spam) emails, and a place to send reports about incidents. Setting up needs the policy to be passive, or “reporting only”, set by <code>p-none</code> in the DNS record. Increasing levels of confidence in the deliverability of email from the server allows organisations to increase this policy to “quarantine”, or even “reject”. Email reports are sent for authentication failure (forensic) and summary information (aggregate) to the email addresses in the record.</p>
 
 <p>If you want to send your DMARC reports to an address at a different domain, then that domain needs a DNS record to authorize the the reports:</p>
 
-<p><code class="language-plaintext highlighter-rouge">reportingdomain.tld._report._dmarc TXT v=DMARC1</code></p>
+<p><code>reportingdomain.tld._report._dmarc TXT v=DMARC1</code></p>
 
 <p>If the target domain for the reports is being used for several domains (as in my case), then you can specify a wildcard entry:</p>
 
-<p><code class="language-plaintext highlighter-rouge">*._report._dmarc TXT v=DMARC1</code></p>
+<p><code>*._report._dmarc TXT v=DMARC1</code></p>
 
-<p>Within the Plesk server-wide mail settings panel, you can now check <code class="language-plaintext highlighter-rouge">Enable DMARC to check incoming mail</code>.</p>
+<p>Within the Plesk server-wide mail settings panel, you can now check <code>Enable DMARC to check incoming mail</code>.</p>
 
 <h2 id="summary">Summary</h2>
 <p>The final DNS aligns with the server settings to provide a more robust and spam-free<sup id="fnref:orly" role="doc-noteref"><a href="#fn:orly" class="footnote" rel="footnote">3</a></sup> mail experience. An example DNS set of mail-related TXT entries:</p>
@@ -250,8 +250,8 @@
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Securing mail using DKIM&url=https://cullaloe.com/securing-mail-with-dkim/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/securing-mail-with-dkim/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Securing mail using DKIM&url=http://localhost:4000/securing-mail-with-dkim/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/securing-mail-with-dkim/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

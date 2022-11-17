@@ -76,7 +76,11 @@ William Benjamin recognised the significance of time in his [radio pedagogy](Rad
   ```
 ## Next steps
 
-This has been just an introduction for me to this "way in" to better writing productivity in my PhD. The tip came at the right time for me, at a point where I was struggling with momentum. I am thankful Ramsey Affifi for sharing his practice with me, and to Sönke Ahrens, whose book has just arrived and is the subject of my close attention for the next few days.
+This has been just an introduction for me to this "way in" to better writing productivity in my PhD. The tip came at the right time for me, at a point where I was struggling with momentum. I am thankful to Ramsey Affifi for sharing his practice with me, and to Sönke Ahrens, whose book has just arrived and is the subject of my close attention for the next few days.
+
+## Later (edited November 2022)
+
+I ditched using Zettelkasten after a few weeks. I found that building and maintaining the *kasten* to be the main focus of my energy instead of reading and writing. I became more focused on form than function and quickly, this method got in my way. Because I am very much a part-time researcher (I have very much a full-time job), this was wasteful. I still largely agree with Luhmann's quote above, that "One cannot think without writing", so when I do engage with my research project, I am doing just that. I am glad I tried this approach though, it certainly looked useful for some projects.
 
 ## Further reading
 

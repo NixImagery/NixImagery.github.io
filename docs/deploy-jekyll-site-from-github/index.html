@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/deploy-jekyll-site-from-github/" property="og:url">
+    <meta content="http://localhost:4000/deploy-jekyll-site-from-github/" property="og:url">
   
   
     <meta content="2019-11-26T00:00:00+00:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/pattiesmuir.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/pattiesmuir.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Deploying a Jekyll site from GitHub">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/deploy-jekyll-site-from-github/">
+    <meta name="twitter:url" content="http://localhost:4000/deploy-jekyll-site-from-github/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/pattiesmuir.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/pattiesmuir.jpg">
   
 
 	<meta name="description" content="">
@@ -166,24 +166,24 @@
         <h1 class="page-title">Deploying a Jekyll site from GitHub</h1>
         <div class="page-date"><span>2019, Nov 26&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>I’ve been building a site using Jekyll and hosting the code on GitHub. The site is available on GitHub pages from the <code class="language-plaintext highlighter-rouge">docs</code> folder in the <code class="language-plaintext highlighter-rouge">master</code>branch, but I wanted to deploy it to a server running Centos and Apache.</p>
+      <p>I’ve been building a site using Jekyll and hosting the code on GitHub. The site is available on GitHub pages from the <code>docs</code> folder in the <code>master</code>branch, but I wanted to deploy it to a server running Centos and Apache.</p>
 
-<p>On the VPS, from behind the <code class="language-plaintext highlighter-rouge">httpdocs</code> or web-facing folder, clone the GitHub repository into a new folder (in this example, both the repository and the local folder are called “foobar”):</p>
+<p>On the VPS, from behind the <code>httpdocs</code> or web-facing folder, clone the GitHub repository into a new folder (in this example, both the repository and the local folder are called “foobar”):</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/githubuser/foobar.git foobar
-</code></pre></div></div>
+<pre><code class="language-sh">$ git clone https://github.com/githubuser/foobar.git foobar
+</code></pre>
 
 <p>Now we need to serve the site files from the docs folder in the repository. Include this in the Apache/Nginx configuration:</p>
 
-<div class="language-apache highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Alias</span> /foobar /var/www/vhosts/thesite/foobar/docs
-</code></pre></div></div>
+<pre><code class="language-apache">Alias /foobar /var/www/vhosts/thesite/foobar/docs
+</code></pre>
 
-<p>Updating the site just requires <code class="language-plaintext highlighter-rouge">$ git pull</code> from the repository folder on the web server. Depending on how you are logged in to the server, you may need to change the folder permissions so Apache can serve the pages and find the css, etc.</p>
+<p>Updating the site just requires <code>$ git pull</code> from the repository folder on the web server. Depending on how you are logged in to the server, you may need to change the folder permissions so Apache can serve the pages and find the css, etc.</p>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Deploying a Jekyll site from GitHub&url=https://cullaloe.com/deploy-jekyll-site-from-github/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/deploy-jekyll-site-from-github/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Deploying a Jekyll site from GitHub&url=http://localhost:4000/deploy-jekyll-site-from-github/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/deploy-jekyll-site-from-github/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

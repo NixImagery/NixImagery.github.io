@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/new-terminal/" property="og:url">
+    <meta content="http://localhost:4000/new-terminal/" property="og:url">
   
   
     <meta content="2021-08-08T00:00:00+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/R0001012.JPG" property="og:image">
+    <meta content="http://localhost:4000/assets/img/R0001012.JPG" property="og:image">
   
   
     
@@ -44,13 +44,13 @@
     <meta name="twitter:title" content="Jekyll development in zsh">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/new-terminal/">
+    <meta name="twitter:url" content="http://localhost:4000/new-terminal/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/R0001012.JPG">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/R0001012.JPG">
   
 
 	<meta name="description" content="">
@@ -168,31 +168,31 @@
 
 <h2 id="zsh">zsh</h2>
 
-<p>Recent OSX (now called MacOS) updates have changed the default shell programme from the Bourne Again Shell <code class="language-plaintext highlighter-rouge">bash</code> to the extended version of this, the Z Shell <code class="language-plaintext highlighter-rouge">zsh</code>. The first impact of this is that the <code class="language-plaintext highlighter-rouge">rake</code> command (or any command passing square brackets) doesn’t work any more:</p>
+<p>Recent OSX (now called MacOS) updates have changed the default shell programme from the Bourne Again Shell <code>bash</code> to the extended version of this, the Z Shell <code>zsh</code>. The first impact of this is that the <code>rake</code> command (or any command passing square brackets) doesn’t work any more:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rake publish[<span class="s2">"Test update"</span><span class="o">]</span>
+<pre><code class="language-bash">% rake publish["Test update"]
 zsh: no matches found: publish[Test update]
-</code></pre></div></div>
-<p>This is simply because <code class="language-plaintext highlighter-rouge">zsh</code> requires the square bracket characters to be escaped:</p>
+</code></pre>
+<p>This is simply because <code>zsh</code> requires the square bracket characters to be escaped:</p>
 
-<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% rake publish<span class="se">\[</span><span class="s2">"Test update"</span><span class="se">\]</span>
+<pre><code class="language-zsh">% rake publish\["Test update"\]
 Configuration file: /your/path/to/GitHub/projectname/_config.yml
 D	docs/yyyy/mm/dd/some-files.html
 ....
-</code></pre></div></div>
+</code></pre>
 
 <h2 id="two-terminals">Two terminals</h2>
 
 <p>When developing, I use two terminal windows in the dev folder – one to do file operations and the like, the other to run a local version of the site while I test. The quick way to get the second window open within your current working directory is to issue this commmand:</p>
 
-<div class="language-zsh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% open <span class="nt">-a</span> Terminal <span class="nb">.</span>
-</code></pre></div></div>
+<pre><code class="language-zsh">% open -a Terminal .
+</code></pre>
 
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Jekyll development in zsh&url=https://cullaloe.com/new-terminal/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/new-terminal/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Jekyll development in zsh&url=http://localhost:4000/new-terminal/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/new-terminal/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

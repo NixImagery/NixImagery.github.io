@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/fix-corrupt-moodle/" property="og:url">
+    <meta content="http://localhost:4000/fix-corrupt-moodle/" property="og:url">
   
   
     <meta content="2020-03-25T00:00:00+00:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/Harlow.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/Harlow.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Fix corrupt Moodle installation">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/fix-corrupt-moodle/">
+    <meta name="twitter:url" content="http://localhost:4000/fix-corrupt-moodle/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/Harlow.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/Harlow.jpg">
   
 
 	<meta name="description" content="">
@@ -166,24 +166,24 @@
         <h1 class="page-title">Fix corrupt Moodle installation</h1>
         <div class="page-date"><span>2020, Mar 25&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>I wanted to update my Moodle 3.8 installation for the latest security patches but discovered that the repository on my VPS was corrupted. I rather suspect that I had done this myself during a recent <code class="language-plaintext highlighter-rouge">rsync</code> backup, when I had lost patience with a large file and deleted it. I know, stupid is as stupid does. Anyway, Stack Overflow and <a href="https://stackoverflow.com/users/6112457/zoey-hewll">Zoey Hewll</a> to the rescue. Zoey had posted a really smart way to re-set your .git to match the remote:</p>
+      <p>I wanted to update my Moodle 3.8 installation for the latest security patches but discovered that the repository on my VPS was corrupted. I rather suspect that I had done this myself during a recent <code>rsync</code> backup, when I had lost patience with a large file and deleted it. I know, stupid is as stupid does. Anyway, Stack Overflow and <a href="https://stackoverflow.com/users/6112457/zoey-hewll">Zoey Hewll</a> to the rescue. Zoey had posted a really smart way to re-set your .git to match the remote:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mv</span> <span class="nt">-v</span> .git .git_old <span class="o">&amp;&amp;</span>            <span class="c"># remove old git</span>
-<span class="nv">$ </span>git init <span class="o">&amp;&amp;</span>                       <span class="c"># initialise new repo</span>
-<span class="nv">$ </span>git remote add origin <span class="s2">"</span><span class="k">${</span><span class="nv">url</span><span class="k">}</span><span class="s2">"</span> <span class="o">&amp;&amp;</span> <span class="c"># link to old repo</span>
-<span class="nv">$ </span>git fetch <span class="o">&amp;&amp;</span>                      <span class="c"># get old history</span>
-<span class="nv">$ </span>git reset origin/master <span class="nt">--mixed</span>   <span class="c"># force update to old history</span>
-</code></pre></div></div>
+<pre><code class="language-sh">$ mv -v .git .git_old &amp;&amp;            # remove old git
+$ git init &amp;&amp;                       # initialise new repo
+$ git remote add origin "${url}" &amp;&amp; # link to old repo
+$ git fetch &amp;&amp;                      # get old history
+$ git reset origin/master --mixed   # force update to old history
+</code></pre>
 <p>This leaves your working tree intact, and only affects git’s bookkeeping.</p>
 
 <p>Zoey’s post included <a href="https://gist.github.com/Zoybean/8db78966abea5d974934bb0e8e5f4e42">a bash script</a> to do this, but I went with typing the git commands above, one step at a time.</p>
 
 <p>Once this was done and my local repository had been unfunged, I had to reset the tracking information to the latest branch, reset it and then pull:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git branch <span class="nt">--set-upstream-to</span><span class="o">=</span>origin/MOODLE_38_STABLE master
-<span class="nv">$ </span>git reset <span class="nt">--hard</span> origin/MOODLE_38_STABLE
-<span class="nv">$ </span>git pull
-</code></pre></div></div>
+<pre><code class="language-sh">$ git branch --set-upstream-to=origin/MOODLE_38_STABLE master
+$ git reset --hard origin/MOODLE_38_STABLE
+$ git pull
+</code></pre>
 
 <p>The last command confirmed there was nothing to do, so the code was recovered and up to date. I could then run the update within the Moodle admin interface OK.</p>
 
@@ -191,8 +191,8 @@
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Fix corrupt Moodle installation&url=https://cullaloe.com/fix-corrupt-moodle/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/fix-corrupt-moodle/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Fix corrupt Moodle installation&url=http://localhost:4000/fix-corrupt-moodle/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/fix-corrupt-moodle/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

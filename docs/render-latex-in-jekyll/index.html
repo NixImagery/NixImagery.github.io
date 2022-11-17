@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/render-latex-in-jekyll/" property="og:url">
+    <meta content="http://localhost:4000/render-latex-in-jekyll/" property="og:url">
   
   
     <meta content="2020-06-11T08:24:00+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/R0000558.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/R0000558.jpg" property="og:image">
   
   
     
@@ -44,13 +44,13 @@
     <meta name="twitter:title" content="Rendering LaTeX in Jekyll pages">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/render-latex-in-jekyll/">
+    <meta name="twitter:url" content="http://localhost:4000/render-latex-in-jekyll/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/R0000558.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/R0000558.jpg">
   
 
 	<meta name="description" content="">
@@ -181,59 +181,59 @@
 
 <p>To implement it in a Jekyll site, the markdown parser should be set in config.yml:</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
-</code></pre></div></div>
-<p>In the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> section, perhaps in the included file <code class="language-plaintext highlighter-rouge">_includes/head.html</code>, add the KaTeX libraries and css:</p>
+<pre><code class="language-yaml">markdown: kramdown
+</code></pre>
+<p>In the <code>&lt;head&gt;</code> section, perhaps in the included file <code>_includes/head.html</code>, add the KaTeX libraries and css:</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c">&lt;!-- KaTeX --&gt;</span>
-  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+<pre><code class="language-html">  &lt;!-- KaTeX --&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous"&gt;
 
-  <span class="c">&lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  &lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;
+  &lt;script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"&gt;&lt;/script&gt;
 
-  <span class="c">&lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;</span>
-  <span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span>
-      <span class="na">onload=</span><span class="s">"renderMathInElement(document.body);"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
+  &lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;
+  &lt;script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"&gt;&lt;/script&gt;
+</code></pre>
 
 <p>In my implementation, I set a flag in the yaml header of any page that requires \(\LaTeX\), for example:</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s">Render LaTeX in Jekyll pages</span>
-<span class="na">date</span><span class="pi">:</span> <span class="s">2020-06-11 08:24</span>
-<span class="na">published</span><span class="pi">:</span> <span class="s">yes</span>
-<span class="na">katex</span><span class="pi">:</span> <span class="s">yes</span>
-<span class="na">tags</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="s">Jekyll</span>
-<span class="pi">-</span> <span class="s">LaTeX</span>
-<span class="nn">---</span>
-</code></pre></div></div>
+<pre><code class="language-yaml">---
+layout: post
+title: Render LaTeX in Jekyll pages
+date: 2020-06-11 08:24
+published: yes
+katex: yes
+tags:
+- Jekyll
+- LaTeX
+---
+</code></pre>
 
 <p>Then conditionally output the header code above only in pages that need to load the css and script:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">katex</span><span class="w"> </span><span class="p">%}</span>
+<pre><code class="language-liquid">
+{% if page.katex %}
   &lt;!-- KaTeX --&gt;
   .
   . etc.
   .
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+{% endif %}
 
-</code></pre></div></div>
+</code></pre>
 <h2 id="using-it">Using it</h2>
-<p>Having set the <code class="language-plaintext highlighter-rouge">katex</code> flag, I can now type LaTeX code either as display (slightly larger and in its own block on the page), or inline:</p>
+<p>Having set the <code>katex</code> flag, I can now type LaTeX code either as display (slightly larger and in its own block on the page), or inline:</p>
 
-<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">$$</span><span class="nv">\LaTeX</span><span class="nb"> code</span><span class="p">$$</span>     <span class="c">% (for inline)</span>
-<span class="k">\\</span>(<span class="k">\LaTeX</span> code<span class="k">\\</span>)   <span class="c">% (also for inline)</span>
-<span class="k">\\</span><span class="na">[\LaTeX code\\]</span>   <span class="c">% (for display)</span>
-</code></pre></div></div>
-<p>The \(\KaTeX\) script converts the <code class="language-plaintext highlighter-rouge">$$</code> code above into either <code class="language-plaintext highlighter-rouge">\\(</code> inline or <code class="language-plaintext highlighter-rouge">\\[</code> display syntax
+<pre><code class="language-tex">$$\LaTeX code$$     % (for inline)
+\\(\LaTeX code\\)   % (also for inline)
+\\[\LaTeX code\\]   % (for display)
+</code></pre>
+<p>The \(\KaTeX\) script converts the <code>$$</code> code above into either <code>\\(</code> inline or <code>\\[</code> display syntax
 which is output as html:</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>\(\LaTeX code\)     % (inline)<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p&gt;</span>\[\LaTeX code\]     % (display)<span class="nt">&lt;/p&gt;</span>
-</code></pre></div></div>
+<pre><code class="language-html">&lt;p&gt;\(\LaTeX code\)     % (inline)&lt;/p&gt;
+&lt;p&gt;\[\LaTeX code\]     % (display)&lt;/p&gt;
+</code></pre>
 <p>and renders thus:</p>
 
 <p>\(\LaTeX code\)
@@ -242,18 +242,18 @@ which is output as html:</p>
 <h2 id="example-binomial-coefficient">Example: binomial coefficient</h2>
 <p>In the markdown for this page, if I type:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\\[
+<pre><code>\\[
     \binom{n}{k} = \frac{n!}{k!(n-k)!}
 \\]
-</code></pre></div></div>
+</code></pre>
 
 <p>Jekyll and kramdown will output this html:</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>
+<pre><code class="language-html">&lt;p&gt;
 \[
     \binom{n}{k} = \frac{n!}{k!(n-k)!}
-\]<span class="nt">&lt;/p&gt;</span>
-</code></pre></div></div>
+\]&lt;/p&gt;
+</code></pre>
 
 <p>In the client browser, the KaTeX javascript will render thus:
 \[
@@ -261,12 +261,12 @@ which is output as html:</p>
 \]</p>
 
 <h2 id="caveats">Caveats</h2>
-<p>Notice this solution does not render \(\LaTeX\) from the server side. All of the rendering is done on the client using the javascript loaded in the <code class="language-plaintext highlighter-rouge">head</code> of the page. It just does it very, very quickly.</p>
+<p>Notice this solution does not render \(\LaTeX\) from the server side. All of the rendering is done on the client using the javascript loaded in the <code>head</code> of the page. It just does it very, very quickly.</p>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Rendering LaTeX in Jekyll pages&url=https://cullaloe.com/render-latex-in-jekyll/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/render-latex-in-jekyll/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Rendering LaTeX in Jekyll pages&url=http://localhost:4000/render-latex-in-jekyll/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/render-latex-in-jekyll/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">
