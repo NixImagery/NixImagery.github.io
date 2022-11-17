@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/R-data-visualisation-course-2/" property="og:url">
+    <meta content="https://cullaloe.com/R-data-visualisation-course-2/" property="og:url">
   
   
     <meta content="2020-06-09T15:08:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/pirate_ships.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/pirate_ships.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Statistics and Visualisation with R #2">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/R-data-visualisation-course-2/">
+    <meta name="twitter:url" content="https://cullaloe.com/R-data-visualisation-course-2/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/pirate_ships.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/pirate_ships.jpg">
   
 
 	<meta name="description" content="">
@@ -275,39 +275,39 @@
 <h3 id="errors">Errors</h3>
 <p>I had the chance to play with the IDE and learn a few things by invoking errors.</p>
 
-<pre><code class="language-R">&gt; ggplot(college, aes(x=sat_avg, y=admission_rate)) + geom_point()
-Error in ggplot(college, aes(x = sat_avg, y = admission_rate)) : 
-  could not find function "ggplot"
-</code></pre>
-<p>The above occurs if you just run that line of code without first loading the library in which <code>ggplot</code> lives, i.e. by calling <code>library("tidyverse")</code> first.</p>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">college</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">sat_avg</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">admission_rate</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_point</span><span class="p">()</span><span class="w">
+</span><span class="n">Error</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">college</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sat_avg</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">admission_rate</span><span class="p">))</span><span class="w"> </span><span class="o">:</span><span class="w"> 
+  </span><span class="n">could</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="s2">"ggplot"</span><span class="w">
+</span></code></pre></div></div>
+<p>The above occurs if you just run that line of code without first loading the library in which <code class="language-plaintext highlighter-rouge">ggplot</code> lives, i.e. by calling <code class="language-plaintext highlighter-rouge">library("tidyverse")</code> first.</p>
 
-<pre><code class="language-R">&gt; ggplot(college, aes(x=sat_avg, y=admission_rate)) + geom_point()
-Error in ggplot(college, aes(x = sat_avg, y = admission_rate)) : 
-  object 'college' not found
-</code></pre>
-<p>This error is thrown because the data object ‘college’ has not been created. Do this by loading the data first, i.e. call <code>college &lt;- read_csv('http://672258.youcanlearnit.net/college.csv')</code>.</p>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">college</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">sat_avg</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">admission_rate</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_point</span><span class="p">()</span><span class="w">
+</span><span class="n">Error</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">college</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sat_avg</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">admission_rate</span><span class="p">))</span><span class="w"> </span><span class="o">:</span><span class="w"> 
+  </span><span class="n">object</span><span class="w"> </span><span class="s1">'college'</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">found</span><span class="w">
+</span></code></pre></div></div>
+<p>This error is thrown because the data object ‘college’ has not been created. Do this by loading the data first, i.e. call <code class="language-plaintext highlighter-rouge">college &lt;- read_csv('http://672258.youcanlearnit.net/college.csv')</code>.</p>
 
 <h3 id="mutate-and-asfactor">Mutate and as.factor</h3>
 <p>Last week’s class included the creation of the dataset using this call:</p>
 
-<pre><code class="language-R">college &lt;- college %&gt;%
-  mutate(state=as.factor(state), region=as.factor(region),
-         highest_degree=as.factor(highest_degree),
-         control=as.factor(control), gender=as.factor(gender),
-         loan_default_rate=as.numeric(loan_default_rate))
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">college</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">college</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">state</span><span class="p">),</span><span class="w"> </span><span class="n">region</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">region</span><span class="p">),</span><span class="w">
+         </span><span class="n">highest_degree</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">highest_degree</span><span class="p">),</span><span class="w">
+         </span><span class="n">control</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">control</span><span class="p">),</span><span class="w"> </span><span class="n">gender</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">gender</span><span class="p">),</span><span class="w">
+         </span><span class="n">loan_default_rate</span><span class="o">=</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">loan_default_rate</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
 
-<p>The <code>mutate()</code> function adds new variable columns to the dataset or replaces existing ones if the same name is used. You can see that <code>state</code> is replaced by a different version of itself: the <code>as.factor()</code> function takes data and turns it into a factor if it isn’t already. “Factor” is a term that indicates that the data is a category or enumerated type, rather than just a set of strings. To see this, consider this:</p>
+<p>The <code class="language-plaintext highlighter-rouge">mutate()</code> function adds new variable columns to the dataset or replaces existing ones if the same name is used. You can see that <code class="language-plaintext highlighter-rouge">state</code> is replaced by a different version of itself: the <code class="language-plaintext highlighter-rouge">as.factor()</code> function takes data and turns it into a factor if it isn’t already. “Factor” is a term that indicates that the data is a category or enumerated type, rather than just a set of strings. To see this, consider this:</p>
 
-<pre><code class="language-R">&gt; var=letters[1:5]
-&gt; var
-[1] "a" "b" "c" "d" "e"
-&gt; var=as.factor(var)
-&gt; var
-[1] a b c d e
-Levels: a b c d e
-</code></pre>
-<p><code>var</code> is created as a vector, then converted to a factor or column in the <code>as.factor</code> call.</p>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">var</span><span class="o">=</span><span class="nb">letters</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">]</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">var</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"a"</span><span class="w"> </span><span class="s2">"b"</span><span class="w"> </span><span class="s2">"c"</span><span class="w"> </span><span class="s2">"d"</span><span class="w"> </span><span class="s2">"e"</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">var</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">var</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">var</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="n">e</span><span class="w">
+</span><span class="n">Levels</span><span class="o">:</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="n">e</span><span class="w">
+</span></code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">var</code> is created as a vector, then converted to a factor or column in the <code class="language-plaintext highlighter-rouge">as.factor</code> call.</p>
 
 <h2 id="class-3---intro-to-statistics-and-descriptive-stats">Class 3 - Intro to statistics and descriptive stats</h2>
 <ul>
@@ -319,7 +319,7 @@ Levels: a b c d e
 </ul>
 
 <h3 id="the-results-of-the-challenge">The results of the challenge</h3>
-<p>Last week’s challenge was discussed, focusing on the meaning of the plots obtained, and how to add a best fit line using <code>+geom_smooth()</code> geometry to the <code>gg-plot</code> command. We played a bit with a tool to help us get better at “seeing” the correlation of plotted data: <a href="http://guessthecorrelation.com/">guessthecorrelation</a>.</p>
+<p>Last week’s challenge was discussed, focusing on the meaning of the plots obtained, and how to add a best fit line using <code class="language-plaintext highlighter-rouge">+geom_smooth()</code> geometry to the <code class="language-plaintext highlighter-rouge">gg-plot</code> command. We played a bit with a tool to help us get better at “seeing” the correlation of plotted data: <a href="http://guessthecorrelation.com/">guessthecorrelation</a>.</p>
 
 <h3 id="intro-to-statistics">Intro to Statistics</h3>
 <p>This part of the class was further levelling by going over the basics of statistics and how they may be used to <strong>summarise</strong> or <strong>infer</strong> information. <strong>Central tendency</strong> includes arithmetic mean, median and mode values. <strong>Measures of dispersion</strong> like variance and standard deviation were also discussed.</p>
@@ -328,8 +328,8 @@ Levels: a b c d e
 
 <p>These functions were illustrated in the R IDE, including accessing columns within datasets using the dollar sign like this:</p>
 
-<pre><code class="language-R">mean(iris$Petal.Width)	#using mean formula
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mean</span><span class="p">(</span><span class="n">iris</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">)</span><span class="w">	</span><span class="c1">#using mean formula</span><span class="w">
+</span></code></pre></div></div>
 <p>Similar functions offer median, variance and sd (standard deviation) calculations.</p>
 
 <h3 id="visualise-the-distribution-histogram-and-density-plots">Visualise the distribution: Histogram and Density plots</h3>
@@ -338,40 +338,40 @@ Levels: a b c d e
 
 <p>Subsets of the data based upon some category can be easily made:</p>
 
-<pre><code class="language-R">virginica &lt;- subset(iris, Species=="virginica")
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">virginica</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span><span class="w"> </span><span class="n">Species</span><span class="o">==</span><span class="s2">"virginica"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 <p>A table of data around these subsets can be quickly constructed and plotted:</p>
 
-<pre><code class="language-R">#Values of Virginica
-mean(virginica$Petal.Width)
-median(virginica$Petal.Width)
-var(virginica$Petal.Width)
-sd (virginica$Petal.Width)
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Values of Virginica</span><span class="w">
+</span><span class="n">mean</span><span class="p">(</span><span class="n">virginica</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">)</span><span class="w">
+</span><span class="n">median</span><span class="p">(</span><span class="n">virginica</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">)</span><span class="w">
+</span><span class="n">var</span><span class="p">(</span><span class="n">virginica</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">)</span><span class="w">
+</span><span class="n">sd</span><span class="w"> </span><span class="p">(</span><span class="n">virginica</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">)</span><span class="w">
 
-#... etc for the other two
+</span><span class="c1">#... etc for the other two</span><span class="w">
 
-# Make a new table...
-Species &lt;- c("setosa","versicolor", "virginica")
+</span><span class="c1"># Make a new table...</span><span class="w">
+</span><span class="n">Species</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"setosa"</span><span class="p">,</span><span class="s2">"versicolor"</span><span class="p">,</span><span class="w"> </span><span class="s2">"virginica"</span><span class="p">)</span><span class="w">
 
-# add columns...
-Mean &lt;- c(mean(setosa$Petal.Width), mean(versicolor$Petal.Width), mean(virginica$Petal.Width))
-Median &lt;- c(median(setosa$Petal.Width), median(versicolor$Petal.Width), median(virginica$Petal.Width))
-Variance &lt;- c(round(var(setosa$Petal.Width), digits = 2), round(var(versicolor$Petal.Width), digits = 2), round(var(virginica$Petal.Width), digits = 2))
-SD &lt;- c(round(sd(setosa$Petal.Width), digits = 2), round(sd(versicolor$Petal.Width), digits = 2),round(sd(virginica$Petal.Width), digits = 2))
+</span><span class="c1"># add columns...</span><span class="w">
+</span><span class="n">Mean</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">setosa</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">versicolor</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">virginica</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">))</span><span class="w">
+</span><span class="n">Median</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">median</span><span class="p">(</span><span class="n">setosa</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">median</span><span class="p">(</span><span class="n">versicolor</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">median</span><span class="p">(</span><span class="n">virginica</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">))</span><span class="w">
+</span><span class="n">Variance</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">setosa</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">versicolor</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">virginica</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">
+</span><span class="n">SD</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">round</span><span class="p">(</span><span class="n">sd</span><span class="p">(</span><span class="n">setosa</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="n">sd</span><span class="p">(</span><span class="n">versicolor</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="nf">round</span><span class="p">(</span><span class="n">sd</span><span class="p">(</span><span class="n">virginica</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">),</span><span class="w"> </span><span class="n">digits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">
 
-# Make the data frame for plotting...
-FullPlot &lt;- as.data.frame(cbind(Species, Mean, Median, Variance, SD))
-</code></pre>
-<p>Notice you can double-click on the FullPlot table in the environment box (equivalent to the command <code>View(FullPlot)</code>), it will display the table in a new tab for inspection.</p>
+</span><span class="c1"># Make the data frame for plotting...</span><span class="w">
+</span><span class="n">FullPlot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">Species</span><span class="p">,</span><span class="w"> </span><span class="n">Mean</span><span class="p">,</span><span class="w"> </span><span class="n">Median</span><span class="p">,</span><span class="w"> </span><span class="n">Variance</span><span class="p">,</span><span class="w"> </span><span class="n">SD</span><span class="p">))</span><span class="w">
+</span></code></pre></div></div>
+<p>Notice you can double-click on the FullPlot table in the environment box (equivalent to the command <code class="language-plaintext highlighter-rouge">View(FullPlot)</code>), it will display the table in a new tab for inspection.</p>
 
-<pre><code class="language-R"># ... and now plot it in a nice histogram
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ... and now plot it in a nice histogram</span><span class="w">
 
-ggplot(iris, aes(x=Petal.Width, fill=Species))+ 
-  geom_histogram(alpha=0.8,color="black", binwidth=0.08)+
-  geom_vline(aes(xintercept = mean(Petal.Width)),col='red',size=2)+
-  theme_bw()+facet_wrap(~Species, ncol = 1) 
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Petal.Width</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="n">Species</span><span class="p">))</span><span class="o">+</span><span class="w"> 
+  </span><span class="n">geom_histogram</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="m">0.8</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span><span class="w"> </span><span class="n">binwidth</span><span class="o">=</span><span class="m">0.08</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_vline</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">xintercept</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mean</span><span class="p">(</span><span class="n">Petal.Width</span><span class="p">)),</span><span class="n">col</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="m">2</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_bw</span><span class="p">()</span><span class="o">+</span><span class="n">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">Species</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w"> 
   
-</code></pre>
+</span></code></pre></div></div>
 <p>Here’s how that looks:</p>
 
 <p><img src="/assets/img/iris-histogram.png" alt="" /></p>
@@ -404,23 +404,23 @@ ggplot(iris, aes(x=Petal.Width, fill=Species))+
 
 <p>In R, boxplots are another geometry<sup id="fnref:gallery" role="doc-noteref"><a href="#fn:gallery" class="footnote" rel="footnote">2</a></sup>:</p>
 
-<pre><code class="language-R">ggplot(iris, aes(x=Species, y=Petal.Width, fill=Species)) + geom_boxplot()
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ggplot</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Species</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Petal.Width</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="o">=</span><span class="n">Species</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_boxplot</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="playing-with-colours">Playing with colours</h3>
 <p>There are a number of colour themes within R to allow you to make beautiful and readable plots and graphs. What is important, as with all open source, is that when using different packages and utilities, you must RTFM<sup id="fnref:rtm" role="doc-noteref"><a href="#fn:rtm" class="footnote" rel="footnote">3</a></sup>.</p>
 
-<p>These are invoked with colour commands and palettes, like <code>scale_color_manual</code> here:</p>
+<p>These are invoked with colour commands and palettes, like <code class="language-plaintext highlighter-rouge">scale_color_manual</code> here:</p>
 
-<pre><code class="language-R">ggplot(iris, aes(x=Species, y=Petal.Width, color=Species)) + 
-  geom_boxplot(outlier.alpha = 0)+
-  scale_color_manual(values = wes_palette("GrandBudapest2", n=4))
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ggplot</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Species</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">Petal.Width</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="n">Species</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+  </span><span class="n">geom_boxplot</span><span class="p">(</span><span class="n">outlier.alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wes_palette</span><span class="p">(</span><span class="s2">"GrandBudapest2"</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">=</span><span class="m">4</span><span class="p">))</span><span class="w">
 
-# other color methods:
-scale_color_grey(start = 0.6, end = 0.1) # grayscale
-scale_color_manual(values=c("#80ec65", "#145200", "#700015")) # manually defined
-scale_color_gradientn(colours = rainbow(7)) # gradient
-</code></pre>
+</span><span class="c1"># other color methods:</span><span class="w">
+</span><span class="n">scale_color_grey</span><span class="p">(</span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">)</span><span class="w"> </span><span class="c1"># grayscale</span><span class="w">
+</span><span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s2">"#80ec65"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#145200"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#700015"</span><span class="p">))</span><span class="w"> </span><span class="c1"># manually defined</span><span class="w">
+</span><span class="n">scale_color_gradientn</span><span class="p">(</span><span class="n">colours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rainbow</span><span class="p">(</span><span class="m">7</span><span class="p">))</span><span class="w"> </span><span class="c1"># gradient</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="exporting-graphs">Exporting graphs</h3>
 <p>Pretty self-explanatory from the IDE: exporting graphs to pdf or png is available from the dropdown in the plots tab.</p>
@@ -428,16 +428,16 @@ scale_color_gradientn(colours = rainbow(7)) # gradient
 <h3 id="challenge-number-3">Challenge number 3</h3>
 <p>Well, today I managed to get a result during the time allocated for us to work on the problem, which made up for how I had been feeling earlier. With a little tweaking after class, I settled on this:</p>
 
-<pre><code class="language-R">ggplot(college, aes(x=region, y=faculty_salary_avg, fill = region)) + 
-  geom_boxplot(outlier.alpha = 0.0, alpha = 0.8) +
-  geom_jitter(alpha =0.2)+
-  theme_bw()+ 
-  facet_wrap(~control, ncol = 2)+
-  labs(title = "USA University", 
-       subtitle = "Faculty salary by region", 
-       x = "Region", 
-       y = "Average salary")
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ggplot</span><span class="p">(</span><span class="n">college</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">faculty_salary_avg</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">region</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+  </span><span class="n">geom_boxplot</span><span class="p">(</span><span class="n">outlier.alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_jitter</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="m">0.2</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_bw</span><span class="p">()</span><span class="o">+</span><span class="w"> 
+  </span><span class="n">facet_wrap</span><span class="p">(</span><span class="o">~</span><span class="n">control</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"USA University"</span><span class="p">,</span><span class="w"> 
+       </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Faculty salary by region"</span><span class="p">,</span><span class="w"> 
+       </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Region"</span><span class="p">,</span><span class="w"> 
+       </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Average salary"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 <p>which yielded this:</p>
 
 <p><img src="/assets/img/challenge3.png" alt="Challenge 3 plot" /></p>
@@ -469,8 +469,8 @@ scale_color_gradientn(colours = rainbow(7)) # gradient
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Statistics and Visualisation with R #2&url=http://localhost:4000/R-data-visualisation-course-2/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/R-data-visualisation-course-2/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Statistics and Visualisation with R #2&url=https://cullaloe.com/R-data-visualisation-course-2/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/R-data-visualisation-course-2/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

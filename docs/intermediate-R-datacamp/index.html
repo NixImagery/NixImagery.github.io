@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/intermediate-R-datacamp/" property="og:url">
+    <meta content="https://cullaloe.com/intermediate-R-datacamp/" property="og:url">
   
   
     <meta content="2020-07-10T00:00:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/DSF7259.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/DSF7259.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Datacamp course - intermediate R">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/intermediate-R-datacamp/">
+    <meta name="twitter:url" content="https://cullaloe.com/intermediate-R-datacamp/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/DSF7259.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/DSF7259.jpg">
   
 
 	<meta name="description" content="">
@@ -166,7 +166,7 @@
         <h1 class="page-title">Datacamp course - intermediate R</h1>
         <div class="page-date"><span>2020, Jul 10&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>Continuing my journey into <code>R</code>, the next course in the R programming track at DataCamp is <a href="https://campus.datacamp.com/courses/intermediate-r">Intermediate R</a>. This course is presented by <a href="https://www.datacamp.com/instructors/filipsch">Filip Schouwenaars</a>. It teaches language syntax and programming conventions, building on <a href="/introduction-to-R-datacamp">the last course</a>.</p>
+      <p>Continuing my journey into <code class="language-plaintext highlighter-rouge">R</code>, the next course in the R programming track at DataCamp is <a href="https://campus.datacamp.com/courses/intermediate-r">Intermediate R</a>. This course is presented by <a href="https://www.datacamp.com/instructors/filipsch">Filip Schouwenaars</a>. It teaches language syntax and programming conventions, building on <a href="/introduction-to-R-datacamp">the last course</a>.</p>
 
 <ul id="markdown-toc">
   <li><a href="#conditionals-and-control-flow" id="markdown-toc-conditionals-and-control-flow">Conditionals and Control Flow</a>    <ul>
@@ -183,52 +183,52 @@
 <h3 id="relational-operators">Relational operators</h3>
 <p>This section begins with a talk-through the main relational operators in R, with simple examples, followed by exercises in the virtual lab.</p>
 
-<pre><code class="language-r">&gt; TRUE == TRUE			# Equality
-[1] TRUE
-&gt; 'oranges' != 'apples'	# Inequality
-[1] TRUE
-&gt; 'oranges' &gt; 'apples'	# Strings compare alphabetically
-[1] TRUE
-&gt; 'oranges' &lt; 'apples'
-[1] FALSE
-&gt; vec &lt;- c('apples', 'bananas', 'dragon fruit', 'tomato')
-&gt; vec &gt; 'oranges'		# Works on vectors (and matrices)
-[1] FALSE FALSE FALSE  TRUE
-</code></pre>
-<p><code>TRUE</code> coerces to the value 1, <code>FALSE</code>, 0. So truth is greater!</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="kc">TRUE</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">			</span><span class="c1"># Equality</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'oranges'</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">'apples'</span><span class="w">	</span><span class="c1"># Inequality</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'oranges'</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'apples'</span><span class="w">	</span><span class="c1"># Strings compare alphabetically</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'oranges'</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">'apples'</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s1">'apples'</span><span class="p">,</span><span class="w"> </span><span class="s1">'bananas'</span><span class="p">,</span><span class="w"> </span><span class="s1">'dragon fruit'</span><span class="p">,</span><span class="w"> </span><span class="s1">'tomato'</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">'oranges'</span><span class="w">		</span><span class="c1"># Works on vectors (and matrices)</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">  </span><span class="kc">TRUE</span><span class="w">
+</span></code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">TRUE</code> coerces to the value 1, <code class="language-plaintext highlighter-rouge">FALSE</code>, 0. So truth is greater!</p>
 
 <h3 id="logical-operators">Logical operators</h3>
-<p>Syntax for these familiar operators is <code>&amp;</code>, <code>|</code> and <code>!</code>, for logical <code>AND</code>, <code>OR</code> and <code>NOT</code>, respectively. They have high precedence and therefore do not need brackets around expressions:</p>
+<p>Syntax for these familiar operators is <code class="language-plaintext highlighter-rouge">&amp;</code>, <code class="language-plaintext highlighter-rouge">|</code> and <code class="language-plaintext highlighter-rouge">!</code>, for logical <code class="language-plaintext highlighter-rouge">AND</code>, <code class="language-plaintext highlighter-rouge">OR</code> and <code class="language-plaintext highlighter-rouge">NOT</code>, respectively. They have high precedence and therefore do not need brackets around expressions:</p>
 
-<pre><code class="language-r">&gt; 4 &gt; 3 &amp; 8 &lt;= 9
-[1] TRUE
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m">9</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">
+</span></code></pre></div></div>
 <p>Logical operators may be used on matrices and vectors:</p>
 
-<pre><code class="language-r">&gt; !c(TRUE, FALSE, 1 &gt; 0)
-[1] FALSE  TRUE FALSE
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="o">!</span><span class="nf">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">  </span><span class="kc">TRUE</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">
+</span></code></pre></div></div>
 
-<p>Note that double-signed operators like <code>&amp;&amp;</code> work only on the first element of a vector.</p>
+<p>Note that double-signed operators like <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> work only on the first element of a vector.</p>
 
 <h3 id="conditional-statements">Conditional statements</h3>
-<p>Again, familiar syntax here, with the conditional test in brackets; code blocks in curly braces; and two statement words, <code>if</code> and <code>else</code>:</p>
+<p>Again, familiar syntax here, with the conditional test in brackets; code blocks in curly braces; and two statement words, <code class="language-plaintext highlighter-rouge">if</code> and <code class="language-plaintext highlighter-rouge">else</code>:</p>
 
-<pre><code class="language-r">x &lt;- 0
-if (x &lt; 0) { 
-    print ('x is negative')
-} else if (x == 0) { 
-  print ('x is zero') 
-} else { 
-    print ('x is positive') 
-}
-</code></pre>
-<p>Notice that the <code>else</code> and <code>else if</code> statements come on the same line as the closign curly brace of the associated <code>if</code> statement. Once a conditional test evaluates <code>TRUE</code>, the corresponding code block is executed and the remaining code within the <code>if</code> control structure is ignored. Conditional statements may be nested.</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+    </span><span class="n">print</span><span class="w"> </span><span class="p">(</span><span class="s1">'x is negative'</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+  </span><span class="n">print</span><span class="w"> </span><span class="p">(</span><span class="s1">'x is zero'</span><span class="p">)</span><span class="w"> 
+</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+    </span><span class="n">print</span><span class="w"> </span><span class="p">(</span><span class="s1">'x is positive'</span><span class="p">)</span><span class="w"> 
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+<p>Notice that the <code class="language-plaintext highlighter-rouge">else</code> and <code class="language-plaintext highlighter-rouge">else if</code> statements come on the same line as the closign curly brace of the associated <code class="language-plaintext highlighter-rouge">if</code> statement. Once a conditional test evaluates <code class="language-plaintext highlighter-rouge">TRUE</code>, the corresponding code block is executed and the remaining code within the <code class="language-plaintext highlighter-rouge">if</code> control structure is ignored. Conditional statements may be nested.</p>
 
 <h2 id="evaluation-and-next-steps">Evaluation and next steps</h2>
 <p>There is a greater teacher presence in this course than the previous, through the use of video presentations to support the hands-on interactive labs.</p>
 
-<p>Thus far into the <code>R</code> Programming Track with Datacamp, I have stopped because I have hit an unexpected paywall. Continuing requires a commitment of at least $25 per month, which is good value if I were continuing with courses several hours per day but not appropriate for my current ad-hoc engagement. The day job takes priority, which means <em>all</em> of the available time mostly. I’ll be switching to other resources from now, probably starting with <em>R for Data Science</em><sup id="fnref:Grolemund2016" role="doc-noteref"><a href="#fn:Grolemund2016" class="footnote" rel="footnote">1</a></sup>, or at least the <a href="https://r4ds.had.co.nz/">online version</a>.</p>
+<p>Thus far into the <code class="language-plaintext highlighter-rouge">R</code> Programming Track with Datacamp, I have stopped because I have hit an unexpected paywall. Continuing requires a commitment of at least $25 per month, which is good value if I were continuing with courses several hours per day but not appropriate for my current ad-hoc engagement. The day job takes priority, which means <em>all</em> of the available time mostly. I’ll be switching to other resources from now, probably starting with <em>R for Data Science</em><sup id="fnref:Grolemund2016" role="doc-noteref"><a href="#fn:Grolemund2016" class="footnote" rel="footnote">1</a></sup>, or at least the <a href="https://r4ds.had.co.nz/">online version</a>.</p>
 
 <h2 id="references">References</h2>
 <div class="footnotes" role="doc-endnotes">
@@ -241,8 +241,8 @@ if (x &lt; 0) {
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Datacamp course - intermediate R&url=http://localhost:4000/intermediate-R-datacamp/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/intermediate-R-datacamp/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Datacamp course - intermediate R&url=https://cullaloe.com/intermediate-R-datacamp/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/intermediate-R-datacamp/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

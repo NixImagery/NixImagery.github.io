@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/R-data-visualisation-course-1/" property="og:url">
+    <meta content="https://cullaloe.com/R-data-visualisation-course-1/" property="og:url">
   
   
     <meta content="2020-06-02T20:32:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/pirate-ship-at-sea.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/pirate-ship-at-sea.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Statistics and Visualisation with R">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/R-data-visualisation-course-1/">
+    <meta name="twitter:url" content="https://cullaloe.com/R-data-visualisation-course-1/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/pirate-ship-at-sea.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/pirate-ship-at-sea.jpg">
   
 
 	<meta name="description" content="">
@@ -306,29 +306,29 @@
 
 <p>Comments and header syntax was explained, then using an immediate mode of running commands in the console (by pressing cmd-enter). Outputs are presented in vectors: index 1.</p>
 
-<pre><code class="language-R"># THIS IS A LEVEL 1 HEADER #################################
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># THIS IS A LEVEL 1 HEADER #################################</span><span class="w">
 
-## This Is a Level 2 Header ================================
+</span><span class="c1">## This Is a Level 2 Header ================================</span><span class="w">
 
-### This is a level 3 header. ------------------------------
+</span><span class="c1">### This is a level 3 header. ------------------------------</span><span class="w">
 
-print('Hello World!')
+</span><span class="n">print</span><span class="p">(</span><span class="s1">'Hello World!'</span><span class="p">)</span><span class="w">
 
-## Define Variables ================
-x &lt;- 1:5 #Put the numbers between 1-5 in the variable x (alt- is a short code for &lt;- in the IDE)
-x #Displays the values we have set in x
-</code></pre>
-<p>Getting help is a matter of issuing a query command: e.g. <code>?datasets</code> displays help on the Datasets package.</p>
+</span><span class="c1">## Define Variables ================</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="w"> </span><span class="c1">#Put the numbers between 1-5 in the variable x (alt- is a short code for &lt;- in the IDE)</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="c1">#Displays the values we have set in x</span><span class="w">
+</span></code></pre></div></div>
+<p>Getting help is a matter of issuing a query command: e.g. <code class="language-plaintext highlighter-rouge">?datasets</code> displays help on the Datasets package.</p>
 
 <h3 id="packages">Packages</h3>
 
 <p>Packages are installed and activated thus:</p>
-<pre><code class="language-R">install.packages("ggplot2")
-?install.packages  # Get help on installing packages
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">install.packages</span><span class="p">(</span><span class="s2">"ggplot2"</span><span class="p">)</span><span class="w">
+</span><span class="o">?</span><span class="n">install.packages</span><span class="w">  </span><span class="c1"># Get help on installing packages</span><span class="w">
 
-## Activate packages ==========================
-library(ggplot2)
-</code></pre>
+</span><span class="c1">## Activate packages ==========================</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 <p>We ended the session by installing something called the “Tidyverse”, which seems to be a collection of useful packages. It calls itself an “opinionated collection of R packages designed for data science”.</p>
 
 <h2 id="class-2---types-of-data-and-grammar-of-graphs">Class 2 - Types of data and Grammar of graphs</h2>
@@ -376,31 +376,31 @@ library(ggplot2)
 
 <h3 id="keeping-the-environment-clean">Keeping the environment clean</h3>
 
-<pre><code class="language-R"># Clear environment
-rm(list = ls())
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Clear environment</span><span class="w">
+</span><span class="n">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ls</span><span class="p">())</span><span class="w">
 
-# Clear console
-cat("\014")  # ctrl+L
-</code></pre>
+</span><span class="c1"># Clear console</span><span class="w">
+</span><span class="n">cat</span><span class="p">(</span><span class="s2">"\014"</span><span class="p">)</span><span class="w">  </span><span class="c1"># ctrl+L</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="loading-data">Loading data</h3>
-<pre><code class="language-R">df &lt;- read_csv("data/RodentSimplified.csv")
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/RodentSimplified.csv"</span><span class="p">)</span><span class="w">
 
-# ... same, with selection and mutation of month column name:
+</span><span class="c1"># ... same, with selection and mutation of month column name:</span><span class="w">
 
-df2 &lt;- read_csv("data/RodentSimplified.csv") %&gt;%
-  select(mo,dy,yr,period,species) %&gt;% 
-  mutate(period = as.factor(period)) %&gt;%
-  rename(month = mo) %&gt;%
-  print()
-</code></pre>
-<p>What looks like a continuation line in the above code block is called a “pipe”, written <code>%&gt;%</code>. A pipe is much more than just for making the code look pretty: it really does work as a pipe to transfer a value between subsequent function calls. See <a href="https://style.tidyverse.org/pipes.html">this</a> and <a href="https://magrittr.tidyverse.org/">this</a> and <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html">this</a> for more details.</p>
+</span><span class="n">df2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/RodentSimplified.csv"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">select</span><span class="p">(</span><span class="n">mo</span><span class="p">,</span><span class="n">dy</span><span class="p">,</span><span class="n">yr</span><span class="p">,</span><span class="n">period</span><span class="p">,</span><span class="n">species</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">period</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">as.factor</span><span class="p">(</span><span class="n">period</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mo</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">print</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+<p>What looks like a continuation line in the above code block is called a “pipe”, written <code class="language-plaintext highlighter-rouge">%&gt;%</code>. A pipe is much more than just for making the code look pretty: it really does work as a pipe to transfer a value between subsequent function calls. See <a href="https://style.tidyverse.org/pipes.html">this</a> and <a href="https://magrittr.tidyverse.org/">this</a> and <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html">this</a> for more details.</p>
 
 <h3 id="graph-types">Graph types</h3>
 <p>After some warnings on selecting data presentation that is consistent with your intention to actually communicate something, and not to show off, Lucia introduced us to some of the graph types available with R. She gave us a really nice demonstration why many journals prefer data presentation (e.g. ratios) as a bar chart rather than a pie chart. Differences are sometimes clearer in the bar chart. Apparently, Florence Nightingale invented the pie chart!</p>
 
 <h3 id="the-grammar-of-graphics">The Grammar of graphics</h3>
-<p>The <code>ggplot</code> function allows the creation of graphs according to the framework outlined by Wilkinson<sup id="fnref:Wilkinson" role="doc-noteref"><a href="#fn:Wilkinson" class="footnote" rel="footnote">1</a></sup> in which the separate aspects of data presentation are dealt with separately. A basic template is described <a href="https://homepage.divms.uiowa.edu/~luke/classes/STAT4580/ggplot.html">here</a> with examples for <code>ggplot</code>. My take on the framework is:</p>
+<p>The <code class="language-plaintext highlighter-rouge">ggplot</code> function allows the creation of graphs according to the framework outlined by Wilkinson<sup id="fnref:Wilkinson" role="doc-noteref"><a href="#fn:Wilkinson" class="footnote" rel="footnote">1</a></sup> in which the separate aspects of data presentation are dealt with separately. A basic template is described <a href="https://homepage.divms.uiowa.edu/~luke/classes/STAT4580/ggplot.html">here</a> with examples for <code class="language-plaintext highlighter-rouge">ggplot</code>. My take on the framework is:</p>
 
 <ol>
   <li>a <strong>data</strong> set</li>
@@ -412,25 +412,25 @@ df2 &lt;- read_csv("data/RodentSimplified.csv") %&gt;%
   <li>global <strong>themes</strong> and labels to make it look pretty</li>
 </ol>
 
-<p>Some of these map into the <code>ggplot</code> function, from the most basic (using examples from the weekly challenge, below):</p>
+<p>Some of these map into the <code class="language-plaintext highlighter-rouge">ggplot</code> function, from the most basic (using examples from the weekly challenge, below):</p>
 
-<pre><code class="language-R">ggplot(college, aes(x=sat_avg, y=admission_rate)) + geom_point()
-</code></pre>
-<p>Here, the <code>aes</code> part is the aesthetics definition of the variables for the plot; <code>geom_point</code> defines the type of chart (scatter plot), and <code>college</code> is the data set.</p>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ggplot</span><span class="p">(</span><span class="n">college</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">sat_avg</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">admission_rate</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_point</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+<p>Here, the <code class="language-plaintext highlighter-rouge">aes</code> part is the aesthetics definition of the variables for the plot; <code class="language-plaintext highlighter-rouge">geom_point</code> defines the type of chart (scatter plot), and <code class="language-plaintext highlighter-rouge">college</code> is the data set.</p>
 
 <h3 id="the-weekly-challenge">The weekly challenge</h3>
 <p>I completely failed to get anything at all out of the challenge in the 5 minutes we were given for this task. My code just didn’t produce any kind of plot, just barffing errors at me. This was entirely down to my inability to type or read carefully what I had typed. Later, I managed to make some progress:</p>
 
-<pre><code class="language-R"># Import CSV files from online repo
-college &lt;- read_csv('http://672258.youcanlearnit.net/college.csv')
-college &lt;- college %&gt;%
-  mutate(state=as.factor(state), region=as.factor(region),
-         highest_degree=as.factor(highest_degree),
-         control=as.factor(control), gender=as.factor(gender),
-         loan_default_rate=as.numeric(loan_default_rate))
-# Create a chart that would show the relationship between the SAT average and the admission rate 
-ggplot(college, aes(x=sat_avg, y=admission_rate)) + geom_point()
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Import CSV files from online repo</span><span class="w">
+</span><span class="n">college</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'http://672258.youcanlearnit.net/college.csv'</span><span class="p">)</span><span class="w">
+</span><span class="n">college</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">college</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">state</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">state</span><span class="p">),</span><span class="w"> </span><span class="n">region</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">region</span><span class="p">),</span><span class="w">
+         </span><span class="n">highest_degree</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">highest_degree</span><span class="p">),</span><span class="w">
+         </span><span class="n">control</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">control</span><span class="p">),</span><span class="w"> </span><span class="n">gender</span><span class="o">=</span><span class="n">as.factor</span><span class="p">(</span><span class="n">gender</span><span class="p">),</span><span class="w">
+         </span><span class="n">loan_default_rate</span><span class="o">=</span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">loan_default_rate</span><span class="p">))</span><span class="w">
+</span><span class="c1"># Create a chart that would show the relationship between the SAT average and the admission rate </span><span class="w">
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">college</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">sat_avg</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">admission_rate</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">geom_point</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
 <p>Time is not in abundance at the moment, so I did eventually just look at the solution and run it, seeing how each element of the code contributed to the final result. Here’s my result:</p>
 
 <p><img src="/assets/img/Challenge_1.png" alt="" /></p>
@@ -459,8 +459,8 @@ ggplot(college, aes(x=sat_avg, y=admission_rate)) + geom_point()
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Statistics and Visualisation with R&url=http://localhost:4000/R-data-visualisation-course-1/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/R-data-visualisation-course-1/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Statistics and Visualisation with R&url=https://cullaloe.com/R-data-visualisation-course-1/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/R-data-visualisation-course-1/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/introduction-to-R-datacamp/" property="og:url">
+    <meta content="https://cullaloe.com/introduction-to-R-datacamp/" property="og:url">
   
   
     <meta content="2020-07-08T00:00:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/new-years-day.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/new-years-day.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Datacamp course - introduction to R">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/introduction-to-R-datacamp/">
+    <meta name="twitter:url" content="https://cullaloe.com/introduction-to-R-datacamp/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/new-years-day.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/new-years-day.jpg">
   
 
 	<meta name="description" content="">
@@ -184,169 +184,169 @@
 
 <h2 id="basics">Basics</h2>
 <h3 id="assignment-and-operators">Assignment and operators</h3>
-<pre><code class="language-r">a &lt;- 4		# assignment 3 ways
-4 -&gt; a
-a = 4
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">4</span><span class="w">		</span><span class="c1"># assignment 3 ways</span><span class="w">
+</span><span class="m">4</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">a</span><span class="w">
+</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="w">
 
-1 + 2		# mathematical operators
-4 - 3 
-6 * 5
-(7 + 9) / 2 
-8^2		# exponentiation
-10 %% 4		# modulo
+</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="w">		</span><span class="c1"># mathematical operators</span><span class="w">
+</span><span class="m">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">3</span><span class="w"> 
+</span><span class="m">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span><span class="p">(</span><span class="m">7</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">9</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span><span class="w"> 
+</span><span class="m">8</span><span class="o">^</span><span class="m">2</span><span class="w">		</span><span class="c1"># exponentiation</span><span class="w">
+</span><span class="m">10</span><span class="w"> </span><span class="o">%%</span><span class="w"> </span><span class="m">4</span><span class="w">		</span><span class="c1"># modulo</span><span class="w">
 
-x &lt; y		# less than
-a &gt; c		# greater than
-a &lt;= b 
-j &gt;= k 
-one == two	# equal to
-up != down	# not equal to
-</code></pre>
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="w">		</span><span class="c1"># less than</span><span class="w">
+</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">c</span><span class="w">		</span><span class="c1"># greater than</span><span class="w">
+</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="w"> 
+</span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">k</span><span class="w"> 
+</span><span class="n">one</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">two</span><span class="w">	</span><span class="c1"># equal to</span><span class="w">
+</span><span class="n">up</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">down</span><span class="w">	</span><span class="c1"># not equal to</span><span class="w">
+</span></code></pre></div></div>
 
 <h3 id="data-types">Data types</h3>
-<pre><code class="language-r">12.5 / 2.5	# numerics
-7 + 123		# integers are also numerics
-7 = 3		# Boolean (TRUE or FALSE) are logicals
-"Hello world"	# characters
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="m">12.5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2.5</span><span class="w">	</span><span class="c1"># numerics</span><span class="w">
+</span><span class="m">7</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">123</span><span class="w">		</span><span class="c1"># integers are also numerics</span><span class="w">
+</span><span class="m">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w">		</span><span class="c1"># Boolean (TRUE or FALSE) are logicals</span><span class="w">
+</span><span class="s2">"Hello world"</span><span class="w">	</span><span class="c1"># characters</span><span class="w">
 
-class(x)	# what data type is x?
-</code></pre>
+</span><span class="nf">class</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">	</span><span class="c1"># what data type is x?</span><span class="w">
+</span></code></pre></div></div>
 <h2 id="vectors">Vectors</h2>
 <p>A vector is a one-dimensional array (think of a row in a spreadsheet). In research, this is a single <em>observation</em>.</p>
 
-<pre><code class="language-r"># using the combine function to create a vector
-a_numeric_vector &lt;- c(1, 2, 3, 4, 5)
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># using the combine function to create a vector</span><span class="w">
+</span><span class="n">a_numeric_vector</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
 
-# vectors can have column names
-names(a_numeric_vector) &lt;- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+</span><span class="c1"># vectors can have column names</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">a_numeric_vector</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Monday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tuesday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Wednesday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Thursday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Friday"</span><span class="p">)</span><span class="w">
 
-# printing the vector outputs the element names:
-&gt; a_numeric_vector
-   Monday   Tuesday Wednesday  Thursday    Friday 
-        1         2         3         4         5
-&gt; 
+</span><span class="c1"># printing the vector outputs the element names:</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a_numeric_vector</span><span class="w">
+   </span><span class="n">Monday</span><span class="w">   </span><span class="n">Tuesday</span><span class="w"> </span><span class="n">Wednesday</span><span class="w">  </span><span class="n">Thursday</span><span class="w">    </span><span class="n">Friday</span><span class="w"> 
+        </span><span class="m">1</span><span class="w">         </span><span class="m">2</span><span class="w">         </span><span class="m">3</span><span class="w">         </span><span class="m">4</span><span class="w">         </span><span class="m">5</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> 
 
-# using a vector to hold the column names
-days_of_week &lt;- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-names(week-values) &lt;- days_of_week
-</code></pre>
+</span><span class="c1"># using a vector to hold the column names</span><span class="w">
+</span><span class="n">days_of_week</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Monday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tuesday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Wednesday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Thursday"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Friday"</span><span class="p">)</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">week</span><span class="o">-</span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">days_of_week</span><span class="w">
+</span></code></pre></div></div>
 <p>You can do some quick and easy arithmetic with vectors.</p>
 
-<pre><code class="language-r">low_nums &lt;- c(1, 2, 3, 4, 5)
-hi_nums &lt;- c(6, 7, 8, 9, 10)
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">low_nums</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w">
+</span><span class="n">hi_nums</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w">
 
-total_nums &lt;- low_nums + hi_nums
+</span><span class="n">total_nums</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">low_nums</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hi_nums</span><span class="w">
 
-&gt; total_nums
-[1]  7  9 11 13 15
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">total_nums</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w">  </span><span class="m">7</span><span class="w">  </span><span class="m">9</span><span class="w"> </span><span class="m">11</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">15</span><span class="w">
 
-sum(low_nums) 	# adds up the elements in the vector
-mean(low_nums)	# average of elements in the vector
+</span><span class="nf">sum</span><span class="p">(</span><span class="n">low_nums</span><span class="p">)</span><span class="w"> 	</span><span class="c1"># adds up the elements in the vector</span><span class="w">
+</span><span class="n">mean</span><span class="p">(</span><span class="n">low_nums</span><span class="p">)</span><span class="w">	</span><span class="c1"># average of elements in the vector</span><span class="w">
 
-low_nums[3]	# print the third low number (note 1-index)
-hi_num[c(2:4)] 	# just get the middle values
-</code></pre>
+</span><span class="n">low_nums</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w">	</span><span class="c1"># print the third low number (note 1-index)</span><span class="w">
+</span><span class="n">hi_num</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">4</span><span class="p">)]</span><span class="w"> 	</span><span class="c1"># just get the middle values</span><span class="w">
+</span></code></pre></div></div>
 
 <p>The selection of elements can be conditional using boolean values in another vector.</p>
 
-<pre><code class="language-r">&gt; c(49, 50, 51) &gt; 50
-[1] FALSE FALSE TRUE
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">49</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">51</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">50</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="kc">FALSE</span><span class="w"> </span><span class="kc">TRUE</span><span class="w">
 
-&gt; nums &lt;- c(1:99)	# vector of the first 99 integers
-&gt; fives &lt;- nums %% 5
-&gt; nums[fives == 0]	# all of those divisible by 5
- [1]  5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95
-</code></pre>
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">99</span><span class="p">)</span><span class="w">	</span><span class="c1"># vector of the first 99 integers</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fives</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">%%</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">fives</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">]</span><span class="w">	</span><span class="c1"># all of those divisible by 5</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">35</span><span class="w"> </span><span class="m">40</span><span class="w"> </span><span class="m">45</span><span class="w"> </span><span class="m">50</span><span class="w"> </span><span class="m">55</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="m">65</span><span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="m">75</span><span class="w"> </span><span class="m">80</span><span class="w"> </span><span class="m">85</span><span class="w"> </span><span class="m">90</span><span class="w"> </span><span class="m">95</span><span class="w">
+</span></code></pre></div></div>
 
-<p>In the last example above, <code>fives == 0</code> is a vector of boolean values. Used as a selector in the <code>nums</code> vector, only the <code>TRUE</code> elements are selected.</p>
+<p>In the last example above, <code class="language-plaintext highlighter-rouge">fives == 0</code> is a vector of boolean values. Used as a selector in the <code class="language-plaintext highlighter-rouge">nums</code> vector, only the <code class="language-plaintext highlighter-rouge">TRUE</code> elements are selected.</p>
 
 <h2 id="matrices">Matrices</h2>
 <p>A matrix in R is a collection of elements, all of the same data type, arranged in 2 dimensions of rows and columns.</p>
 
-<pre><code class="language-r">&gt; # A matrix that contain the numbers 1 up to 9 in 3 rows
-&gt; matrix(1:9, byrow = TRUE, nrow = 3)
-     [,1] [,2] [,3]
-[1,]    1    2    3
-[2,]    4    5    6
-[3,]    7    8    9
-&gt; 
-</code></pre>
-<p>The access indicators are shown in the row labels and column headers above. So, element [2,3] of the matrix contains the value 6. The first row of <code>my_matrix</code> is the vector <code>my_matrix[1,]</code>. Row and column names can be set for matrices, as they can be for vectors. This can be done by calling rownames() and colnames(), or at the time the matrix is set up.</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="c1"># A matrix that contain the numbers 1 up to 9 in 3 rows</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+     </span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">[,</span><span class="m">3</span><span class="p">]</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">2</span><span class="w">    </span><span class="m">3</span><span class="w">
+</span><span class="p">[</span><span class="m">2</span><span class="p">,]</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">5</span><span class="w">    </span><span class="m">6</span><span class="w">
+</span><span class="p">[</span><span class="m">3</span><span class="p">,]</span><span class="w">    </span><span class="m">7</span><span class="w">    </span><span class="m">8</span><span class="w">    </span><span class="m">9</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> 
+</span></code></pre></div></div>
+<p>The access indicators are shown in the row labels and column headers above. So, element [2,3] of the matrix contains the value 6. The first row of <code class="language-plaintext highlighter-rouge">my_matrix</code> is the vector <code class="language-plaintext highlighter-rouge">my_matrix[1,]</code>. Row and column names can be set for matrices, as they can be for vectors. This can be done by calling rownames() and colnames(), or at the time the matrix is set up.</p>
 
-<pre><code class="language-r"># Construct star_wars_matrix
-box_office &lt;- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
-star_wars_matrix &lt;- matrix(box_office, nrow = 3, byrow = TRUE,
-                           dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"), 
-                                           c("US", "non-US")))
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Construct star_wars_matrix</span><span class="w">
+</span><span class="n">box_office</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">460.998</span><span class="p">,</span><span class="w"> </span><span class="m">314.4</span><span class="p">,</span><span class="w"> </span><span class="m">290.475</span><span class="p">,</span><span class="w"> </span><span class="m">247.900</span><span class="p">,</span><span class="w"> </span><span class="m">309.306</span><span class="p">,</span><span class="w"> </span><span class="m">165.8</span><span class="p">)</span><span class="w">
+</span><span class="n">star_wars_matrix</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="n">box_office</span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w">
+                           </span><span class="n">dimnames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s2">"A New Hope"</span><span class="p">,</span><span class="w"> </span><span class="s2">"The Empire Strikes Back"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Return of the Jedi"</span><span class="p">),</span><span class="w"> 
+                                           </span><span class="nf">c</span><span class="p">(</span><span class="s2">"US"</span><span class="p">,</span><span class="w"> </span><span class="s2">"non-US"</span><span class="p">)))</span><span class="w">
+</span></code></pre></div></div>
 
-<p>The function <code>cbind()</code> binds columns to an existing matrix. <code>rbind()</code> does the same thing for adding row vectors to a matrix. <code>rowSums()</code> and <code>colSums()</code> do what they sound like - making new vectors ready to be bound into the source matrix if required.</p>
+<p>The function <code class="language-plaintext highlighter-rouge">cbind()</code> binds columns to an existing matrix. <code class="language-plaintext highlighter-rouge">rbind()</code> does the same thing for adding row vectors to a matrix. <code class="language-plaintext highlighter-rouge">rowSums()</code> and <code class="language-plaintext highlighter-rouge">colSums()</code> do what they sound like - making new vectors ready to be bound into the source matrix if required.</p>
 
 <p>Arithmetic operators work element-wise on matrices.</p>
 
 <h2 id="factors">Factors</h2>
-<p>A <strong>factor</strong> is a data type used to store categorical variables. These are discrete variable which can only take a finite number of values (cf. continuous variables which can have any of an infinite set of values, like real numbers). <code>R</code> can make a vector of the categories from a vector of categorical values:</p>
+<p>A <strong>factor</strong> is a data type used to store categorical variables. These are discrete variable which can only take a finite number of values (cf. continuous variables which can have any of an infinite set of values, like real numbers). <code class="language-plaintext highlighter-rouge">R</code> can make a vector of the categories from a vector of categorical values:</p>
 
-<pre><code class="language-r">&gt; birthdates &lt;- c(12,4,13,23,31,16,1,9,12,4,8,24,27,25,24,25)
-&gt; birthdates
- [1] 12  4 13 23 31 16  1  9 12  4  8 24 27 25 24 25
-&gt; bd_factors &lt;- factor(birthdates)
-&gt; bd_factors
- [1] 12 4  13 23 31 16 1  9  12 4  8  24 27 25 24 25
-Levels: 1 4 8 9 12 13 16 23 24 25 27 31
-&gt; 
-</code></pre>
-<p>Such variables are <strong>nominal</strong> or <strong>ordinal</strong> according to whether they are just names, or if they can be ranked in some meaningful way. Ordinal factors are created with additional parameters, e.g., <code>order = TRUE</code> and <code>levels = c("low", "high")</code> and can be compared easily.</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">birthdates</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">12</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">13</span><span class="p">,</span><span class="m">23</span><span class="p">,</span><span class="m">31</span><span class="p">,</span><span class="m">16</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">9</span><span class="p">,</span><span class="m">12</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">8</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">27</span><span class="p">,</span><span class="m">25</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">25</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">birthdates</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">12</span><span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">16</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">9</span><span class="w"> </span><span class="m">12</span><span class="w">  </span><span class="m">4</span><span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">27</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">25</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bd_factors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">birthdates</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bd_factors</span><span class="w">
+ </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="m">13</span><span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="m">9</span><span class="w">  </span><span class="m">12</span><span class="w"> </span><span class="m">4</span><span class="w">  </span><span class="m">8</span><span class="w">  </span><span class="m">24</span><span class="w"> </span><span class="m">27</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">25</span><span class="w">
+</span><span class="n">Levels</span><span class="o">:</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">13</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">27</span><span class="w"> </span><span class="m">31</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> 
+</span></code></pre></div></div>
+<p>Such variables are <strong>nominal</strong> or <strong>ordinal</strong> according to whether they are just names, or if they can be ranked in some meaningful way. Ordinal factors are created with additional parameters, e.g., <code class="language-plaintext highlighter-rouge">order = TRUE</code> and <code class="language-plaintext highlighter-rouge">levels = c("low", "high")</code> and can be compared easily.</p>
 
 <h2 id="data-frames">Data Frames</h2>
-<p>A <strong>data frame</strong> has the variables of a data set as columns and the observations as rows. A quick peek at the structure of a data frame is provided by <code>head()</code> and <code>tail()</code> functions, e.g.:</p>
+<p>A <strong>data frame</strong> has the variables of a data set as columns and the observations as rows. A quick peek at the structure of a data frame is provided by <code class="language-plaintext highlighter-rouge">head()</code> and <code class="language-plaintext highlighter-rouge">tail()</code> functions, e.g.:</p>
 
-<pre><code class="language-r">&gt; head(mtcars)
-                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
-Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
-Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
-Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
-Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
-Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
-Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
-&gt;
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span><span class="w">
+                   </span><span class="n">mpg</span><span class="w"> </span><span class="n">cyl</span><span class="w"> </span><span class="n">disp</span><span class="w">  </span><span class="n">hp</span><span class="w"> </span><span class="n">drat</span><span class="w">    </span><span class="n">wt</span><span class="w">  </span><span class="n">qsec</span><span class="w"> </span><span class="n">vs</span><span class="w"> </span><span class="n">am</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="n">carb</span><span class="w">
+</span><span class="n">Mazda</span><span class="w"> </span><span class="n">RX4</span><span class="w">         </span><span class="m">21.0</span><span class="w">   </span><span class="m">6</span><span class="w">  </span><span class="m">160</span><span class="w"> </span><span class="m">110</span><span class="w"> </span><span class="m">3.90</span><span class="w"> </span><span class="m">2.620</span><span class="w"> </span><span class="m">16.46</span><span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">4</span><span class="w">
+</span><span class="n">Mazda</span><span class="w"> </span><span class="n">RX4</span><span class="w"> </span><span class="n">Wag</span><span class="w">     </span><span class="m">21.0</span><span class="w">   </span><span class="m">6</span><span class="w">  </span><span class="m">160</span><span class="w"> </span><span class="m">110</span><span class="w"> </span><span class="m">3.90</span><span class="w"> </span><span class="m">2.875</span><span class="w"> </span><span class="m">17.02</span><span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">4</span><span class="w">
+</span><span class="n">Datsun</span><span class="w"> </span><span class="m">710</span><span class="w">        </span><span class="m">22.8</span><span class="w">   </span><span class="m">4</span><span class="w">  </span><span class="m">108</span><span class="w">  </span><span class="m">93</span><span class="w"> </span><span class="m">3.85</span><span class="w"> </span><span class="m">2.320</span><span class="w"> </span><span class="m">18.61</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">1</span><span class="w">
+</span><span class="n">Hornet</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="n">Drive</span><span class="w">    </span><span class="m">21.4</span><span class="w">   </span><span class="m">6</span><span class="w">  </span><span class="m">258</span><span class="w"> </span><span class="m">110</span><span class="w"> </span><span class="m">3.08</span><span class="w"> </span><span class="m">3.215</span><span class="w"> </span><span class="m">19.44</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">0</span><span class="w">    </span><span class="m">3</span><span class="w">    </span><span class="m">1</span><span class="w">
+</span><span class="n">Hornet</span><span class="w"> </span><span class="n">Sportabout</span><span class="w"> </span><span class="m">18.7</span><span class="w">   </span><span class="m">8</span><span class="w">  </span><span class="m">360</span><span class="w"> </span><span class="m">175</span><span class="w"> </span><span class="m">3.15</span><span class="w"> </span><span class="m">3.440</span><span class="w"> </span><span class="m">17.02</span><span class="w">  </span><span class="m">0</span><span class="w">  </span><span class="m">0</span><span class="w">    </span><span class="m">3</span><span class="w">    </span><span class="m">2</span><span class="w">
+</span><span class="n">Valiant</span><span class="w">           </span><span class="m">18.1</span><span class="w">   </span><span class="m">6</span><span class="w">  </span><span class="m">225</span><span class="w"> </span><span class="m">105</span><span class="w"> </span><span class="m">2.76</span><span class="w"> </span><span class="m">3.460</span><span class="w"> </span><span class="m">20.22</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">0</span><span class="w">    </span><span class="m">3</span><span class="w">    </span><span class="m">1</span><span class="w">
+</span><span class="o">&gt;</span><span class="w">
+</span></code></pre></div></div>
 
-<p><code>mtcars</code> is one of the many data sets built into R. A list of them is obtained by calling <code>data()</code>. <code>str()</code> provides a look at the structure of a data set:</p>
+<p><code class="language-plaintext highlighter-rouge">mtcars</code> is one of the many data sets built into R. A list of them is obtained by calling <code class="language-plaintext highlighter-rouge">data()</code>. <code class="language-plaintext highlighter-rouge">str()</code> provides a look at the structure of a data set:</p>
 
-<pre><code class="language-r">&gt; str(mtcars)
-'data.frame':	32 obs. of  11 variables:
- $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
- $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
- $ disp: num  160 160 108 258 360 ...
- $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
- $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
- $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
- $ qsec: num  16.5 17 18.6 19.4 17 ...
- $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
- $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
- $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
- $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
-&gt; 
-</code></pre>
-<p>Columns of a data frame are added one column vector at a time as a list of parameters in the function call <code>data.frame()</code>. Selecting a data point from row 32, column 2 is a matter of calling <code>df_bears[32,2]</code>. Note the order - <em>observation</em> (row) first, then <em>variable</em> (column). A whole observation (e.g. the tenth) is obtained by <code>df_bears[10,]</code>. The first 4 data points from the <em>paw_size</em> column are <code>df_bears[1:4,"paw_size"]</code>. The whole column vector is <code>df_bears$paw_size</code> (notice the dollar sign notation). <strong>Subsets</strong> can be made calling <code>subset(df_bears, paw_size &lt; 4)</code>. Sorting can be achieved by making a vector of the data frame order, based upon the columns you are interested in:</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">str</span><span class="p">(</span><span class="n">mtcars</span><span class="p">)</span><span class="w">
+</span><span class="s1">'data.frame'</span><span class="o">:</span><span class="w">	</span><span class="m">32</span><span class="w"> </span><span class="n">obs.</span><span class="w"> </span><span class="n">of</span><span class="w">  </span><span class="m">11</span><span class="w"> </span><span class="n">variables</span><span class="o">:</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">mpg</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">21</span><span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="m">22.8</span><span class="w"> </span><span class="m">21.4</span><span class="w"> </span><span class="m">18.7</span><span class="w"> </span><span class="m">18.1</span><span class="w"> </span><span class="m">14.3</span><span class="w"> </span><span class="m">24.4</span><span class="w"> </span><span class="m">22.8</span><span class="w"> </span><span class="m">19.2</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">cyl</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">disp</span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">160</span><span class="w"> </span><span class="m">160</span><span class="w"> </span><span class="m">108</span><span class="w"> </span><span class="m">258</span><span class="w"> </span><span class="m">360</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">hp</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">110</span><span class="w"> </span><span class="m">110</span><span class="w"> </span><span class="m">93</span><span class="w"> </span><span class="m">110</span><span class="w"> </span><span class="m">175</span><span class="w"> </span><span class="m">105</span><span class="w"> </span><span class="m">245</span><span class="w"> </span><span class="m">62</span><span class="w"> </span><span class="m">95</span><span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">drat</span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">3.9</span><span class="w"> </span><span class="m">3.9</span><span class="w"> </span><span class="m">3.85</span><span class="w"> </span><span class="m">3.08</span><span class="w"> </span><span class="m">3.15</span><span class="w"> </span><span class="m">2.76</span><span class="w"> </span><span class="m">3.21</span><span class="w"> </span><span class="m">3.69</span><span class="w"> </span><span class="m">3.92</span><span class="w"> </span><span class="m">3.92</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">wt</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">2.62</span><span class="w"> </span><span class="m">2.88</span><span class="w"> </span><span class="m">2.32</span><span class="w"> </span><span class="m">3.21</span><span class="w"> </span><span class="m">3.44</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">qsec</span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">16.5</span><span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="m">18.6</span><span class="w"> </span><span class="m">19.4</span><span class="w"> </span><span class="m">17</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">vs</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">am</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">gear</span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="n">...</span><span class="w">
+ </span><span class="o">$</span><span class="w"> </span><span class="n">carb</span><span class="o">:</span><span class="w"> </span><span class="n">num</span><span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="n">...</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> 
+</span></code></pre></div></div>
+<p>Columns of a data frame are added one column vector at a time as a list of parameters in the function call <code class="language-plaintext highlighter-rouge">data.frame()</code>. Selecting a data point from row 32, column 2 is a matter of calling <code class="language-plaintext highlighter-rouge">df_bears[32,2]</code>. Note the order - <em>observation</em> (row) first, then <em>variable</em> (column). A whole observation (e.g. the tenth) is obtained by <code class="language-plaintext highlighter-rouge">df_bears[10,]</code>. The first 4 data points from the <em>paw_size</em> column are <code class="language-plaintext highlighter-rouge">df_bears[1:4,"paw_size"]</code>. The whole column vector is <code class="language-plaintext highlighter-rouge">df_bears$paw_size</code> (notice the dollar sign notation). <strong>Subsets</strong> can be made calling <code class="language-plaintext highlighter-rouge">subset(df_bears, paw_size &lt; 4)</code>. Sorting can be achieved by making a vector of the data frame order, based upon the columns you are interested in:</p>
 
-<pre><code class="language-r">&gt; a &lt;- order(df_bears$claw_size)
-&gt; df_bears[a,]
-&gt; 
-&gt; mtcars[order(mtcars$disp),]
-&gt;                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
-Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
-Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
-Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
-Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
-Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
-Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
-...
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">order</span><span class="p">(</span><span class="n">df_bears</span><span class="o">$</span><span class="n">claw_size</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">df_bears</span><span class="p">[</span><span class="n">a</span><span class="p">,]</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> 
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mtcars</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">mtcars</span><span class="o">$</span><span class="n">disp</span><span class="p">),]</span><span class="w">
+</span><span class="o">&gt;</span><span class="w">                      </span><span class="n">mpg</span><span class="w"> </span><span class="n">cyl</span><span class="w">  </span><span class="n">disp</span><span class="w">  </span><span class="n">hp</span><span class="w"> </span><span class="n">drat</span><span class="w">    </span><span class="n">wt</span><span class="w">  </span><span class="n">qsec</span><span class="w"> </span><span class="n">vs</span><span class="w"> </span><span class="n">am</span><span class="w"> </span><span class="n">gear</span><span class="w"> </span><span class="n">carb</span><span class="w">
+</span><span class="n">Toyota</span><span class="w"> </span><span class="n">Corolla</span><span class="w">      </span><span class="m">33.9</span><span class="w">   </span><span class="m">4</span><span class="w">  </span><span class="m">71.1</span><span class="w">  </span><span class="m">65</span><span class="w"> </span><span class="m">4.22</span><span class="w"> </span><span class="m">1.835</span><span class="w"> </span><span class="m">19.90</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">1</span><span class="w">
+</span><span class="n">Honda</span><span class="w"> </span><span class="n">Civic</span><span class="w">         </span><span class="m">30.4</span><span class="w">   </span><span class="m">4</span><span class="w">  </span><span class="m">75.7</span><span class="w">  </span><span class="m">52</span><span class="w"> </span><span class="m">4.93</span><span class="w"> </span><span class="m">1.615</span><span class="w"> </span><span class="m">18.52</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">2</span><span class="w">
+</span><span class="n">Fiat</span><span class="w"> </span><span class="m">128</span><span class="w">            </span><span class="m">32.4</span><span class="w">   </span><span class="m">4</span><span class="w">  </span><span class="m">78.7</span><span class="w">  </span><span class="m">66</span><span class="w"> </span><span class="m">4.08</span><span class="w"> </span><span class="m">2.200</span><span class="w"> </span><span class="m">19.47</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">1</span><span class="w">
+</span><span class="n">Fiat</span><span class="w"> </span><span class="n">X1</span><span class="m">-9</span><span class="w">           </span><span class="m">27.3</span><span class="w">   </span><span class="m">4</span><span class="w">  </span><span class="m">79.0</span><span class="w">  </span><span class="m">66</span><span class="w"> </span><span class="m">4.08</span><span class="w"> </span><span class="m">1.935</span><span class="w"> </span><span class="m">18.90</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">1</span><span class="w">
+</span><span class="n">Lotus</span><span class="w"> </span><span class="n">Europa</span><span class="w">        </span><span class="m">30.4</span><span class="w">   </span><span class="m">4</span><span class="w">  </span><span class="m">95.1</span><span class="w"> </span><span class="m">113</span><span class="w"> </span><span class="m">3.77</span><span class="w"> </span><span class="m">1.513</span><span class="w"> </span><span class="m">16.90</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">5</span><span class="w">    </span><span class="m">2</span><span class="w">
+</span><span class="n">Datsun</span><span class="w"> </span><span class="m">710</span><span class="w">          </span><span class="m">22.8</span><span class="w">   </span><span class="m">4</span><span class="w"> </span><span class="m">108.0</span><span class="w">  </span><span class="m">93</span><span class="w"> </span><span class="m">3.85</span><span class="w"> </span><span class="m">2.320</span><span class="w"> </span><span class="m">18.61</span><span class="w">  </span><span class="m">1</span><span class="w">  </span><span class="m">1</span><span class="w">    </span><span class="m">4</span><span class="w">    </span><span class="m">1</span><span class="w">
+</span><span class="n">...</span><span class="w">
+</span></code></pre></div></div>
 
 <h2 id="lists">Lists</h2>
-<p><strong>Lists</strong> can contain arbitrary data and <strong>data types</strong>. They are constructed by calling <code>list()</code> with optional names for each component, e.g. <code>list(top_dogs = df_dogs[1:10,], top_cats = df_cats[1:10,])</code>.</p>
+<p><strong>Lists</strong> can contain arbitrary data and <strong>data types</strong>. They are constructed by calling <code class="language-plaintext highlighter-rouge">list()</code> with optional names for each component, e.g. <code class="language-plaintext highlighter-rouge">list(top_dogs = df_dogs[1:10,], top_cats = df_cats[1:10,])</code>.</p>
 
 <h2 id="evaluation-and-next-steps">Evaluation and next steps</h2>
 <p>I’ve found this introduction differently paced to the earlier introduction course run by the university. Because there is no instructor, attention has been paid to very small details: every aspect of the course works because it is programmatic. Learners have to take the right (small) steps to complete the exercises successfully. Errors are picked up and RTFQ-type prompts are given. This was less challenging than the earlier, demonstrator-led course but I completed this one, instead of bailing out feeling frustrated and weak. I also learned considerably more that is useful and earned a more secure foundation for further study.</p>
@@ -355,8 +355,8 @@ Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Datacamp course - introduction to R&url=http://localhost:4000/introduction-to-R-datacamp/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/introduction-to-R-datacamp/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Datacamp course - introduction to R&url=https://cullaloe.com/introduction-to-R-datacamp/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/introduction-to-R-datacamp/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

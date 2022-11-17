@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/invalid-active-developer-path/" property="og:url">
+    <meta content="https://cullaloe.com/invalid-active-developer-path/" property="og:url">
   
   
     <meta content="2019-10-10T14:11:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/edinburgh.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/edinburgh.jpg" property="og:image">
   
   
     
@@ -42,13 +42,13 @@
     <meta name="twitter:title" content="Invalid active developer path after upgrade to Catalana">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/invalid-active-developer-path/">
+    <meta name="twitter:url" content="https://cullaloe.com/invalid-active-developer-path/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/edinburgh.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/edinburgh.jpg">
   
 
 	<meta name="description" content="">
@@ -164,22 +164,22 @@
       </header>
       <p>After allowing my MacBook Air to upgrade itself to OSX 10.15 Catalana, git commands throw an error:</p>
 
-<pre><code class="language-sh">$ git status
-xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git status
+xcrun: error: invalid active developer path <span class="o">(</span>/Library/Developer/CommandLineTools<span class="o">)</span>, missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+</code></pre></div></div>
 
 <p>This is because OSX updates remove the developer tools. You need to re-install them (and agree the license again).</p>
 
-<pre><code class="language-sh">$ xcode-select --install
-xcode-select: note: install requested for command line developer tools
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcode-select <span class="nt">--install</span>
+xcode-select: note: <span class="nb">install </span>requested <span class="k">for </span><span class="nb">command </span>line developer tools
+</code></pre></div></div>
 
 <p>I am grateful to the contributors on <a href="https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a">Stack Exchange</a> for the solution to this problem.</p>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Invalid active developer path after upgrade to Catalana&url=http://localhost:4000/invalid-active-developer-path/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/invalid-active-developer-path/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Invalid active developer path after upgrade to Catalana&url=https://cullaloe.com/invalid-active-developer-path/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/invalid-active-developer-path/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

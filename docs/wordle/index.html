@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/wordle/" property="og:url">
+    <meta content="https://cullaloe.com/wordle/" property="og:url">
   
   
     <meta content="2022-11-17T00:00:00+00:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/2022-11-17-wordle.png" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/2022-11-17-wordle.png" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Wordle cheating with R">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/wordle/">
+    <meta name="twitter:url" content="https://cullaloe.com/wordle/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/2022-11-17-wordle.png">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/2022-11-17-wordle.png">
   
 
 	<meta name="description" content="">
@@ -176,21 +176,21 @@
 
 <p>So, I finished marking a small batch of essays and want to see how the cohort have done overall, beyond my subjective feeling that they did OK. From a terminal, start R:</p>
 
-<pre><code class="language-sh">$ R
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>R
+</code></pre></div></div>
 
 <p>This will start a session and tell you which version of R you are running. Now, it’s just a matter of typing in your numbers. They don’t have to be in any particular order:</p>
 
-<pre><code class="language-r">&gt; boxplot(c(57,82,68,64,62,72),horizontal=TRUE)
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">boxplot</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">57</span><span class="p">,</span><span class="m">82</span><span class="p">,</span><span class="m">68</span><span class="p">,</span><span class="m">64</span><span class="p">,</span><span class="m">62</span><span class="p">,</span><span class="m">72</span><span class="p">),</span><span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 <p>This will make a nice <a href="https://en.wikipedia.org/wiki/Box_plot">boxplot</a> showing that your intuitions were OK. Doing well, with a reasonable median (the thick line).</p>
 
 <p><img src="/assets/img/22-11-17-boxplot.png" alt="" /></p>
 
-<p>If you want to compare 2 sets, give <code>R</code> 2 vectors (a vector is a list or collection of data, constructed thus <code>c(43,44,56,76)</code>):</p>
+<p>If you want to compare 2 sets, give <code class="language-plaintext highlighter-rouge">R</code> 2 vectors (a vector is a list or collection of data, constructed thus <code class="language-plaintext highlighter-rouge">c(43,44,56,76)</code>):</p>
 
-<pre><code class="language-r">&gt; boxplot(c(57,82,68,64,62,72),c(64,44,48,55,70,68),horizontal=TRUE)
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">boxplot</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">57</span><span class="p">,</span><span class="m">82</span><span class="p">,</span><span class="m">68</span><span class="p">,</span><span class="m">64</span><span class="p">,</span><span class="m">62</span><span class="p">,</span><span class="m">72</span><span class="p">),</span><span class="nf">c</span><span class="p">(</span><span class="m">64</span><span class="p">,</span><span class="m">44</span><span class="p">,</span><span class="m">48</span><span class="p">,</span><span class="m">55</span><span class="p">,</span><span class="m">70</span><span class="p">,</span><span class="m">68</span><span class="p">),</span><span class="n">horizontal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
 <p><img src="/assets/img/22-11-17-boxplot2.png" alt="" /></p>
 
@@ -200,27 +200,27 @@
 
 <p>The NY Times Wordle app asks if “Something doesn’t look right”. To me the plot looked a bit skewed towards the stupid end, and so I decided to play with the app to make my stats look symmetrical. I do the puzzle every day in a web browser, find the answer, and then do it again on a different machine – the one that stores cookie data and remembers my stats.</p>
 
-<p>For this, I created an <code>R</code> markdown document which contains both text and images, calculated from the figures in the document. You can use any text editor to create the document (I use <a href="https://macdown.uranusjr.com/">MacDown</a>) but make sure the file extension is <code>.Rmd</code>, so that <code>R</code> knows to process the <code>R</code> code blocks. Here’s the source of the <code>Wordle.Rmd</code> file containing my dishonest stats. They are in the brutal lines constructing the vector of guesses, for example, these show that I have guessed the word in 2, a total of 17 times:</p>
+<p>For this, I created an <code class="language-plaintext highlighter-rouge">R</code> markdown document which contains both text and images, calculated from the figures in the document. You can use any text editor to create the document (I use <a href="https://macdown.uranusjr.com/">MacDown</a>) but make sure the file extension is <code class="language-plaintext highlighter-rouge">.Rmd</code>, so that <code class="language-plaintext highlighter-rouge">R</code> knows to process the <code class="language-plaintext highlighter-rouge">R</code> code blocks. Here’s the source of the <code class="language-plaintext highlighter-rouge">Wordle.Rmd</code> file containing my dishonest stats. They are in the brutal lines constructing the vector of guesses, for example, these show that I have guessed the word in 2, a total of 17 times:</p>
 
-<pre><code class="language-markdown">---
-title: "Wordle stats"
-subtitle: It's only a game
-author: Nick Hood
-date: \today
-output:
-  pdf_document: default
-documentclass: scrartcl
-lang: en-GB
-papersize: a4
-fontsize: 11pt
-geometry: margin=2cm, bindingoffset=0.5cm
-pagestyle: headings
-fontfamily: roboto
-fontfamilyoptions: sfdefault, light
----
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Wordle</span><span class="nv"> </span><span class="s">stats"</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="s">It's only a game</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Nick Hood</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">\today</span>
+<span class="na">output</span><span class="pi">:</span>
+  <span class="na">pdf_document</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">documentclass</span><span class="pi">:</span> <span class="s">scrartcl</span>
+<span class="na">lang</span><span class="pi">:</span> <span class="s">en-GB</span>
+<span class="na">papersize</span><span class="pi">:</span> <span class="s">a4</span>
+<span class="na">fontsize</span><span class="pi">:</span> <span class="s">11pt</span>
+<span class="na">geometry</span><span class="pi">:</span> <span class="s">margin=2cm, bindingoffset=0.5cm</span>
+<span class="na">pagestyle</span><span class="pi">:</span> <span class="s">headings</span>
+<span class="na">fontfamily</span><span class="pi">:</span> <span class="s">roboto</span>
+<span class="na">fontfamilyoptions</span><span class="pi">:</span> <span class="s">sfdefault, light</span>
+<span class="nn">---</span>
 
-```{r data, echo=FALSE}
-Guesses&lt;-c( + 
+<span class="p">```</span><span class="nl">{r data, echo=FALSE}
+</span><span class="sb">Guesses&lt;-c( + 
 rep(1,times=6), +
 rep(2,times=17), +
 rep(3,times=51), +
@@ -229,30 +229,30 @@ rep(5,times=67), +
 rep(6,times=23), +
 rep(7,times=16))
 
-hist(Guesses,breaks=0:7,col="#CCCFFF", main="Guess distribution")
-```
-The NY Times Wordle app asks if "Something doesn't look right". To me the plot looked a bit skewed towards the stupid end, and so I'm playing the app to make my stats look symmetrical. Of course it's cheating but it's not just editing the cookies to make the numbers look right. That would be *cheating*.
+hist(Guesses,breaks=0:7,col="#CCCFFF", main="Guess distribution")</span>
+<span class="p">```</span>
+The NY Times Wordle app asks if "Something doesn't look right". To me the plot looked a bit skewed towards the stupid end, and so I'm playing the app to make my stats look symmetrical. Of course it's cheating but it's not just editing the cookies to make the numbers look right. That would be <span class="ge">*cheating*</span>.
 
-</code></pre>
+</code></pre></div></div>
 
-<p>We can now send this file as a script to <code>R</code>:</p>
+<p>We can now send this file as a script to <code class="language-plaintext highlighter-rouge">R</code>:</p>
 
-<pre><code class="language-sh">$ Rscript -e "rmarkdown::render('Wordle.Rmd')"
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>Rscript <span class="nt">-e</span> <span class="s2">"rmarkdown::render('Wordle.Rmd')"</span>
+</code></pre></div></div>
 
-<p>which produces a pdf document (see the output option in the <code>.Rmd</code> file) that looks like this:</p>
+<p>which produces a pdf document (see the output option in the <code class="language-plaintext highlighter-rouge">.Rmd</code> file) that looks like this:</p>
 
 <p><img src="/assets/img/Wordle.png" alt="" /></p>
 
 <h2 id="summary">Summary</h2>
 
-<p>Not the solution to the biggest problem, but I found it useful for making nice graphical images from small data sets. <code>R</code> is perfect for that, and this gets you started without too much fuss. Try copy-pasting the boxplot into an email next time you discuss marking assignments with colleagues.</p>
+<p>Not the solution to the biggest problem, but I found it useful for making nice graphical images from small data sets. <code class="language-plaintext highlighter-rouge">R</code> is perfect for that, and this gets you started without too much fuss. Try copy-pasting the boxplot into an email next time you discuss marking assignments with colleagues.</p>
 
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Wordle cheating with R&url=http://localhost:4000/wordle/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/wordle/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Wordle cheating with R&url=https://cullaloe.com/wordle/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/wordle/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

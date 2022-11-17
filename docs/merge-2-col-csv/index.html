@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/merge-2-col-csv/" property="og:url">
+    <meta content="https://cullaloe.com/merge-2-col-csv/" property="og:url">
   
   
     <meta content="2020-08-27T00:00:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/R0000677.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/R0000677.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Merge join data files on 2 columns with python">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/merge-2-col-csv/">
+    <meta name="twitter:url" content="https://cullaloe.com/merge-2-col-csv/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/R0000677.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/R0000677.jpg">
   
 
 	<meta name="description" content="">
@@ -184,50 +184,50 @@
   <p>Can anyone suggest a (free) tool that can do this - and then preferably allow for some analysis - plotting temp 1 against temp 2, for instance.</p>
 </blockquote>
 
-<p>I thought about this on and off during one of those challenging COVID days, and finally sat down in the evening and knocked up a quick solution to the first part of the problem, using <code>python</code>.</p>
+<p>I thought about this on and off during one of those challenging COVID days, and finally sat down in the evening and knocked up a quick solution to the first part of the problem, using <code class="language-plaintext highlighter-rouge">python</code>.</p>
 
 <p>file 1.csv, 2.csv contain data:</p>
 
-<pre><code class="language-sh">$ cat 1.csv 
-"x","y","t1"
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>1.csv 
+<span class="s2">"x"</span>,<span class="s2">"y"</span>,<span class="s2">"t1"</span>
 42,35,122
 39,44,242
 12,43,188
 
-$ cat 2.csv 
-"x","y","t2"
+<span class="nv">$ </span><span class="nb">cat </span>2.csv 
+<span class="s2">"x"</span>,<span class="s2">"y"</span>,<span class="s2">"t2"</span>
 53,22,192
 39,44,122
 22,56,238
-</code></pre>
+</code></pre></div></div>
 
-<p>Launching <code>python 3</code><sup id="fnref:why" role="doc-noteref"><a href="#fn:why" class="footnote" rel="footnote">1</a></sup></p>
+<p>Launching <code class="language-plaintext highlighter-rouge">python 3</code><sup id="fnref:why" role="doc-noteref"><a href="#fn:why" class="footnote" rel="footnote">1</a></sup></p>
 
-<pre><code class="language-sh">$ python3
-Python 3.6.2 (v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06) 
-[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
-</code></pre>
-<pre><code class="language-python">&gt;&gt;&gt; import pandas as pd
-&gt;&gt;&gt; csv1 = pd.read_csv("1.csv")
-&gt;&gt;&gt; csv2 = pd.read_csv("2.csv”)
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python3
+Python 3.6.2 <span class="o">(</span>v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06<span class="o">)</span> 
+<span class="o">[</span>GCC 4.2.1 <span class="o">(</span>Apple Inc. build 5666<span class="o">)</span> <span class="o">(</span>dot 3<span class="o">)]</span> on darwin
+Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for </span>more information.
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">csv1</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"1.csv"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">csv2</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"2.csv”)
+</span></code></pre></div></div>
 <p>(check it looks ok)</p>
 
-<pre><code class="language-python">&gt;&gt;&gt; csv1.head()
-    x   y   t1
-0  42  35  122
-1  39  44  242
-2  12  43  188
-&gt;&gt;&gt; csv2.head()
-    x   y   t2
-0  53  22  192
-1  39  44  122
-2  22  56  238
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">csv1</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+    <span class="n">x</span>   <span class="n">y</span>   <span class="n">t1</span>
+<span class="mi">0</span>  <span class="mi">42</span>  <span class="mi">35</span>  <span class="mi">122</span>
+<span class="mi">1</span>  <span class="mi">39</span>  <span class="mi">44</span>  <span class="mi">242</span>
+<span class="mi">2</span>  <span class="mi">12</span>  <span class="mi">43</span>  <span class="mi">188</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">csv2</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+    <span class="n">x</span>   <span class="n">y</span>   <span class="n">t2</span>
+<span class="mi">0</span>  <span class="mi">53</span>  <span class="mi">22</span>  <span class="mi">192</span>
+<span class="mi">1</span>  <span class="mi">39</span>  <span class="mi">44</span>  <span class="mi">122</span>
+<span class="mi">2</span>  <span class="mi">22</span>  <span class="mi">56</span>  <span class="mi">238</span>
+</code></pre></div></div>
 <p>Make an outer join of these two tables on the two coordinate columns:</p>
 
-<pre><code class="language-python">&gt;&gt;&gt; merged_data = csv1.merge(csv2,on=["x","y"],how='outer’)
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">merged_data</span> <span class="o">=</span> <span class="n">csv1</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">csv2</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s">"x"</span><span class="p">,</span><span class="s">"y"</span><span class="p">],</span><span class="n">how</span><span class="o">=</span><span class="s">'outer’)
 
 &gt;&gt;&gt; merged_data.head()
     x   y     t1     t2
@@ -236,23 +236,23 @@ Type "help", "copyright", "credits" or "license" for more information.
 2  12  43  188.0    NaN
 3  53  22    NaN  192.0
 4  22  56    NaN  238.0
-</code></pre>
+</span></code></pre></div></div>
 
 <p>“NaN” is not your Nan, it’s just “not a number”, or “no data here”.</p>
 
-<pre><code class="language-python">&gt;&gt;&gt; merged_data.to_csv("out.csv",index=False)
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">merged_data</span><span class="p">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"out.csv"</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>… and back in the shell, we can see the result…</p>
 
-<pre><code class="language-sh">$ cat out.csv 
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>out.csv 
 x,y,t1,t2
 42,35,122.0,
 39,44,242.0,122.0
 12,43,188.0,
 53,22,,192.0
 22,56,,238.0
-</code></pre>
+</code></pre></div></div>
 <p>… your merged file, sir.</p>
 
 <p>It ought to work with a few million rows. I didn’t answer the final part of the OP’s question but it ought to easy enough with this example - a million or more rows, might be a different problem.</p>
@@ -261,15 +261,15 @@ x,y,t1,t2
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:why" role="doc-endnote">
-      <p>I am using python3 because OSX has a legacy version 2 nobody dares touch. On other systems you might want to use just “python” and “pip” in the above examples. You might have to install pandas first, using <code>$ pip3 install pandas</code>. <a href="#fnref:why" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>I am using python3 because OSX has a legacy version 2 nobody dares touch. On other systems you might want to use just “python” and “pip” in the above examples. You might have to install pandas first, using <code class="language-plaintext highlighter-rouge">$ pip3 install pandas</code>. <a href="#fnref:why" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Merge join data files on 2 columns with python&url=http://localhost:4000/merge-2-col-csv/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/merge-2-col-csv/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Merge join data files on 2 columns with python&url=https://cullaloe.com/merge-2-col-csv/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/merge-2-col-csv/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">
