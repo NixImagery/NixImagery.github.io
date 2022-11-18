@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Nov 2022 09:09:04 +0000</pubDate>
-    <lastBuildDate>Fri, 18 Nov 2022 09:09:04 +0000</lastBuildDate>
+    <pubDate>Thu, 17 Nov 2022 09:55:21 +0000</pubDate>
+    <lastBuildDate>Thu, 17 Nov 2022 09:55:21 +0000</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -1954,44 +1954,6 @@ Finished.
       </item>
     
       <item>
-        <title>IOP CLPL: Smartphone practicals</title>
-        <description>&lt;p&gt;The IoP in Scotland is putting on a rich catalogue of online CLPL for the community of physics teachers, and presented by colleagues from that same community. I accessed one of these after the event, because it had been recorded and published by Drew Burrett on &lt;a href=&quot;https://www.youtube.com/watch?v=TJvuI5g0WNI&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This session was hosted by Stuart Farmer and Jenny Hargreaves, and presented by Murat Gullen and Martyn Crawshaw, who gave us a practical introduction to using tools for data capture and analysis using the suite of sensors on most modern phones. They presented a brief rationale, acknowledging that although not all children have a smart phone, most have access to one. The scope (pun intended) for teachers to offer practical sessions using their own equipment was also underlined.&lt;/p&gt;
-
-&lt;p&gt;The first tool discussed was &lt;a href=&quot;https://phyphox.org/&quot;&gt;PhyPhox&lt;/a&gt; which not only can access all of the phone’s sensors, it has a number of built-in activities and tools to make use of the data captured. These can be exported in several formats, or posted to Dropbox for later discussion. What I hadn’t realised is that there is a built-in web server accessed through the “triple dots” at the top right of the phone screen which enables display and control of the app from any nearby browser, provided that the computer is on the same network (it uses a 192.168.x.x IP address).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_1E1AE83E2C49-1.jpeg&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;/assets/img/phyphox.png&quot; alt=&quot;&quot; /&gt;
-&lt;em&gt;Screenshots of Phyphox on iPhone and Browser (uses the language of the phone)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Martyn started by talking about &lt;a href=&quot;https://apps.apple.com/us/app/vernier-video-physics/id389784247&quot;&gt;Vernier video&lt;/a&gt; tracking and analysis software, similar to the java &lt;a href=&quot;https://www.physlets.org/tracker/&quot;&gt;Tracker&lt;/a&gt; program. He went on to demonstrate Pasco’s &lt;a href=&quot;https://www.pasco.com/products/software/sparkvue&quot;&gt;SparkVue&lt;/a&gt; app, what Martyn called the “twenty-first century version” of Data Studio found in many schools. It allows connection to onboard sensors and also Pasco equipment in the lab.&lt;/p&gt;
-
-&lt;p&gt;It was made clear that teachers should take care not to assume that their pupils are tech-savvy enough to know how to use all of the tools and interfaces without support and guidance.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Don’t lose the learning!” – Martyn Crawshaw&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Excellent stuff, as ever, with a lively Q &amp;amp; A at the end. I’m going to share this with my students.&lt;/p&gt;
-
-&lt;!--## Footnotes--&gt;
-</description>
-        <pubDate>Tue, 01 Sep 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/iop-clpl-smartphone-practicals/</link>
-        <guid isPermaLink="true">https://cullaloe.com/iop-clpl-smartphone-practicals/</guid>
-        
-        <category>Education</category>
-        
-        <category>Physics</category>
-        
-        <category>Practicals</category>
-        
-        <category>CPD</category>
-        
-        
-      </item>
-    
-      <item>
         <title>Video capture and production including closed captions</title>
         <description>&lt;h2 class=&quot;no_toc&quot; id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -2314,6 +2276,44 @@ x,y,t1,t2
         <category>Nextcloud</category>
         
         <category>Content-Security-Policy</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>IOP CLPL: Smartphone practicals</title>
+        <description>&lt;p&gt;The IoP in Scotland is putting on a rich catalogue of online CLPL for the community of physics teachers, and presented by colleagues from that same community. I accessed one of these after the event, because it had been recorded and published by Drew Burrett on &lt;a href=&quot;https://www.youtube.com/watch?v=TJvuI5g0WNI&quot;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This session was hosted by Stuart Farmer and Jenny Hargreaves, and presented by Murat Gullen and Martyn Crawshaw, who gave us a practical introduction to using tools for data capture and analysis using the suite of sensors on most modern phones. They presented a brief rationale, acknowledging that although not all children have a smart phone, most have access to one. The scope (pun intended) for teachers to offer practical sessions using their own equipment was also underlined.&lt;/p&gt;
+
+&lt;p&gt;The first tool discussed was &lt;a href=&quot;https://phyphox.org/&quot;&gt;PhyPhox&lt;/a&gt; which not only can access all of the phone’s sensors, it has a number of built-in activities and tools to make use of the data captured. These can be exported in several formats, or posted to Dropbox for later discussion. What I hadn’t realised is that there is a built-in web server accessed through the “triple dots” at the top right of the phone screen which enables display and control of the app from any nearby browser, provided that the computer is on the same network (it uses a 192.168.x.x IP address).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_1E1AE83E2C49-1.jpeg&quot; alt=&quot;&quot; /&gt; &lt;img src=&quot;/assets/img/phyphox.png&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;Screenshots of Phyphox on iPhone and Browser (uses the language of the phone)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Martyn started by talking about &lt;a href=&quot;https://apps.apple.com/us/app/vernier-video-physics/id389784247&quot;&gt;Vernier video&lt;/a&gt; tracking and analysis software, similar to the java &lt;a href=&quot;https://www.physlets.org/tracker/&quot;&gt;Tracker&lt;/a&gt; program. He went on to demonstrate Pasco’s &lt;a href=&quot;https://www.pasco.com/products/software/sparkvue&quot;&gt;SparkVue&lt;/a&gt; app, what Martyn called the “twenty-first century version” of Data Studio found in many schools. It allows connection to onboard sensors and also Pasco equipment in the lab.&lt;/p&gt;
+
+&lt;p&gt;It was made clear that teachers should take care not to assume that their pupils are tech-savvy enough to know how to use all of the tools and interfaces without support and guidance.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Don’t lose the learning!” – Martyn Crawshaw&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Excellent stuff, as ever, with a lively Q &amp;amp; A at the end. I’m going to share this with my students.&lt;/p&gt;
+
+&lt;!--## Footnotes--&gt;
+</description>
+        <pubDate>Sun, 02 Aug 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/iop-clpl-smartphone-practicals/</link>
+        <guid isPermaLink="true">https://cullaloe.com/iop-clpl-smartphone-practicals/</guid>
+        
+        <category>Education</category>
+        
+        <category>Physics</category>
+        
+        <category>Practicals</category>
+        
+        <category>CPD</category>
         
         
       </item>
@@ -3259,7 +3259,7 @@ The goal for all data collection is to capture quality evidence that allows anal
 &lt;h2 id=&quot;next-steps-other-ways-to-learn-r&quot;&gt;Next steps: other ways to learn R&lt;/h2&gt;
 &lt;p&gt;I got totally overwhelmed with the rate of new concepts in this class, or perhaps the pace and style of delivery. I think, given the time I have to spend after each class going over the material in order to make sense of it, it is clear that this course is not right for me. I have decided to abandon it and follow other materials more appropriate to my purpose, which is to develop skills in data visualisation using R. Despite the title, this course is not doing that for me.&lt;/p&gt;
 
-&lt;p&gt;Having decided&lt;sup id=&quot;fnref:progression2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:progression2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to seek out other ways to learn how to R, I found that there are lots of self-directed learning resources out there, of course. An &lt;a href=&quot;https://www.datacamp.com/courses/free-introduction-to-r&quot;&gt;introduction to R&lt;/a&gt; course at DataCamp will be the new direction of travel down this rabbit hole for me.&lt;/p&gt;
+&lt;p&gt;Having decided&lt;sup id=&quot;fnref:progression2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:progression2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to seek out other ways to learn how to R, I found that there are lots of self-directed learning resources out there, of course. An &lt;a href=&quot;https://learn.datacamp.com/courses/free-introduction-to-r&quot;&gt;introduction to R&lt;/a&gt; course at DataCamp will be the new direction of travel down this rabbit hole for me.&lt;/p&gt;
 
 &lt;h2 id=&quot;notes-and-references&quot;&gt;Notes and references&lt;/h2&gt;
 
@@ -4002,103 +4002,6 @@ which is output as html:&lt;/p&gt;
       </item>
     
       <item>
-        <title>Securing mail using DKIM</title>
-        <description>&lt;p&gt;Over the weekend, as I was updating DNS tables for a client, I thought I’d sharpen up my server mail settings to make the mail service more robust. I’ve seen (unrelated to this) an increase in spam recently and it had been on my mind to do more to combat it. These notes set out broadly how I configure my mail server.&lt;/p&gt;
-
-&lt;h2 id=&quot;mail-server-settings&quot;&gt;Mail server settings&lt;/h2&gt;
-&lt;p&gt;The mail server I use is Postfix/Dovecot. Using the Plesk control interface on my VPS&lt;sup id=&quot;fnref:vps&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:vps&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, there are a number of settings needed to mitigate the scourge that is spam emails. From Tools &amp;amp; Settings, select Server-wide mail settings make these changes.&lt;/p&gt;
-
-&lt;h3 id=&quot;using-dns-blacklisting&quot;&gt;Using DNS Blacklisting&lt;/h3&gt;
-&lt;p&gt;The first thing to do is to switch on spam protection based on DNS blackhole lists such as &lt;a href=&quot;https://www.spamhaus.org/&quot;&gt;zen.spamhaus.org&lt;/a&gt;, &lt;a href=&quot;https://abuse.ch/&quot;&gt;spam.abuse.ch&lt;/a&gt; and &lt;a href=&quot;https://imp.ch/&quot;&gt;spamrbl.imp.ch&lt;/a&gt;. Also, when you do get spam in your inbox, report it immediately. This means just copying the message source&lt;sup id=&quot;fnref:notthat&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:notthat&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; into a form at somewhere like &lt;a href=&quot;https://www.spamcop.net/&quot;&gt;SpamCop.net&lt;/a&gt;, who will send abuse reports to the ISPs that allow the spammers access to the internet. What we hope is that these providers will shut them down, but some are repeat offenders: all of my recent reports have gone to &lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;CloudFlare&lt;/a&gt; who seem reluctant to combat internet abuse, perhaps because they are making money out of it.&lt;/p&gt;
-
-&lt;h2 id=&quot;spf&quot;&gt;SPF&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7208&quot;&gt;Sender Policy Framework&lt;/a&gt; is designed to allow domain admins to authorise the servers that are allowed to use their domain names. Receiving mail servers can check that authorisation by looking up the SPF record of the domain claimed in the “from” field of an email.&lt;/p&gt;
-
-&lt;p&gt;Within the Plesk panel for the mail server, under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SPF spam protection&lt;/code&gt;, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable SPF spam protection to check incoming mail&lt;/code&gt; and select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Only create Received-SPF headers, never block&lt;/code&gt; from the drop-down. Your domains should also have an SPF code in the DNS table. This acts like a return address on a snail-mail envelope. Servers can check the sender’s IP against this DNS record to check that it is allowed to send mail on behalf of the domain. This record identifies the version of SPF being used (always 1 at the moment), which records pertain and what policy should be applied to mail that fails to be verified when this record is checked by the receiving mail server. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a&lt;/code&gt; is a hard fail setting which advises rejection of mail that doesn’t match the record parameters. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~a&lt;/code&gt; is a soft fail, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+a&lt;/code&gt; is like leaving your keys in the front door. Use the hard fail setting.&lt;/p&gt;
-
-&lt;h2 id=&quot;dkim&quot;&gt;DKIM&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc6376&quot;&gt;DomainKeys Identified Mail (DKIM)&lt;/a&gt; is a system that allows the mail server to “certify” emails to assert their authenticity. This is achieved through a cryptographic signature and by querying the signer’s domain directly to retrieve a key. This requires another couple of entries in the DNS table to contain the keys (see table below for examples). Take care when entering your key that you do not inadvertently introduce spaces in the long key. They will invalidate your key.&lt;/p&gt;
-
-&lt;p&gt;To enable this on the VPS, in the server-wide mail settings interface in Plesk, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Verify incoming mail&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow signing outgoing mail&lt;/code&gt; under DKIM spam protection. In the panel for each subscription (domain), in the Mail Settings tab, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Use DKIM spam protection system to sign outgoing email messages&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;dmarc&quot;&gt;DMARC&lt;/h2&gt;
-&lt;p&gt;Bringing the measures together, with a DNS-based reporting mechanism that closes the loop, is &lt;a href=&quot;https://www.rfc-editor.org/info/rfc7489&quot;&gt;Domain-based Message Authentication, Reporting, and Conformance (DMARC)&lt;/a&gt;. This helps protect the domain from unauthorized use. It also requires a DNS TXT entry which identifies policy for handling non-aligned (mail that looks like it might be spam) emails, and a place to send reports about incidents. Setting up needs the policy to be passive, or “reporting only”, set by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p-none&lt;/code&gt; in the DNS record. Increasing levels of confidence in the deliverability of email from the server allows organisations to increase this policy to “quarantine”, or even “reject”. Email reports are sent for authentication failure (forensic) and summary information (aggregate) to the email addresses in the record.&lt;/p&gt;
-
-&lt;p&gt;If you want to send your DMARC reports to an address at a different domain, then that domain needs a DNS record to authorize the the reports:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reportingdomain.tld._report._dmarc TXT v=DMARC1&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;If the target domain for the reports is being used for several domains (as in my case), then you can specify a wildcard entry:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*._report._dmarc TXT v=DMARC1&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Within the Plesk server-wide mail settings panel, you can now check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable DMARC to check incoming mail&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;The final DNS aligns with the server settings to provide a more robust and spam-free&lt;sup id=&quot;fnref:orly&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:orly&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; mail experience. An example DNS set of mail-related TXT entries:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Host name&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Record type&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Address&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;@&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;v=spf1 +a +mx -all&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;_domainkey&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;o=-&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;default._domainkey&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;v=DKIM1;k=rsa; p=yourkeygoeshere&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;_dmarc&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;v=DMARC1; p=none; rua=mailto:aggregate@yourdomain.tld; ruf=mailto:forensics@yourdomain.tld; fo=1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&quot;https://mxtoolbox.com/&quot;&gt;mxtoolbox&lt;/a&gt; for providing a suite of extremely useful tools and information. Although there is &lt;a href=&quot;https://ietf.org/standards/rfcs/&quot;&gt;RFC&lt;/a&gt;, this would have been much harder to do without your help. Most of the DKIM verifiers out there don’t actually check the validity of the signature key: &lt;a href=&quot;https://www.dmarcanalyzer.com/&quot;&gt;DMARCAnalyzer&lt;/a&gt; does, thanks also to them for this service.&lt;/p&gt;
-
-&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
-
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:vps&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Virtual private server. Literally, a Dell server, in a rack, connected to the T1 backbone in London. Mine runs Centos, a variant of RedHat specifically designed for this kind of job. My ISP for the past 20 years has been &lt;a href=&quot;https://hostinguk.net/&quot;&gt;Hosting UK&lt;/a&gt;, run by Phil Parry, who set the business up in his garage. It’s now part of the Scottish IT business &lt;a href=&quot;https://www.iomart.com/&quot;&gt;IoMart&lt;/a&gt;. &lt;a href=&quot;#fnref:vps&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:notthat&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Not the body of the email. The DNS blacklisters need to see the contents of the email header, which reveals where it came from and how it was routed to your computer. Filter scores are also included here. On a mac, if you’re using Mail.app, just click in the body of the mail message and click cmd-alt-u to get a pop-up with the email message source. Cmd-a, cmd-c, and then paste it in the textbox on the spamcop form. &lt;a href=&quot;#fnref:notthat&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:orly&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Well, we will see how it goes. &lt;a href=&quot;#fnref:orly&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Mon, 01 Jun 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/securing-mail-with-dkim/</link>
-        <guid isPermaLink="true">https://cullaloe.com/securing-mail-with-dkim/</guid>
-        
-        <category>Plesk</category>
-        
-        <category>DNS</category>
-        
-        
-      </item>
-    
-      <item>
         <title>Virtual Physics Staffroom again</title>
         <description>&lt;p&gt;On the last two Fridays, I participated in two more of the IoP’s Virtual Physics Staffroom online 40-minute&lt;sup id=&quot;fnref:zoom&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:zoom&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Zoom meetings. On the 22nd May, the focus was on practicals and skills development, and the 29th saw a session focused on the pedagogy of blended learning.&lt;/p&gt;
 
@@ -4633,6 +4536,103 @@ There is nothing more important in realising that you are not alone just now.&lt
         <category>Remote teaching</category>
         
         <category>CPD</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Securing mail using DKIM</title>
+        <description>&lt;p&gt;Over the weekend, as I was updating DNS tables for a client, I thought I’d sharpen up my server mail settings to make the mail service more robust. I’ve seen (unrelated to this) an increase in spam recently and it had been on my mind to do more to combat it. These notes set out broadly how I configure my mail server.&lt;/p&gt;
+
+&lt;h2 id=&quot;mail-server-settings&quot;&gt;Mail server settings&lt;/h2&gt;
+&lt;p&gt;The mail server I use is Postfix/Dovecot. Using the Plesk control interface on my VPS&lt;sup id=&quot;fnref:vps&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:vps&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, there are a number of settings needed to mitigate the scourge that is spam emails. From Tools &amp;amp; Settings, select Server-wide mail settings make these changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;using-dns-blacklisting&quot;&gt;Using DNS Blacklisting&lt;/h3&gt;
+&lt;p&gt;The first thing to do is to switch on spam protection based on DNS blackhole lists such as &lt;a href=&quot;https://www.spamhaus.org/&quot;&gt;zen.spamhaus.org&lt;/a&gt;, &lt;a href=&quot;https://abuse.ch/&quot;&gt;spam.abuse.ch&lt;/a&gt; and &lt;a href=&quot;https://imp.ch/&quot;&gt;spamrbl.imp.ch&lt;/a&gt;. Also, when you do get spam in your inbox, report it immediately. This means just copying the message source&lt;sup id=&quot;fnref:notthat&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:notthat&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; into a form at somewhere like &lt;a href=&quot;https://www.spamcop.net/&quot;&gt;SpamCop.net&lt;/a&gt;, who will send abuse reports to the ISPs that allow the spammers access to the internet. What we hope is that these providers will shut them down, but some are repeat offenders: all of my recent reports have gone to &lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;CloudFlare&lt;/a&gt; who seem reluctant to combat internet abuse, perhaps because they are making money out of it.&lt;/p&gt;
+
+&lt;h2 id=&quot;spf&quot;&gt;SPF&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7208&quot;&gt;Sender Policy Framework&lt;/a&gt; is designed to allow domain admins to authorise the servers that are allowed to use their domain names. Receiving mail servers can check that authorisation by looking up the SPF record of the domain claimed in the “from” field of an email.&lt;/p&gt;
+
+&lt;p&gt;Within the Plesk panel for the mail server, under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SPF spam protection&lt;/code&gt;, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable SPF spam protection to check incoming mail&lt;/code&gt; and select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Only create Received-SPF headers, never block&lt;/code&gt; from the drop-down. Your domains should also have an SPF code in the DNS table. This acts like a return address on a snail-mail envelope. Servers can check the sender’s IP against this DNS record to check that it is allowed to send mail on behalf of the domain. This record identifies the version of SPF being used (always 1 at the moment), which records pertain and what policy should be applied to mail that fails to be verified when this record is checked by the receiving mail server. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a&lt;/code&gt; is a hard fail setting which advises rejection of mail that doesn’t match the record parameters. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~a&lt;/code&gt; is a soft fail, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+a&lt;/code&gt; is like leaving your keys in the front door. Use the hard fail setting.&lt;/p&gt;
+
+&lt;h2 id=&quot;dkim&quot;&gt;DKIM&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc6376&quot;&gt;DomainKeys Identified Mail (DKIM)&lt;/a&gt; is a system that allows the mail server to “certify” emails to assert their authenticity. This is achieved through a cryptographic signature and by querying the signer’s domain directly to retrieve a key. This requires another couple of entries in the DNS table to contain the keys (see table below for examples). Take care when entering your key that you do not inadvertently introduce spaces in the long key. They will invalidate your key.&lt;/p&gt;
+
+&lt;p&gt;To enable this on the VPS, in the server-wide mail settings interface in Plesk, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Verify incoming mail&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow signing outgoing mail&lt;/code&gt; under DKIM spam protection. In the panel for each subscription (domain), in the Mail Settings tab, check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Use DKIM spam protection system to sign outgoing email messages&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;dmarc&quot;&gt;DMARC&lt;/h2&gt;
+&lt;p&gt;Bringing the measures together, with a DNS-based reporting mechanism that closes the loop, is &lt;a href=&quot;https://www.rfc-editor.org/info/rfc7489&quot;&gt;Domain-based Message Authentication, Reporting, and Conformance (DMARC)&lt;/a&gt;. This helps protect the domain from unauthorized use. It also requires a DNS TXT entry which identifies policy for handling non-aligned (mail that looks like it might be spam) emails, and a place to send reports about incidents. Setting up needs the policy to be passive, or “reporting only”, set by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;p-none&lt;/code&gt; in the DNS record. Increasing levels of confidence in the deliverability of email from the server allows organisations to increase this policy to “quarantine”, or even “reject”. Email reports are sent for authentication failure (forensic) and summary information (aggregate) to the email addresses in the record.&lt;/p&gt;
+
+&lt;p&gt;If you want to send your DMARC reports to an address at a different domain, then that domain needs a DNS record to authorize the the reports:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;reportingdomain.tld._report._dmarc TXT v=DMARC1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If the target domain for the reports is being used for several domains (as in my case), then you can specify a wildcard entry:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*._report._dmarc TXT v=DMARC1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Within the Plesk server-wide mail settings panel, you can now check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enable DMARC to check incoming mail&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;The final DNS aligns with the server settings to provide a more robust and spam-free&lt;sup id=&quot;fnref:orly&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:orly&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; mail experience. An example DNS set of mail-related TXT entries:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Host name&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Record type&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Address&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;@&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;v=spf1 +a +mx -all&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;_domainkey&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;o=-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;default._domainkey&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;v=DKIM1;k=rsa; p=yourkeygoeshere&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;_dmarc&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;TXT&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;v=DMARC1; p=none; rua=mailto:aggregate@yourdomain.tld; ruf=mailto:forensics@yourdomain.tld; fo=1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://mxtoolbox.com/&quot;&gt;mxtoolbox&lt;/a&gt; for providing a suite of extremely useful tools and information. Although there is &lt;a href=&quot;https://ietf.org/standards/rfcs/&quot;&gt;RFC&lt;/a&gt;, this would have been much harder to do without your help. Most of the DKIM verifiers out there don’t actually check the validity of the signature key: &lt;a href=&quot;https://www.dmarcanalyzer.com/&quot;&gt;DMARCAnalyzer&lt;/a&gt; does, thanks also to them for this service.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:vps&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Virtual private server. Literally, a Dell server, in a rack, connected to the T1 backbone in London. Mine runs Centos, a variant of RedHat specifically designed for this kind of job. My ISP for the past 20 years has been &lt;a href=&quot;https://hostinguk.net/&quot;&gt;Hosting UK&lt;/a&gt;, run by Phil Parry, who set the business up in his garage. It’s now part of the Scottish IT business &lt;a href=&quot;https://www.iomart.com/&quot;&gt;IoMart&lt;/a&gt;. &lt;a href=&quot;#fnref:vps&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:notthat&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Not the body of the email. The DNS blacklisters need to see the contents of the email header, which reveals where it came from and how it was routed to your computer. Filter scores are also included here. On a mac, if you’re using Mail.app, just click in the body of the mail message and click cmd-alt-u to get a pop-up with the email message source. Cmd-a, cmd-c, and then paste it in the textbox on the spamcop form. &lt;a href=&quot;#fnref:notthat&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:orly&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Well, we will see how it goes. &lt;a href=&quot;#fnref:orly&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 02 May 2020 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/securing-mail-with-dkim/</link>
+        <guid isPermaLink="true">https://cullaloe.com/securing-mail-with-dkim/</guid>
+        
+        <category>Plesk</category>
+        
+        <category>DNS</category>
         
         
       </item>
