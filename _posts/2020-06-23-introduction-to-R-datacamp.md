@@ -14,7 +14,7 @@ tags:
 
 # permalink:
 ---
-Having abandoned the data visualisation course run by Edinburgh University, and wanting to gain some further competence in R, I took the [DataCamp "Introduction to R" course](https://learn.datacamp.com/courses/free-introduction-to-r). This course is written by [Jonathan Cornelissen](https://www.jonathancornelissen.com/), one of the founders of DataCamp and a man with seriously good credentials in R.
+Having abandoned the data visualisation course run by Edinburgh University, and wanting to gain some further competence in R, I took the [DataCamp "Introduction to R" course](https://datacamp.com/courses/free-introduction-to-r). This course is written by [Jonathan Cornelissen](https://www.jonathancornelissen.com/), one of the founders of DataCamp and a man with seriously good credentials in R.
 
 * table of contents
 {:toc}
@@ -96,7 +96,8 @@ The selection of elements can be conditional using boolean values in another vec
 
 > nums <- c(1:99)	# vector of the first 99 integers
 > fives <- nums %% 5
-> nums[fives == 0]	# all of those divisible by 5 [1]  5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95
+> nums[fives == 0]	# all of those divisible by 5
+ [1]  5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95
 ```
 
 In the last example above, ```fives == 0``` is a vector of boolean values. Used as a selector in the `nums` vector, only the `TRUE` elements are selected.
@@ -131,7 +132,14 @@ Arithmetic operators work element-wise on matrices.
 A **factor** is a data type used to store categorical variables. These are discrete variable which can only take a finite number of values (cf. continuous variables which can have any of an infinite set of values, like real numbers). `R` can make a vector of the categories from a vector of categorical values:
 
 ```r
-> birthdates <- c(12,4,13,23,31,16,1,9,12,4,8,24,27,25,24,25)> birthdates [1] 12  4 13 23 31 16  1  9 12  4  8 24 27 25 24 25> bd_factors <- factor(birthdates)> bd_factors [1] 12 4  13 23 31 16 1  9  12 4  8  24 27 25 24 25Levels: 1 4 8 9 12 13 16 23 24 25 27 31> 
+> birthdates <- c(12,4,13,23,31,16,1,9,12,4,8,24,27,25,24,25)
+> birthdates
+ [1] 12  4 13 23 31 16  1  9 12  4  8 24 27 25 24 25
+> bd_factors <- factor(birthdates)
+> bd_factors
+ [1] 12 4  13 23 31 16 1  9  12 4  8  24 27 25 24 25
+Levels: 1 4 8 9 12 13 16 23 24 25 27 31
+> 
 ```
 Such variables are **nominal** or **ordinal** according to whether they are just names, or if they can be ranked in some meaningful way. Ordinal factors are created with additional parameters, e.g., `order = TRUE` and `levels = c("low", "high")` and can be compared easily.
 
@@ -139,14 +147,34 @@ Such variables are **nominal** or **ordinal** according to whether they are just
 A **data frame** has the variables of a data set as columns and the observations as rows. A quick peek at the structure of a data frame is provided by `head()` and `tail()` functions, e.g.:
 
 ```r
-> head(mtcars)                   mpg cyl disp  hp drat    wt  qsec vs am gear carbMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+> head(mtcars)
+                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 >
 ```
 
 `mtcars` is one of the many data sets built into R. A list of them is obtained by calling `data()`. `str()` provides a look at the structure of a data set:
 
 ```r
-> str(mtcars)'data.frame':	32 obs. of  11 variables: $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ... $ cyl : num  6 6 4 6 8 6 8 4 4 6 ... $ disp: num  160 160 108 258 360 ... $ hp  : num  110 110 93 110 175 105 245 62 95 123 ... $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ... $ wt  : num  2.62 2.88 2.32 3.21 3.44 ... $ qsec: num  16.5 17 18.6 19.4 17 ... $ vs  : num  0 0 1 1 0 1 0 1 1 1 ... $ am  : num  1 1 1 0 0 0 0 0 0 0 ... $ gear: num  4 4 4 3 3 3 3 4 4 4 ... $ carb: num  4 4 1 1 2 1 4 2 2 4 ...> 
+> str(mtcars)
+'data.frame':	32 obs. of  11 variables:
+ $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+ $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+ $ disp: num  160 160 108 258 360 ...
+ $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+ $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+ $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+ $ qsec: num  16.5 17 18.6 19.4 17 ...
+ $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+ $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+ $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+ $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+> 
 ```
 Columns of a data frame are added one column vector at a time as a list of parameters in the function call `data.frame()`. Selecting a data point from row 32, column 2 is a matter of calling `df_bears[32,2]`. Note the order - *observation* (row) first, then *variable* (column). A whole observation (e.g. the tenth) is obtained by `df_bears[10,]`. The first 4 data points from the *paw_size* column are `df_bears[1:4,"paw_size"]`. The whole column vector is `df_bears$paw_size` (notice the dollar sign notation). **Subsets** can be made calling `subset(df_bears, paw_size < 4)`. Sorting can be achieved by making a vector of the data frame order, based upon the columns you are interested in:
 
@@ -155,7 +183,13 @@ Columns of a data frame are added one column vector at a time as a list of param
 > df_bears[a,]
 > 
 > mtcars[order(mtcars$disp),]
->                      mpg cyl  disp  hp drat    wt  qsec vs am gear carbToyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
+>                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Toyota Corolla      33.9   4  71.1  65 4.22 1.835 19.90  1  1    4    1
+Honda Civic         30.4   4  75.7  52 4.93 1.615 18.52  1  1    4    2
+Fiat 128            32.4   4  78.7  66 4.08 2.200 19.47  1  1    4    1
+Fiat X1-9           27.3   4  79.0  66 4.08 1.935 18.90  1  1    4    1
+Lotus Europa        30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
+Datsun 710          22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
 ...
 ```
 
