@@ -70,7 +70,8 @@ One emphasis today is that there are multiple ways of doing the same thing in R,
 Between this week's two classes, I had a quick look at the [Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/) and discovered a neat thing. Remember the funky assignment operator `<-` from the first class which had its funky keyboard shortcut `alt -`? Most programming languages I've used have a simple equals sign as the assignment operator and I was a bit baffled as to why super-sexy R should do something so weird as `<-`. Well, it turns out that in most contexts, `=` works in exactly the way you'd expect, so these are equivalent:
 
 ```R
-> x <- 99> x = 99
+> x <- 99
+> x = 99
 ```
 What's interesting about the R syntax, though, it that it can be reversed and it still works:
 
@@ -86,7 +87,7 @@ I'm sure that the case for this will become apparent eventually. One more way to
 ## Next steps: other ways to learn R
 I got totally overwhelmed with the rate of new concepts in this class, or perhaps the pace and style of delivery. I think, given the time I have to spend after each class going over the material in order to make sense of it, it is clear that this course is not right for me. I have decided to abandon it and follow other materials more appropriate to my purpose, which is to develop skills in data visualisation using R. Despite the title, this course is not doing that for me.
 
-Having decided[^progression2] to seek out other ways to learn how to R, I found that there are lots of self-directed learning resources out there, of course. An [introduction to R](https://learn.datacamp.com/courses/free-introduction-to-r) course at DataCamp will be the new direction of travel down this rabbit hole for me.
+Having decided[^progression2] to seek out other ways to learn how to R, I found that there are lots of self-directed learning resources out there, of course. An [introduction to R](https://www.datacamp.com/courses/free-introduction-to-r) course at DataCamp will be the new direction of travel down this rabbit hole for me.
 
 ## Notes and references
 [^progression]: I seem to be not the only one amongst the diminishing cohort (we're down to a dozen today (Monday), having started closer to 50) that is finding it hard to follow this course. Yes, it's interesting and cool, the different things you can do with R and geometries, but I am missing clarity, signposting, structure and other basic pedagogical features. 
