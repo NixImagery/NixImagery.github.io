@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Nov 2022 11:22:54 +0000</pubDate>
-    <lastBuildDate>Fri, 18 Nov 2022 11:22:54 +0000</lastBuildDate>
+    <pubDate>Sat, 19 Nov 2022 18:44:55 +0000</pubDate>
+    <lastBuildDate>Sat, 19 Nov 2022 18:44:55 +0000</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -95,8 +95,8 @@ The NY Times Wordle app asks if &quot;Something doesn&apos;t look right&quot;. T
 
 </description>
         <pubDate>Thu, 17 Nov 2022 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/wordle/</link>
-        <guid isPermaLink="true">https://cullaloe.com/wordle/</guid>
+        <link>https://cullaloe.com/wordle</link>
+        <guid isPermaLink="true">https://cullaloe.com/wordle</guid>
         
         <category>Markdown</category>
         
@@ -205,8 +205,8 @@ William Benjamin recognised the significance of time in his &lt;span class=&quot
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 09 Jun 2022 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/zettelkasten/</link>
-        <guid isPermaLink="true">https://cullaloe.com/zettelkasten/</guid>
+        <link>https://cullaloe.com/zettelkasten</link>
+        <guid isPermaLink="true">https://cullaloe.com/zettelkasten</guid>
         
         <category>Markdown</category>
         
@@ -386,8 +386,8 @@ William Benjamin recognised the significance of time in his &lt;span class=&quot
 &lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;bresson1999the&quot;&gt;Cartier-Bresson, Henri. 1999. &lt;i&gt;The Mind’s Eye : Writings on Photography and Photographers&lt;/i&gt;. New York, N.Y: Aperture.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/chicago-author-date-with-ibid/</link>
-        <guid isPermaLink="true">https://cullaloe.com/chicago-author-date-with-ibid/</guid>
+        <link>https://cullaloe.com/chicago-author-date-with-ibid</link>
+        <guid isPermaLink="true">https://cullaloe.com/chicago-author-date-with-ibid</guid>
         
         <category>CSL</category>
         
@@ -772,8 +772,8 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 &lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Atkinson2012&quot;&gt;Atkinson, Michael. 2012. “Literature Reviews.” In &lt;i&gt;Key Concepts in Sport and Exercise Research Methods&lt;/i&gt;, 1–245. https://doi.org/10.4135/9781446288092.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Mon, 22 Nov 2021 15:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/writing-lit-review/</link>
-        <guid isPermaLink="true">https://cullaloe.com/writing-lit-review/</guid>
+        <link>https://cullaloe.com/writing-lit-review</link>
+        <guid isPermaLink="true">https://cullaloe.com/writing-lit-review</guid>
         
         <category>PhD</category>
         
@@ -865,8 +865,8 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 10 Nov 2021 19:30:00 +0000</pubDate>
-        <link>https://cullaloe.com/survive-part-time-pgr/</link>
-        <guid isPermaLink="true">https://cullaloe.com/survive-part-time-pgr/</guid>
+        <link>https://cullaloe.com/survive-part-time-pgr</link>
+        <guid isPermaLink="true">https://cullaloe.com/survive-part-time-pgr</guid>
         
         <category>PhD</category>
         
@@ -908,8 +908,8 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 --&gt;
 </description>
         <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/libsmart-ii/</link>
-        <guid isPermaLink="true">https://cullaloe.com/libsmart-ii/</guid>
+        <link>https://cullaloe.com/libsmart-ii</link>
+        <guid isPermaLink="true">https://cullaloe.com/libsmart-ii</guid>
         
         <category>PhD</category>
         
@@ -1033,8 +1033,8 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 
 </description>
         <pubDate>Tue, 26 Oct 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/getting-started-pgr/</link>
-        <guid isPermaLink="true">https://cullaloe.com/getting-started-pgr/</guid>
+        <link>https://cullaloe.com/getting-started-pgr</link>
+        <guid isPermaLink="true">https://cullaloe.com/getting-started-pgr</guid>
         
         <category>PhD</category>
         
@@ -1154,8 +1154,8 @@ txt = txt.lower()
 &lt;p&gt;This was a very nice way to run through a tutorial notebook and learn a few tricks in python for text analysis, with support running in the background if I needed it. The format is powerful; it focuses you on the task within the time window allocated and helps you avoid distractions. Although it’s self-study (and as such relies on good quality materials in the first place), it’s OK to play a bit too, because there’s help at hand if you come unstuck. Well done, &lt;a href=&quot;https://www.cdcs.ed.ac.uk/training&quot;&gt;CDCS&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 12 Oct 2021 15:30:00 +0100</pubDate>
-        <link>https://cullaloe.com/cdcs-text-analysis/</link>
-        <guid isPermaLink="true">https://cullaloe.com/cdcs-text-analysis/</guid>
+        <link>https://cullaloe.com/cdcs-text-analysis</link>
+        <guid isPermaLink="true">https://cullaloe.com/cdcs-text-analysis</guid>
         
         <category>PhD</category>
         
@@ -1212,8 +1212,8 @@ txt = txt.lower()
 &lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;MeriamLibrary-CaliforniaStateUniversityChico2015&quot;&gt;Meriam Library - California State University Chico. 2015. “Evaluating Information – Applying the CRAAP Test,” 17. https://www.csuchico.edu/lins/handouts/eval_websites.pdf.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Sun, 26 Sep 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/libsmart-i/</link>
-        <guid isPermaLink="true">https://cullaloe.com/libsmart-i/</guid>
+        <link>https://cullaloe.com/libsmart-i</link>
+        <guid isPermaLink="true">https://cullaloe.com/libsmart-i</guid>
         
         <category>PhD</category>
         
@@ -1247,8 +1247,8 @@ txt = txt.lower()
 &lt;p&gt;Empty the trash and you’re free of it.&lt;/p&gt;
 </description>
         <pubDate>Sun, 22 Aug 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/onedrive/</link>
-        <guid isPermaLink="true">https://cullaloe.com/onedrive/</guid>
+        <link>https://cullaloe.com/onedrive</link>
+        <guid isPermaLink="true">https://cullaloe.com/onedrive</guid>
         
         <category>MacOS</category>
         
@@ -1287,8 +1287,8 @@ D	docs/yyyy/mm/dd/some-files.html
 
 </description>
         <pubDate>Sun, 08 Aug 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/new-terminal/</link>
-        <guid isPermaLink="true">https://cullaloe.com/new-terminal/</guid>
+        <link>https://cullaloe.com/new-terminal</link>
+        <guid isPermaLink="true">https://cullaloe.com/new-terminal</guid>
         
         <category>Jekyll</category>
         
@@ -1326,8 +1326,8 @@ D	docs/yyyy/mm/dd/some-files.html
 Original “India” image in the screenshot © &lt;a href=&quot;https://www.emily-teague.com/India&quot;&gt;Emily Teague&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 17 Jun 2021 10:30:00 +0100</pubDate>
-        <link>https://cullaloe.com/capture-one-seminar/</link>
-        <guid isPermaLink="true">https://cullaloe.com/capture-one-seminar/</guid>
+        <link>https://cullaloe.com/capture-one-seminar</link>
+        <guid isPermaLink="true">https://cullaloe.com/capture-one-seminar</guid>
         
         <category>CPD</category>
         
@@ -1459,8 +1459,8 @@ Original “India” image in the screenshot © &lt;a href=&quot;https://www.emi
 &lt;!--## Footnotes--&gt;
 </description>
         <pubDate>Wed, 26 May 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/reading-ical-r/</link>
-        <guid isPermaLink="true">https://cullaloe.com/reading-ical-r/</guid>
+        <link>https://cullaloe.com/reading-ical-r</link>
+        <guid isPermaLink="true">https://cullaloe.com/reading-ical-r</guid>
         
         <category>R</category>
         
@@ -1507,8 +1507,8 @@ Original “India” image in the screenshot © &lt;a href=&quot;https://www.emi
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 25 May 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/mental-health-training/</link>
-        <guid isPermaLink="true">https://cullaloe.com/mental-health-training/</guid>
+        <link>https://cullaloe.com/mental-health-training</link>
+        <guid isPermaLink="true">https://cullaloe.com/mental-health-training</guid>
         
         <category>CPD</category>
         
@@ -1584,8 +1584,8 @@ jekyll s &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docs
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Sun, 09 May 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/frankie/</link>
-        <guid isPermaLink="true">https://cullaloe.com/frankie/</guid>
+        <link>https://cullaloe.com/frankie</link>
+        <guid isPermaLink="true">https://cullaloe.com/frankie</guid>
         
         <category>Linux</category>
         
@@ -1653,8 +1653,8 @@ jekyll s &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docs
 &lt;p&gt;EDIT 29 March 21: added WoK and ERIC&lt;/p&gt;
 </description>
         <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/how-to-lit-review/</link>
-        <guid isPermaLink="true">https://cullaloe.com/how-to-lit-review/</guid>
+        <link>https://cullaloe.com/how-to-lit-review</link>
+        <guid isPermaLink="true">https://cullaloe.com/how-to-lit-review</guid>
         
         <category>CPD</category>
         
@@ -1693,8 +1693,8 @@ jekyll s &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; docs
 &lt;p&gt;Biesta, G. (2005) ‘Against learning. Reclaiming a language for education in an age of learning.’, Nordic Studies in Education = Nordisk Pedagogik, Nordic Educational Research Association (NERA), vol. 25, no. 1, pp. 54–66 [Online]. DOI: 10.1177/00187267030568002.&lt;/p&gt;
 </description>
         <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/seminar-educational-theory/</link>
-        <guid isPermaLink="true">https://cullaloe.com/seminar-educational-theory/</guid>
+        <link>https://cullaloe.com/seminar-educational-theory</link>
+        <guid isPermaLink="true">https://cullaloe.com/seminar-educational-theory</guid>
         
         <category>CPD</category>
         
@@ -1788,8 +1788,8 @@ Finished.
 &lt;p&gt;Notice a call to publish will also generate the site for you. If you’re in a hurry, just issue &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt; to get the default &lt;em&gt;Commit via Rake&lt;/em&gt; commit message.&lt;/p&gt;
 </description>
         <pubDate>Tue, 01 Dec 2020 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/jekyll-update-via-rake/</link>
-        <guid isPermaLink="true">https://cullaloe.com/jekyll-update-via-rake/</guid>
+        <link>https://cullaloe.com/jekyll-update-via-rake</link>
+        <guid isPermaLink="true">https://cullaloe.com/jekyll-update-via-rake</guid>
         
         <category>Jekyll</category>
         
@@ -1807,8 +1807,8 @@ Finished.
 &lt;p&gt;You can read my notes on the course, including a personal reflection, at the &lt;a href=&quot;https://cullaloe.com/DataEthicsMOOC/&quot;&gt;blog I kept on the MOOC&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/data-ethics-mooc/</link>
-        <guid isPermaLink="true">https://cullaloe.com/data-ethics-mooc/</guid>
+        <link>https://cullaloe.com/data-ethics-mooc</link>
+        <guid isPermaLink="true">https://cullaloe.com/data-ethics-mooc</guid>
         
         <category>CPD</category>
         
@@ -1850,8 +1850,8 @@ Finished.
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Nov 2020 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/x-party-group/</link>
-        <guid isPermaLink="true">https://cullaloe.com/x-party-group/</guid>
+        <link>https://cullaloe.com/x-party-group</link>
+        <guid isPermaLink="true">https://cullaloe.com/x-party-group</guid>
         
         <category>Education</category>
         
@@ -1935,8 +1935,8 @@ Finished.
 &lt;!--## Footnotes--&gt;
 </description>
         <pubDate>Fri, 11 Sep 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/video-cc-workflow-2/</link>
-        <guid isPermaLink="true">https://cullaloe.com/video-cc-workflow-2/</guid>
+        <link>https://cullaloe.com/video-cc-workflow-2</link>
+        <guid isPermaLink="true">https://cullaloe.com/video-cc-workflow-2</guid>
         
         <category>Education</category>
         
@@ -2071,8 +2071,8 @@ Everybody says how good my videos are.
 &lt;!--## Footnotes--&gt;
 </description>
         <pubDate>Sun, 30 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/video-cc-workflow/</link>
-        <guid isPermaLink="true">https://cullaloe.com/video-cc-workflow/</guid>
+        <link>https://cullaloe.com/video-cc-workflow</link>
+        <guid isPermaLink="true">https://cullaloe.com/video-cc-workflow</guid>
         
         <category>Education</category>
         
@@ -2192,8 +2192,8 @@ x,y,t1,t2
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 27 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/merge-2-col-csv/</link>
-        <guid isPermaLink="true">https://cullaloe.com/merge-2-col-csv/</guid>
+        <link>https://cullaloe.com/merge-2-col-csv</link>
+        <guid isPermaLink="true">https://cullaloe.com/merge-2-col-csv</guid>
         
         <category>Python</category>
         
@@ -2236,8 +2236,8 @@ x,y,t1,t2
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 11 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/practice-worth-sharing-asynchronous/</link>
-        <guid isPermaLink="true">https://cullaloe.com/practice-worth-sharing-asynchronous/</guid>
+        <link>https://cullaloe.com/practice-worth-sharing-asynchronous</link>
+        <guid isPermaLink="true">https://cullaloe.com/practice-worth-sharing-asynchronous</guid>
         
         <category>Remote teaching</category>
         
@@ -2268,8 +2268,8 @@ x,y,t1,t2
 &lt;p&gt;With the above edits (no server restart required), the calendar will embed quite happily. There is no need to implement the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Frame-Options&lt;/code&gt; HTTP header documented elsewhere as this is obsolete. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Security-Policy&lt;/code&gt; header delivered by the above fix from within NextCloud is enough.&lt;/p&gt;
 </description>
         <pubDate>Wed, 05 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/nextcloud-calendar-embed/</link>
-        <guid isPermaLink="true">https://cullaloe.com/nextcloud-calendar-embed/</guid>
+        <link>https://cullaloe.com/nextcloud-calendar-embed</link>
+        <guid isPermaLink="true">https://cullaloe.com/nextcloud-calendar-embed</guid>
         
         <category>Linux</category>
         
@@ -2304,8 +2304,8 @@ x,y,t1,t2
 &lt;!--## Footnotes--&gt;
 </description>
         <pubDate>Sun, 02 Aug 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/iop-clpl-smartphone-practicals/</link>
-        <guid isPermaLink="true">https://cullaloe.com/iop-clpl-smartphone-practicals/</guid>
+        <link>https://cullaloe.com/iop-clpl-smartphone-practicals</link>
+        <guid isPermaLink="true">https://cullaloe.com/iop-clpl-smartphone-practicals</guid>
         
         <category>Education</category>
         
@@ -2394,8 +2394,8 @@ x,y,t1,t2
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 10 Jul 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/intermediate-R-datacamp/</link>
-        <guid isPermaLink="true">https://cullaloe.com/intermediate-R-datacamp/</guid>
+        <link>https://cullaloe.com/intermediate-R-datacamp</link>
+        <guid isPermaLink="true">https://cullaloe.com/intermediate-R-datacamp</guid>
         
         <category>Data</category>
         
@@ -2596,8 +2596,8 @@ x,y,t1,t2
 &lt;p&gt;I am working with RStudio on a daily basis now as I am producing documentation and course materials with Bookdown. My intention is to further develop competence with R and R-markdown.&lt;/p&gt;
 </description>
         <pubDate>Wed, 08 Jul 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/introduction-to-R-datacamp/</link>
-        <guid isPermaLink="true">https://cullaloe.com/introduction-to-R-datacamp/</guid>
+        <link>https://cullaloe.com/introduction-to-R-datacamp</link>
+        <guid isPermaLink="true">https://cullaloe.com/introduction-to-R-datacamp</guid>
         
         <category>Data</category>
         
@@ -2663,8 +2663,8 @@ x,y,t1,t2
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 03 Jul 2020 09:10:00 +0100</pubDate>
-        <link>https://cullaloe.com/deploy-bookdown-site-plesk/</link>
-        <guid isPermaLink="true">https://cullaloe.com/deploy-bookdown-site-plesk/</guid>
+        <link>https://cullaloe.com/deploy-bookdown-site-plesk</link>
+        <guid isPermaLink="true">https://cullaloe.com/deploy-bookdown-site-plesk</guid>
         
         <category>R</category>
         
@@ -2924,8 +2924,8 @@ x,y,t1,t2
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 01 Jul 2020 05:08:00 +0100</pubDate>
-        <link>https://cullaloe.com/ms-onenote-academy/</link>
-        <guid isPermaLink="true">https://cullaloe.com/ms-onenote-academy/</guid>
+        <link>https://cullaloe.com/ms-onenote-academy</link>
+        <guid isPermaLink="true">https://cullaloe.com/ms-onenote-academy</guid>
         
         <category>Education</category>
         
@@ -2957,8 +2957,8 @@ x,y,t1,t2
 &lt;p&gt;I need to skill up. So, I’m going to pick up an MIE, starting with the &lt;a href=&quot;https://education.microsoft.com/en-us/learningPath/b6e3b5f2&quot;&gt;OneNote Teacher Academy&lt;/a&gt; course. I’m starting here because it’s where I need to begin in shifting content from the old VLE into something newer: not Learn, because it’s not fit for that particular purpose, but OneNote. Here we go.&lt;/p&gt;
 </description>
         <pubDate>Tue, 30 Jun 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/ms-tools-education/</link>
-        <guid isPermaLink="true">https://cullaloe.com/ms-tools-education/</guid>
+        <link>https://cullaloe.com/ms-tools-education</link>
+        <guid isPermaLink="true">https://cullaloe.com/ms-tools-education</guid>
         
         <category>Education</category>
         
@@ -3005,8 +3005,8 @@ x,y,t1,t2
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 29 Jun 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/introduction-to-mendeley-advisors/</link>
-        <guid isPermaLink="true">https://cullaloe.com/introduction-to-mendeley-advisors/</guid>
+        <link>https://cullaloe.com/introduction-to-mendeley-advisors</link>
+        <guid isPermaLink="true">https://cullaloe.com/introduction-to-mendeley-advisors</guid>
         
         <category>Mendeley</category>
         
@@ -3114,8 +3114,8 @@ x,y,t1,t2
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 19 Jun 2020 13:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/online-teaching-sfsg/</link>
-        <guid isPermaLink="true">https://cullaloe.com/online-teaching-sfsg/</guid>
+        <link>https://cullaloe.com/online-teaching-sfsg</link>
+        <guid isPermaLink="true">https://cullaloe.com/online-teaching-sfsg</guid>
         
         <category>Education</category>
         
@@ -3275,8 +3275,8 @@ The goal for all data collection is to capture quality evidence that allows anal
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 15 Jun 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/R-data-visualisation-course-3/</link>
-        <guid isPermaLink="true">https://cullaloe.com/R-data-visualisation-course-3/</guid>
+        <link>https://cullaloe.com/R-data-visualisation-course-3</link>
+        <guid isPermaLink="true">https://cullaloe.com/R-data-visualisation-course-3</guid>
         
         <category>Data</category>
         
@@ -3379,8 +3379,8 @@ which is output as html:&lt;/p&gt;
 &lt;p&gt;Notice this solution does not render \(\LaTeX\) from the server side. All of the rendering is done on the client using the javascript loaded in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head&lt;/code&gt; of the page. It just does it very, very quickly.&lt;/p&gt;
 </description>
         <pubDate>Thu, 11 Jun 2020 08:24:00 +0100</pubDate>
-        <link>https://cullaloe.com/render-latex-in-jekyll/</link>
-        <guid isPermaLink="true">https://cullaloe.com/render-latex-in-jekyll/</guid>
+        <link>https://cullaloe.com/render-latex-in-jekyll</link>
+        <guid isPermaLink="true">https://cullaloe.com/render-latex-in-jekyll</guid>
         
         <category>Jekyll</category>
         
@@ -3683,8 +3683,8 @@ which is output as html:&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 09 Jun 2020 15:08:00 +0100</pubDate>
-        <link>https://cullaloe.com/R-data-visualisation-course-2/</link>
-        <guid isPermaLink="true">https://cullaloe.com/R-data-visualisation-course-2/</guid>
+        <link>https://cullaloe.com/R-data-visualisation-course-2</link>
+        <guid isPermaLink="true">https://cullaloe.com/R-data-visualisation-course-2</guid>
         
         <category>Data</category>
         
@@ -3989,8 +3989,8 @@ which is output as html:&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 02 Jun 2020 20:32:00 +0100</pubDate>
-        <link>https://cullaloe.com/R-data-visualisation-course-1/</link>
-        <guid isPermaLink="true">https://cullaloe.com/R-data-visualisation-course-1/</guid>
+        <link>https://cullaloe.com/R-data-visualisation-course-1</link>
+        <guid isPermaLink="true">https://cullaloe.com/R-data-visualisation-course-1</guid>
         
         <category>Data</category>
         
@@ -4079,8 +4079,8 @@ which is output as html:&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 29 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/sustainable-blended-learning/</link>
-        <guid isPermaLink="true">https://cullaloe.com/sustainable-blended-learning/</guid>
+        <link>https://cullaloe.com/sustainable-blended-learning</link>
+        <guid isPermaLink="true">https://cullaloe.com/sustainable-blended-learning</guid>
         
         <category>Physics</category>
         
@@ -4117,8 +4117,8 @@ which is output as html:&lt;/p&gt;
 &lt;p&gt;Hieggelke, C. J. et al. (2013) &lt;a href=&quot;https://www.amazon.co.uk/TIPERs-Sensemaking-Introductory-Educational-Innovation/dp/0132854589&quot;&gt;TIPERs : Sensemaking Tasks for Introductory Physics&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/sserc-diagnostic-questioning/</link>
-        <guid isPermaLink="true">https://cullaloe.com/sserc-diagnostic-questioning/</guid>
+        <link>https://cullaloe.com/sserc-diagnostic-questioning</link>
+        <guid isPermaLink="true">https://cullaloe.com/sserc-diagnostic-questioning</guid>
         
         <category>Education</category>
         
@@ -4196,8 +4196,8 @@ which is output as html:&lt;/p&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 20 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/mh-children-during-lockdown/</link>
-        <guid isPermaLink="true">https://cullaloe.com/mh-children-during-lockdown/</guid>
+        <link>https://cullaloe.com/mh-children-during-lockdown</link>
+        <guid isPermaLink="true">https://cullaloe.com/mh-children-during-lockdown</guid>
         
         <category>Education</category>
         
@@ -4296,8 +4296,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 18 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/online-teaching-more/</link>
-        <guid isPermaLink="true">https://cullaloe.com/online-teaching-more/</guid>
+        <link>https://cullaloe.com/online-teaching-more</link>
+        <guid isPermaLink="true">https://cullaloe.com/online-teaching-more</guid>
         
         <category>Education</category>
         
@@ -4417,8 +4417,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 14 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/take-your-teaching-online-ou-course/</link>
-        <guid isPermaLink="true">https://cullaloe.com/take-your-teaching-online-ou-course/</guid>
+        <link>https://cullaloe.com/take-your-teaching-online-ou-course</link>
+        <guid isPermaLink="true">https://cullaloe.com/take-your-teaching-online-ou-course</guid>
         
         <category>Education</category>
         
@@ -4489,8 +4489,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;p&gt;This has been just a couple of hours of reflection on my developing understanding of taking my teaching online. There are many people with much more experience who are also sharing opportunities and ideas, such as &lt;a href=&quot;http://heppell.net/lol/&quot;&gt;Stephen Heppell&lt;/a&gt;, and my colleagues in the &lt;a href=&quot;https://www.de.ed.ac.uk/&quot;&gt;Centre for Research into Digital Education&lt;/a&gt;. Share your own thoughts and experiences, so we can all do this well.&lt;/p&gt;
 </description>
         <pubDate>Wed, 13 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/online-teaching/</link>
-        <guid isPermaLink="true">https://cullaloe.com/online-teaching/</guid>
+        <link>https://cullaloe.com/online-teaching</link>
+        <guid isPermaLink="true">https://cullaloe.com/online-teaching</guid>
         
         <category>Education</category>
         
@@ -4528,8 +4528,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;p&gt;The Moray House Online seminar series continues next week. You can find details &lt;a href=&quot;https://www.eventbrite.co.uk/o/moray-house-school-of-education-amp-sport-30195624068&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/mh-supporting-family-learning-during-lockdown/</link>
-        <guid isPermaLink="true">https://cullaloe.com/mh-supporting-family-learning-during-lockdown/</guid>
+        <link>https://cullaloe.com/mh-supporting-family-learning-during-lockdown</link>
+        <guid isPermaLink="true">https://cullaloe.com/mh-supporting-family-learning-during-lockdown</guid>
         
         <category>Education</category>
         
@@ -4627,8 +4627,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 02 May 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/securing-mail-with-dkim/</link>
-        <guid isPermaLink="true">https://cullaloe.com/securing-mail-with-dkim/</guid>
+        <link>https://cullaloe.com/securing-mail-with-dkim</link>
+        <guid isPermaLink="true">https://cullaloe.com/securing-mail-with-dkim</guid>
         
         <category>Plesk</category>
         
@@ -4662,8 +4662,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;p&gt;Great seminar. We are likely to emerge from COVID-19 measures with a new sensibility towards each other, including to our young people, and I wonder if this isn’t a good thing.&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Apr 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/mh-mental-health-during-lockdown/</link>
-        <guid isPermaLink="true">https://cullaloe.com/mh-mental-health-during-lockdown/</guid>
+        <link>https://cullaloe.com/mh-mental-health-during-lockdown</link>
+        <guid isPermaLink="true">https://cullaloe.com/mh-mental-health-during-lockdown</guid>
         
         <category>Education</category>
         
@@ -4694,8 +4694,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 24 Apr 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/virtual-physics-staffroom/</link>
-        <guid isPermaLink="true">https://cullaloe.com/virtual-physics-staffroom/</guid>
+        <link>https://cullaloe.com/virtual-physics-staffroom</link>
+        <guid isPermaLink="true">https://cullaloe.com/virtual-physics-staffroom</guid>
         
         <category>Physics</category>
         
@@ -4725,8 +4725,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;p&gt;As for the RSA, well, make your own mind up. I read the magazines, listened to the podcasts, and even went to some of the meetings in the days when one could. They left me at best, feeling no different, and at worst, a little foolish for having been flattered out of my membership fee to support other people’s agendas.&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Apr 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/hail-fellow/</link>
-        <guid isPermaLink="true">https://cullaloe.com/hail-fellow/</guid>
+        <link>https://cullaloe.com/hail-fellow</link>
+        <guid isPermaLink="true">https://cullaloe.com/hail-fellow</guid>
         
         <category>Postnominals</category>
         
@@ -4748,8 +4748,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;p&gt;I have asked Judy to consider in future sessions, addressing the question of dealing with inclusion in online classrooms. I find differences in confidence seem to be brought more sharply  into contrast within a group of learners when within an online space than in a physical classroom.&lt;/p&gt;
 </description>
         <pubDate>Wed, 22 Apr 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/mh-online/</link>
-        <guid isPermaLink="true">https://cullaloe.com/mh-online/</guid>
+        <link>https://cullaloe.com/mh-online</link>
+        <guid isPermaLink="true">https://cullaloe.com/mh-online</guid>
         
         <category>Education</category>
         
@@ -4771,8 +4771,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;p&gt;This is a screenshot of &lt;a href=&quot;https://www.freecodecamp.org/certification/cullaloe/responsive-web-design&quot;&gt;my certificate&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 31 Mar 2020 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/web-design-cpd/</link>
-        <guid isPermaLink="true">https://cullaloe.com/web-design-cpd/</guid>
+        <link>https://cullaloe.com/web-design-cpd</link>
+        <guid isPermaLink="true">https://cullaloe.com/web-design-cpd</guid>
         
         <category>HTML</category>
         
@@ -4809,8 +4809,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;p&gt;Thank you, Zoey.&lt;/p&gt;
 </description>
         <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/fix-corrupt-moodle/</link>
-        <guid isPermaLink="true">https://cullaloe.com/fix-corrupt-moodle/</guid>
+        <link>https://cullaloe.com/fix-corrupt-moodle</link>
+        <guid isPermaLink="true">https://cullaloe.com/fix-corrupt-moodle</guid>
         
         <category>Moodle</category>
         
@@ -4863,8 +4863,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 
 </description>
         <pubDate>Thu, 19 Mar 2020 15:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/remote-teaching/</link>
-        <guid isPermaLink="true">https://cullaloe.com/remote-teaching/</guid>
+        <link>https://cullaloe.com/remote-teaching</link>
+        <guid isPermaLink="true">https://cullaloe.com/remote-teaching</guid>
         
         <category>Education</category>
         
@@ -4931,8 +4931,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;/table&gt;
 </description>
         <pubDate>Thu, 06 Feb 2020 13:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/lrps/</link>
-        <guid isPermaLink="true">https://cullaloe.com/lrps/</guid>
+        <link>https://cullaloe.com/lrps</link>
+        <guid isPermaLink="true">https://cullaloe.com/lrps</guid>
         
         <category>Photography</category>
         
@@ -4953,8 +4953,8 @@ There is nothing more important in realising that you are not alone just now.&lt
 &lt;p&gt;“Poppies” image © 2019. A quick re-edit using the new program.&lt;/p&gt;
 </description>
         <pubDate>Thu, 19 Dec 2019 16:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/capture-one-webinar/</link>
-        <guid isPermaLink="true">https://cullaloe.com/capture-one-webinar/</guid>
+        <link>https://cullaloe.com/capture-one-webinar</link>
+        <guid isPermaLink="true">https://cullaloe.com/capture-one-webinar</guid>
         
         <category>CPD</category>
         
@@ -4988,8 +4988,8 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 14 Dec 2019 18:40:00 +0000</pubDate>
-        <link>https://cullaloe.com/backup-a-vps/</link>
-        <guid isPermaLink="true">https://cullaloe.com/backup-a-vps/</guid>
+        <link>https://cullaloe.com/backup-a-vps</link>
+        <guid isPermaLink="true">https://cullaloe.com/backup-a-vps</guid>
         
         <category>Linux</category>
         
@@ -5062,8 +5062,8 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 13 Dec 2019 23:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/futures-conference/</link>
-        <guid isPermaLink="true">https://cullaloe.com/futures-conference/</guid>
+        <link>https://cullaloe.com/futures-conference</link>
+        <guid isPermaLink="true">https://cullaloe.com/futures-conference</guid>
         
         <category>CPD</category>
         
@@ -5113,8 +5113,8 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 06 Dec 2019 16:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/SSERC-conference/</link>
-        <guid isPermaLink="true">https://cullaloe.com/SSERC-conference/</guid>
+        <link>https://cullaloe.com/SSERC-conference</link>
+        <guid isPermaLink="true">https://cullaloe.com/SSERC-conference</guid>
         
         <category>CPD</category>
         
@@ -5140,8 +5140,8 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
 &lt;p&gt;Updating the site just requires &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ git pull&lt;/code&gt; from the repository folder on the web server. Depending on how you are logged in to the server, you may need to change the folder permissions so Apache can serve the pages and find the css, etc.&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/deploy-jekyll-site-from-github/</link>
-        <guid isPermaLink="true">https://cullaloe.com/deploy-jekyll-site-from-github/</guid>
+        <link>https://cullaloe.com/deploy-jekyll-site-from-github</link>
+        <guid isPermaLink="true">https://cullaloe.com/deploy-jekyll-site-from-github</guid>
         
         <category>Jekyll</category>
         
@@ -5184,8 +5184,8 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 05 Nov 2019 16:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/IDL-planning/</link>
-        <guid isPermaLink="true">https://cullaloe.com/IDL-planning/</guid>
+        <link>https://cullaloe.com/IDL-planning</link>
+        <guid isPermaLink="true">https://cullaloe.com/IDL-planning</guid>
         
         <category>Education</category>
         
@@ -5213,8 +5213,8 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
 &lt;p&gt;There’s a useful thread with more details on possible causes over at &lt;a href=&quot;http://hints.macworld.com/article.php?story=20060308010111601&quot;&gt;MacWorld&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Fri, 25 Oct 2019 08:55:00 +0100</pubDate>
-        <link>https://cullaloe.com/osx-finder-stuck-in-loop/</link>
-        <guid isPermaLink="true">https://cullaloe.com/osx-finder-stuck-in-loop/</guid>
+        <link>https://cullaloe.com/osx-finder-stuck-in-loop</link>
+        <guid isPermaLink="true">https://cullaloe.com/osx-finder-stuck-in-loop</guid>
         
         <category>OSX</category>
         
@@ -5232,8 +5232,8 @@ rsync &lt;span class=&quot;nt&quot;&gt;-avz&lt;/span&gt; user@server.tld:/path/t
 &lt;p&gt;Once again, I am grateful to the responses over at &lt;a href=&quot;https://stackoverflow.com/questions/25277457/google-chrome-redirecting-localhost-to-https&quot;&gt;Stack Overflow&lt;/a&gt;. If this doesn’t fix your problem then that’s the next place you should look.&lt;/p&gt;
 </description>
         <pubDate>Sat, 12 Oct 2019 20:55:00 +0100</pubDate>
-        <link>https://cullaloe.com/chrome-force-localhost-http/</link>
-        <guid isPermaLink="true">https://cullaloe.com/chrome-force-localhost-http/</guid>
+        <link>https://cullaloe.com/chrome-force-localhost-http</link>
+        <guid isPermaLink="true">https://cullaloe.com/chrome-force-localhost-http</guid>
         
         <category>Chrome</category>
         
@@ -5257,8 +5257,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;I am grateful to the contributors on &lt;a href=&quot;https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a&quot;&gt;Stack Exchange&lt;/a&gt; for the solution to this problem.&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 Oct 2019 14:11:00 +0100</pubDate>
-        <link>https://cullaloe.com/invalid-active-developer-path/</link>
-        <guid isPermaLink="true">https://cullaloe.com/invalid-active-developer-path/</guid>
+        <link>https://cullaloe.com/invalid-active-developer-path</link>
+        <guid isPermaLink="true">https://cullaloe.com/invalid-active-developer-path</guid>
         
         <category>OSX</category>
         
@@ -5312,8 +5312,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;If you really have to, change the output format from pdf to pptx and remove &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-t beamer&lt;/code&gt; from the command. The output is a bit funky, but will give you a starting point for editing and formatting in PowerPoint if that’s what you need.&lt;/p&gt;
 </description>
         <pubDate>Sun, 22 Sep 2019 13:38:00 +0100</pubDate>
-        <link>https://cullaloe.com/presentation-in-markdown/</link>
-        <guid isPermaLink="true">https://cullaloe.com/presentation-in-markdown/</guid>
+        <link>https://cullaloe.com/presentation-in-markdown</link>
+        <guid isPermaLink="true">https://cullaloe.com/presentation-in-markdown</guid>
         
         <category>Markdown</category>
         
@@ -5362,8 +5362,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 31 Aug 2019 17:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/arch-linux-on-osx/</link>
-        <guid isPermaLink="true">https://cullaloe.com/arch-linux-on-osx/</guid>
+        <link>https://cullaloe.com/arch-linux-on-osx</link>
+        <guid isPermaLink="true">https://cullaloe.com/arch-linux-on-osx</guid>
         
         <category>OSX</category>
         
@@ -5381,8 +5381,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;The laptop had had its old Windows OS replaced by the student’s dad by Arch Linux. Not my first choice for a day to day operating system but the student’s dad had done a great job in setting it up with all the apps she needed, and apart from the wireless connection, everything was working sweetly. A classic case for a cheap and sustainable computing solution!&lt;/p&gt;
 </description>
         <pubDate>Thu, 22 Aug 2019 18:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/connecting-to-eduroam-arch/</link>
-        <guid isPermaLink="true">https://cullaloe.com/connecting-to-eduroam-arch/</guid>
+        <link>https://cullaloe.com/connecting-to-eduroam-arch</link>
+        <guid isPermaLink="true">https://cullaloe.com/connecting-to-eduroam-arch</guid>
         
         <category>Linux</category>
         
@@ -5420,8 +5420,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;As of July 2019, I have rejected these ideas as I begin to recognize that perhaps that which I peddle is Snake Oil, or at least, not without serious faults. This is not to say that I reject the importance of the social dimension in certain learning spaces, just that it is neither necessary nor sufficient for learning.&lt;/p&gt;
 </description>
         <pubDate>Fri, 19 Jul 2019 18:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/phd-workflow/</link>
-        <guid isPermaLink="true">https://cullaloe.com/phd-workflow/</guid>
+        <link>https://cullaloe.com/phd-workflow</link>
+        <guid isPermaLink="true">https://cullaloe.com/phd-workflow</guid>
         
         <category>Markdown</category>
         
@@ -5443,8 +5443,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;&lt;img src=&quot;/assets/img/IMG_8123-sm.png&quot; alt=&quot;screen grab&quot; /&gt; &lt;img src=&quot;/assets/img/IMG_8124.PNG&quot; alt=&quot;screen grab&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 29 Jun 2019 15:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/data-error/</link>
-        <guid isPermaLink="true">https://cullaloe.com/data-error/</guid>
+        <link>https://cullaloe.com/data-error</link>
+        <guid isPermaLink="true">https://cullaloe.com/data-error</guid>
         
         <category>Analytics</category>
         
@@ -5472,8 +5472,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;/div&gt;
 </description>
         <pubDate>Sun, 23 Jun 2019 15:42:00 +0100</pubDate>
-        <link>https://cullaloe.com/nextcloud-update/</link>
-        <guid isPermaLink="true">https://cullaloe.com/nextcloud-update/</guid>
+        <link>https://cullaloe.com/nextcloud-update</link>
+        <guid isPermaLink="true">https://cullaloe.com/nextcloud-update</guid>
         
         <category>Linux</category>
         
@@ -5491,8 +5491,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;If you want to get in touch, by all means use the channel links in the sidebar, or add a comment below.&lt;/p&gt;
 </description>
         <pubDate>Sun, 23 Jun 2019 15:42:00 +0100</pubDate>
-        <link>https://cullaloe.com/technical-blog/</link>
-        <guid isPermaLink="true">https://cullaloe.com/technical-blog/</guid>
+        <link>https://cullaloe.com/technical-blog</link>
+        <guid isPermaLink="true">https://cullaloe.com/technical-blog</guid>
         
         <category>Media</category>
         
@@ -5508,8 +5508,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;Don’t forget to connect to your &lt;a href=&quot;https://protonvpn.com/&quot;&gt;VPN&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sat, 16 Feb 2019 13:48:44 +0000</pubDate>
-        <link>https://cullaloe.com/a-problem-occurred-the-web-page-couldnt-be-loaded/</link>
-        <guid isPermaLink="true">https://cullaloe.com/a-problem-occurred-the-web-page-couldnt-be-loaded/</guid>
+        <link>https://cullaloe.com/a-problem-occurred-the-web-page-couldnt-be-loaded</link>
+        <guid isPermaLink="true">https://cullaloe.com/a-problem-occurred-the-web-page-couldnt-be-loaded</guid>
         
         <category>OSX</category>
         
@@ -5534,8 +5534,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 14 Feb 2019 15:58:21 +0000</pubDate>
-        <link>https://cullaloe.com/wordpress-editor-stuck-in-code/</link>
-        <guid isPermaLink="true">https://cullaloe.com/wordpress-editor-stuck-in-code/</guid>
+        <link>https://cullaloe.com/wordpress-editor-stuck-in-code</link>
+        <guid isPermaLink="true">https://cullaloe.com/wordpress-editor-stuck-in-code</guid>
         
         <category>WordPress</category>
         
@@ -5570,8 +5570,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 14 Aug 2018 10:27:57 +0100</pubDate>
-        <link>https://cullaloe.com/rename-image-files-in-folders/</link>
-        <guid isPermaLink="true">https://cullaloe.com/rename-image-files-in-folders/</guid>
+        <link>https://cullaloe.com/rename-image-files-in-folders</link>
+        <guid isPermaLink="true">https://cullaloe.com/rename-image-files-in-folders</guid>
         
         <category>Python</category>
         
@@ -5587,8 +5587,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;There is a security risk associated with this and users should assess the risk to their servers before implementing this workaround.&lt;/p&gt;
 </description>
         <pubDate>Tue, 07 Aug 2018 10:15:02 +0100</pubDate>
-        <link>https://cullaloe.com/grav-error-403-in-admin-panel/</link>
-        <guid isPermaLink="true">https://cullaloe.com/grav-error-403-in-admin-panel/</guid>
+        <link>https://cullaloe.com/grav-error-403-in-admin-panel</link>
+        <guid isPermaLink="true">https://cullaloe.com/grav-error-403-in-admin-panel</guid>
         
         <category>Software</category>
         
@@ -5641,8 +5641,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;Bring on the AI revolution! Technology is no threat to us.&lt;/p&gt;
 </description>
         <pubDate>Sat, 09 Jun 2018 21:14:42 +0100</pubDate>
-        <link>https://cullaloe.com/tv-on-demand/</link>
-        <guid isPermaLink="true">https://cullaloe.com/tv-on-demand/</guid>
+        <link>https://cullaloe.com/tv-on-demand</link>
+        <guid isPermaLink="true">https://cullaloe.com/tv-on-demand</guid>
         
         <category>Media</category>
         
@@ -5658,8 +5658,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;There’s an interview with Chris Shallue, the lead author on the paper on the &lt;a href=&quot;https://twimlai.com/twiml-talk-117-discovering-exoplanets-deep-learning-chris-shallue/&quot;&gt;TWIMLAI podcast&lt;/a&gt; which makes interesting listening for anyone interested in machine learning, AI or exoplanetary research.&lt;/p&gt;
 </description>
         <pubDate>Sun, 11 Mar 2018 11:34:38 +0000</pubDate>
-        <link>https://cullaloe.com/google-research-releases-exoplanet-discovery-ml-code/</link>
-        <guid isPermaLink="true">https://cullaloe.com/google-research-releases-exoplanet-discovery-ml-code/</guid>
+        <link>https://cullaloe.com/google-research-releases-exoplanet-discovery-ml-code</link>
+        <guid isPermaLink="true">https://cullaloe.com/google-research-releases-exoplanet-discovery-ml-code</guid>
         
         <category>AI</category>
         
@@ -5679,8 +5679,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;Shame. This whole internet thing seemed like a good idea when it was new.&lt;/p&gt;
 </description>
         <pubDate>Fri, 24 Nov 2017 23:21:53 +0000</pubDate>
-        <link>https://cullaloe.com/open-badges-closed/</link>
-        <guid isPermaLink="true">https://cullaloe.com/open-badges-closed/</guid>
+        <link>https://cullaloe.com/open-badges-closed</link>
+        <guid isPermaLink="true">https://cullaloe.com/open-badges-closed</guid>
         
         <category>Moodle</category>
         
@@ -5694,8 +5694,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;What ticks me off is that I have already bought and paid for this software. It makes me even more determined to move to open source.&lt;/p&gt;
 </description>
         <pubDate>Fri, 24 Nov 2017 16:05:03 +0000</pubDate>
-        <link>https://cullaloe.com/open-source-1-microsoft-0-own-goal/</link>
-        <guid isPermaLink="true">https://cullaloe.com/open-source-1-microsoft-0-own-goal/</guid>
+        <link>https://cullaloe.com/open-source-1-microsoft-0-own-goal</link>
+        <guid isPermaLink="true">https://cullaloe.com/open-source-1-microsoft-0-own-goal</guid>
         
         <category>Software</category>
         
@@ -5707,8 +5707,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
         <description>&lt;p&gt;I picked up a link to a &lt;a href=&quot;https://www.codeschool.com/courses/try-git&quot;&gt;free online course&lt;/a&gt; from a recent &lt;a href=&quot;https://www.linuxvoice.com/podcast-season-5-episode-17/&quot;&gt;Linux Voice&lt;/a&gt; podcast. I tried the course and wasn’t really impressed with it. The interface is nice, with an embedded virtual terminal to let you practice typing in the commands but the pedagogy is pretty weak. There’s nothing in the presentation that indicates that the designers understand how to construct understanding: all this lovely bit of code is doing is rehearsing a list of commands (and there’s even a click-once shortcut if you can’t be bothered actually typing). It’s more of a checklist than a course. It would be easy to turn it into a really effective bit of online learning with the addition of some better structure and graphics, and maybe a little assessment for learning. A shame, really, as it is clearly a loss leader to sell the Code School itself: I am in the market for some good quality online learning in their area, but I’m not likely to look any further at their catalogue.&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Nov 2017 21:52:07 +0000</pubDate>
-        <link>https://cullaloe.com/trygit-its-the-teach-not-the-tech/</link>
-        <guid isPermaLink="true">https://cullaloe.com/trygit-its-the-teach-not-the-tech/</guid>
+        <link>https://cullaloe.com/trygit-its-the-teach-not-the-tech</link>
+        <guid isPermaLink="true">https://cullaloe.com/trygit-its-the-teach-not-the-tech</guid>
         
         <category>Linux</category>
         
@@ -5735,8 +5735,8 @@ xcode-select: note: &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;reques
 &lt;p&gt;What this server now provides is an independent calendar service, contacts, and secure file storage, at no additional cost and under my own secure control.&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 Oct 2017 21:12:09 +0000</pubDate>
-        <link>https://cullaloe.com/owncloud-installation-on-centos-7/</link>
-        <guid isPermaLink="true">https://cullaloe.com/owncloud-installation-on-centos-7/</guid>
+        <link>https://cullaloe.com/owncloud-installation-on-centos-7</link>
+        <guid isPermaLink="true">https://cullaloe.com/owncloud-installation-on-centos-7</guid>
         
         <category>Linux</category>
         

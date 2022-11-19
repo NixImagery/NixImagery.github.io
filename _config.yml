@@ -19,10 +19,10 @@ plugins:
 mermaid:
   src: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
 
-permalink: ':title/'
+permalink: '/:title'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cullaloe.com" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: cullaloe #if your site has a twitter account, enter it here
+site-twitter: Niximagery #if your site has a twitter account, enter it here
 
 scholar:
   style: /Users/v1nhood/Library/CloudStorage/Dropbox/styles/chicago-author-date-with-ibid.csl
@@ -38,12 +38,13 @@ author: Nick Hood # add your name
 author-img: nick-hood.jpg # add your photo
 about-author: Tech, tales and imagery # add description
 about-page: about
-# social-twitter: cullaloe # add your Twitter handle
 social-orcid: 0000-0001-7891-9736
 # social-facebook: Cullaloe # add your Facebook handle
 social-github: NixImagery # add your Github handle
 social-instagram: NixImagery # add your Insta handle
-social-email: nick@cullaloe.com # add your Email address
+social-mastodon: mastodon.scot/@NixImagery
+social-twitter: NixImagery # add your Twitter handle
+# social-email: nick@cullaloe.com # add your Email address
 
 # Disqus
 discus-identifier: cullaloe-gh # add your discus identifier
