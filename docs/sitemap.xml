@@ -5,8 +5,8 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 19 Nov 2022 18:44:55 +0000</pubDate>
-    <lastBuildDate>Sat, 19 Nov 2022 18:44:55 +0000</lastBuildDate>
+    <pubDate>Sun, 20 Nov 2022 13:56:02 +0000</pubDate>
+    <lastBuildDate>Sun, 20 Nov 2022 13:56:02 +0000</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -2320,7 +2320,7 @@ x,y,t1,t2
     
       <item>
         <title>Datacamp course - intermediate R</title>
-        <description>&lt;p&gt;Continuing my journey into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;, the next course in the R programming track at DataCamp is &lt;a href=&quot;https://campus.datacamp.com/courses/intermediate-r&quot;&gt;Intermediate R&lt;/a&gt;. This course is presented by &lt;a href=&quot;https://www.datacamp.com/instructors/filipsch&quot;&gt;Filip Schouwenaars&lt;/a&gt;. It teaches language syntax and programming conventions, building on &lt;a href=&quot;/introduction-to-R-datacamp&quot;&gt;the last course&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;Continuing my journey into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;, the next course in the R programming track at DataCamp is Intermediate R. This course is presented by Filip Schouwenaars. It teaches language syntax and programming conventions, building on &lt;a href=&quot;/introduction-to-R-datacamp&quot;&gt;the last course&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#conditionals-and-control-flow&quot; id=&quot;markdown-toc-conditionals-and-control-flow&quot;&gt;Conditionals and Control Flow&lt;/a&gt;    &lt;ul&gt;
@@ -2408,7 +2408,7 @@ x,y,t1,t2
     
       <item>
         <title>Datacamp course - introduction to R</title>
-        <description>&lt;p&gt;Having abandoned the data visualisation course run by Edinburgh University, and wanting to gain some further competence in R, I took the &lt;a href=&quot;https://datacamp.com/courses/free-introduction-to-r&quot;&gt;DataCamp “Introduction to R” course&lt;/a&gt;. This course is written by &lt;a href=&quot;https://www.jonathancornelissen.com/&quot;&gt;Jonathan Cornelissen&lt;/a&gt;, one of the founders of DataCamp and a man with seriously good credentials in R.&lt;/p&gt;
+        <description>&lt;p&gt;Having abandoned the data visualisation course run by Edinburgh University, and wanting to gain some further competence in R, I took the DataCamp “Introduction to R” course. This course is written by &lt;a href=&quot;https://www.jonathancornelissen.com/&quot;&gt;Jonathan Cornelissen&lt;/a&gt;, one of the founders of DataCamp and a man with seriously good credentials in R.&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#basics&quot; id=&quot;markdown-toc-basics&quot;&gt;Basics&lt;/a&gt;    &lt;ul&gt;
@@ -3259,7 +3259,7 @@ The goal for all data collection is to capture quality evidence that allows anal
 &lt;h2 id=&quot;next-steps-other-ways-to-learn-r&quot;&gt;Next steps: other ways to learn R&lt;/h2&gt;
 &lt;p&gt;I got totally overwhelmed with the rate of new concepts in this class, or perhaps the pace and style of delivery. I think, given the time I have to spend after each class going over the material in order to make sense of it, it is clear that this course is not right for me. I have decided to abandon it and follow other materials more appropriate to my purpose, which is to develop skills in data visualisation using R. Despite the title, this course is not doing that for me.&lt;/p&gt;
 
-&lt;p&gt;Having decided&lt;sup id=&quot;fnref:progression2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:progression2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to seek out other ways to learn how to R, I found that there are lots of self-directed learning resources out there, of course. An &lt;a href=&quot;https://datacamp.com/courses/free-introduction-to-r&quot;&gt;introduction to R&lt;/a&gt; course at DataCamp will be the new direction of travel down this rabbit hole for me.&lt;/p&gt;
+&lt;p&gt;Having decided&lt;sup id=&quot;fnref:progression2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:progression2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to seek out other ways to learn how to R, I found that there are lots of self-directed learning resources out there, of course. An introduction to R course at DataCamp will be the new direction of travel down this rabbit hole for me.&lt;/p&gt;
 
 &lt;h2 id=&quot;notes-and-references&quot;&gt;Notes and references&lt;/h2&gt;
 

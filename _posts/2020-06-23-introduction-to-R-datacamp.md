@@ -14,7 +14,7 @@ tags:
 
 # permalink:
 ---
-Having abandoned the data visualisation course run by Edinburgh University, and wanting to gain some further competence in R, I took the [DataCamp "Introduction to R" course](https://datacamp.com/courses/free-introduction-to-r). This course is written by [Jonathan Cornelissen](https://www.jonathancornelissen.com/), one of the founders of DataCamp and a man with seriously good credentials in R.
+Having abandoned the data visualisation course run by Edinburgh University, and wanting to gain some further competence in R, I took the DataCamp "Introduction to R" course. This course is written by [Jonathan Cornelissen](https://www.jonathancornelissen.com/), one of the founders of DataCamp and a man with seriously good credentials in R.
 
 * table of contents
 {:toc}

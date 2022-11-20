@@ -14,7 +14,7 @@ tags:
 
 # permalink:
 ---
-Continuing my journey into `R`, the next course in the R programming track at DataCamp is [Intermediate R](https://campus.datacamp.com/courses/intermediate-r). This course is presented by [Filip Schouwenaars](https://www.datacamp.com/instructors/filipsch). It teaches language syntax and programming conventions, building on [the last course](/introduction-to-R-datacamp).
+Continuing my journey into `R`, the next course in the R programming track at DataCamp is Intermediate R. This course is presented by Filip Schouwenaars. It teaches language syntax and programming conventions, building on [the last course](/introduction-to-R-datacamp).
 
 * table of contents
 {:toc}
