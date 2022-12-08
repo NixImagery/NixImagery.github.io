@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/futures-conference-21" property="og:url">
+    <meta content="http://localhost:4000/futures-conference-21" property="og:url">
   
   
     <meta content="2021-12-10T15:00:00+00:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/IMG_9536.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/IMG_9536.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="IT Futures Conference">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/futures-conference-21">
+    <meta name="twitter:url" content="http://localhost:4000/futures-conference-21">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/IMG_9536.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/IMG_9536.jpg">
   
 
 	<meta name="description" content="">
@@ -205,55 +205,55 @@
 
 <p>Two years ago, the IT Futures conference cracked open how dangerous the weaponising of AI and small technologies was becoming. That threat is <a href="https://www.newscientist.com/article/2282656-israel-used-worlds-first-ai-guided-combat-drone-swarm-in-gaza-attacks/">now being realised in theatres of war</a>, funded <a href="https://good-with-money.com/2018/06/10/majority-of-uk-pensions-happy-to-invest-in-weapons/">with our pension money</a>. Our friends and enemies alike are becoming ever more bold in trying to steal what advantages we may have. To illustrate, my little, almost insignificant development server logs in the past 10 minutes<sup id="fnref:note-21-12-10-1" role="doc-noteref"><a href="#fn:note-21-12-10-1" class="footnote" rel="footnote">1</a></sup>:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dec 12 19:14:38 foo sshd[15612]: Failed password <span class="k">for </span>bar from 143.110.179.115 port 59458 
-Dec 12 19:17:29 foo sshd[15840]: Failed password <span class="k">for </span>bar from 143.110.179.115 port 45380 
-Dec 12 19:18:42 foo sshd[15919]: Failed password <span class="k">for </span>bar from 92.255.85.237 port 49342 
-Dec 12 19:19:35 foo sshd[15978]: Failed password <span class="k">for </span>bar from 134.209.198.229 port 36532 
-Dec 12 19:20:20 foo sshd[16034]: Failed password <span class="k">for </span>bar from 143.110.179.115 port 59534 
-Dec 12 19:22:29 foo sshd[16162]: Failed password <span class="k">for </span>bar from 134.209.198.229 port 44780 
-Dec 12 19:23:20 foo sshd[16218]: Failed password <span class="k">for </span>bar from 222.187.254.41 port 32036 
-Dec 12 19:23:22 foo sshd[16218]: Failed password <span class="k">for </span>bar from 222.187.254.41 port 32036 
-Dec 12 19:23:24 foo sshd[16218]: Failed password <span class="k">for </span>bar from 222.187.254.41 port 32036 
-Dec 12 19:23:28 foo sshd[16227]: Failed password <span class="k">for </span>bar from 222.187.254.41 port 44073 
-Dec 12 19:23:30 foo sshd[16227]: Failed password <span class="k">for </span>bar from 222.187.254.41 port 44073 
-Dec 12 19:23:32 foo sshd[16227]: Failed password <span class="k">for </span>bar from 222.187.254.41 port 44073 
-</code></pre></div></div>
+<pre><code class="language-bash">Dec 12 19:14:38 foo sshd[15612]: Failed password for bar from 143.110.179.115 port 59458 
+Dec 12 19:17:29 foo sshd[15840]: Failed password for bar from 143.110.179.115 port 45380 
+Dec 12 19:18:42 foo sshd[15919]: Failed password for bar from 92.255.85.237 port 49342 
+Dec 12 19:19:35 foo sshd[15978]: Failed password for bar from 134.209.198.229 port 36532 
+Dec 12 19:20:20 foo sshd[16034]: Failed password for bar from 143.110.179.115 port 59534 
+Dec 12 19:22:29 foo sshd[16162]: Failed password for bar from 134.209.198.229 port 44780 
+Dec 12 19:23:20 foo sshd[16218]: Failed password for bar from 222.187.254.41 port 32036 
+Dec 12 19:23:22 foo sshd[16218]: Failed password for bar from 222.187.254.41 port 32036 
+Dec 12 19:23:24 foo sshd[16218]: Failed password for bar from 222.187.254.41 port 32036 
+Dec 12 19:23:28 foo sshd[16227]: Failed password for bar from 222.187.254.41 port 44073 
+Dec 12 19:23:30 foo sshd[16227]: Failed password for bar from 222.187.254.41 port 44073 
+Dec 12 19:23:32 foo sshd[16227]: Failed password for bar from 222.187.254.41 port 44073 
+</code></pre>
 
 <p>Who is that sending their wolf-bots to huff and puff and try to gain access to my technical secrets<sup id="fnref:note-21-12-10-2" role="doc-noteref"><a href="#fn:note-21-12-10-2" class="footnote" rel="footnote">2</a></sup>?</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># curl ipinfo.io/143.110.179.115</span>
-<span class="o">{</span>
-  <span class="s2">"city"</span>: <span class="s2">"Doddaballapura"</span>,
-  <span class="s2">"region"</span>: <span class="s2">"Karnataka"</span>,
-  <span class="s2">"country"</span>: <span class="s2">"IN"</span>,
-  <span class="s2">"org"</span>: <span class="s2">"AS14061 DigitalOcean, LLC"</span>,
-  <span class="s2">"timezone"</span>: <span class="s2">"Asia/Kolkata"</span>,
-<span class="o">}</span>
-<span class="c"># curl ipinfo.io/92.255.85.237</span>
-<span class="o">{</span>
-  <span class="s2">"city"</span>: <span class="s2">"Moscow"</span>,
-  <span class="s2">"region"</span>: <span class="s2">"Moscow"</span>,
-  <span class="s2">"country"</span>: <span class="s2">"RU"</span>,
-  <span class="s2">"org"</span>: <span class="s2">"AS57523 Chang Way Technologies Co. Limited"</span>,
-  <span class="s2">"timezone"</span>: <span class="s2">"Europe/Moscow"</span>,
-<span class="o">}</span>
-<span class="c"># curl ipinfo.io/134.209.198.229</span>
-<span class="o">{</span>
-  <span class="s2">"city"</span>: <span class="s2">"Amsterdam"</span>,
-  <span class="s2">"region"</span>: <span class="s2">"North Holland"</span>,
-  <span class="s2">"country"</span>: <span class="s2">"NL"</span>,
-  <span class="s2">"org"</span>: <span class="s2">"AS14061 DigitalOcean, LLC"</span>,
-  <span class="s2">"timezone"</span>: <span class="s2">"Europe/Amsterdam"</span>,
-<span class="o">}</span>
-<span class="c"># curl ipinfo.io/222.187.254.41</span>
-<span class="o">{</span>
-  <span class="s2">"city"</span>: <span class="s2">"Hangzhou"</span>,
-  <span class="s2">"region"</span>: <span class="s2">"Zhejiang"</span>,
-  <span class="s2">"country"</span>: <span class="s2">"CN"</span>,
-  <span class="s2">"org"</span>: <span class="s2">"AS4134 CHINANET-BACKBONE"</span>,
-  <span class="s2">"timezone"</span>: <span class="s2">"Asia/Shanghai"</span>,
-<span class="o">}</span>
-</code></pre></div></div>
+<pre><code class="language-bash"># curl ipinfo.io/143.110.179.115
+{
+  "city": "Doddaballapura",
+  "region": "Karnataka",
+  "country": "IN",
+  "org": "AS14061 DigitalOcean, LLC",
+  "timezone": "Asia/Kolkata",
+}
+# curl ipinfo.io/92.255.85.237
+{
+  "city": "Moscow",
+  "region": "Moscow",
+  "country": "RU",
+  "org": "AS57523 Chang Way Technologies Co. Limited",
+  "timezone": "Europe/Moscow",
+}
+# curl ipinfo.io/134.209.198.229
+{
+  "city": "Amsterdam",
+  "region": "North Holland",
+  "country": "NL",
+  "org": "AS14061 DigitalOcean, LLC",
+  "timezone": "Europe/Amsterdam",
+}
+# curl ipinfo.io/222.187.254.41
+{
+  "city": "Hangzhou",
+  "region": "Zhejiang",
+  "country": "CN",
+  "org": "AS4134 CHINANET-BACKBONE",
+  "timezone": "Asia/Shanghai",
+}
+</code></pre>
 <p>We are distracted by a global energy crisis that nobody wants to solve (otherwise why are <a href="https://www.edinburghcastle.scot/whats-on/castle-of-light-hidden-treasures">all these lights</a> on?), an eco-carbon crisis that <a href="https://latinamericanpost.com/35883-deforestation-a-constant-threat-to-latin-america">nobody wants to solve</a> and <a href="https://www.nhsconfed.org/news/nhs-has-reached-tipping-point-warn-healthcare-leaders">sustaining the unsustainable</a>. It is interesting to notice that the same companies funding the race to mutual obliteration through short-termism and the abdication of any kind of moral (or even logical) constraints on our actions, are the same companies funding lucrative projects around the university.</p>
 
 <h2 id="conclusion-and-next-steps">Conclusion and next steps</h2>
@@ -276,8 +276,8 @@ Dec 12 19:23:32 foo sshd[16227]: Failed password <span class="k">for </span>bar 
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=IT Futures Conference&url=https://cullaloe.com/futures-conference-21" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/futures-conference-21" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=IT Futures Conference&url=http://localhost:4000/futures-conference-21" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/futures-conference-21" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/" property="og:url">
+    <meta content="http://localhost:4000/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/" property="og:url">
   
   
     <meta content="2018-06-13T17:36:30+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/heron.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/heron.jpg" property="og:image">
   
   
     
@@ -42,13 +42,13 @@
     <meta name="twitter:title" content="Upgrading solr server from 6.6.0 to 7.3.1">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/">
+    <meta name="twitter:url" content="http://localhost:4000/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/heron.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/heron.jpg">
   
 
 	<meta name="description" content="">
@@ -171,13 +171,13 @@
       </header>
       <p>I use Apache’s <a href="http://lucene.apache.org/solr/">Solr</a> to provide a global search facility on Moodle. Now that my courses have ended for the summer, it’s time to bite the bullet and upgrade the Solr server software from version 6.6.0 which I installed last year, to the current 7.3.1. This turned out to be more straightforward than I feared, and did not require me to touch the PHP solr module that I had to compile from source when I installed it the first time. Here are the steps:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /opt
-<span class="nv">$ </span>wget http://apache.mirrors.nublue.co.uk/lucene/solr/7.3.1/solr-7.3.1.tgz
-<span class="nv">$ </span><span class="nb">tar </span>zxvf solr-7.3.1.tgz
-<span class="nv">$ </span><span class="nb">cp </span>solr-7.3.1/bin/install_solr_service.sh <span class="nb">.</span>
-<span class="nv">$ </span><span class="nb">rm</span> <span class="nt">-rf</span> solr-7.3.1
-<span class="nv">$ </span>./install_solr_service.sh solr-7.3.1.tgz <span class="nt">-f</span>
-</code></pre></div></div>
+<pre><code class="language-bash">$ cd /opt
+$ wget http://apache.mirrors.nublue.co.uk/lucene/solr/7.3.1/solr-7.3.1.tgz
+$ tar zxvf solr-7.3.1.tgz
+$ cp solr-7.3.1/bin/install_solr_service.sh .
+$ rm -rf solr-7.3.1
+$ ./install_solr_service.sh solr-7.3.1.tgz -f
+</code></pre>
 
 <p>Notice the -f flag which tells the script to upgrade an existing installation. The script stops the currently running instance, extracts the new code and starts the instance. A quick check of the admin interface on port 8983 shows the new code running OK, the cores intact, and the client service on Moodle nominal.</p>
 
@@ -187,8 +187,8 @@
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Upgrading solr server from 6.6.0 to 7.3.1&url=https://cullaloe.com/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Upgrading solr server from 6.6.0 to 7.3.1&url=http://localhost:4000/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/blog/2018/06/13/upgrading-solr-server-from-6-6-0-to-7-3-1/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

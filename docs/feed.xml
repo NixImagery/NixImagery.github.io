@@ -3,10 +3,10 @@
   <channel>
     <title>Tech, tales and imagery</title>
     <description>A technical blog</description>
-    <link>https://cullaloe.com/</link>
-    <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 20 Nov 2022 13:56:02 +0000</pubDate>
-    <lastBuildDate>Sun, 20 Nov 2022 13:56:02 +0000</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 08 Dec 2022 07:51:01 +0000</pubDate>
+    <lastBuildDate>Thu, 08 Dec 2022 07:51:01 +0000</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
     
       <item>
@@ -21,21 +21,21 @@
 
 &lt;p&gt;So, I finished marking a small batch of essays and want to see how the cohort have done overall, beyond my subjective feeling that they did OK. From a terminal, start R:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;R
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;$ R
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This will start a session and tell you which version of R you are running. Now, it’s just a matter of typing in your numbers. They don’t have to be in any particular order:&lt;/p&gt;
 
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;82&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;68&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;62&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;horizontal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;&amp;gt; boxplot(c(57,82,68,64,62,72),horizontal=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This will make a nice &lt;a href=&quot;https://en.wikipedia.org/wiki/Box_plot&quot;&gt;boxplot&lt;/a&gt; showing that your intuitions were OK. Doing well, with a reasonable median (the thick line).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/22-11-17-boxplot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;If you want to compare 2 sets, give &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; 2 vectors (a vector is a list or collection of data, constructed thus &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;c(43,44,56,76)&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;If you want to compare 2 sets, give &lt;code&gt;R&lt;/code&gt; 2 vectors (a vector is a list or collection of data, constructed thus &lt;code&gt;c(43,44,56,76)&lt;/code&gt;):&lt;/p&gt;
 
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boxplot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;82&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;68&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;62&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;44&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;68&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;horizontal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-r&quot;&gt;&amp;gt; boxplot(c(57,82,68,64,62,72),c(64,44,48,55,70,68),horizontal=TRUE)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/22-11-17-boxplot2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -45,27 +45,27 @@
 
 &lt;p&gt;The NY Times Wordle app asks if “Something doesn’t look right”. To me the plot looked a bit skewed towards the stupid end, and so I decided to play with the app to make my stats look symmetrical. I do the puzzle every day in a web browser, find the answer, and then do it again on a different machine – the one that stores cookie data and remembers my stats.&lt;/p&gt;
 
-&lt;p&gt;For this, I created an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; markdown document which contains both text and images, calculated from the figures in the document. You can use any text editor to create the document (I use &lt;a href=&quot;https://macdown.uranusjr.com/&quot;&gt;MacDown&lt;/a&gt;) but make sure the file extension is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.Rmd&lt;/code&gt;, so that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; knows to process the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; code blocks. Here’s the source of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Wordle.Rmd&lt;/code&gt; file containing my dishonest stats. They are in the brutal lines constructing the vector of guesses, for example, these show that I have guessed the word in 2, a total of 17 times:&lt;/p&gt;
+&lt;p&gt;For this, I created an &lt;code&gt;R&lt;/code&gt; markdown document which contains both text and images, calculated from the figures in the document. You can use any text editor to create the document (I use &lt;a href=&quot;https://macdown.uranusjr.com/&quot;&gt;MacDown&lt;/a&gt;) but make sure the file extension is &lt;code&gt;.Rmd&lt;/code&gt;, so that &lt;code&gt;R&lt;/code&gt; knows to process the &lt;code&gt;R&lt;/code&gt; code blocks. Here’s the source of the &lt;code&gt;Wordle.Rmd&lt;/code&gt; file containing my dishonest stats. They are in the brutal lines constructing the vector of guesses, for example, these show that I have guessed the word in 2, a total of 17 times:&lt;/p&gt;
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Wordle&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;stats&quot;&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;subtitle&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;It&apos;s only a game&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Nick Hood&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;\today&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;pdf_document&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;default&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;documentclass&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;scrartcl&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;en-GB&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;papersize&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;a4&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;fontsize&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;11pt&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;geometry&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;margin=2cm, bindingoffset=0.5cm&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;pagestyle&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;headings&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;fontfamily&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;roboto&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;fontfamilyoptions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;sfdefault, light&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;---
+title: &quot;Wordle stats&quot;
+subtitle: It&apos;s only a game
+author: Nick Hood
+date: \today
+output:
+  pdf_document: default
+documentclass: scrartcl
+lang: en-GB
+papersize: a4
+fontsize: 11pt
+geometry: margin=2cm, bindingoffset=0.5cm
+pagestyle: headings
+fontfamily: roboto
+fontfamilyoptions: sfdefault, light
+---
 
-&lt;span class=&quot;p&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;{r data, echo=FALSE}
-&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;Guesses&amp;lt;-c( + 
+```{r data, echo=FALSE}
+Guesses&amp;lt;-c( + 
 rep(1,times=6), +
 rep(2,times=17), +
 rep(3,times=51), +
@@ -74,29 +74,29 @@ rep(5,times=67), +
 rep(6,times=23), +
 rep(7,times=16))
 
-hist(Guesses,breaks=0:7,col=&quot;#CCCFFF&quot;, main=&quot;Guess distribution&quot;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;```&lt;/span&gt;
-The NY Times Wordle app asks if &quot;Something doesn&apos;t look right&quot;. To me the plot looked a bit skewed towards the stupid end, and so I&apos;m playing the app to make my stats look symmetrical. Of course it&apos;s cheating but it&apos;s not just editing the cookies to make the numbers look right. That would be &lt;span class=&quot;ge&quot;&gt;*cheating*&lt;/span&gt;.
+hist(Guesses,breaks=0:7,col=&quot;#CCCFFF&quot;, main=&quot;Guess distribution&quot;)
+```
+The NY Times Wordle app asks if &quot;Something doesn&apos;t look right&quot;. To me the plot looked a bit skewed towards the stupid end, and so I&apos;m playing the app to make my stats look symmetrical. Of course it&apos;s cheating but it&apos;s not just editing the cookies to make the numbers look right. That would be *cheating*.
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;We can now send this file as a script to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;We can now send this file as a script to &lt;code&gt;R&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;Rscript &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rmarkdown::render(&apos;Wordle.Rmd&apos;)&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;$ Rscript -e &quot;rmarkdown::render(&apos;Wordle.Rmd&apos;)&quot;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;which produces a pdf document (see the output option in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.Rmd&lt;/code&gt; file) that looks like this:&lt;/p&gt;
+&lt;p&gt;which produces a pdf document (see the output option in the &lt;code&gt;.Rmd&lt;/code&gt; file) that looks like this:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/Wordle.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 
-&lt;p&gt;Not the solution to the biggest problem, but I found it useful for making nice graphical images from small data sets. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; is perfect for that, and this gets you started without too much fuss. Try copy-pasting the boxplot into an email next time you discuss marking assignments with colleagues.&lt;/p&gt;
+&lt;p&gt;Not the solution to the biggest problem, but I found it useful for making nice graphical images from small data sets. &lt;code&gt;R&lt;/code&gt; is perfect for that, and this gets you started without too much fuss. Try copy-pasting the boxplot into an email next time you discuss marking assignments with colleagues.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 17 Nov 2022 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/wordle</link>
-        <guid isPermaLink="true">https://cullaloe.com/wordle</guid>
+        <link>http://localhost:4000/wordle</link>
+        <guid isPermaLink="true">http://localhost:4000/wordle</guid>
         
         <category>Markdown</category>
         
@@ -135,13 +135,13 @@ The NY Times Wordle app asks if &quot;Something doesn&apos;t look right&quot;. T
 
 &lt;p&gt;The numbering system of Zettelkasten is illustrated by &lt;a class=&quot;citation&quot; href=&quot;#Schmidt2016&quot;&gt;(Schmidt, 2016)&lt;/a&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1/1 Card with notes 
+&lt;pre&gt;&lt;code&gt;1/1 Card with notes 
     1/1a Card containing notes referring to a concept/idea from card 1/1 
     1/1b Continuation of notes from card 1/1a 
         1/1b1 Card containing notes referring to a concept/idea from card 1/1b 
         1/1b2 Continuation of notes from card 1/1b1 
 1/2 Continuation of notes from card 1/1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The design of this is to deliberately avoid imposing structure on the notes as they are made, so as not to force thinking into a one-time-and-for-ever way of thinking. The principle is to allow the author to have &lt;a href=&quot;https://luhmann.surge.sh/communicating-with-slip-boxes&quot;&gt;a conversation&lt;/a&gt; with the collection of ideas, as they are made, and later, as they connect to existing thought. Luhmann called the system his “secondary memory” &lt;a class=&quot;citation&quot; href=&quot;#Schmidt2016&quot;&gt;(Schmidt, 2016)&lt;/a&gt; to almost infer a thinking partner in the process of reflecting on and interrogating his own ideas.&lt;/p&gt;
 
@@ -157,12 +157,12 @@ The NY Times Wordle app asks if &quot;Something doesn&apos;t look right&quot;. T
 
 &lt;p&gt;This image was a screenshot from the mobile version of Obsidian, which allows me to use the program in the same way as I do on the desktop: I can edit, link and even dictate new notes on the fly: it’s not necessary to buy the &lt;a href=&quot;https://obsidian.md/sync&quot;&gt;Obsidian Sync&lt;/a&gt; subscription if you work in the same virtual space: for Apple infrastructure users, this means the iCloud Drive &lt;sup id=&quot;fnref:ic-fix&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:ic-fix&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. My Zettelkasten is pushed from there on the desktop to its home in a GitHub private repository. The program does quite a lot of the work for us, without excusing the author from tending to proper tagging and referencing. An example from my own “card” collection:&lt;/p&gt;
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;gu&quot;&gt;## Chronotope&lt;/span&gt;
-William Benjamin recognised the significance of time in his &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;radio pedagogy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;Radio%20pedagogy.md&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;, as an essential part of the power of the medium. The setting of a story in space and time has been called the chronotope [@Bakhtin1981 119].
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;
+## Chronotope
+William Benjamin recognised the significance of time in his [radio pedagogy](Radio%20pedagogy.md), as an essential part of the power of the medium. The setting of a story in space and time has been called the chronotope [@Bakhtin1981 119].
 
  #chronotope
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
 
 &lt;p&gt;This has been just an introduction for me to this “way in” to better writing productivity in my PhD. The tip came at the right time for me, at a point where I was struggling with momentum. I am thankful to Ramsey Affifi for sharing his practice with me, and to Sönke Ahrens, whose book has just arrived and is the subject of my close attention for the next few days.&lt;/p&gt;
@@ -196,17 +196,17 @@ William Benjamin recognised the significance of time in his &lt;span class=&quot
 &lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:rbdms&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;A relational database is made up of tables of records; each record in a table may be uniquely identified by a &lt;em&gt;key&lt;/em&gt;, often an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ID&lt;/code&gt; field. The database tables are boxes or &lt;em&gt;kästen&lt;/em&gt; and each record in a table is a card or &lt;em&gt;zettel&lt;/em&gt;. Seeking patterns and relationships in a relational database management system (&lt;a href=&quot;https://en.wikipedia.org/wiki/Relational_database&quot;&gt;RDBMS&lt;/a&gt;) demands skills in &lt;a href=&quot;https://en.wikipedia.org/wiki/SQL&quot;&gt;SQL&lt;/a&gt;. Databases are behind billions of websites and computer systems in use today. &lt;a href=&quot;#fnref:rbdms&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;A relational database is made up of tables of records; each record in a table may be uniquely identified by a &lt;em&gt;key&lt;/em&gt;, often an &lt;code&gt;ID&lt;/code&gt; field. The database tables are boxes or &lt;em&gt;kästen&lt;/em&gt; and each record in a table is a card or &lt;em&gt;zettel&lt;/em&gt;. Seeking patterns and relationships in a relational database management system (&lt;a href=&quot;https://en.wikipedia.org/wiki/Relational_database&quot;&gt;RDBMS&lt;/a&gt;) demands skills in &lt;a href=&quot;https://en.wikipedia.org/wiki/SQL&quot;&gt;SQL&lt;/a&gt;. Databases are behind billions of websites and computer systems in use today. &lt;a href=&quot;#fnref:rbdms&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:ic-fix&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Be careful that iCloud doesn’t get stuck syncing. You can tell this by the presence of the little dotted cloud icon in Finder, which on mouse-over, tells you that the file or folder is “Waiting to Upload”. The program that gets stuck is bird, the backend process behind iCloud Drive, which can be unstuck by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;% pkill -f &apos;Support/bird&apos;&lt;/code&gt; in a terminal. Give it a minute and all should sync OK. &lt;a href=&quot;#fnref:ic-fix&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Be careful that iCloud doesn’t get stuck syncing. You can tell this by the presence of the little dotted cloud icon in Finder, which on mouse-over, tells you that the file or folder is “Waiting to Upload”. The program that gets stuck is bird, the backend process behind iCloud Drive, which can be unstuck by typing &lt;code&gt;% pkill -f &apos;Support/bird&apos;&lt;/code&gt; in a terminal. Give it a minute and all should sync OK. &lt;a href=&quot;#fnref:ic-fix&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 09 Jun 2022 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/zettelkasten</link>
-        <guid isPermaLink="true">https://cullaloe.com/zettelkasten</guid>
+        <link>http://localhost:4000/zettelkasten</link>
+        <guid isPermaLink="true">http://localhost:4000/zettelkasten</guid>
         
         <category>Markdown</category>
         
@@ -261,7 +261,7 @@ William Benjamin recognised the significance of time in his &lt;span class=&quot
 
 &lt;p&gt;Nustem have a &lt;a href=&quot;https://nustem.uk/activities/&quot;&gt;collection of activities&lt;/a&gt; around STEM careers and what people in these jobs do for a living, including &lt;a href=&quot;https://nustem.uk/careers/&quot;&gt;career cards&lt;/a&gt; linked to the English curriculum. Carol seemed to respond positively to my suggestion that they follow the Imperial College’s &lt;a href=&quot;https://www.reachoutcpd.com/&quot;&gt;ReachOut CPD&lt;/a&gt; example of connecting the resources to CfE E&amp;amp;Os, specifically for Primary teachers who will also make great use of such a resource if that is done. Primary teachers in Scotland have a particular workflow that is understood by Imperial, hence their tagging of their CPD units by experiences and outcomes of the Scottish curriculum. The nustem activities and resources will, in my view, be similarly accessed if these keys are available to teachers, and more to the point, are not likely to be used if they are not. These teachers just don’t have the time to translate Key Stages and curricular references from the English culture that dominates nustem at the moment.&lt;/p&gt;
 
-&lt;p&gt;A nice touch with the nustem &lt;a href=&quot;https://nustem.uk/primarycareers/&quot;&gt;Primary Careers Tool&lt;/a&gt; is the hidden keywords in the image search links on each card, designed to compensate unconscious bias being exacerbated by Google’s image search bias. For example, on the card for &lt;a href=&quot;https://nustem.uk/careers_resource/mechanical-engineer/&quot;&gt;mechanical engineer&lt;/a&gt;, the image search phrase is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mechanical engineer AND female&lt;/code&gt;. Clumsy, but effective in presenting counter-stereotypical images to your children of what mechanical engineers look like.&lt;/p&gt;
+&lt;p&gt;A nice touch with the nustem &lt;a href=&quot;https://nustem.uk/primarycareers/&quot;&gt;Primary Careers Tool&lt;/a&gt; is the hidden keywords in the image search links on each card, designed to compensate unconscious bias being exacerbated by Google’s image search bias. For example, on the card for &lt;a href=&quot;https://nustem.uk/careers_resource/mechanical-engineer/&quot;&gt;mechanical engineer&lt;/a&gt;, the image search phrase is &lt;code&gt;mechanical engineer AND female&lt;/code&gt;. Clumsy, but effective in presenting counter-stereotypical images to your children of what mechanical engineers look like.&lt;/p&gt;
 
 &lt;p&gt;One final powerful tool amongst the many great ideas Carol shared with us was the phrasing of career-oriented questions for young people: less, “what do you want to be when you grow up?” or “do you want to be a pilot?”, and more, “could you be a &lt;a href=&quot;https://nustem.uk/careers_resource/marine-engineer/&quot;&gt;marine engineer&lt;/a&gt;?”. Follow the link to that card and read the attributes: young people might like the idea of a job that asks them to be “passionate, imaginative, open-minded” in an environment that features working in and around water. Triggering the imagination seems to be key, and I remember seeing myself in various roles as influencing my own choices.&lt;/p&gt;
 
@@ -316,8 +316,8 @@ William Benjamin recognised the significance of time in his &lt;span class=&quot
 &lt;/div&gt;
 </description>
         <pubDate>Thu, 26 May 2022 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/stirling-conference-22</link>
-        <guid isPermaLink="true">https://cullaloe.com/stirling-conference-22</guid>
+        <link>http://localhost:4000/stirling-conference-22</link>
+        <guid isPermaLink="true">http://localhost:4000/stirling-conference-22</guid>
         
         <category>CPD</category>
         
@@ -340,44 +340,44 @@ William Benjamin recognised the significance of time in his &lt;span class=&quot
 
 &lt;p&gt;This is great advice and something I had seen before. I use &lt;a href=&quot;https://www.mendeley.com/DOWNLOAD-DESKTOP/&quot;&gt;Mendeley Desktop&lt;/a&gt; as my academic library and reference manager, which plays nicely with my &lt;a href=&quot;/phd-workflow-22&quot;&gt;writing workflow&lt;/a&gt;. I am used to using the so-called “Harvard” citation style, otherwise known as “author-date” because it looks like this: &lt;a class=&quot;citation&quot; href=&quot;#bresson1999the&quot;&gt;(Cartier-Bresson, 1999)&lt;/a&gt; but had not worked out how to have the software automatically detect when &lt;em&gt;ibid.&lt;/em&gt; is appropriate.&lt;/p&gt;
 
-&lt;p&gt;The key to it is in the &lt;a href=&quot;https://citationstyles.org/&quot;&gt;citation style&lt;/a&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file that tells your typesetting program how to format citations. There are thousands of these, publicly accessible over at the &lt;a href=&quot;https://www.zotero.org/styles&quot;&gt;Zotero Style Repository&lt;/a&gt; or &lt;a href=&quot;https://github.com/citation-style-language/styles&quot;&gt;Github&lt;/a&gt;. I wanted to use a popular &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;csl&lt;/code&gt; style using the globally recognised &lt;a href=&quot;https://www.chicagomanualofstyle.org/&quot;&gt;Chicago Style Manual&lt;/a&gt; but the use of &lt;em&gt;ibid&lt;/em&gt; has been deprecated there. They favour the use of a short form citation which is well suited to the numbered footnote alternative to author-date.&lt;/p&gt;
+&lt;p&gt;The key to it is in the &lt;a href=&quot;https://citationstyles.org/&quot;&gt;citation style&lt;/a&gt; or &lt;code&gt;.csl&lt;/code&gt; file that tells your typesetting program how to format citations. There are thousands of these, publicly accessible over at the &lt;a href=&quot;https://www.zotero.org/styles&quot;&gt;Zotero Style Repository&lt;/a&gt; or &lt;a href=&quot;https://github.com/citation-style-language/styles&quot;&gt;Github&lt;/a&gt;. I wanted to use a popular &lt;code&gt;csl&lt;/code&gt; style using the globally recognised &lt;a href=&quot;https://www.chicagomanualofstyle.org/&quot;&gt;Chicago Style Manual&lt;/a&gt; but the use of &lt;em&gt;ibid&lt;/em&gt; has been deprecated there. They favour the use of a short form citation which is well suited to the numbered footnote alternative to author-date.&lt;/p&gt;
 
-&lt;p&gt;With a little leg work I found that it is quite easy to adapt &lt;a href=&quot;https://www.zotero.org/styles/chicago-author-date&quot;&gt;the current Chicago author-date&lt;/a&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file to include the &lt;em&gt;ibid&lt;/em&gt; feature from &lt;a href=&quot;https://www.zotero.org/styles/chicago-note-bibliography-with-ibid&quot;&gt;its numbered footnote sister&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With a little leg work I found that it is quite easy to adapt &lt;a href=&quot;https://www.zotero.org/styles/chicago-author-date&quot;&gt;the current Chicago author-date&lt;/a&gt; &lt;code&gt;.csl&lt;/code&gt; file to include the &lt;em&gt;ibid&lt;/em&gt; feature from &lt;a href=&quot;https://www.zotero.org/styles/chicago-note-bibliography-with-ibid&quot;&gt;its numbered footnote sister&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-adaptation&quot;&gt;The adaptation&lt;/h2&gt;
 
-&lt;p&gt;Starting with a copy of the author-date &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file (obviously change the name), find the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;citation&amp;gt;&lt;/code&gt; tag and merge the equivalent code from the fullnote with ibid &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file. It should look like this:&lt;/p&gt;
+&lt;p&gt;Starting with a copy of the author-date &lt;code&gt;.csl&lt;/code&gt; file (obviously change the name), find the &lt;code&gt;&amp;lt;citation&amp;gt;&lt;/code&gt; tag and merge the equivalent code from the fullnote with ibid &lt;code&gt;.csl&lt;/code&gt; file. It should look like this:&lt;/p&gt;
 
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;citation&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;et-al-min=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;et-al-use-first=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-year-suffix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-names=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disambiguate-add-givenname=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;givenname-disambiguation-rule=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;primary-name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;collapse=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;year&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;after-collapse-delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;; &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;layout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;prefix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;(&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;suffix=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;)&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;; &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;choose&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;position=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid-with-locator&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;term=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;point-locators-subsequent&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;else-if&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;position=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-          &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;term=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ibid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/else-if&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;else&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;group&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;delimiter=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;contributors-short&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;date-in-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-              &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;macro=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;point-locators&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/else&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/choose&amp;gt;&lt;/span&gt;
-      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/group&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/layout&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/citation&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;It is also necessary to pull in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-locators-subsequent&lt;/code&gt; macro. Paste it below the other macros in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.csl&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;citation et-al-min=&quot;4&quot; et-al-use-first=&quot;1&quot; disambiguate-add-year-suffix=&quot;true&quot; disambiguate-add-names=&quot;true&quot; disambiguate-add-givenname=&quot;true&quot; givenname-disambiguation-rule=&quot;primary-name&quot; collapse=&quot;year&quot; after-collapse-delimiter=&quot;; &quot;&amp;gt;
+    &amp;lt;layout prefix=&quot;(&quot; suffix=&quot;)&quot; delimiter=&quot;; &quot;&amp;gt;
+      &amp;lt;group delimiter=&quot;, &quot;&amp;gt;
+        &amp;lt;choose&amp;gt;
+        &amp;lt;if position=&quot;ibid-with-locator&quot;&amp;gt;
+          &amp;lt;group delimiter=&quot;, &quot;&amp;gt;
+            &amp;lt;text term=&quot;ibid&quot;/&amp;gt;
+            &amp;lt;text macro=&quot;point-locators-subsequent&quot;/&amp;gt;
+          &amp;lt;/group&amp;gt;
+        &amp;lt;/if&amp;gt;
+        &amp;lt;else-if position=&quot;ibid&quot;&amp;gt;
+          &amp;lt;text term=&quot;ibid&quot;/&amp;gt;
+        &amp;lt;/else-if&amp;gt;
+        &amp;lt;else&amp;gt;
+            &amp;lt;group delimiter=&quot;, &quot;&amp;gt;
+              &amp;lt;text macro=&quot;contributors-short&quot;/&amp;gt;
+              &amp;lt;text macro=&quot;date-in-text&quot;/&amp;gt;
+              &amp;lt;text macro=&quot;point-locators&quot;/&amp;gt;
+            &amp;lt;/group&amp;gt;
+        &amp;lt;/else&amp;gt;
+        &amp;lt;/choose&amp;gt;
+      &amp;lt;/group&amp;gt;
+    &amp;lt;/layout&amp;gt;
+&amp;lt;/citation&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It is also necessary to pull in the &lt;code&gt;point-locators-subsequent&lt;/code&gt; macro. Paste it below the other macros in the &lt;code&gt;.csl&lt;/code&gt; file.&lt;/p&gt;
 
 &lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
 
-&lt;p&gt;All that is required now is to point the rendering software to the style file, in my case, by editing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yaml&lt;/code&gt; header in my markdown document, or the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file for this site.&lt;/p&gt;
+&lt;p&gt;All that is required now is to point the rendering software to the style file, in my case, by editing the &lt;code&gt;yaml&lt;/code&gt; header in my markdown document, or the &lt;code&gt;_config.yml&lt;/code&gt; file for this site.&lt;/p&gt;
 
 &lt;p&gt;I don’t feel that I should push this back to the open source repositories because it’s just my own hack that works for me, but you can download my version of &lt;a href=&quot;/assets/docs/chicago-author-date-with-ibid.csl&quot;&gt;chicago-author-date-with-ibid.csl&lt;/a&gt; to adapt for your own use.&lt;/p&gt;
 
@@ -386,8 +386,8 @@ William Benjamin recognised the significance of time in his &lt;span class=&quot
 &lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;bresson1999the&quot;&gt;Cartier-Bresson, Henri. 1999. &lt;i&gt;The Mind’s Eye : Writings on Photography and Photographers&lt;/i&gt;. New York, N.Y: Aperture.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/chicago-author-date-with-ibid</link>
-        <guid isPermaLink="true">https://cullaloe.com/chicago-author-date-with-ibid</guid>
+        <link>http://localhost:4000/chicago-author-date-with-ibid</link>
+        <guid isPermaLink="true">http://localhost:4000/chicago-author-date-with-ibid</guid>
         
         <category>CSL</category>
         
@@ -442,7 +442,7 @@ graph TD
 &lt;h2 id=&quot;citation-and-referencing&quot;&gt;Citation and referencing&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.mendeley.com/&quot;&gt;Mendeley&lt;/a&gt; is a reference manager suite that includes a &lt;a href=&quot;https://www.mendeley.com/reference-management/mendeley-desktop&quot;&gt;desktop application&lt;/a&gt; to access and manage your own library of references, and generates &lt;a href=&quot;http://www.bibtex.org/&quot;&gt;bibtex&lt;/a&gt; files which can be used by text processors. Note that the desktop application is not being supported now: there is a newer and much less useful &lt;a href=&quot;https://www.mendeley.com/download-reference-manager&quot;&gt;Mendeley Reference Manager&lt;/a&gt;. Many users have been lobbying Elsevier, who own Mendeley, to reinstate the Mendeley Desktop app or add its functionality to the new Reference Manager.&lt;/p&gt;
 
-&lt;p&gt;The most useful feature of Mendeley Desktop, apart from importing and managing my reference library, is the automatic creation and update of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bib&lt;/code&gt; file of the entire library, or optionally, separate bib files for each folder. The bib file is used by \(\LaTeX\) and pandoc when generating your document output, to insert correctly formatted citations and your bibliography.&lt;/p&gt;
+&lt;p&gt;The most useful feature of Mendeley Desktop, apart from importing and managing my reference library, is the automatic creation and update of a &lt;code&gt;.bib&lt;/code&gt; file of the entire library, or optionally, separate bib files for each folder. The bib file is used by \(\LaTeX\) and pandoc when generating your document output, to insert correctly formatted citations and your bibliography.&lt;/p&gt;
 
 &lt;h2 id=&quot;document-production&quot;&gt;Document production&lt;/h2&gt;
 
@@ -478,35 +478,35 @@ graph LR
 
 &lt;p&gt;Documents written in markdown often include a short &lt;a href=&quot;https://yaml.org/&quot;&gt;YAML&lt;/a&gt; header containing information about it and instructions for pandoc, etc. Here is an example markdown document, with a YAML header:&lt;/p&gt;
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;My amazing document&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Nick Hood&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;bibliography&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/path/to/your/library.bib&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;\today&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;language-markdown&quot;&gt;---
+title: My amazing document
+author: Nick Hood
+bibliography: /path/to/your/library.bib
+date: \today
+---
 
-&lt;span class=&quot;gh&quot;&gt;# My heading&lt;/span&gt;
+# My heading
 Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting.
 
-&lt;span class=&quot;gu&quot;&gt;## A subheading&lt;/span&gt;
+## A subheading
 Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. 
 
-&lt;span class=&quot;gu&quot;&gt;## A paragraph with a reference in it&lt;/span&gt;
+## A paragraph with a reference in it
 Here is some text which is my interpretation of what someone else wrote about [@OxfordEnglishDictionary]. 
 
-&lt;span class=&quot;gh&quot;&gt;# References&lt;/span&gt;
+# References
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To make a pdf of this document using pandoc, we type this in a terminal window:&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pandoc &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; filename.md &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; filename.pdf &lt;span class=&quot;nt&quot;&gt;--citeproc&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;$ pandoc -s filename.md -o filename.pdf --citeproc
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;It produces &lt;a href=&quot;/assets/docs/filename.pdf&quot;&gt;this file&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;extended-documents-not-public-eg-thesis&quot;&gt;Extended documents, not public (e.g. Thesis)&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; and the &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt; IDE are used for larger documents and data processing &lt;a class=&quot;citation&quot; href=&quot;#RCoreTeam2021&quot;&gt;(R Core Team, 2021)&lt;/a&gt;, mostly within &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RStudio&lt;/code&gt;. My (non-public) thesis website is made using the &lt;a href=&quot;https://bookdown.org/&quot;&gt;Bookdown&lt;/a&gt; R package &lt;a class=&quot;citation&quot; href=&quot;#Xie2016&quot;&gt;(Xie, 2016; Xie, 2020)&lt;/a&gt;, which itself uses pandoc to generate HTML, Word and pdf documents. Read more about how I do this &lt;a href=&quot;/deploy-bookdown-site-plesk/&quot;&gt;in this post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.r-project.org/&quot;&gt;R&lt;/a&gt; and the &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;RStudio&lt;/a&gt; IDE are used for larger documents and data processing &lt;a class=&quot;citation&quot; href=&quot;#RCoreTeam2021&quot;&gt;(R Core Team, 2021)&lt;/a&gt;, mostly within &lt;code&gt;RStudio&lt;/code&gt;. My (non-public) thesis website is made using the &lt;a href=&quot;https://bookdown.org/&quot;&gt;Bookdown&lt;/a&gt; R package &lt;a class=&quot;citation&quot; href=&quot;#Xie2016&quot;&gt;(Xie, 2016; Xie, 2020)&lt;/a&gt;, which itself uses pandoc to generate HTML, Word and pdf documents. Read more about how I do this &lt;a href=&quot;/deploy-bookdown-site-plesk/&quot;&gt;in this post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;public-web-articles-like-the-one-youre-reading&quot;&gt;Public web articles (like the one you’re reading)&lt;/h3&gt;
 
@@ -540,8 +540,8 @@ Here is some text which is my interpretation of what someone else wrote about [@
 &lt;/div&gt;
 </description>
         <pubDate>Sat, 26 Feb 2022 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/phd-workflow-22</link>
-        <guid isPermaLink="true">https://cullaloe.com/phd-workflow-22</guid>
+        <link>http://localhost:4000/phd-workflow-22</link>
+        <guid isPermaLink="true">http://localhost:4000/phd-workflow-22</guid>
         
         <category>Markdown</category>
         
@@ -584,55 +584,55 @@ Here is some text which is my interpretation of what someone else wrote about [@
 
 &lt;p&gt;Two years ago, the IT Futures conference cracked open how dangerous the weaponising of AI and small technologies was becoming. That threat is &lt;a href=&quot;https://www.newscientist.com/article/2282656-israel-used-worlds-first-ai-guided-combat-drone-swarm-in-gaza-attacks/&quot;&gt;now being realised in theatres of war&lt;/a&gt;, funded &lt;a href=&quot;https://good-with-money.com/2018/06/10/majority-of-uk-pensions-happy-to-invest-in-weapons/&quot;&gt;with our pension money&lt;/a&gt;. Our friends and enemies alike are becoming ever more bold in trying to steal what advantages we may have. To illustrate, my little, almost insignificant development server logs in the past 10 minutes&lt;sup id=&quot;fnref:note-21-12-10-1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:note-21-12-10-1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Dec 12 19:14:38 foo sshd[15612]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 143.110.179.115 port 59458 
-Dec 12 19:17:29 foo sshd[15840]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 143.110.179.115 port 45380 
-Dec 12 19:18:42 foo sshd[15919]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 92.255.85.237 port 49342 
-Dec 12 19:19:35 foo sshd[15978]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 134.209.198.229 port 36532 
-Dec 12 19:20:20 foo sshd[16034]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 143.110.179.115 port 59534 
-Dec 12 19:22:29 foo sshd[16162]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 134.209.198.229 port 44780 
-Dec 12 19:23:20 foo sshd[16218]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 222.187.254.41 port 32036 
-Dec 12 19:23:22 foo sshd[16218]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 222.187.254.41 port 32036 
-Dec 12 19:23:24 foo sshd[16218]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 222.187.254.41 port 32036 
-Dec 12 19:23:28 foo sshd[16227]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 222.187.254.41 port 44073 
-Dec 12 19:23:30 foo sshd[16227]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 222.187.254.41 port 44073 
-Dec 12 19:23:32 foo sshd[16227]: Failed password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;bar from 222.187.254.41 port 44073 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;Dec 12 19:14:38 foo sshd[15612]: Failed password for bar from 143.110.179.115 port 59458 
+Dec 12 19:17:29 foo sshd[15840]: Failed password for bar from 143.110.179.115 port 45380 
+Dec 12 19:18:42 foo sshd[15919]: Failed password for bar from 92.255.85.237 port 49342 
+Dec 12 19:19:35 foo sshd[15978]: Failed password for bar from 134.209.198.229 port 36532 
+Dec 12 19:20:20 foo sshd[16034]: Failed password for bar from 143.110.179.115 port 59534 
+Dec 12 19:22:29 foo sshd[16162]: Failed password for bar from 134.209.198.229 port 44780 
+Dec 12 19:23:20 foo sshd[16218]: Failed password for bar from 222.187.254.41 port 32036 
+Dec 12 19:23:22 foo sshd[16218]: Failed password for bar from 222.187.254.41 port 32036 
+Dec 12 19:23:24 foo sshd[16218]: Failed password for bar from 222.187.254.41 port 32036 
+Dec 12 19:23:28 foo sshd[16227]: Failed password for bar from 222.187.254.41 port 44073 
+Dec 12 19:23:30 foo sshd[16227]: Failed password for bar from 222.187.254.41 port 44073 
+Dec 12 19:23:32 foo sshd[16227]: Failed password for bar from 222.187.254.41 port 44073 
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Who is that sending their wolf-bots to huff and puff and try to gain access to my technical secrets&lt;sup id=&quot;fnref:note-21-12-10-2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:note-21-12-10-2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;?&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# curl ipinfo.io/143.110.179.115&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&quot;city&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Doddaballapura&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;region&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Karnataka&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;country&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;IN&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;org&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;AS14061 DigitalOcean, LLC&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;timezone&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Asia/Kolkata&quot;&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# curl ipinfo.io/92.255.85.237&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&quot;city&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Moscow&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;region&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Moscow&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;country&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;RU&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;org&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;AS57523 Chang Way Technologies Co. Limited&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;timezone&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Europe/Moscow&quot;&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# curl ipinfo.io/134.209.198.229&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&quot;city&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Amsterdam&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;region&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;North Holland&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;country&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;NL&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;org&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;AS14061 DigitalOcean, LLC&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;timezone&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Europe/Amsterdam&quot;&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# curl ipinfo.io/222.187.254.41&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;s2&quot;&gt;&quot;city&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Hangzhou&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;region&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Zhejiang&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;country&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;CN&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;org&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;AS4134 CHINANET-BACKBONE&quot;&lt;/span&gt;,
-  &lt;span class=&quot;s2&quot;&gt;&quot;timezone&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Asia/Shanghai&quot;&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;# curl ipinfo.io/143.110.179.115
+{
+  &quot;city&quot;: &quot;Doddaballapura&quot;,
+  &quot;region&quot;: &quot;Karnataka&quot;,
+  &quot;country&quot;: &quot;IN&quot;,
+  &quot;org&quot;: &quot;AS14061 DigitalOcean, LLC&quot;,
+  &quot;timezone&quot;: &quot;Asia/Kolkata&quot;,
+}
+# curl ipinfo.io/92.255.85.237
+{
+  &quot;city&quot;: &quot;Moscow&quot;,
+  &quot;region&quot;: &quot;Moscow&quot;,
+  &quot;country&quot;: &quot;RU&quot;,
+  &quot;org&quot;: &quot;AS57523 Chang Way Technologies Co. Limited&quot;,
+  &quot;timezone&quot;: &quot;Europe/Moscow&quot;,
+}
+# curl ipinfo.io/134.209.198.229
+{
+  &quot;city&quot;: &quot;Amsterdam&quot;,
+  &quot;region&quot;: &quot;North Holland&quot;,
+  &quot;country&quot;: &quot;NL&quot;,
+  &quot;org&quot;: &quot;AS14061 DigitalOcean, LLC&quot;,
+  &quot;timezone&quot;: &quot;Europe/Amsterdam&quot;,
+}
+# curl ipinfo.io/222.187.254.41
+{
+  &quot;city&quot;: &quot;Hangzhou&quot;,
+  &quot;region&quot;: &quot;Zhejiang&quot;,
+  &quot;country&quot;: &quot;CN&quot;,
+  &quot;org&quot;: &quot;AS4134 CHINANET-BACKBONE&quot;,
+  &quot;timezone&quot;: &quot;Asia/Shanghai&quot;,
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We are distracted by a global energy crisis that nobody wants to solve (otherwise why are &lt;a href=&quot;https://www.edinburghcastle.scot/whats-on/castle-of-light-hidden-treasures&quot;&gt;all these lights&lt;/a&gt; on?), an eco-carbon crisis that &lt;a href=&quot;https://latinamericanpost.com/35883-deforestation-a-constant-threat-to-latin-america&quot;&gt;nobody wants to solve&lt;/a&gt; and &lt;a href=&quot;https://www.nhsconfed.org/news/nhs-has-reached-tipping-point-warn-healthcare-leaders&quot;&gt;sustaining the unsustainable&lt;/a&gt;. It is interesting to notice that the same companies funding the race to mutual obliteration through short-termism and the abdication of any kind of moral (or even logical) constraints on our actions, are the same companies funding lucrative projects around the university.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion-and-next-steps&quot;&gt;Conclusion and next steps&lt;/h2&gt;
@@ -654,8 +654,8 @@ Dec 12 19:23:32 foo sshd[16227]: Failed password &lt;span class=&quot;k&quot;&gt
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 10 Dec 2021 15:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/futures-conference-21</link>
-        <guid isPermaLink="true">https://cullaloe.com/futures-conference-21</guid>
+        <link>http://localhost:4000/futures-conference-21</link>
+        <guid isPermaLink="true">http://localhost:4000/futures-conference-21</guid>
         
         <category>CPD</category>
         
@@ -670,13 +670,13 @@ Dec 12 19:23:32 foo sshd[16227]: Failed password &lt;span class=&quot;k&quot;&gt
         <title>Writing a literature review</title>
         <description>&lt;p&gt;This event is one of many within the PostGraduate Research (PGR) provision at Moray House. It is aimed specifically at first year PGR students. I am thankful to John Kelly for putting this lecture on for us and for fielding Q&amp;amp;A at the end. This was an extremely timely and useful session. These are my own notes from the event – I am responsible for any errors or omissions. &lt;em&gt;Caveat lector.&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DATE/TIME: Tuesday 30 November   [13:00-15:00]
+&lt;pre&gt;&lt;code&gt;DATE/TIME: Tuesday 30 November   [13:00-15:00]
 LOCATION: St Leonard’s Land, 3.25
 PGR STUDENT GROUP: PGR Students - Year 1
 SEMINAR: Writing a literature review
 PRESENTER: Dr John Kelly
 Director of PG Research
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Errors in communication delayed the start of this lecture (for it was lecture rather than seminar) which turned out to be not on campus, after all. Delegates quickly sorted out sharing arrangements for laptops as we connected. Others left, presumably to catch the recording later.&lt;/p&gt;
 
 &lt;p&gt;John quickly offered his disclaimers for the lecture and urged delegates to check in with their supervisors to ensure the approaches they are taking are consistent with the specifics of their project and scope. What followed was presented as general guidance in sections which in practice overlap with each other.&lt;/p&gt;
@@ -743,14 +743,14 @@ Director of PG Research
 
 &lt;p&gt;Your way in to all of this is in developing a basic understanding of the themes in your project (remember, this lecture was aimed at first year PGR students, mostly PhD students only a few weeks in to their PhDs, me included). This basic understanding can be had by first of all engaging with textbooks – often the first 4 – 5 chapters of the key texts in your domain will address the main themes. Once you have some confidence in your basic knowledge, then you can begin to go deeper by finding relevant journal articles by searching databases using keywords of concepts. Start with selecting your keywords, then pair them up. Combining more and more terms will lead you back towards the “bullseye” of your area of interest.&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;EDUCATION
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;EDUCATION
 EDUCATION UNDERGRADUATE
 EDUCATION UNDERGRADUATE UK
 TEACHER EDUCATION UNDERGRADUATE UK
 SECONDARY TEACHER EDUCATION UNDERGRADUATE UK
 SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE UK
 SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;em&gt;Narrowing scope by combining keywords&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;writing-a-literature-review&quot;&gt;Writing a literature review&lt;/h2&gt;
@@ -772,8 +772,8 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 &lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Atkinson2012&quot;&gt;Atkinson, Michael. 2012. “Literature Reviews.” In &lt;i&gt;Key Concepts in Sport and Exercise Research Methods&lt;/i&gt;, 1–245. https://doi.org/10.4135/9781446288092.&lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
         <pubDate>Mon, 22 Nov 2021 15:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/writing-lit-review</link>
-        <guid isPermaLink="true">https://cullaloe.com/writing-lit-review</guid>
+        <link>http://localhost:4000/writing-lit-review</link>
+        <guid isPermaLink="true">http://localhost:4000/writing-lit-review</guid>
         
         <category>PhD</category>
         
@@ -865,8 +865,8 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 &lt;/div&gt;
 </description>
         <pubDate>Wed, 10 Nov 2021 19:30:00 +0000</pubDate>
-        <link>https://cullaloe.com/survive-part-time-pgr</link>
-        <guid isPermaLink="true">https://cullaloe.com/survive-part-time-pgr</guid>
+        <link>http://localhost:4000/survive-part-time-pgr</link>
+        <guid isPermaLink="true">http://localhost:4000/survive-part-time-pgr</guid>
         
         <category>PhD</category>
         
@@ -908,8 +908,8 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 --&gt;
 </description>
         <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
-        <link>https://cullaloe.com/libsmart-ii</link>
-        <guid isPermaLink="true">https://cullaloe.com/libsmart-ii</guid>
+        <link>http://localhost:4000/libsmart-ii</link>
+        <guid isPermaLink="true">http://localhost:4000/libsmart-ii</guid>
         
         <category>PhD</category>
         
@@ -1033,8 +1033,8 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
 
 </description>
         <pubDate>Tue, 26 Oct 2021 00:00:00 +0100</pubDate>
-        <link>https://cullaloe.com/getting-started-pgr</link>
-        <guid isPermaLink="true">https://cullaloe.com/getting-started-pgr</guid>
+        <link>http://localhost:4000/getting-started-pgr</link>
+        <guid isPermaLink="true">http://localhost:4000/getting-started-pgr</guid>
         
         <category>PhD</category>
         

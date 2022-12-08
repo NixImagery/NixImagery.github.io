@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/wordpress-editor-stuck-in-code" property="og:url">
+    <meta content="http://localhost:4000/wordpress-editor-stuck-in-code" property="og:url">
   
   
     <meta content="2019-02-14T15:58:21+00:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/analogies.png" property="og:image">
+    <meta content="http://localhost:4000/assets/img/analogies.png" property="og:image">
   
   
     
@@ -42,13 +42,13 @@
     <meta name="twitter:title" content="Wordpress editor stuck in code">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/wordpress-editor-stuck-in-code">
+    <meta name="twitter:url" content="http://localhost:4000/wordpress-editor-stuck-in-code">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/analogies.png">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/analogies.png">
   
 
 	<meta name="description" content="">
@@ -175,13 +175,13 @@
 
 <p>In other words, his interface was stuck in the code editor. Unfortunately, he had no way of changing this (and neither did I as admin) in the UI. We changed a lot of variables, suspecting first his browser choice (Edge) and then OS choice (Windows). Long story short, the fix is to add an entry into the user’s meta table setting the rich_editing variable true.</p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="nv">`wp_usermeta`</span> <span class="p">(</span><span class="nv">`umeta_id`</span><span class="p">,</span> <span class="nv">`user_id`</span><span class="p">,</span> <span class="nv">`meta_key`</span><span class="p">,</span> <span class="nv">`meta_value`</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="k">NULL</span><span class="p">,</span> <span class="s1">'999'</span><span class="p">,</span> <span class="s1">'rich_editing'</span><span class="p">,</span> <span class="s1">'true'</span><span class="p">)</span>
-</code></pre></div></div>
+<pre><code class="language-sql">INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '999', 'rich_editing', 'true')
+</code></pre>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Wordpress editor stuck in code&url=https://cullaloe.com/wordpress-editor-stuck-in-code" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/wordpress-editor-stuck-in-code" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Wordpress editor stuck in code&url=http://localhost:4000/wordpress-editor-stuck-in-code" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/wordpress-editor-stuck-in-code" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

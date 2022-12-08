@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/rename-image-files-in-folders" property="og:url">
+    <meta content="http://localhost:4000/rename-image-files-in-folders" property="og:url">
   
   
     <meta content="2018-08-14T10:27:57+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/Screenshot-2019-06-21.png" property="og:image">
+    <meta content="http://localhost:4000/assets/img/Screenshot-2019-06-21.png" property="og:image">
   
   
     
@@ -42,13 +42,13 @@
     <meta name="twitter:title" content="Rename Image Files in Folders">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/rename-image-files-in-folders">
+    <meta name="twitter:url" content="http://localhost:4000/rename-image-files-in-folders">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/Screenshot-2019-06-21.png">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/Screenshot-2019-06-21.png">
   
 
 	<meta name="description" content="">
@@ -173,31 +173,31 @@
 
 <p>The client wanted each folder’s images to be numbered 001.jpg to nnn.jpg for some further process.</p>
 
-<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">imghdr</span>
+<pre><code class="language-py">import os
+import imghdr
 
-<span class="k">def</span> <span class="nf">renamefiles</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-<span class="n">rootstructure</span><span class="o">=</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">rootstructure</span><span class="p">):</span>
-<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-<span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">!=</span> <span class="n">root</span><span class="p">:</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Reset the counter
-</span><span class="n">os</span><span class="p">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+def renamefiles(path):
+rootstructure=os.path.abspath(path)
+n = 0
+for root, dirs, files in os.walk(rootstructure):
+for f in files:
+if os.getcwd() != root:
+n = 0 # Reset the counter
+os.chdir(root)
 
-<span class="nb">type</span> <span class="o">=</span> <span class="n">imghdr</span><span class="p">.</span><span class="n">what</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s">'jpeg'</span><span class="p">:</span>
-<span class="n">n</span> <span class="o">+=</span><span class="mi">1</span>
-<span class="n">os</span><span class="p">.</span><span class="n">rename</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">).</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s">".jpg"</span><span class="p">)</span>
+type = imghdr.what(f)
+if type == 'jpeg':
+n +=1
+os.rename(f, str(n).zfill(3) + ".jpg")
 
-<span class="c1"># Specify the full path to the directory here.
-</span><span class="n">renamefiles</span><span class="p">(</span><span class="s">"/Users/myuser/Desktop/TheImageFolder"</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</code></pre></div></div>
+# Specify the full path to the directory here.
+renamefiles("/Users/myuser/Desktop/TheImageFolder")&lt;/pre&gt;
+</code></pre>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Rename Image Files in Folders&url=https://cullaloe.com/rename-image-files-in-folders" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/rename-image-files-in-folders" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Rename Image Files in Folders&url=http://localhost:4000/rename-image-files-in-folders" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/rename-image-files-in-folders" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

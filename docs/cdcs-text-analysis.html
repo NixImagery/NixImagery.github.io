@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/cdcs-text-analysis" property="og:url">
+    <meta content="http://localhost:4000/cdcs-text-analysis" property="og:url">
   
   
     <meta content="2021-10-12T15:30:00+01:00" property="article:published_time">
-    <meta content="https://cullaloe.com/about/" property="article:author">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/Kodak-Portra-800-20211010_12192098.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/Kodak-Portra-800-20211010_12192098.jpg" property="og:image">
   
   
     
@@ -48,13 +48,13 @@
     <meta name="twitter:title" content="Introduction to Text Analysis">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/cdcs-text-analysis">
+    <meta name="twitter:url" content="http://localhost:4000/cdcs-text-analysis">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/Kodak-Portra-800-20211010_12192098.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/Kodak-Portra-800-20211010_12192098.jpg">
   
 
 	<meta name="description" content="">
@@ -183,13 +183,13 @@
 
 <p>The workshop begins with some exercises in the IDE to get used to running python code within the cells to do something with text strings, using variables, e.g.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first_name</span> <span class="o">=</span> <span class="s">"ada"</span>
-<span class="n">last_name</span> <span class="o">=</span> <span class="s">"lovelace"</span>
+<pre><code class="language-python">first_name = "ada"
+last_name = "lovelace"
 
-<span class="n">full_name</span> <span class="o">=</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">last_name</span> <span class="c1"># combine strings with a space inbetween
-</span>
-<span class="k">print</span> <span class="p">(</span><span class="n">full_name</span><span class="p">)</span>
-</code></pre></div></div>
+full_name = first_name + ' ' + last_name # combine strings with a space inbetween
+
+print (full_name)
+</code></pre>
 
 <h3 id="file-handling">File handling</h3>
 
@@ -208,17 +208,17 @@ txt = txt.lower()
 <h4 id="tokenization">Tokenization</h4>
 <p>Text analysis begins with breaking down a block of text into smaller chunks such as words or sentences. This is called <em>Tokenization</em>.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">nltk</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span> <span class="c1"># or word_tokenize for words
-</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"origin-intro.txt"</span><span class="p">)</span> <span class="c1"># open file
-</span>
-<span class="n">txt</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>          <span class="c1"># add file contents to variable
-</span>
-<span class="n">tokenized_text</span><span class="o">=</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+<pre><code class="language-python">import nltk
+from nltk.tokenize import sent_tokenize # or word_tokenize for words
 
-<span class="k">print</span><span class="p">(</span><span class="n">tokenized_text</span><span class="p">)</span>
-</code></pre></div></div>
+f = open("origin-intro.txt") # open file
+
+txt = f.read()          # add file contents to variable
+
+tokenized_text=sent_tokenize(txt)
+
+print(tokenized_text)
+</code></pre>
 
 <h4 id="cleaning-text">Cleaning text</h4>
 
@@ -233,22 +233,22 @@ txt = txt.lower()
 
 <p>“Stop” words are sometimes called filler words: they are the common words that don’t add much meaning to a sentence.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<pre><code class="language-python">import re
+from nltk.tokenize import word_tokenize
 
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"origin-intro.txt"</span><span class="p">)</span> <span class="c1"># open file
-</span><span class="n">contents</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>          <span class="c1"># add file contents to variable
-</span><span class="n">contents</span> <span class="o">=</span> <span class="n">contents</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>  <span class="c1"># lower case text
-</span><span class="n">contents</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s">'[^\w\s]'</span><span class="p">,</span><span class="s">''</span><span class="p">,</span><span class="n">contents</span><span class="p">)</span>  <span class="c1">#remove punctuation (note use of regex)
-</span><span class="n">tokenized_word</span><span class="o">=</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+f = open("origin-intro.txt") # open file
+contents = f.read()          # add file contents to variable
+contents = contents.lower()  # lower case text
+contents = re.sub(r'[^\w\s]','',contents)  #remove punctuation (note use of regex)
+tokenized_word=word_tokenize(contents)
 
-<span class="n">filtered_word</span><span class="o">=</span><span class="p">[]</span>
+filtered_word=[]
 
-<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">tokenized_word</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">:</span>
-        <span class="n">filtered_word</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Filterd Words:"</span><span class="p">,</span><span class="n">filtered_word</span><span class="p">)</span>
-</code></pre></div></div>
+for w in tokenized_word:
+    if w not in stop_words:
+        filtered_word.append(w)
+print("Filterd Words:",filtered_word)
+</code></pre>
 
 <h3 id="further-functions-and-libraries">Further functions and libraries</h3>
 
@@ -258,16 +258,16 @@ txt = txt.lower()
 
 <p>A delightful bit of fun was had analysing President Trump’s Tweets using this code to fetch the text:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">csv</span>
-<span class="kn">import</span> <span class="nn">urllib.request</span>
+<pre><code class="language-python">import csv
+import urllib.request
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">'https://learn.edina.ac.uk/intro-ta/files/trump-tweet-archive.csv'</span> <span class="c1"># download the file
-</span><span class="n">csv</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">()</span> <span class="c1"># assign the contents of the file to a variable (csv)
-</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'tweets.csv'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span> <span class="c1"># create a new file and save the contents of 'csv' to this file
-</span>    <span class="nb">file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">csv</span><span class="p">)</span>
+url = 'https://learn.edina.ac.uk/intro-ta/files/trump-tweet-archive.csv' # download the file
+csv = urllib.request.urlopen(url).read() # assign the contents of the file to a variable (csv)
+with open('tweets.csv', 'wb') as file: # create a new file and save the contents of 'csv' to this file
+    file.write(csv)
     
-    <span class="k">print</span><span class="p">(</span><span class="s">'CSV file created'</span><span class="p">)</span>
-</code></pre></div></div>
+    print('CSV file created')
+</code></pre>
 
 <p>What do you think was the top 4-gram in all of this data?</p>
 
@@ -283,8 +283,8 @@ txt = txt.lower()
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Introduction to Text Analysis&url=https://cullaloe.com/cdcs-text-analysis" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/cdcs-text-analysis" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Introduction to Text Analysis&url=http://localhost:4000/cdcs-text-analysis" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/cdcs-text-analysis" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">
