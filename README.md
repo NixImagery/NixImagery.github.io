@@ -1,4 +1,4 @@
-# NixImagery.github.io
+# NixImagery.github.io, served from cullaloe.com
 
 This repository is the source for a blog that contains posts on coding, technical matters, education, and research.
 
