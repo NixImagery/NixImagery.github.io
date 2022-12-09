@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/arch-linux-on-osx" property="og:url">
+    <meta content="https://cullaloe.com/arch-linux-on-osx" property="og:url">
   
   
     <meta content="2019-08-31T17:00:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/archlinux-logo.png" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/archlinux-logo.png" property="og:image">
   
   
     
@@ -44,13 +44,13 @@
     <meta name="twitter:title" content="Arch Linux on OSX">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/arch-linux-on-osx">
+    <meta name="twitter:url" content="https://cullaloe.com/arch-linux-on-osx">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/archlinux-logo.png">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/archlinux-logo.png">
   
 
 	<meta name="description" content="">
@@ -173,25 +173,25 @@
 <h2 id="the-virtual-machine">The Virtual Machine</h2>
 <p>I downloaded and installed <a href="https://www.vagrantup.com/">Vagrant</a> and gave it a spin with the example Ubuntu 12.04 LTS. Installation, running and logging in to the instance takes three commands…</p>
 
-<pre><code class="language-bash">$ vagrant init hashicorp/precise64
-$ vagrant up
-$ vagrant ssh
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>vagrant init hashicorp/precise64
+<span class="nv">$ </span>vagrant up
+<span class="nv">$ </span>vagrant ssh
+</code></pre></div></div>
 
 <h2 id="arch">Arch</h2>
-<p>Firing up Arch itself could be done the same way, but the Vagrant site hints that once Vagrant is installed on your dev machine, all you need is a Vagrantfile with the right info in it. Here’s the MWE<sup id="fnref:MWE" role="doc-noteref"><a href="#fn:MWE" class="footnote" rel="footnote">2</a></sup> I started with. It uses ruby syntax, and was simply a new directory containing a single file called <code>Vagrantfile</code>:</p>
+<p>Firing up Arch itself could be done the same way, but the Vagrant site hints that once Vagrant is installed on your dev machine, all you need is a Vagrantfile with the right info in it. Here’s the MWE<sup id="fnref:MWE" role="doc-noteref"><a href="#fn:MWE" class="footnote" rel="footnote">2</a></sup> I started with. It uses ruby syntax, and was simply a new directory containing a single file called <code class="language-plaintext highlighter-rouge">Vagrantfile</code>:</p>
 
-<pre><code class="language-ruby">Vagrant.configure("2") do |config|
-  config.vm.box = "archlinux/archlinux"
-end
-</code></pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Vagrant</span><span class="p">.</span><span class="nf">configure</span><span class="p">(</span><span class="s2">"2"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="p">.</span><span class="nf">vm</span><span class="p">.</span><span class="nf">box</span> <span class="o">=</span> <span class="s2">"archlinux/archlinux"</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
 <p>This is a super quick and easy way to get Arch up and running. Now, you just type the command:</p>
 
-<pre><code class="language-bash">$ vagrant up
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>vagrant up
+</code></pre></div></div>
 
-<p>This will download and install a fresh instance of Arch and fire it up, ready for you to <code>ssh</code> into.</p>
+<p>This will download and install a fresh instance of Arch and fire it up, ready for you to <code class="language-plaintext highlighter-rouge">ssh</code> into.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
@@ -206,8 +206,8 @@ end
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Arch Linux on OSX&url=http://localhost:4000/arch-linux-on-osx" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/arch-linux-on-osx" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Arch Linux on OSX&url=https://cullaloe.com/arch-linux-on-osx" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/arch-linux-on-osx" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

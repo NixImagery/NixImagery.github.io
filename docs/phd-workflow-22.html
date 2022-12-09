@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/phd-workflow-22" property="og:url">
+    <meta content="https://cullaloe.com/phd-workflow-22" property="og:url">
   
   
     <meta content="2022-02-26T00:00:00+00:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/DSF8893.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/DSF8893.jpg" property="og:image">
   
   
     
@@ -44,13 +44,13 @@
     <meta name="twitter:title" content="PhD Tools and software">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/phd-workflow-22">
+    <meta name="twitter:url" content="https://cullaloe.com/phd-workflow-22">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/DSF8893.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/DSF8893.jpg">
   
 
 	<meta name="description" content="">
@@ -220,7 +220,7 @@ graph TD
 <h2 id="citation-and-referencing">Citation and referencing</h2>
 <p><a href="https://www.mendeley.com/">Mendeley</a> is a reference manager suite that includes a <a href="https://www.mendeley.com/reference-management/mendeley-desktop">desktop application</a> to access and manage your own library of references, and generates <a href="http://www.bibtex.org/">bibtex</a> files which can be used by text processors. Note that the desktop application is not being supported now: there is a newer and much less useful <a href="https://www.mendeley.com/download-reference-manager">Mendeley Reference Manager</a>. Many users have been lobbying Elsevier, who own Mendeley, to reinstate the Mendeley Desktop app or add its functionality to the new Reference Manager.</p>
 
-<p>The most useful feature of Mendeley Desktop, apart from importing and managing my reference library, is the automatic creation and update of a <code>.bib</code> file of the entire library, or optionally, separate bib files for each folder. The bib file is used by \(\LaTeX\) and pandoc when generating your document output, to insert correctly formatted citations and your bibliography.</p>
+<p>The most useful feature of Mendeley Desktop, apart from importing and managing my reference library, is the automatic creation and update of a <code class="language-plaintext highlighter-rouge">.bib</code> file of the entire library, or optionally, separate bib files for each folder. The bib file is used by \(\LaTeX\) and pandoc when generating your document output, to insert correctly formatted citations and your bibliography.</p>
 
 <h2 id="document-production">Document production</h2>
 
@@ -257,35 +257,35 @@ graph LR
 
 <p>Documents written in markdown often include a short <a href="https://yaml.org/">YAML</a> header containing information about it and instructions for pandoc, etc. Here is an example markdown document, with a YAML header:</p>
 
-<pre><code class="language-markdown">---
-title: My amazing document
-author: Nick Hood
-bibliography: /path/to/your/library.bib
-date: \today
----
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">My amazing document</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Nick Hood</span>
+<span class="na">bibliography</span><span class="pi">:</span> <span class="s">/path/to/your/library.bib</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">\today</span>
+<span class="nn">---</span>
 
-# My heading
+<span class="gh"># My heading</span>
 Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting. Here is some text which is very interesting.
 
-## A subheading
+<span class="gu">## A subheading</span>
 Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. Here is some text which is very interesting but more detailed. 
 
-## A paragraph with a reference in it
+<span class="gu">## A paragraph with a reference in it</span>
 Here is some text which is my interpretation of what someone else wrote about [@OxfordEnglishDictionary]. 
 
-# References
+<span class="gh"># References</span>
 
-</code></pre>
+</code></pre></div></div>
 
 <p>To make a pdf of this document using pandoc, we type this in a terminal window:</p>
 
-<pre><code class="language-sh">$ pandoc -s filename.md -o filename.pdf --citeproc
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pandoc <span class="nt">-s</span> filename.md <span class="nt">-o</span> filename.pdf <span class="nt">--citeproc</span>
+</code></pre></div></div>
 <p>It produces <a href="/assets/docs/filename.pdf">this file</a>.</p>
 
 <h3 id="extended-documents-not-public-eg-thesis">Extended documents, not public (e.g. Thesis)</h3>
 
-<p><a href="https://www.r-project.org/">R</a> and the <a href="https://www.rstudio.com/">RStudio</a> IDE are used for larger documents and data processing <a class="citation" href="#RCoreTeam2021">(R Core Team, 2021)</a>, mostly within <code>RStudio</code>. My (non-public) thesis website is made using the <a href="https://bookdown.org/">Bookdown</a> R package <a class="citation" href="#Xie2016">(Xie, 2016; Xie, 2020)</a>, which itself uses pandoc to generate HTML, Word and pdf documents. Read more about how I do this <a href="/deploy-bookdown-site-plesk/">in this post</a>.</p>
+<p><a href="https://www.r-project.org/">R</a> and the <a href="https://www.rstudio.com/">RStudio</a> IDE are used for larger documents and data processing <a class="citation" href="#RCoreTeam2021">(R Core Team, 2021)</a>, mostly within <code class="language-plaintext highlighter-rouge">RStudio</code>. My (non-public) thesis website is made using the <a href="https://bookdown.org/">Bookdown</a> R package <a class="citation" href="#Xie2016">(Xie, 2016; Xie, 2020)</a>, which itself uses pandoc to generate HTML, Word and pdf documents. Read more about how I do this <a href="/deploy-bookdown-site-plesk/">in this post</a>.</p>
 
 <h3 id="public-web-articles-like-the-one-youre-reading">Public web articles (like the one you’re reading)</h3>
 
@@ -320,8 +320,8 @@ Here is some text which is my interpretation of what someone else wrote about [@
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=PhD Tools and software&url=http://localhost:4000/phd-workflow-22" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/phd-workflow-22" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=PhD Tools and software&url=https://cullaloe.com/phd-workflow-22" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/phd-workflow-22" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

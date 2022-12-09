@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/jekyll-update-via-rake" property="og:url">
+    <meta content="https://cullaloe.com/jekyll-update-via-rake" property="og:url">
   
   
     <meta content="2020-12-01T00:00:00+00:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/Ilford-Delta-3200-20201127_20085880.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/Ilford-Delta-3200-20201127_20085880.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Github/Jekyll site update via Rake">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/jekyll-update-via-rake">
+    <meta name="twitter:url" content="https://cullaloe.com/jekyll-update-via-rake">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/Ilford-Delta-3200-20201127_20085880.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/Ilford-Delta-3200-20201127_20085880.jpg">
   
 
 	<meta name="description" content="">
@@ -173,90 +173,90 @@
         <h1 class="page-title">Github/Jekyll site update via Rake</h1>
         <div class="page-date"><span>2020, Dec 01&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>I wanted a quick way to provide useful comments on commits made in development of a Jekyll site which is deployed on GitHub. This method offers a couple of rake tasks to first quickly build the site locally, placing the output into the <code>docs</code> folder; then to commit and push the changes to GitHub once you’re happy. All of this code goes in the <code>Rakefile</code>.</p>
+      <p>I wanted a quick way to provide useful comments on commits made in development of a Jekyll site which is deployed on GitHub. This method offers a couple of rake tasks to first quickly build the site locally, placing the output into the <code class="language-plaintext highlighter-rouge">docs</code> folder; then to commit and push the changes to GitHub once you’re happy. All of this code goes in the <code class="language-plaintext highlighter-rouge">Rakefile</code>.</p>
 
 <h3 id="build">Build</h3>
 
-<pre><code class="language-ruby">require 'rubygems'
-require 'rake'
-require 'rdoc'
-require 'date'
-require 'yaml'
-require 'tmpdir'
-require 'jekyll'
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rubygems'</span>
+<span class="nb">require</span> <span class="s1">'rake'</span>
+<span class="nb">require</span> <span class="s1">'rdoc'</span>
+<span class="nb">require</span> <span class="s1">'date'</span>
+<span class="nb">require</span> <span class="s1">'yaml'</span>
+<span class="nb">require</span> <span class="s1">'tmpdir'</span>
+<span class="nb">require</span> <span class="s1">'jekyll'</span>
 
-desc "Generate blog files"
-task :generate do
-  Jekyll::Site.new(Jekyll.configuration({
-    "source"      =&gt; ".",
-    "destination" =&gt; "docs"
-  })).process
-end
-</code></pre>
+<span class="n">desc</span> <span class="s2">"Generate blog files"</span>
+<span class="n">task</span> <span class="ss">:generate</span> <span class="k">do</span>
+  <span class="no">Jekyll</span><span class="o">::</span><span class="no">Site</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">Jekyll</span><span class="p">.</span><span class="nf">configuration</span><span class="p">({</span>
+    <span class="s2">"source"</span>      <span class="o">=&gt;</span> <span class="s2">"."</span><span class="p">,</span>
+    <span class="s2">"destination"</span> <span class="o">=&gt;</span> <span class="s2">"docs"</span>
+  <span class="p">})).</span><span class="nf">process</span>
+<span class="k">end</span>
+</code></pre></div></div>
 <p>You can build and test your site in your development machine (I’m using a Mac) using a python http server to render the static site thus:</p>
 
-<pre><code class="language-sh">$ rake generate
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rake generate
 Configuration file: /your/path/to/GitHub/projectname/_config.yml
-$ cd docs/
-$ python3 -m http.server
-</code></pre>
+<span class="nv">$ </span><span class="nb">cd </span>docs/
+<span class="nv">$ </span>python3 <span class="nt">-m</span> http.server
+</code></pre></div></div>
 <h3 id="deploy">Deploy</h3>
-<p>You should place an empty <code>.nojekyll</code> file in the root of your project to tell GitHub not to bother rebuilding the site. You’re just deploying static files to the <code>docs</code> folder. Once you’re ready to deploy, you can publish via rake. The rest of the <code>Rakefile</code> looks like this:</p>
+<p>You should place an empty <code class="language-plaintext highlighter-rouge">.nojekyll</code> file in the root of your project to tell GitHub not to bother rebuilding the site. You’re just deploying static files to the <code class="language-plaintext highlighter-rouge">docs</code> folder. Once you’re ready to deploy, you can publish via rake. The rest of the <code class="language-plaintext highlighter-rouge">Rakefile</code> looks like this:</p>
 
-<pre><code class="language-ruby"># Usage:
-# $ rake
-# $ rake generate
-# $ rake publish
-# $ rake publish["Your comment here"]
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Usage:</span>
+<span class="c1"># $ rake</span>
+<span class="c1"># $ rake generate</span>
+<span class="c1"># $ rake publish</span>
+<span class="c1"># $ rake publish["Your comment here"]</span>
 
-desc "Generate and publish blog to master/docs"
-task :publish, [:var] =&gt; [:generate] do |task, args|
-  args.with_defaults(var: 'Commit via Rake')
-Dir.mktmpdir do |tmp|
-    system "mv docs/* #{tmp}"
-    system "git checkout -B master"
-    system "rm -rf docs/*"
-    system "mv #{tmp}/* docs"
-    system "git add ."
-    system "git commit -a -m #{args.var.inspect}"
-    system "git push origin master --force"
-    system "git checkout master"
-    system "echo Finished."
-  end
-end
+<span class="n">desc</span> <span class="s2">"Generate and publish blog to master/docs"</span>
+<span class="n">task</span> <span class="ss">:publish</span><span class="p">,</span> <span class="p">[</span><span class="ss">:var</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="ss">:generate</span><span class="p">]</span> <span class="k">do</span> <span class="o">|</span><span class="n">task</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+  <span class="n">args</span><span class="p">.</span><span class="nf">with_defaults</span><span class="p">(</span><span class="ss">var: </span><span class="s1">'Commit via Rake'</span><span class="p">)</span>
+<span class="no">Dir</span><span class="p">.</span><span class="nf">mktmpdir</span> <span class="k">do</span> <span class="o">|</span><span class="n">tmp</span><span class="o">|</span>
+    <span class="nb">system</span> <span class="s2">"mv docs/* </span><span class="si">#{</span><span class="n">tmp</span><span class="si">}</span><span class="s2">"</span>
+    <span class="nb">system</span> <span class="s2">"git checkout -B master"</span>
+    <span class="nb">system</span> <span class="s2">"rm -rf docs/*"</span>
+    <span class="nb">system</span> <span class="s2">"mv </span><span class="si">#{</span><span class="n">tmp</span><span class="si">}</span><span class="s2">/* docs"</span>
+    <span class="nb">system</span> <span class="s2">"git add ."</span>
+    <span class="nb">system</span> <span class="s2">"git commit -a -m </span><span class="si">#{</span><span class="n">args</span><span class="p">.</span><span class="nf">var</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span>
+    <span class="nb">system</span> <span class="s2">"git push origin master --force"</span>
+    <span class="nb">system</span> <span class="s2">"git checkout master"</span>
+    <span class="nb">system</span> <span class="s2">"echo Finished."</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 
-task :default =&gt; :publish
-</code></pre>
+<span class="n">task</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="ss">:publish</span>
+</code></pre></div></div>
 <p>For example, you might publish using this command from the project folder:</p>
 
-<pre><code class="language-sh">$ rake publish["Example updates"]
-(in /your/path/to/GitHub/projectname/)
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rake publish[<span class="s2">"Example updates"</span><span class="o">]</span>
+<span class="o">(</span><span class="k">in</span> /your/path/to/GitHub/projectname/<span class="o">)</span>
 Configuration file: /your/path/to/GitHub/projectname/_config.yml
 D	docs/yyyy/mm/dd/some-files.html
 ....
-Reset branch 'master'
-Your branch is up to date with 'origin/master'.
-[master abcdefg] Example updates
- n files changed, p insertions(+), q deletions(-)
-Enumerating objects: r, done.
-Counting objects: 100% (nn/nn), done.
+Reset branch <span class="s1">'master'</span>
+Your branch is up to <span class="nb">date </span>with <span class="s1">'origin/master'</span><span class="nb">.</span>
+<span class="o">[</span>master abcdefg] Example updates
+ n files changed, p insertions<span class="o">(</span>+<span class="o">)</span>, q deletions<span class="o">(</span>-<span class="o">)</span>
+Enumerating objects: r, <span class="k">done</span><span class="nb">.</span>
+Counting objects: 100% <span class="o">(</span>nn/nn<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
 Delta compression using up to x threads
-Compressing objects: 100% (mm/mm), done.
-Writing objects: 100% (mm/mm), 1234 bytes | 123.00 KiB/s, done.
-Total mm (delta nn), reused 0 (delta 0)
-remote: Resolving deltas: 100% (nn/nn), completed with nn local objects.
+Compressing objects: 100% <span class="o">(</span>mm/mm<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
+Writing objects: 100% <span class="o">(</span>mm/mm<span class="o">)</span>, 1234 bytes | 123.00 KiB/s, <span class="k">done</span><span class="nb">.</span>
+Total mm <span class="o">(</span>delta nn<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
+remote: Resolving deltas: 100% <span class="o">(</span>nn/nn<span class="o">)</span>, completed with nn <span class="nb">local </span>objects.
 To https://github.com/YourGHName/projectname.git
    0aa7f2g..abcdefg  master -&gt; master
-Already on 'master'
-Your branch is up to date with 'origin/master'.
+Already on <span class="s1">'master'</span>
+Your branch is up to <span class="nb">date </span>with <span class="s1">'origin/master'</span><span class="nb">.</span>
 Finished.
-</code></pre>
-<p>Notice a call to publish will also generate the site for you. If you’re in a hurry, just issue <code>rake</code> to get the default <em>Commit via Rake</em> commit message.</p>
+</code></pre></div></div>
+<p>Notice a call to publish will also generate the site for you. If you’re in a hurry, just issue <code class="language-plaintext highlighter-rouge">rake</code> to get the default <em>Commit via Rake</em> commit message.</p>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Github/Jekyll site update via Rake&url=http://localhost:4000/jekyll-update-via-rake" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/jekyll-update-via-rake" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Github/Jekyll site update via Rake&url=https://cullaloe.com/jekyll-update-via-rake" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/jekyll-update-via-rake" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

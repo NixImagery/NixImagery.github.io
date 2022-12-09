@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/nextcloud-calendar-embed" property="og:url">
+    <meta content="https://cullaloe.com/nextcloud-calendar-embed" property="og:url">
   
   
     <meta content="2020-08-05T00:00:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/nextcloud-calendar.png" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/nextcloud-calendar.png" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Nextcloud calendar embedding">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/nextcloud-calendar-embed">
+    <meta name="twitter:url" content="https://cullaloe.com/nextcloud-calendar-embed">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/nextcloud-calendar.png">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/nextcloud-calendar.png">
   
 
 	<meta name="description" content="">
@@ -173,29 +173,29 @@
       </header>
       <p>I needed to embed a <a href="https://nextcloud.com/">NextCloud</a> calendar within another website. Next cloud offers an embed code block which looks like this:</p>
 
-<pre><code class="language-html">&lt;iframe width="400" height="215" src="https://your.tld/index.php/apps/calendar/embed/50m3rAnD0mC0d3z"&gt;&lt;/iframe&gt;
-</code></pre>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"400"</span> <span class="na">height=</span><span class="s">"215"</span> <span class="na">src=</span><span class="s">"https://your.tld/index.php/apps/calendar/embed/50m3rAnD0mC0d3z"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
 <p>Because NextCloud sets some fairly intelligent security defaults, this results in the browser throwing a “refused to connect” error unless the site you embed the calendar iframe on is on the same domain as your NextCloud instance. See the header image for what this looks like.</p>
 
-<p>The solution lies in allowing your target web server to connect to your NextCloud server. This is not done in NginX/Apache settings because these will be overridden by NextCloud anyway. Instead, edit the <code>ContentSecurityPolicy.php</code> file for NextCloud. This file is located in the <code>/lib/public/AppFramework/Http/</code> folder of your NextCloud installation.</p>
+<p>The solution lies in allowing your target web server to connect to your NextCloud server. This is not done in NginX/Apache settings because these will be overridden by NextCloud anyway. Instead, edit the <code class="language-plaintext highlighter-rouge">ContentSecurityPolicy.php</code> file for NextCloud. This file is located in the <code class="language-plaintext highlighter-rouge">/lib/public/AppFramework/Http/</code> folder of your NextCloud installation.</p>
 
-<pre><code class="language-php">/** @var array Domains from which iframes can be loaded */
-	protected $allowedFrameDomains = [
-	'https://*.yourdomain.tld',
-    ];
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cd">/** @var array Domains from which iframes can be loaded */</span>
+	<span class="k">protected</span> <span class="nv">$allowedFrameDomains</span> <span class="o">=</span> <span class="p">[</span>
+	<span class="s1">'https://*.yourdomain.tld'</span><span class="p">,</span>
+    <span class="p">];</span>
     
-/** @var array Domains which can embed this Nextcloud instance */
-	protected $allowedFrameAncestors = [
-		'\'self\'',
-    	'https://*.yourdomain.tld',
-    ];
-</code></pre>
-<p>With the above edits (no server restart required), the calendar will embed quite happily. There is no need to implement the <code>X-Frame-Options</code> HTTP header documented elsewhere as this is obsolete. The <code>Content-Security-Policy</code> header delivered by the above fix from within NextCloud is enough.</p>
+<span class="cd">/** @var array Domains which can embed this Nextcloud instance */</span>
+	<span class="k">protected</span> <span class="nv">$allowedFrameAncestors</span> <span class="o">=</span> <span class="p">[</span>
+		<span class="s1">'\'self\''</span><span class="p">,</span>
+    	<span class="s1">'https://*.yourdomain.tld'</span><span class="p">,</span>
+    <span class="p">];</span>
+</code></pre></div></div>
+<p>With the above edits (no server restart required), the calendar will embed quite happily. There is no need to implement the <code class="language-plaintext highlighter-rouge">X-Frame-Options</code> HTTP header documented elsewhere as this is obsolete. The <code class="language-plaintext highlighter-rouge">Content-Security-Policy</code> header delivered by the above fix from within NextCloud is enough.</p>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Nextcloud calendar embedding&url=http://localhost:4000/nextcloud-calendar-embed" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/nextcloud-calendar-embed" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Nextcloud calendar embedding&url=https://cullaloe.com/nextcloud-calendar-embed" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/nextcloud-calendar-embed" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/reading-ical-r" property="og:url">
+    <meta content="https://cullaloe.com/reading-ical-r" property="og:url">
   
   
     <meta content="2021-05-26T00:00:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/R0000956.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/R0000956.jpg" property="og:image">
   
   
     
@@ -52,13 +52,13 @@
     <meta name="twitter:title" content="Reading iCal in R">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/reading-ical-r">
+    <meta name="twitter:url" content="https://cullaloe.com/reading-ical-r">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/R0000956.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/R0000956.jpg">
   
 
 	<meta name="description" content="">
@@ -187,61 +187,61 @@
 
 <p>Fortunately, there is already a <a href="https://cran.r-project.org/package=calendar">package</a> for reading and manipulating iCal files. You may need to install this first.</p>
 
-<pre><code class="language-r">&gt; install.packages("calendar")
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"calendar"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
-<p>So, firstly we want to grab data from the iCal feed. This is the path to an <code>.ics</code> file or the ical data for the calendar: make sure it’s not just a link to a web interface for the calendar.</p>
+<p>So, firstly we want to grab data from the iCal feed. This is the path to an <code class="language-plaintext highlighter-rouge">.ics</code> file or the ical data for the calendar: make sure it’s not just a link to a web interface for the calendar.</p>
 
-<pre><code class="language-r">&gt; mydat &lt;- readLines("https://www.gov.uk/bank-holidays/england-and-wales.ics")
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">mydat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readLines</span><span class="p">(</span><span class="s2">"https://www.gov.uk/bank-holidays/england-and-wales.ics"</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
 
-<p>It’s worth checking that this has returned something useful: the <code>head()</code> function returns the first few lines and an iCal file should look something like this:</p>
+<p>It’s worth checking that this has returned something useful: the <code class="language-plaintext highlighter-rouge">head()</code> function returns the first few lines and an iCal file should look something like this:</p>
 
-<pre><code class="language-r">&gt; head(mydat)
-[1] "BEGIN:VCALENDAR"                     
-[2] "VERSION:2.0"                         
-[3] "METHOD:PUBLISH"                      
-[4] "PRODID:-//uk.gov/GOVUK calendars//EN"
-[5] "CALSCALE:GREGORIAN"                  
-[6] "BEGIN:VEVENT"       
-&gt; 
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">mydat</span><span class="p">)</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"BEGIN:VCALENDAR"</span><span class="w">                     
+</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="s2">"VERSION:2.0"</span><span class="w">                         
+</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="w"> </span><span class="s2">"METHOD:PUBLISH"</span><span class="w">                      
+</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="s2">"PRODID:-//uk.gov/GOVUK calendars//EN"</span><span class="w">
+</span><span class="p">[</span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="s2">"CALSCALE:GREGORIAN"</span><span class="w">                  
+</span><span class="p">[</span><span class="m">6</span><span class="p">]</span><span class="w"> </span><span class="s2">"BEGIN:VEVENT"</span><span class="w">       
+</span><span class="o">&gt;</span><span class="w"> 
+</span></code></pre></div></div>
 
-<p>We can use <code>ic_dataframe()</code> to organise this flat file into something more structured, again peeking in at the first few column header names in the data frame:</p>
+<p>We can use <code class="language-plaintext highlighter-rouge">ic_dataframe()</code> to organise this flat file into something more structured, again peeking in at the first few column header names in the data frame:</p>
 
-<pre><code class="language-r">&gt; mydf &lt;- ic_dataframe(mydat)
-&gt; head(names(mydf))
-[1] "DTEND;VALUE=DATE"   "DTSTART;VALUE=DATE" "SUMMARY"           
-[4] "UID"                "SEQUENCE"           "DTSTAMP"                          
-&gt; 
-</code></pre>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">mydf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ic_dataframe</span><span class="p">(</span><span class="n">mydat</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="nf">names</span><span class="p">(</span><span class="n">mydf</span><span class="p">))</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s2">"DTEND;VALUE=DATE"</span><span class="w">   </span><span class="s2">"DTSTART;VALUE=DATE"</span><span class="w"> </span><span class="s2">"SUMMARY"</span><span class="w">           
+</span><span class="p">[</span><span class="m">4</span><span class="p">]</span><span class="w"> </span><span class="s2">"UID"</span><span class="w">                </span><span class="s2">"SEQUENCE"</span><span class="w">           </span><span class="s2">"DTSTAMP"</span><span class="w">                          
+</span><span class="o">&gt;</span><span class="w"> 
+</span></code></pre></div></div>
 <p>Selecting the information you need from that is a matter of applying filters. A new data frame using the first 3 columns:</p>
 
-<pre><code class="language-r">&gt; set1 &lt;- data.frame(mydf["DTSTART;VALUE=DATE"],mydf["SUMMARY"])
-&gt; head(set1)
-  DTSTART.VALUE.DATE                SUMMARY
-1         2016-01-01         New Year’s Day
-2         2016-03-25            Good Friday
-3         2016-03-28          Easter Monday
-4         2016-05-02 Early May bank holiday
-5         2016-05-30    Spring bank holiday
-6         2016-08-29    Summer bank holiday
-</code></pre>
-<p>Selecting only Jubilee holidays using the logical form of <code>grep</code>:</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">set1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">mydf</span><span class="p">[</span><span class="s2">"DTSTART;VALUE=DATE"</span><span class="p">],</span><span class="n">mydf</span><span class="p">[</span><span class="s2">"SUMMARY"</span><span class="p">])</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">set1</span><span class="p">)</span><span class="w">
+  </span><span class="n">DTSTART.VALUE.DATE</span><span class="w">                </span><span class="n">SUMMARY</span><span class="w">
+</span><span class="m">1</span><span class="w">         </span><span class="m">2016-01-01</span><span class="w">         </span><span class="n">New</span><span class="w"> </span><span class="n">Year</span><span class="err">’</span><span class="n">s</span><span class="w"> </span><span class="n">Day</span><span class="w">
+</span><span class="m">2</span><span class="w">         </span><span class="m">2016-03-25</span><span class="w">            </span><span class="n">Good</span><span class="w"> </span><span class="n">Friday</span><span class="w">
+</span><span class="m">3</span><span class="w">         </span><span class="m">2016-03-28</span><span class="w">          </span><span class="n">Easter</span><span class="w"> </span><span class="n">Monday</span><span class="w">
+</span><span class="m">4</span><span class="w">         </span><span class="m">2016-05-02</span><span class="w"> </span><span class="n">Early</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="n">holiday</span><span class="w">
+</span><span class="m">5</span><span class="w">         </span><span class="m">2016-05-30</span><span class="w">    </span><span class="n">Spring</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="n">holiday</span><span class="w">
+</span><span class="m">6</span><span class="w">         </span><span class="m">2016-08-29</span><span class="w">    </span><span class="n">Summer</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="n">holiday</span><span class="w">
+</span></code></pre></div></div>
+<p>Selecting only Jubilee holidays using the logical form of <code class="language-plaintext highlighter-rouge">grep</code>:</p>
 
-<pre><code class="language-r">&gt; set2 &lt;- subset(set1,grepl("Jubilee",set1$SUMMARY))
-&gt; head(set2)
-   DTSTART.VALUE.DATE                       SUMMARY
-54         2022-06-03 Platinum Jubilee bank holiday
-</code></pre>
-<p>Adding new headings using <code>setnames</code> from the <code>data.table</code> library, then removing row numbers and displaying as a table.</p>
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">set2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span><span class="n">grepl</span><span class="p">(</span><span class="s2">"Jubilee"</span><span class="p">,</span><span class="n">set1</span><span class="o">$</span><span class="n">SUMMARY</span><span class="p">))</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">head</span><span class="p">(</span><span class="n">set2</span><span class="p">)</span><span class="w">
+   </span><span class="n">DTSTART.VALUE.DATE</span><span class="w">                       </span><span class="n">SUMMARY</span><span class="w">
+</span><span class="m">54</span><span class="w">         </span><span class="m">2022-06-03</span><span class="w"> </span><span class="n">Platinum</span><span class="w"> </span><span class="n">Jubilee</span><span class="w"> </span><span class="n">bank</span><span class="w"> </span><span class="n">holiday</span><span class="w">
+</span></code></pre></div></div>
+<p>Adding new headings using <code class="language-plaintext highlighter-rouge">setnames</code> from the <code class="language-plaintext highlighter-rouge">data.table</code> library, then removing row numbers and displaying as a table.</p>
 
-<pre><code class="language-r">library(data.table)
-setnames(set1, c("Date","Event name"))
-set2 &lt;- subset(set1,grepl("2022",set1$Date))
-knitr::kable(set2[order(set2$From),], caption = '2022 Holiday Calendar', row.names = FALSE)
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">data.table</span><span class="p">)</span><span class="w">
+</span><span class="n">setnames</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Date"</span><span class="p">,</span><span class="s2">"Event name"</span><span class="p">))</span><span class="w">
+</span><span class="n">set2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">subset</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span><span class="n">grepl</span><span class="p">(</span><span class="s2">"2022"</span><span class="p">,</span><span class="n">set1</span><span class="o">$</span><span class="n">Date</span><span class="p">))</span><span class="w">
+</span><span class="n">knitr</span><span class="o">::</span><span class="n">kable</span><span class="p">(</span><span class="n">set2</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="n">set2</span><span class="o">$</span><span class="n">From</span><span class="p">),],</span><span class="w"> </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'2022 Holiday Calendar'</span><span class="p">,</span><span class="w"> </span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
 
-</code></pre>
+</span></code></pre></div></div>
 
 <p>Which will yield a table in your book(down):</p>
 
@@ -301,8 +301,8 @@ knitr::kable(set2[order(set2$From),], caption = '2022 Holiday Calendar', row.nam
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Reading iCal in R&url=http://localhost:4000/reading-ical-r" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/reading-ical-r" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Reading iCal in R&url=https://cullaloe.com/reading-ical-r" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/reading-ical-r" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

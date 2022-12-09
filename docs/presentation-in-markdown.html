@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/presentation-in-markdown" property="og:url">
+    <meta content="https://cullaloe.com/presentation-in-markdown" property="og:url">
   
   
     <meta content="2019-09-22T13:38:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/rumbling-bridge.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/rumbling-bridge.jpg" property="og:image">
   
   
     
@@ -42,13 +42,13 @@
     <meta name="twitter:title" content="Presentations in Markdown">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/presentation-in-markdown">
+    <meta name="twitter:url" content="https://cullaloe.com/presentation-in-markdown">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/rumbling-bridge.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/rumbling-bridge.jpg">
   
 
 	<meta name="description" content="">
@@ -173,20 +173,20 @@
 
 <h2 id="yaml-header">YAML Header</h2>
 
-<pre><code class="language-ruby">---
-title: Example
-author: Nick Hood
-date: "22nd September 2019"
-classoption: "aspectratio=169"
----
-</code></pre>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---</span>
+<span class="ss">title: </span><span class="no">Example</span>
+<span class="ss">author: </span><span class="no">Nick</span> <span class="no">Hood</span>
+<span class="ss">date: </span><span class="s2">"22nd September 2019"</span>
+<span class="ss">classoption: </span><span class="s2">"aspectratio=169"</span>
+<span class="o">---</span>
+</code></pre></div></div>
 
 <h2 id="the-presentation">The presentation</h2>
 <p>The slide heading level is determined by the first heading that is followed by content. Any headings above that will be treated as section header slides.</p>
 
 <p>Any references can be automatically expanded into a list at the end of the final slide.</p>
 
-<pre><code>## Bullets and links
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Bullets and links
 
 * First [Link](https://cullaloe.net)!
 * No link
@@ -195,28 +195,28 @@ classoption: "aspectratio=169"
 # Q &amp; A
 
 ## References
-</code></pre>
+</code></pre></div></div>
 
 <h2 id="how-to-make-the-presentation">How to make the presentation</h2>
-<pre><code class="language-bash">$ pandoc -t beamer Example.md -o Example.pdf \
-    --bibliography="/path/to/bibliography.bib"
-</code></pre>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>pandoc <span class="nt">-t</span> beamer Example.md <span class="nt">-o</span> Example.pdf <span class="se">\</span>
+    <span class="nt">--bibliography</span><span class="o">=</span><span class="s2">"/path/to/bibliography.bib"</span>
+</code></pre></div></div>
 <ul>
-  <li>add <code>-V theme:Pittsburgh</code> for non-default themes</li>
-  <li>add <code>-V colortheme:beaver</code> for non-default colours</li>
-  <li>add <code>-V fonttheme:structuresmallcapsserif</code> for non-default fonts</li>
+  <li>add <code class="language-plaintext highlighter-rouge">-V theme:Pittsburgh</code> for non-default themes</li>
+  <li>add <code class="language-plaintext highlighter-rouge">-V colortheme:beaver</code> for non-default colours</li>
+  <li>add <code class="language-plaintext highlighter-rouge">-V fonttheme:structuresmallcapsserif</code> for non-default fonts</li>
   <li>Themes, etc. are <a href="http://www.deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html">online</a></li>
 </ul>
 
 <p>Have fun.</p>
 
 <h2 id="but-i-need-a-powerpoint">But I need a PowerPoint</h2>
-<p>If you really have to, change the output format from pdf to pptx and remove <code>-t beamer</code> from the command. The output is a bit funky, but will give you a starting point for editing and formatting in PowerPoint if that’s what you need.</p>
+<p>If you really have to, change the output format from pdf to pptx and remove <code class="language-plaintext highlighter-rouge">-t beamer</code> from the command. The output is a bit funky, but will give you a starting point for editing and formatting in PowerPoint if that’s what you need.</p>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Presentations in Markdown&url=http://localhost:4000/presentation-in-markdown" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/presentation-in-markdown" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Presentations in Markdown&url=https://cullaloe.com/presentation-in-markdown" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/presentation-in-markdown" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">

@@ -17,14 +17,14 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="http://localhost:4000/R-data-visualisation-course-3" property="og:url">
+    <meta content="https://cullaloe.com/R-data-visualisation-course-3" property="og:url">
   
   
     <meta content="2020-06-15T00:00:00+01:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
+    <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/sea-black-and-white-beach-89095.jpg" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/sea-black-and-white-beach-89095.jpg" property="og:image">
   
   
     
@@ -46,13 +46,13 @@
     <meta name="twitter:title" content="Statistics and Visualisation with R #3">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/R-data-visualisation-course-3">
+    <meta name="twitter:url" content="https://cullaloe.com/R-data-visualisation-course-3">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/sea-black-and-white-beach-89095.jpg">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/sea-black-and-white-beach-89095.jpg">
   
 
 	<meta name="description" content="">
@@ -269,7 +269,7 @@ The goal for all data collection is to capture quality evidence that allows anal
 <p>The <strong>sample</strong> is taken from the <strong>population</strong>, but a <strong>bias</strong> is introduced when the sample is taken. One example of this is the <strong><a href="https://en.wikipedia.org/wiki/Survivorship_bias">survivorship bias</a></strong>.</p>
 
 <h3 id="probability">Probability</h3>
-<p>A basic definition was given to the class, with an example from an earlier class that helped us. If we make the statement <code>if **A** is true then **B** is true</code> can we infer from this that <code>if **B** is true then **A** is true</code>? Clearly not, but we might be able to say <code>if **B** is true then **A** is more plausible</code>. Plausibility here relates to how probably something can be.</p>
+<p>A basic definition was given to the class, with an example from an earlier class that helped us. If we make the statement <code class="language-plaintext highlighter-rouge">if **A** is true then **B** is true</code> can we infer from this that <code class="language-plaintext highlighter-rouge">if **B** is true then **A** is true</code>? Clearly not, but we might be able to say <code class="language-plaintext highlighter-rouge">if **B** is true then **A** is more plausible</code>. Plausibility here relates to how probably something can be.</p>
 
 <blockquote>
   <p>“Probability is a numerical description of how likely an event is to occur or how likely it is that a proposition is true.” - <a href="https://en.wikipedia.org/wiki/Probability">Wikipedia</a></p>
@@ -277,7 +277,7 @@ The goal for all data collection is to capture quality evidence that allows anal
 
 <h3 id="distribution">Distribution</h3>
 
-<p>In introducing this topic, we were shown the really neat <code>rnorm()</code> function that generates random data sets with specified mean and standard deviation.</p>
+<p>In introducing this topic, we were shown the really neat <code class="language-plaintext highlighter-rouge">rnorm()</code> function that generates random data sets with specified mean and standard deviation.</p>
 
 <p>In the class, we were given a challenge to go through the steps needed with a new data set to examine it. These steps seem to be just to plot it and have a look. All of the curves looked to be distributed around a central mean, which makes them <strong>normal</strong> distributions. There was a problem with the challenge files which meant that some of us didn’t have the correct files and so did a different (trivial) task. The key message is to examine your data as soon as you have it, to look for central values and distribution, so as to understand it and how you expect it to behave in analysis.</p>
 
@@ -289,19 +289,19 @@ The goal for all data collection is to capture quality evidence that allows anal
 <p>One emphasis today is that there are multiple ways of doing the same thing in R, with an illustration of data importation and summarisation. Although some of the few remaining students seemed to be following the narrative, I became increasingly frustrated and lost trying to follow the class: the thread was along the lines of hypothesis testing, the null hypothesis and corrections.</p>
 
 <h2 id="playtime-discoveries">Playtime discoveries</h2>
-<p>Between this week’s two classes, I had a quick look at the <a href="https://cran.r-project.org/">Comprehensive R Archive Network (CRAN)</a> and discovered a neat thing. Remember the funky assignment operator <code>&lt;-</code> from the first class which had its funky keyboard shortcut <code>alt -</code>? Most programming languages I’ve used have a simple equals sign as the assignment operator and I was a bit baffled as to why super-sexy R should do something so weird as <code>&lt;-</code>. Well, it turns out that in most contexts, <code>=</code> works in exactly the way you’d expect, so these are equivalent:</p>
+<p>Between this week’s two classes, I had a quick look at the <a href="https://cran.r-project.org/">Comprehensive R Archive Network (CRAN)</a> and discovered a neat thing. Remember the funky assignment operator <code class="language-plaintext highlighter-rouge">&lt;-</code> from the first class which had its funky keyboard shortcut <code class="language-plaintext highlighter-rouge">alt -</code>? Most programming languages I’ve used have a simple equals sign as the assignment operator and I was a bit baffled as to why super-sexy R should do something so weird as <code class="language-plaintext highlighter-rouge">&lt;-</code>. Well, it turns out that in most contexts, <code class="language-plaintext highlighter-rouge">=</code> works in exactly the way you’d expect, so these are equivalent:</p>
 
-<pre><code class="language-R">&gt; x &lt;- 99
-&gt; x = 99
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">99</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">99</span><span class="w">
+</span></code></pre></div></div>
 <p>What’s interesting about the R syntax, though, it that it can be reversed and it still works:</p>
 
-<pre><code class="language-R">&gt; 99 -&gt; x
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="m">99</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w">
+</span></code></pre></div></div>
 <p>I’m sure that the case for this will become apparent eventually. One more way to do assignments is to call the assignment function:</p>
 
-<pre><code class="language-R">&gt; assign('x', 99) # notice the weird need for quotes around x in the function call
-</code></pre>
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">assign</span><span class="p">(</span><span class="s1">'x'</span><span class="p">,</span><span class="w"> </span><span class="m">99</span><span class="p">)</span><span class="w"> </span><span class="c1"># notice the weird need for quotes around x in the function call</span><span class="w">
+</span></code></pre></div></div>
 
 <h2 id="next-steps-other-ways-to-learn-r">Next steps: other ways to learn R</h2>
 <p>I got totally overwhelmed with the rate of new concepts in this class, or perhaps the pace and style of delivery. I think, given the time I have to spend after each class going over the material in order to make sense of it, it is clear that this course is not right for me. I have decided to abandon it and follow other materials more appropriate to my purpose, which is to develop skills in data visualisation using R. Despite the title, this course is not doing that for me.</p>
@@ -323,8 +323,8 @@ The goal for all data collection is to capture quality evidence that allows anal
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Statistics and Visualisation with R #3&url=http://localhost:4000/R-data-visualisation-course-3" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/R-data-visualisation-course-3" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=Statistics and Visualisation with R #3&url=https://cullaloe.com/R-data-visualisation-course-3" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/R-data-visualisation-course-3" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">
