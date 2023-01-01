@@ -5,9 +5,26 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/sitemap.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Dec 2022 08:52:27 +0000</pubDate>
-    <lastBuildDate>Fri, 09 Dec 2022 08:52:27 +0000</lastBuildDate>
+    <pubDate>Sun, 01 Jan 2023 11:49:12 +0000</pubDate>
+    <lastBuildDate>Sun, 01 Jan 2023 11:49:12 +0000</lastBuildDate>
     <generator>Jekyll v4.3.1</generator>
+    
+      <item>
+        <title>How to make Hollandaise sauce</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_9940 Large.jpeg#thumbnail&quot; alt=&quot;Creamy Hollandaise&quot; /&gt; New Year’s Day and the resolution list includes being more confident in the kitchen, so I aksed Alexa for a recipe for Hollandaise, which she obliged me with, from the &lt;a href=&quot;https://www.bbcgoodfood.com/recipes/hollandaise-sauce&quot;&gt;BBC Good Food website&lt;/a&gt;. It’s very simple and straightforward and any fule can make this. Start by clarifying half a pack of butter in a small pan, skimming the white solids off the top as you heat it. Meanwhile, whisk up a couple of fresh egg yolks with white wine vinegar, a little salt, and a splash of cold water in a glass bowl, transferring the bowl to sit over some softly simmering water after a minute or two. Continue whisking until you get a nice pale, thick sauce. Remove the pan from the heat and gradually whisk in the butter to make a rich, creamy Hollandaise.&lt;/p&gt;
+
+&lt;p&gt;Place all of the pans on the side ready for cleaning, and open a jar of Tesco’s Finest Hollandaise sauce to spoon over your poached egg.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/IMG_9942 Large.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+        <link>https://cullaloe.com/hollandaise</link>
+        <guid isPermaLink="true">https://cullaloe.com/hollandaise</guid>
+        
+        <category>Cuisine</category>
+        
+        
+      </item>
     
       <item>
         <title>Wordle cheating with R</title>

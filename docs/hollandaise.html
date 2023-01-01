@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
 	<meta charset="utf-8">
-	<title>Wordpress editor stuck in code - Tech, tales and imagery</title>
+	<title>How to make Hollandaise sauce - Tech, tales and imagery</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Tech, tales and imagery" property="og:site_name">
   
-    <meta content="Wordpress editor stuck in code" property="og:title">
+    <meta content="How to make Hollandaise sauce" property="og:title">
   
   
     <meta content="article" property="og:type">
@@ -17,21 +17,21 @@
     <meta content="A technical blog" property="og:description">
   
   
-    <meta content="https://cullaloe.com/wordpress-editor-stuck-in-code" property="og:url">
+    <meta content="https://cullaloe.com/hollandaise" property="og:url">
   
   
-    <meta content="2019-02-14T15:58:21+00:00" property="article:published_time">
+    <meta content="2023-01-01T00:00:00+00:00" property="article:published_time">
     <meta content="https://cullaloe.com/about/" property="article:author">
   
   
-    <meta content="https://cullaloe.com/assets/img/analogies.png" property="og:image">
+    <meta content="https://cullaloe.com/assets/img/IMG_9939-Large.jpeg" property="og:image">
   
   
     
   
   
     
-    <meta content="WordPress" property="article:tag">
+    <meta content="Cuisine" property="article:tag">
     
   
 
@@ -39,16 +39,16 @@
     <meta name="twitter:site" content="@Niximagery">
     <meta name="twitter:creator" content="@NixImagery">
   
-    <meta name="twitter:title" content="Wordpress editor stuck in code">
+    <meta name="twitter:title" content="How to make Hollandaise sauce">
   
   
-    <meta name="twitter:url" content="https://cullaloe.com/wordpress-editor-stuck-in-code">
+    <meta name="twitter:url" content="https://cullaloe.com/hollandaise">
   
   
     <meta name="twitter:description" content="A technical blog">
   
   
-    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/analogies.png">
+    <meta name="twitter:image:src" content="https://cullaloe.com/assets/img/IMG_9939-Large.jpeg">
   
 
 	<meta name="description" content="">
@@ -153,40 +153,37 @@
     
     <div class="page-cover-image">
       <figure>
-        <img class="page-image" src=/assets/img/analogies.png alt="Wordpress editor stuck in code">
+        <img class="page-image" src=/assets/img/IMG_9939-Large.jpeg alt="How to make Hollandaise sauce">
+        
+          <figcaption>Breakfast
+            
+              <br/><div class="attrib">Nick Hood</div>
+            
+          </figcaption>
         
       </figure>
     </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">Wordpress editor stuck in code</h1>
-        <div class="page-date"><span>2019, Feb 14&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">How to make Hollandaise sauce</h1>
+        <div class="page-date"><span>2023, Jan 01&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>The new Wordpress editor, Gutenberg, has had a mixed reception. For users that are only occasional editors on a site, it can be a pain to get to grips with, especially as the implementation is still quite buggy.</p>
+      <p><img src="/assets/img/IMG_9940 Large.jpeg#thumbnail" alt="Creamy Hollandaise" /> New Year’s Day and the resolution list includes being more confident in the kitchen, so I aksed Alexa for a recipe for Hollandaise, which she obliged me with, from the <a href="https://www.bbcgoodfood.com/recipes/hollandaise-sauce">BBC Good Food website</a>. It’s very simple and straightforward and any fule can make this. Start by clarifying half a pack of butter in a small pan, skimming the white solids off the top as you heat it. Meanwhile, whisk up a couple of fresh egg yolks with white wine vinegar, a little salt, and a splash of cold water in a glass bowl, transferring the bowl to sit over some softly simmering water after a minute or two. Continue whisking until you get a nice pale, thick sauce. Remove the pan from the heat and gradually whisk in the butter to make a rich, creamy Hollandaise.</p>
 
-<p>One of my clients tried to add a post to a site he hadn’t contributed to for some time and ran straight into a difficulty: the visual editor wasn’t working for him at all. His view should have been this:</p>
+<p>Place all of the pans on the side ready for cleaning, and open a jar of Tesco’s Finest Hollandaise sauce to spoon over your poached egg.</p>
 
-<p><img src="/assets/img/Screenshot-2019-02-14-at-16.06.03.png" alt="should" /></p>
-
-<p>…but what he got instead was this:</p>
-
-<p><img src="/assets/img/Screenshot-2019-02-14-at-16.07.36.png" alt="did" /></p>
-
-<p>In other words, his interface was stuck in the code editor. Unfortunately, he had no way of changing this (and neither did I as admin) in the UI. We changed a lot of variables, suspecting first his browser choice (Edge) and then OS choice (Windows). Long story short, the fix is to add an entry into the user’s meta table setting the rich_editing variable true.</p>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="nv">`wp_usermeta`</span> <span class="p">(</span><span class="nv">`umeta_id`</span><span class="p">,</span> <span class="nv">`user_id`</span><span class="p">,</span> <span class="nv">`meta_key`</span><span class="p">,</span> <span class="nv">`meta_value`</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="k">NULL</span><span class="p">,</span> <span class="s1">'999'</span><span class="p">,</span> <span class="s1">'rich_editing'</span><span class="p">,</span> <span class="s1">'true'</span><span class="p">)</span>
-</code></pre></div></div>
+<p><img src="/assets/img/IMG_9942 Large.jpeg" alt="" /></p>
 
       <div class="page-footer">
         <div class="page-share">Share this post on 
-          <a href="https://twitter.com/intent/tweet?text=Wordpress editor stuck in code&url=https://cullaloe.com/wordpress-editor-stuck-in-code" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
-          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/wordpress-editor-stuck-in-code" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
+          <a href="https://twitter.com/intent/tweet?text=How to make Hollandaise sauce&url=https://cullaloe.com/hollandaise" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a> or 
+          <a href="https://facebook.com/sharer.php?u=https://cullaloe.com/hollandaise" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>, or maybe 
           <a target="_blank" href="https://www.buymeacoffee.com/cullaloe">Buy me a coffee</a>
         </div>
         <div class="page-tag">
           
-            <a href="/tags#WordPress" class="tag">&#35; WordPress</a>
+            <a href="/tags#Cuisine" class="tag">&#35; Cuisine</a>
           
         </div>
       </div>
