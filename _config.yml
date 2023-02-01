@@ -29,7 +29,7 @@ scholar:
 #  locale: en
 
   source: /Users/v1nhood/Library/CloudStorage/Dropbox/Bibliographies
-  bibliography: library.bib
+  bibliography: Niximagery.github.io.bib
 
   query: "@*"
 
