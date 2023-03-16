@@ -180,25 +180,25 @@
 
 <p>The client wanted each folder’s images to be numbered 001.jpg to nnn.jpg for some further process.</p>
 
-<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">imghdr</span>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">imghdr</span>
 
 <span class="k">def</span> <span class="nf">renamefiles</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-<span class="n">rootstructure</span><span class="o">=</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="n">rootstructure</span><span class="o">=</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">abspath</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">rootstructure</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="nf">walk</span><span class="p">(</span><span class="n">rootstructure</span><span class="p">):</span>
 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-<span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">!=</span> <span class="n">root</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="nf">getcwd</span><span class="p">()</span> <span class="o">!=</span> <span class="n">root</span><span class="p">:</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Reset the counter
-</span><span class="n">os</span><span class="p">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+</span><span class="n">os</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
 
-<span class="nb">type</span> <span class="o">=</span> <span class="n">imghdr</span><span class="p">.</span><span class="n">what</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="nb">type</span> <span class="o">=</span> <span class="n">imghdr</span><span class="p">.</span><span class="nf">what</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s">'jpeg'</span><span class="p">:</span>
 <span class="n">n</span> <span class="o">+=</span><span class="mi">1</span>
-<span class="n">os</span><span class="p">.</span><span class="n">rename</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">).</span><span class="n">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s">".jpg"</span><span class="p">)</span>
+<span class="n">os</span><span class="p">.</span><span class="nf">rename</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="n">n</span><span class="p">).</span><span class="nf">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s">".jpg"</span><span class="p">)</span>
 
 <span class="c1"># Specify the full path to the directory here.
-</span><span class="n">renamefiles</span><span class="p">(</span><span class="s">"/Users/myuser/Desktop/TheImageFolder"</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class="nf">renamefiles</span><span class="p">(</span><span class="s">"/Users/myuser/Desktop/TheImageFolder"</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
       <div class="page-footer">
