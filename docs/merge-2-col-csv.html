@@ -223,8 +223,8 @@ Python 3.6.2 <span class="o">(</span>v3.6.2:5fd33b5926, Jul 16 2017, 20:11:06<sp
 Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for </span>more information.
 </code></pre></div></div>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">csv1</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"1.csv"</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">csv2</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"2.csv”)
+<span class="o">&gt;&gt;&gt;</span> <span class="n">csv1</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">1.csv</span><span class="sh">"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">csv2</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">2.csv”)
 </span></code></pre></div></div>
 <p>(check it looks ok)</p>
 
@@ -241,20 +241,20 @@ Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span 
 </code></pre></div></div>
 <p>Make an outer join of these two tables on the two coordinate columns:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">merged_data</span> <span class="o">=</span> <span class="n">csv1</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">csv2</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s">"x"</span><span class="p">,</span><span class="s">"y"</span><span class="p">],</span><span class="n">how</span><span class="o">=</span><span class="s">'outer’)
-
-&gt;&gt;&gt; merged_data.head()
-    x   y     t1     t2
-0  42  35  122.0    NaN
-1  39  44  242.0  122.0
-2  12  43  188.0    NaN
-3  53  22    NaN  192.0
-4  22  56    NaN  238.0
-</span></code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">merged_data</span> <span class="o">=</span> <span class="n">csv1</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">csv2</span><span class="p">,</span><span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">x</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">y</span><span class="sh">"</span><span class="p">],</span><span class="n">how</span><span class="o">=</span><span class="sh">'</span><span class="s">outer’)
+</span><span class="gp">
+&gt;&gt;&gt;</span> <span class="n">merged_data</span><span class="p">.</span><span class="nf">head</span><span class="p">()</span>
+    <span class="n">x</span>   <span class="n">y</span>     <span class="n">t1</span>     <span class="n">t2</span>
+<span class="mi">0</span>  <span class="mi">42</span>  <span class="mi">35</span>  <span class="mf">122.0</span>    <span class="n">NaN</span>
+<span class="mi">1</span>  <span class="mi">39</span>  <span class="mi">44</span>  <span class="mf">242.0</span>  <span class="mf">122.0</span>
+<span class="mi">2</span>  <span class="mi">12</span>  <span class="mi">43</span>  <span class="mf">188.0</span>    <span class="n">NaN</span>
+<span class="mi">3</span>  <span class="mi">53</span>  <span class="mi">22</span>    <span class="n">NaN</span>  <span class="mf">192.0</span>
+<span class="mi">4</span>  <span class="mi">22</span>  <span class="mi">56</span>    <span class="n">NaN</span>  <span class="mf">238.0</span>
+</code></pre></div></div>
 
 <p>“NaN” is not your Nan, it’s just “not a number”, or “no data here”.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">merged_data</span><span class="p">.</span><span class="nf">to_csv</span><span class="p">(</span><span class="s">"out.csv"</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">merged_data</span><span class="p">.</span><span class="nf">to_csv</span><span class="p">(</span><span class="sh">"</span><span class="s">out.csv</span><span class="sh">"</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>… and back in the shell, we can see the result…</p>

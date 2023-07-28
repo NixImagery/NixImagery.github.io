@@ -193,12 +193,12 @@
 </span><span class="n">os</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
 
 <span class="nb">type</span> <span class="o">=</span> <span class="n">imghdr</span><span class="p">.</span><span class="nf">what</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s">'jpeg'</span><span class="p">:</span>
+<span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="sh">'</span><span class="s">jpeg</span><span class="sh">'</span><span class="p">:</span>
 <span class="n">n</span> <span class="o">+=</span><span class="mi">1</span>
-<span class="n">os</span><span class="p">.</span><span class="nf">rename</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="n">n</span><span class="p">).</span><span class="nf">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s">".jpg"</span><span class="p">)</span>
+<span class="n">os</span><span class="p">.</span><span class="nf">rename</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="n">n</span><span class="p">).</span><span class="nf">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="sh">"</span><span class="s">.jpg</span><span class="sh">"</span><span class="p">)</span>
 
 <span class="c1"># Specify the full path to the directory here.
-</span><span class="nf">renamefiles</span><span class="p">(</span><span class="s">"/Users/myuser/Desktop/TheImageFolder"</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class="nf">renamefiles</span><span class="p">(</span><span class="sh">"</span><span class="s">/Users/myuser/Desktop/TheImageFolder</span><span class="sh">"</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </code></pre></div></div>
 
       <div class="page-footer">

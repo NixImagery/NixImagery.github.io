@@ -190,10 +190,10 @@
 
 <p>The workshop begins with some exercises in the IDE to get used to running python code within the cells to do something with text strings, using variables, e.g.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first_name</span> <span class="o">=</span> <span class="s">"ada"</span>
-<span class="n">last_name</span> <span class="o">=</span> <span class="s">"lovelace"</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">ada</span><span class="sh">"</span>
+<span class="n">last_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">lovelace</span><span class="sh">"</span>
 
-<span class="n">full_name</span> <span class="o">=</span> <span class="n">first_name</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">last_name</span> <span class="c1"># combine strings with a space inbetween
+<span class="n">full_name</span> <span class="o">=</span> <span class="n">first_name</span> <span class="o">+</span> <span class="sh">'</span><span class="s"> </span><span class="sh">'</span> <span class="o">+</span> <span class="n">last_name</span> <span class="c1"># combine strings with a space inbetween
 </span>
 <span class="nf">print </span><span class="p">(</span><span class="n">full_name</span><span class="p">)</span>
 </code></pre></div></div>
@@ -218,7 +218,7 @@ txt = txt.lower()
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">nltk</span>
 <span class="kn">from</span> <span class="n">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span> <span class="c1"># or word_tokenize for words
 </span>
-<span class="n">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">"origin-intro.txt"</span><span class="p">)</span> <span class="c1"># open file
+<span class="n">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="sh">"</span><span class="s">origin-intro.txt</span><span class="sh">"</span><span class="p">)</span> <span class="c1"># open file
 </span>
 <span class="n">txt</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>          <span class="c1"># add file contents to variable
 </span>
@@ -243,10 +243,10 @@ txt = txt.lower()
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">re</span>
 <span class="kn">from</span> <span class="n">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
 
-<span class="n">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">"origin-intro.txt"</span><span class="p">)</span> <span class="c1"># open file
+<span class="n">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="sh">"</span><span class="s">origin-intro.txt</span><span class="sh">"</span><span class="p">)</span> <span class="c1"># open file
 </span><span class="n">contents</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>          <span class="c1"># add file contents to variable
 </span><span class="n">contents</span> <span class="o">=</span> <span class="n">contents</span><span class="p">.</span><span class="nf">lower</span><span class="p">()</span>  <span class="c1"># lower case text
-</span><span class="n">contents</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nf">sub</span><span class="p">(</span><span class="sa">r</span><span class="s">'[^\w\s]'</span><span class="p">,</span><span class="s">''</span><span class="p">,</span><span class="n">contents</span><span class="p">)</span>  <span class="c1">#remove punctuation (note use of regex)
+</span><span class="n">contents</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nf">sub</span><span class="p">(</span><span class="sa">r</span><span class="sh">'</span><span class="s">[^\w\s]</span><span class="sh">'</span><span class="p">,</span><span class="sh">''</span><span class="p">,</span><span class="n">contents</span><span class="p">)</span>  <span class="c1">#remove punctuation (note use of regex)
 </span><span class="n">tokenized_word</span><span class="o">=</span><span class="nf">word_tokenize</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
 
 <span class="n">filtered_word</span><span class="o">=</span><span class="p">[]</span>
@@ -254,7 +254,7 @@ txt = txt.lower()
 <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">tokenized_word</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">:</span>
         <span class="n">filtered_word</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="s">"Filterd Words:"</span><span class="p">,</span><span class="n">filtered_word</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Filterd Words:</span><span class="sh">"</span><span class="p">,</span><span class="n">filtered_word</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="further-functions-and-libraries">Further functions and libraries</h3>
@@ -268,12 +268,12 @@ txt = txt.lower()
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">csv</span>
 <span class="kn">import</span> <span class="n">urllib.request</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s">'https://learn.edina.ac.uk/intro-ta/files/trump-tweet-archive.csv'</span> <span class="c1"># download the file
+<span class="n">url</span> <span class="o">=</span> <span class="sh">'</span><span class="s">https://learn.edina.ac.uk/intro-ta/files/trump-tweet-archive.csv</span><span class="sh">'</span> <span class="c1"># download the file
 </span><span class="n">csv</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="nf">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="nf">read</span><span class="p">()</span> <span class="c1"># assign the contents of the file to a variable (csv)
-</span><span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="s">'tweets.csv'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span> <span class="c1"># create a new file and save the contents of 'csv' to this file
+</span><span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">'</span><span class="s">tweets.csv</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">wb</span><span class="sh">'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span> <span class="c1"># create a new file and save the contents of 'csv' to this file
 </span>    <span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">csv</span><span class="p">)</span>
     
-    <span class="nf">print</span><span class="p">(</span><span class="s">'CSV file created'</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">'</span><span class="s">CSV file created</span><span class="sh">'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>What do you think was the top 4-gram in all of this data?</p>
