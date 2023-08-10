@@ -5,9 +5,60 @@
     <description>A technical blog</description>
     <link>https://cullaloe.com/</link>
     <atom:link href="https://cullaloe.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Aug 2023 08:03:51 +0100</pubDate>
-    <lastBuildDate>Thu, 10 Aug 2023 08:03:51 +0100</lastBuildDate>
+    <pubDate>Thu, 10 Aug 2023 16:34:03 +0100</pubDate>
+    <lastBuildDate>Thu, 10 Aug 2023 16:34:03 +0100</lastBuildDate>
     <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Data Protection Essentials</title>
+        <description>&lt;p&gt;All staff at the university where I work are required to keep up to date with things that matter to our students, our reputation and ourselves. Data protection is one of these things, and we have, in time for the new academic session, an updated self-service training course on it.&lt;/p&gt;
+
+&lt;h2 id=&quot;rationale&quot;&gt;Rationale&lt;/h2&gt;
+
+&lt;p&gt;The course starts with a couple of case studies which cite the actuallly, not very large fines, relatively speaking, levied on public bodies for failures leading to potential data loss. The failures are things like losing a laptop; not using basic encryption of personal data; and not knowing the difference between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bcc&lt;/code&gt;. I am old enough to know what the letters stand for and why. The greater rationale is, of course, to look after people by being careful with what you know, write, and say about them, including what might be inferred from partial data. Social media, especially since chatGPT and other examples of how pieces can be assembled by machines, has helped raise awareness of what may go wrong when information is shared and connected.&lt;/p&gt;
+
+&lt;h2 id=&quot;personal-data&quot;&gt;Personal data&lt;/h2&gt;
+
+&lt;p&gt;I have done this course before, and think I know a lot about it but it was good to be reminded that personal data does not have to be in an electronic form to be protected. We interview often, and are take great care with notes we make in the process, ever mindful of freedom of information rights of access. The course gives a list of specific examples, in our context, of what data can be considered &lt;em&gt;personal data&lt;/em&gt;. The list ranges from the obvious (student names and numbers) to the less so, like GPS data embedded in a digital photo. “Special categories” of data relate to possibly private information, which might be usable to discriminate such as union membership, religious beliefs or political opinions. Biometric data is included in this category.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-protection-principles&quot;&gt;Data protection principles&lt;/h2&gt;
+
+&lt;p&gt;Six principles of data protection sit within an overarching principle of accountability. These principles require staff to act lawfully, fairly and openly; to be deliberate in how data is used, complying with privacy notices; to collect only the data needed to do the task it is needed for; to keep it accurate and up to date; to anonymise if possible and keep it only while it is needed (archiving is OK if it is in the public or research interest); and to keep data securely.&lt;/p&gt;
+
+&lt;h2 id=&quot;rights&quot;&gt;Rights&lt;/h2&gt;
+
+&lt;p&gt;People have rights when it comes to their data, including the the right to be informed (that you have data about them and why you need it); the right to see a copy of what you have about them; to have a copy in a form they can use; to have it corrected if it’s wrong; to prevent use of the data pending other actions;  to “opt out” of things like profiling for marketing. There is also a right to have decisions about them made by humans and not based on automated processing. There is no right to be forgotten, however. The right to have data removed is only available under certain circumstances.&lt;/p&gt;
+
+&lt;p&gt;When it comes to marketing, the sleazy term “legitimate interest” applies to allow anyone to use data about people to target them for marketing and advertising purposes, provided that they take certain steps like including “unsubscribe” links in emails. This is why we all get calls, spam and junk all the time.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-transfer&quot;&gt;Data transfer&lt;/h2&gt;
+
+&lt;p&gt;There is information in the course that goes into quite a lot of detail about policy and legal aspects that are not at all relevant to the roles I hold, for example relating to “The Adequacy Decision in International Transfers”, matters of executive responsibility and legal acronymic phenomena like “SDPC” or “ACOC”, which I found funny, if only for their lack of definition in the course materials.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-breach&quot;&gt;Data breach&lt;/h2&gt;
+
+&lt;p&gt;Procedures for what to do on discovery of a data breach are described and clearly understandable.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next steps&lt;/h2&gt;
+
+&lt;p&gt;As a doctoral researcher, I will be required to undergo further training in data protection for researchers at the appropriate time.&lt;/p&gt;
+
+&lt;h2 id=&quot;missing-from-this-course&quot;&gt;Missing from this course&lt;/h2&gt;
+
+&lt;p&gt;I was surprised by how much was missing from this course. It focuses on administrative, legal and marketing aspects of what a university does corporately, but fails to address the threat surfaces presented to and by staff. The case studies in the introduction signalled this but it is conspicuously missing. My colleagues and I would greatly reduce the risk of these threats with a little education, for example, what is the difference between &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bcc&lt;/code&gt; and why does it matter?&lt;/p&gt;
+
+&lt;p&gt;The risks presented by the university IT systems infrastructure, relying as it does on the “nobody-ever-got-fired-for-buying” Microsoft tools and software, would be substantially diminished by such education and sharing of good practices. Why we are not using products like &lt;a href=&quot;https://wire.com/en/&quot;&gt;Wire&lt;/a&gt; I do not know. Unofficially, of course, you do find things being done to circumvent the clunky and dysfunctional official software (&lt;a href=&quot;https://www.blackboard.com/learnultra&quot;&gt;Learn Ultra&lt;/a&gt;, anyone? “simple, modern and intuitive” it is not). Despite the risks, ironically, these unofficial actions continue to protect the university and its community by providing greater security, coherence and even functionality than the official systems.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 Aug 2023 00:00:00 +0100</pubDate>
+        <link>https://cullaloe.com/data-protection</link>
+        <guid isPermaLink="true">https://cullaloe.com/data-protection</guid>
+        
+        <category>CPD</category>
+        
+        <category>Data</category>
+        
+        
+      </item>
     
       <item>
         <title>Knowledge exchange and impact</title>
@@ -858,97 +909,6 @@ SECONDARY PHYSICS TEACHER EDUCATION UNDERGRADUATE SCOTLAND
         <category>Research</category>
         
         <category>Education</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Survive and Thrive as a Part Time PhD Researcher</title>
-        <description>&lt;p&gt;Notes from another excellent online course provided by the University’s IAD.&lt;/p&gt;
-
-&lt;h2 id=&quot;pre-course-actions&quot;&gt;Pre course Actions&lt;/h2&gt;
-
-&lt;p&gt;We were asked, about a week before the course, to read an article in the &lt;a href=&quot;https://www.theguardian.com/higher-education-network/2016/apr/27/how-to-juggle-a-full-time-job-and-a-part-time-phd&quot;&gt;online Grauniad&lt;/a&gt; on &lt;em&gt;How to juggle a full-time job and a part-time PhD&lt;/em&gt;; to think of &lt;em&gt;5 top tips&lt;/em&gt; for being successful as a PT PhD; and bring questions of our own to the course.&lt;/p&gt;
-
-&lt;p&gt;Within the correspondence were also buried a couple of unannounced pdf attachments which contained resource for the course, I think, but also some links to blog posts and articles&lt;sup id=&quot;fnref:2021-11-10-blog1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2021-11-10-blog1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2021-11-10-blog2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2021-11-10-blog2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2021-11-10-blog3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2021-11-10-blog3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&quot;fnref:2021-11-10-blog4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2021-11-10-blog4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; on doing a part-time PhD. One message stood out from these, beyond those that resonated with my own “top tips” (below), and that was this:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;students who study part time for their whole degree finish sooner and have better results than full time students.&lt;sup id=&quot;fnref:2021-11-10-pearson&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2021-11-10-pearson&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Wow, that is encouraging. I have a hope not to overrun on my own PhD, and finish early if at all possible but there are a lot of factors in that particular critical path, most of which I have no idea about. For now, I am focusing on sustaining the momentum by doing something every day, unless I specifically plan not to. It’s working so far, and I have managed when external factors have confounded that approach.&lt;/p&gt;
-
-&lt;p&gt;Having a TBR (to be read) list is a good idea: I have one but it’s huge and diverse. Next task is to organise and prioritise that. Lastly from the blogs, making use of buffer time that provides transition space between work, home and study. My job is closely related to my research and there is a “double divided” of much of the studying/thinking I am doing, so it matters less between work and study time, but I also need to be sure to be fully present at home: to not be nodding along to a domestic tale whilst mentally drafting some thesisable nugget. Working memory needs to be dedicated to whatever is current or in the moment. &lt;strong&gt;Multitasking is your enemy!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;my-5-top-tips&quot;&gt;My 5 top tips&lt;/h3&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Block out time&lt;/dt&gt;
-  &lt;dd&gt;You have to switch off everything that might distract you from your PhD. &lt;em&gt;Everything&lt;/em&gt;. The only way I have been able to do that is block out time when I am doing nothing else but PhD work.&lt;/dd&gt;
-  &lt;dt&gt;Have specific objectives&lt;/dt&gt;
-  &lt;dd&gt;That time should be spent working on something specific, whether tidying up your reference manager library, reading specific papers, searching for new ones or writing up notes.&lt;/dd&gt;
-  &lt;dt&gt;Track achievement&lt;/dt&gt;
-  &lt;dd&gt;Have a to-do list that you check in on every day and check off the things you complete or progress. Watching that build into a record of achievement helps keep me keep moving forward.&lt;/dd&gt;
-  &lt;dt&gt;Talk about your research&lt;/dt&gt;
-  &lt;dd&gt;I find it feels good to talk to other people about my research project. It is important and interesting, what you are doing. Tell people about it and what impact you hope to achieve. If you haven’t got people, talk to a dog. Or a gonk.&lt;/dd&gt;
-  &lt;dt&gt;Accept advice gracefully, and park it&lt;/dt&gt;
-  &lt;dd&gt;When you talk to other people, they may well have their own ideas or a book/paper/journal for you to read. Keep track of that stuff but sustain your immediate direction – don’t be distracted by what others think you should be reading. Make time for it when you can to check back on once you have progressed what you’re working on &lt;em&gt;today&lt;/em&gt;.&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;h2 id=&quot;the-seminar&quot;&gt;The seminar&lt;/h2&gt;
-
-&lt;p&gt;The 90-minute seminar was led by &lt;a href=&quot;https://www.hutchinsontraining.com/&quot;&gt;Steve Hutchinson&lt;/a&gt; who I have met before on a speed-reading course. He’s an impressive teacher, whether in the 2-D Zoom space or 3-D in real life, where he is a pretty impressive sketch noter. I still have his notes from that on my office wall: and still use the methods he taught me. Delegates were grouped for chatting about what works and what doesn’t: based on our preparatory notes and conversations between us. As well as my top five above, there were some superb ideas to help, including:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;writing is output, even if it’s shit;&lt;/li&gt;
-  &lt;li&gt;when you stop writing, note down prompts for next time&lt;/li&gt;
-  &lt;li&gt;get some time in early, before looking at your emails&lt;/li&gt;
-  &lt;li&gt;don’t compare yourself with other people (especially full-timers)&lt;/li&gt;
-  &lt;li&gt;focusing in small chunks of time&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It’s also important to keep yourself reminded of why your PhD is important to you: what motivates you about it and the things you are learning. The vision involves “bricks, walls, and cathedrals”: the to-do list is the day to day reification of this idea.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“The PhD is a project to be managed, not a quest for truth.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There were plenty of other ideas and strategies shared, reference within the course handout, that make it a useful reference to return to, especially when it might get sticky. Of greatest importance is the repeated reminder that &lt;strong&gt;the purpose is to pass&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
-
-&lt;p&gt;This was absolutely well worth doing: both the preparation, the thinking, and also the engagement with the seminar. The delegates connected in a really lovely way, all fully supportive and empathic. I am thankful to them, and to Steve, and to the IAD for this course.&lt;/p&gt;
-
-&lt;h2 id=&quot;notes-and-references&quot;&gt;Notes and references&lt;/h2&gt;
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:2021-11-10-blog1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;https://thesiswhisperer.com/2013/03/13/5-time-management-ideas-from-part-time-phd-students/ &lt;a href=&quot;#fnref:2021-11-10-blog1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2021-11-10-blog2&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;https://blogs.kcl.ac.uk/editlab/2020/04/01/the-secret-life-of-part-time-phd-students/ &lt;a href=&quot;#fnref:2021-11-10-blog2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2021-11-10-blog3&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;https://www.timeshighereducation.com/student/blogs/studying-part-time-phd-challenges-and-benefits &lt;a href=&quot;#fnref:2021-11-10-blog3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2021-11-10-blog4&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;https://sccontrol.wordpress.com/2012/07/09/part-time-phd-some-problems-and-solutions/ &lt;a href=&quot;#fnref:2021-11-10-blog4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2021-11-10-pearson&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;Pearson, M, Cumming, J, Evans, T, Macauley, P and Ryland, K (2008) “Exploring the Extent and Nature of the Diversity of the Doctoral Population in Australia: A Profile of the Respondents to a 2005 National Survey” in M. Kiley &amp;amp; G. Mullins (Eds). (17-18 April, 2008). Quality in postgraduate research: Research education in the new global environment – Conference Proceedings. Canberra: CEDAM, ANU &lt;a href=&quot;#fnref:2021-11-10-pearson&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Wed, 10 Nov 2021 19:30:00 +0000</pubDate>
-        <link>https://cullaloe.com/survive-part-time-pgr</link>
-        <guid isPermaLink="true">https://cullaloe.com/survive-part-time-pgr</guid>
-        
-        <category>PhD</category>
-        
-        <category>CPD</category>
-        
-        <category>IAD</category>
         
         
       </item>
