@@ -1,7 +1,7 @@
----
-title: "NixImagery.github.io"
----
+This is a collection of sites and repositories I publish and maintain for work, research, or personal interests.
 
-This is a Quarto website.
+Published sites here are related to my [family tales](/family/), interdisciplinary learning at the [Natural Partners Project](https://naturalpartnersproject.org/), the 2020 [Data Ethics MOOC](/DataEthicsMOOC/) run by the University of Edinburgh, and the remnants of the old Scottish Physics Teachers' Resources site [SPTR](https://sptr.net/). There is a public site about the BBC's radio programme [Something Understood](/Something-Understood/).
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I am a Lecturer at Edinburgh University and maintain an interest in programming and artificial intelligence. You can find my latest cv [here](https://github.com/NixImagery/CV/blob/master/cv.pdf) (pdf, 100kB).
+
+This site, like many others here, is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.

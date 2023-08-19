@@ -7,11 +7,19 @@ project:
 website:
   title: "NixImagery.github.io"
   site-url: https://NixImagery.github.io
+  search: false
+  page-footer: 
+    left: 
+      - text: Copyright &copy; Nick Hood
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    right:
+      - icon: github
+        href: https://github.com/NixImagery
+      - icon: instagram
+        href: https://www.instagram.com/niximagery/
+      - icon: twitter
+        href: https://twitter.com/NixImagery
+  google-analytics: G-HRRCR9KGPW
 
 format:
   html:
