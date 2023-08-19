@@ -21,7 +21,7 @@ mermaid:
 
 permalink: '/:title'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://cullaloe.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://Niximagery.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: Niximagery #if your site has a twitter account, enter it here
 
 scholar:
