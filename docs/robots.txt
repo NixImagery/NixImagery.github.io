@@ -1,1 +1,1 @@
-Sitemap: https://niximagery.github.io/sitemap.xml
+Sitemap: https://NixImagery.github.io/sitemap.xml
