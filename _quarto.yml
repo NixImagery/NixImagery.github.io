@@ -8,6 +8,7 @@ website:
   title: "NixImagery.github.io"
   site-url: https://NixImagery.github.io
   search: false
+  favicon: favicon.ico
   page-footer: 
     left: 
       - text: Copyright &copy; Nick Hood

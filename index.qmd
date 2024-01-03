@@ -6,4 +6,4 @@ There is a public site about the BBC's radio programme [Something Understood](/S
 
 I am a Lecturer at Edinburgh University and maintain an interest in programming and artificial intelligence. You can find my latest cv [here](https://github.com/NixImagery/CV/blob/master/cv.pdf) (pdf, 100kB).
 
-This site, like many others here, is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This site, like many others here, is a Quarto website. To learn more about Quarto websites visit <https://quarto.org/docs/websites>, or take a look at my portal at <https://cullaloe.net>.
